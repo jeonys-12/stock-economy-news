@@ -28,6 +28,12 @@ SEARCHES = [
     {"country": "미국", "category": "건설·부동산", "query": "미국 건설 부동산 주택시장 모기지 상업용 부동산"},
 ]
 
+YOUTUBE_CHANNELS = [
+    {"name": "손에잡히는경제", "channel_id": "UCiYbaVEODktcsh09454Grow"},
+    {"name": "언더스탠딩 : 세상의 모든 지식", "channel_id": "UCIUni4ScRp4mqPXsxy62L5w"},
+    {"name": "슈카월드", "channel_id": "UCsJ6RuBiTVWRX156FVbeaGg"},
+]
+
 IMPORTANT_KEYWORDS = {
     "기준금리": 20, "금리 인상": 20, "금리 인하": 20, "FOMC": 20, "연준": 18,
     "한국은행": 18, "관세": 18, "환율": 15, "인플레이션": 15, "물가": 14,
@@ -36,7 +42,7 @@ IMPORTANT_KEYWORDS = {
     "실적": 10, "상장폐지": 20, "급락": 15, "급등": 12,
 }
 
-USER_AGENT = "Mozilla/5.0 (compatible; StockEconomyNewsDashboard/1.0)"
+USER_AGENT = "Mozilla/5.0 (compatible; StockEconomyNewsDashboard/1.1)"
 
 
 def clean_text(value: str | None) -> str:
@@ -48,6 +54,10 @@ def clean_text(value: str | None) -> str:
 
 
 def parse_date(entry: dict) -> datetime:
+    for parsed_key in ("published_parsed", "updated_parsed"):
+        value = entry.get(parsed_key)
+        if value:
+            return datetime(*value[:6], tzinfo=timezone.utc)
     for key in ("published", "updated"):
         value = entry.get(key)
         if value:
@@ -57,7 +67,10 @@ def parse_date(entry: dict) -> datetime:
                     dt = dt.replace(tzinfo=timezone.utc)
                 return dt.astimezone(timezone.utc)
             except (TypeError, ValueError, OverflowError):
-                pass
+                try:
+                    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+                except ValueError:
+                    pass
     return datetime.now(timezone.utc)
 
 
@@ -100,39 +113,43 @@ def collect_feed(search: dict) -> list[dict]:
     response.raise_for_status()
     feed = feedparser.parse(response.content)
     items: list[dict] = []
-
     for entry in feed.entries:
         raw_title = clean_text(entry.get("title"))
         url = entry.get("link", "").strip()
         if not raw_title or not url:
             continue
-
         source = extract_source(entry, raw_title)
         title = normalize_title(raw_title, source)
         description = clean_text(entry.get("summary") or entry.get("description"))
         published_at = parse_date(entry)
         if published_at < datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS):
             continue
-
         unique = hashlib.sha1(f"{title}|{url}".encode("utf-8")).hexdigest()[:16]
-        items.append({
-            "id": unique,
-            "title": title,
-            "description": description[:360],
-            "url": url,
-            "source": source,
-            "country": search["country"],
-            "category": search["category"],
-            "published_at": published_at.isoformat(),
-            "importance_score": importance_score(title, description, published_at),
-        })
+        items.append({"id": unique, "type": "news", "title": title, "description": description[:360], "url": url, "source": source, "country": search["country"], "category": search["category"], "published_at": published_at.isoformat(), "importance_score": importance_score(title, description, published_at)})
+    return items
+
+
+def collect_youtube(channel: dict) -> list[dict]:
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel['channel_id']}"
+    response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
+    response.raise_for_status()
+    feed = feedparser.parse(response.content)
+    items: list[dict] = []
+    for entry in feed.entries:
+        title = clean_text(entry.get("title"))
+        video_url = entry.get("link", "").strip()
+        published_at = parse_date(entry)
+        if not title or not video_url or published_at < datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS):
+            continue
+        video_id = entry.get("yt_videoid") or video_url.split("v=")[-1].split("&")[0]
+        description = clean_text(entry.get("media_description") or entry.get("summary") or "")
+        unique = hashlib.sha1(f"youtube|{channel['channel_id']}|{video_id}".encode("utf-8")).hexdigest()[:16]
+        items.append({"id": unique, "type": "youtube", "title": title, "description": description[:360], "url": video_url, "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg", "source": channel["name"], "country": "대한민국", "category": "경제 유튜브", "published_at": published_at.isoformat(), "importance_score": importance_score(title, description, published_at) + 5})
     return items
 
 
 def deduplicate(items: list[dict]) -> list[dict]:
-    result: list[dict] = []
-    seen_urls: set[str] = set()
-    seen_titles: set[str] = set()
+    result, seen_urls, seen_titles = [], set(), set()
     for item in sorted(items, key=lambda x: x["published_at"], reverse=True):
         normalized = re.sub(r"[^가-힣a-z0-9]", "", item["title"].lower())[:90]
         if item["url"] in seen_urls or normalized in seen_titles:
@@ -149,21 +166,21 @@ def main() -> None:
     for search in SEARCHES:
         try:
             all_items.extend(collect_feed(search))
-        except Exception as exc:  # Keep other feeds running when one source fails.
+        except Exception as exc:
             errors.append(f"{search['country']} / {search['category']}: {exc}")
         time.sleep(1)
-
+    for channel in YOUTUBE_CHANNELS:
+        try:
+            all_items.extend(collect_youtube(channel))
+        except Exception as exc:
+            errors.append(f"YouTube / {channel['name']}: {exc}")
+        time.sleep(1)
     items = deduplicate(all_items)
     items.sort(key=lambda x: (x["importance_score"], x["published_at"]), reverse=True)
-    payload = {
-        "updated_at": datetime.now(KST).isoformat(),
-        "count": min(len(items), MAX_ITEMS),
-        "errors": errors,
-        "news": items[:MAX_ITEMS],
-    }
+    payload = {"updated_at": datetime.now(KST).isoformat(), "count": min(len(items), MAX_ITEMS), "errors": errors, "news": items[:MAX_ITEMS]}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Saved {payload['count']} articles to {OUTPUT}")
+    print(f"Saved {payload['count']} items to {OUTPUT}")
     if errors:
         print("Feed warnings:")
         for error in errors:
