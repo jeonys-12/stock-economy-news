@@ -23,9 +23,6 @@ SEARCHES = [
     {"country": "대한민국", "category": "경제정책", "query": "한국 경제정책 정부 기획재정부 한국은행 산업통상자원부"},
     {"country": "대한민국", "category": "금융시장", "query": "한국 주식 증시 코스피 코스닥 환율 금리 채권 금융시장"},
     {"country": "대한민국", "category": "건설·부동산", "query": "한국 건설 부동산 주택 재건축 재개발 국토교통부"},
-    {"country": "미국", "category": "경제정책", "query": "미국 경제정책 연준 FOMC 재무부 관세 고용 물가"},
-    {"country": "미국", "category": "금융시장", "query": "미국 증시 뉴욕증시 나스닥 S&P500 다우 연준 금리"},
-    {"country": "미국", "category": "건설·부동산", "query": "미국 건설 부동산 주택시장 모기지 상업용 부동산"},
 ]
 
 YOUTUBE_CHANNELS = [
@@ -35,14 +32,14 @@ YOUTUBE_CHANNELS = [
 ]
 
 IMPORTANT_KEYWORDS = {
-    "기준금리": 20, "금리 인상": 20, "금리 인하": 20, "FOMC": 20, "연준": 18,
-    "한국은행": 18, "관세": 18, "환율": 15, "인플레이션": 15, "물가": 14,
-    "고용": 12, "GDP": 15, "경기침체": 20, "부도": 18, "파산": 20,
-    "규제": 12, "공급대책": 15, "재건축": 10, "분양": 8, "수주": 8,
-    "실적": 10, "상장폐지": 20, "급락": 15, "급등": 12,
+    "기준금리": 20, "금리 인상": 20, "금리 인하": 20, "한국은행": 18,
+    "환율": 15, "인플레이션": 15, "물가": 14, "고용": 12, "GDP": 15,
+    "경기침체": 20, "부도": 18, "파산": 20, "규제": 12, "공급대책": 15,
+    "재건축": 10, "분양": 8, "수주": 8, "실적": 10, "상장폐지": 20,
+    "급락": 15, "급등": 12,
 }
 
-USER_AGENT = "Mozilla/5.0 (compatible; StockEconomyNewsDashboard/1.1)"
+USER_AGENT = "Mozilla/5.0 (compatible; StockEconomyNewsDashboard/1.2)"
 
 
 def clean_text(value: str | None) -> str:
@@ -125,7 +122,7 @@ def collect_feed(search: dict) -> list[dict]:
         if published_at < datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS):
             continue
         unique = hashlib.sha1(f"{title}|{url}".encode("utf-8")).hexdigest()[:16]
-        items.append({"id": unique, "type": "news", "title": title, "description": description[:360], "url": url, "source": source, "country": search["country"], "category": search["category"], "published_at": published_at.isoformat(), "importance_score": importance_score(title, description, published_at)})
+        items.append({"id": unique, "type": "news", "title": title, "description": description[:360], "url": url, "source": source, "country": "대한민국", "category": search["category"], "published_at": published_at.isoformat(), "importance_score": importance_score(title, description, published_at)})
     return items
 
 
@@ -144,7 +141,7 @@ def collect_youtube(channel: dict) -> list[dict]:
         video_id = entry.get("yt_videoid") or video_url.split("v=")[-1].split("&")[0]
         description = clean_text(entry.get("media_description") or entry.get("summary") or "")
         unique = hashlib.sha1(f"youtube|{channel['channel_id']}|{video_id}".encode("utf-8")).hexdigest()[:16]
-        items.append({"id": unique, "type": "youtube", "title": title, "description": description[:360], "url": video_url, "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg", "source": channel["name"], "country": "대한민국", "category": "경제 유튜브", "published_at": published_at.isoformat(), "importance_score": importance_score(title, description, published_at) + 5})
+        items.append({"id": unique, "type": "youtube", "title": title, "description": description[:360], "url": video_url, "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg", "source": channel["name"], "country": "대한민국", "category": "경제 유튜브", "published_at": published_at.isoformat(), "importance_score": min(100, importance_score(title, description, published_at) + 5)})
     return items
 
 
@@ -167,7 +164,7 @@ def main() -> None:
         try:
             all_items.extend(collect_feed(search))
         except Exception as exc:
-            errors.append(f"{search['country']} / {search['category']}: {exc}")
+            errors.append(f"대한민국 / {search['category']}: {exc}")
         time.sleep(1)
     for channel in YOUTUBE_CHANNELS:
         try:
@@ -175,12 +172,12 @@ def main() -> None:
         except Exception as exc:
             errors.append(f"YouTube / {channel['name']}: {exc}")
         time.sleep(1)
-    items = deduplicate(all_items)
+    items = [item for item in deduplicate(all_items) if item.get("country") == "대한민국"]
     items.sort(key=lambda x: (x["importance_score"], x["published_at"]), reverse=True)
     payload = {"updated_at": datetime.now(KST).isoformat(), "count": min(len(items), MAX_ITEMS), "errors": errors, "news": items[:MAX_ITEMS]}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Saved {payload['count']} items to {OUTPUT}")
+    print(f"Saved {payload['count']} Korean items to {OUTPUT}")
     if errors:
         print("Feed warnings:")
         for error in errors:
