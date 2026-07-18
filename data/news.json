@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T21:52:13.891563+09:00",
+  "updated_at": "2026-07-18T21:52:49.696447+09:00",
   "count": 68,
   "errors": [],
   "news": [
@@ -216,6 +216,18 @@
       "description": "[미국증시] 뉴욕증시 연준 충격 하루 만에 반등, 반도체지수 사상 최고 자본시장뉴스",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBYVmxNSk9xSGhEWVFzT2tfVmlQY3hiTFpzWURBR09DWDMyQ25XX1FDd0E1Q0lOeHpiUVFONXZtZkJwSVJrQVhaRFhOek56UElzcjNDbDViUk96UnVVaGVlS3k1TEZJSWM?oc=5",
       "source": "자본시장뉴스",
+      "country": "미국",
+      "category": "금융시장",
+      "published_at": "2026-06-19T07:00:00+00:00",
+      "importance_score": 53
+    },
+    {
+      "id": "924dc96503e473df",
+      "type": "news",
+      "title": "하루 만에 연준 충격 극복한 뉴욕 증시…나스닥 2% 상승",
+      "description": "하루 만에 연준 충격 극복한 뉴욕 증시…나스닥 2% 상승 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOY1AzOVA4Sk05NDRpcExraWVIcUJveEpEb2hQMFRVcW1XNW4zN0QyRUI2SUZKV1NQQjAzazYybUEtdmVHWm9XcG4xeDFnM25IemtGZElKN3F4MV96WGx4ZzNIT3RUcFpwd2l0OVBVYWVFZ1BZSVpyd1lnbFVTUTBFenZ5NEVHUlVta2NTdjdzZmF0VkZTSDZjVTkwcFAwUQ?oc=5",
+      "source": "조선일보",
       "country": "미국",
       "category": "금융시장",
       "published_at": "2026-06-19T07:00:00+00:00",
@@ -742,18 +754,6 @@
       "country": "미국",
       "category": "건설·부동산",
       "published_at": "2026-07-09T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "c99cbbab2d0b124f",
-      "type": "news",
-      "title": "뉴욕증시, 중동 긴장에 다우 1%↓…반도체 반등에 나스닥은 올라[월스트리트in]",
-      "description": "뉴욕증시, 중동 긴장에 다우 1%↓…반도체 반등에 나스닥은 올라[월스트리트in] edaily.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQmJjLUlaYVlkbjZWYWNGUGFvRURRXzY0UlRKVnQ0Z1BLcHFIVVRuYTAtWnRkakI3OTg4LU0zQTZhOTdCeXMwRjlWcU5OSXFhWmNWN2NKcGgwSG9rd0dhaXpnN1UwX1dnSENjNFZ3QnZrTnZiNV9nVkNYbW5WQ2NDMg?oc=5",
-      "source": "edaily.co.kr",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-07-08T21:19:58+00:00",
       "importance_score": 35
     },
     {
