@@ -5,6 +5,7 @@ import html
 import json
 import re
 import time
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -13,11 +14,13 @@ from urllib.parse import quote_plus
 import feedparser
 import requests
 from bs4 import BeautifulSoup
+from youtube_transcript_api import YouTubeTranscriptApi
 
 KST = timezone(timedelta(hours=9))
 OUTPUT = Path("data/news.json")
-MAX_AGE_DAYS = 30
+MAX_AGE_DAYS = 7
 MAX_ITEMS = 300
+MAX_YOUTUBE_PER_CHANNEL = 5
 
 SEARCHES = [
     {"country": "대한민국", "category": "경제정책", "query": "한국 경제정책 정부 기획재정부 한국은행 산업통상자원부"},
@@ -39,7 +42,14 @@ IMPORTANT_KEYWORDS = {
     "급락": 15, "급등": 12,
 }
 
-USER_AGENT = "Mozilla/5.0 (compatible; StockEconomyNewsDashboard/1.2)"
+STOPWORDS = {
+    "그런데", "그리고", "그래서", "하지만", "이제", "지금", "정말", "사실", "때문", "대해서",
+    "이렇게", "저렇게", "이것", "저것", "우리", "여러분", "오늘", "이번", "영상", "얘기",
+    "말씀", "정도", "관련", "있는", "없는", "하는", "되는", "같은", "있습니다", "합니다",
+    "입니다", "있어요", "하는데", "됩니다", "가지고", "그리고요", "그러니까", "아니면",
+}
+
+USER_AGENT = "Mozilla/5.0 (compatible; StockEconomyNewsDashboard/1.3)"
 
 
 def clean_text(value: str | None) -> str:
@@ -47,6 +57,7 @@ def clean_text(value: str | None) -> str:
         return ""
     soup = BeautifulSoup(html.unescape(value), "html.parser")
     text = soup.get_text(" ", strip=True)
+    text = re.sub(r"\[(?:음악|박수|웃음|Music|Applause)[^\]]*\]", " ", text, flags=re.I)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -122,8 +133,67 @@ def collect_feed(search: dict) -> list[dict]:
         if published_at < datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS):
             continue
         unique = hashlib.sha1(f"{title}|{url}".encode("utf-8")).hexdigest()[:16]
-        items.append({"id": unique, "type": "news", "title": title, "description": description[:360], "url": url, "source": source, "country": "대한민국", "category": search["category"], "published_at": published_at.isoformat(), "importance_score": importance_score(title, description, published_at)})
+        items.append({
+            "id": unique,
+            "type": "news",
+            "title": title,
+            "description": description[:360],
+            "url": url,
+            "source": source,
+            "country": "대한민국",
+            "category": search["category"],
+            "published_at": published_at.isoformat(),
+            "importance_score": importance_score(title, description, published_at),
+        })
     return items
+
+
+def transcript_chunks(video_id: str) -> list[str]:
+    transcript = YouTubeTranscriptApi().fetch(video_id, languages=["ko", "en"])
+    chunks: list[str] = []
+    buffer = ""
+    for snippet in transcript:
+        text = clean_text(snippet.text)
+        if not text:
+            continue
+        buffer = f"{buffer} {text}".strip()
+        if len(buffer) >= 90 or re.search(r"[.!?。！？]$", text):
+            chunks.append(buffer)
+            buffer = ""
+    if buffer:
+        chunks.append(buffer)
+    return [chunk for chunk in chunks if 35 <= len(chunk) <= 320]
+
+
+def summarize_chunks(chunks: list[str], fallback: str) -> tuple[str, str]:
+    if not chunks:
+        return (fallback[:420] or "영상 설명과 자막을 확인할 수 없습니다."), "description"
+
+    words: list[str] = []
+    for chunk in chunks:
+        words.extend(
+            word for word in re.findall(r"[가-힣A-Za-z0-9]{2,}", chunk.lower())
+            if word not in STOPWORDS and not word.isdigit()
+        )
+    frequency = Counter(words)
+    if not frequency:
+        return " ".join(chunks[:3])[:420], "transcript"
+
+    scored: list[tuple[float, int, str]] = []
+    for index, chunk in enumerate(chunks):
+        tokens = re.findall(r"[가-힣A-Za-z0-9]{2,}", chunk.lower())
+        meaningful = [token for token in tokens if token not in STOPWORDS]
+        if not meaningful:
+            continue
+        score = sum(frequency[token] for token in meaningful) / max(len(meaningful), 1)
+        if any(keyword.lower() in chunk.lower() for keyword in IMPORTANT_KEYWORDS):
+            score += 2.5
+        scored.append((score, index, chunk))
+
+    selected = sorted(scored, reverse=True)[:3]
+    selected.sort(key=lambda item: item[1])
+    summary = " · ".join(item[2] for item in selected)
+    return summary[:520], "transcript"
 
 
 def collect_youtube(channel: dict) -> list[dict]:
@@ -132,16 +202,38 @@ def collect_youtube(channel: dict) -> list[dict]:
     response.raise_for_status()
     feed = feedparser.parse(response.content)
     items: list[dict] = []
-    for entry in feed.entries:
+
+    for entry in feed.entries[:MAX_YOUTUBE_PER_CHANNEL]:
         title = clean_text(entry.get("title"))
         video_url = entry.get("link", "").strip()
         published_at = parse_date(entry)
         if not title or not video_url or published_at < datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS):
             continue
+
         video_id = entry.get("yt_videoid") or video_url.split("v=")[-1].split("&")[0]
-        description = clean_text(entry.get("media_description") or entry.get("summary") or "")
+        original_description = clean_text(entry.get("media_description") or entry.get("summary") or "")
+        try:
+            summary, summary_source = summarize_chunks(transcript_chunks(video_id), original_description)
+        except Exception as exc:
+            print(f"Transcript unavailable for {video_id}: {exc}")
+            summary, summary_source = summarize_chunks([], original_description)
+
         unique = hashlib.sha1(f"youtube|{channel['channel_id']}|{video_id}".encode("utf-8")).hexdigest()[:16]
-        items.append({"id": unique, "type": "youtube", "title": title, "description": description[:360], "url": video_url, "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg", "source": channel["name"], "country": "대한민국", "category": "경제 유튜브", "published_at": published_at.isoformat(), "importance_score": min(100, importance_score(title, description, published_at) + 5)})
+        items.append({
+            "id": unique,
+            "type": "youtube",
+            "title": title,
+            "description": summary,
+            "summary_source": summary_source,
+            "url": video_url,
+            "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
+            "source": channel["name"],
+            "country": "대한민국",
+            "category": "경제 유튜브",
+            "published_at": published_at.isoformat(),
+            "importance_score": min(100, importance_score(title, summary, published_at) + 5),
+        })
+        time.sleep(0.5)
     return items
 
 
@@ -174,7 +266,12 @@ def main() -> None:
         time.sleep(1)
     items = [item for item in deduplicate(all_items) if item.get("country") == "대한민국"]
     items.sort(key=lambda x: (x["importance_score"], x["published_at"]), reverse=True)
-    payload = {"updated_at": datetime.now(KST).isoformat(), "count": min(len(items), MAX_ITEMS), "errors": errors, "news": items[:MAX_ITEMS]}
+    payload = {
+        "updated_at": datetime.now(KST).isoformat(),
+        "count": min(len(items), MAX_ITEMS),
+        "errors": errors,
+        "news": items[:MAX_ITEMS],
+    }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Saved {payload['count']} Korean items to {OUTPUT}")
