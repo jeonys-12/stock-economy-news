@@ -89,6 +89,12 @@
       <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
     </section>
 
+    <section class="source-section" id="sources">
+      <div class="section-heading"><div><p class="section-kicker">SOURCE STATUS</p><h2>수집 방식·제한 현황</h2></div></div>
+      <p class="source-help">공식 API와 공식 RSS를 우선 사용하며, 실패하거나 인증이 필요한 경우 대체 수집 방식으로 자동 전환합니다.</p>
+      <div id="sourceStatusList" class="source-status-list"><p class="result-info">수집 상태를 불러오는 중입니다.</p></div>
+    </section>
+
     <section class="channel-section" id="youtube">
       <div class="section-heading"><div><p class="section-kicker">YOUTUBE</p><h2>모니터링 채널</h2></div></div>
       <div class="channel-list">
@@ -99,7 +105,7 @@
     </section>
   </main>
 
-  <footer><div class="container"><p>공개 RSS 기반 모니터링 · 투자 판단 전 원문을 확인하십시오.</p></div></footer>
+  <footer><div class="container"><p>공개 RSS·공식 API 기반 모니터링 · 투자 판단 전 원문을 확인하십시오.</p></div></footer>
 
   <template id="newsCardTemplate">
     <article class="news-card">
