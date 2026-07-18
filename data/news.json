@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-18T21:52:49.696447+09:00",
-  "count": 68,
+  "updated_at": "2026-07-19T00:07:56.948659+09:00",
+  "count": 67,
   "errors": [],
   "news": [
     {
@@ -222,18 +222,6 @@
       "importance_score": 53
     },
     {
-      "id": "924dc96503e473df",
-      "type": "news",
-      "title": "하루 만에 연준 충격 극복한 뉴욕 증시…나스닥 2% 상승",
-      "description": "하루 만에 연준 충격 극복한 뉴욕 증시…나스닥 2% 상승 조선일보",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOY1AzOVA4Sk05NDRpcExraWVIcUJveEpEb2hQMFRVcW1XNW4zN0QyRUI2SUZKV1NQQjAzazYybUEtdmVHWm9XcG4xeDFnM25IemtGZElKN3F4MV96WGx4ZzNIT3RUcFpwd2l0OVBVYWVFZ1BZSVpyd1lnbFVTUTBFenZ5NEVHUlVta2NTdjdzZmF0VkZTSDZjVTkwcFAwUQ?oc=5",
-      "source": "조선일보",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-19T07:00:00+00:00",
-      "importance_score": 53
-    },
-    {
       "id": "5ff32664d07b17e7",
       "type": "news",
       "title": "美 도매물가 둔화에 뉴욕증시 상승…빅테크 강세가 견인",
@@ -282,6 +270,19 @@
       "category": "경제 유튜브",
       "published_at": "2026-07-13T11:00:14+00:00",
       "importance_score": 52
+    },
+    {
+      "id": "689c02dedf512356",
+      "type": "youtube",
+      "title": "스스로 감탄하면 놀라운 일 생깁니다",
+      "description": "💡내용 요약 김정운 교수는 주체적인 삶은 '내가 좋아하는 것'을 중심으로 살아가는 삶이라고 말한다. 현대인은 SNS와 경쟁 중심 사회 속에서 끊임없이 타인과 자신을 비교하며 우울과 불안을 키우는데, 그 근본 원인은 자신만의 취향과 기준이 없기 때문이라고 진단한다. 이를 극복하려면 좋아하는 것을 깊이 공부하며 몰입(Flow)을 경험하고, 휴식을 통해 자신과 대화하며 메타인지를 키워야 한다고 강조한다. 또한 책을 적극적으로 메모하며 읽고, 음악·미술·캠핑 같은 다양한 정서적 경험을 통해 감정을 풍부하게 만들며, 여행이나 이사처럼 삶의 맥락을 바꾸는 경험을 해야 새로운 관점과 소통 능력이 생긴다고 설명한다. 결국 행복은 빠른 성공이 아니라 자",
+      "url": "https://www.youtube.com/shorts/6RnKtP_lwKU",
+      "thumbnail": "https://i.ytimg.com/vi/6RnKtP_lwKU/hqdefault.jpg",
+      "source": "언더스탠딩 : 세상의 모든 지식",
+      "country": "대한민국",
+      "category": "경제 유튜브",
+      "published_at": "2026-07-18T14:15:36+00:00",
+      "importance_score": 50
     },
     {
       "id": "0a1a57b1e2c819d7",
@@ -436,19 +437,6 @@
       "importance_score": 46
     },
     {
-      "id": "27604ce952696ff1",
-      "type": "youtube",
-      "title": "갑질 공화국 한국 감탄이 없어서다",
-      "description": "💡내용 요약 김정운 교수는 주체적인 삶은 '내가 좋아하는 것'을 중심으로 살아가는 삶이라고 말한다. 현대인은 SNS와 경쟁 중심 사회 속에서 끊임없이 타인과 자신을 비교하며 우울과 불안을 키우는데, 그 근본 원인은 자신만의 취향과 기준이 없기 때문이라고 진단한다. 이를 극복하려면 좋아하는 것을 깊이 공부하며 몰입(Flow)을 경험하고, 휴식을 통해 자신과 대화하며 메타인지를 키워야 한다고 강조한다. 또한 책을 적극적으로 메모하며 읽고, 음악·미술·캠핑 같은 다양한 정서적 경험을 통해 감정을 풍부하게 만들며, 여행이나 이사처럼 삶의 맥락을 바꾸는 경험을 해야 새로운 관점과 소통 능력이 생긴다고 설명한다. 결국 행복은 빠른 성공이 아니라 자",
-      "url": "https://www.youtube.com/shorts/I1TOwb5Ctl8",
-      "thumbnail": "https://i.ytimg.com/vi/I1TOwb5Ctl8/hqdefault.jpg",
-      "source": "언더스탠딩 : 세상의 모든 지식",
-      "country": "대한민국",
-      "category": "경제 유튜브",
-      "published_at": "2026-07-17T14:15:37+00:00",
-      "importance_score": 46
-    },
-    {
       "id": "d756824d7b061b43",
       "type": "news",
       "title": "한국증시, 코스피 최고치…SK하이닉스 삼전 제치고 코스피 시총 1위, 이란 협상 주시•마이크론 실적 앞두고 반도체 랠리 가능? [이완수의 한국금융시장 핫이슈]",
@@ -459,6 +447,19 @@
       "category": "금융시장",
       "published_at": "2026-06-22T07:00:00+00:00",
       "importance_score": 45
+    },
+    {
+      "id": "27604ce952696ff1",
+      "type": "youtube",
+      "title": "갑질 공화국 한국 감탄이 없어서다",
+      "description": "💡내용 요약 김정운 교수는 주체적인 삶은 '내가 좋아하는 것'을 중심으로 살아가는 삶이라고 말한다. 현대인은 SNS와 경쟁 중심 사회 속에서 끊임없이 타인과 자신을 비교하며 우울과 불안을 키우는데, 그 근본 원인은 자신만의 취향과 기준이 없기 때문이라고 진단한다. 이를 극복하려면 좋아하는 것을 깊이 공부하며 몰입(Flow)을 경험하고, 휴식을 통해 자신과 대화하며 메타인지를 키워야 한다고 강조한다. 또한 책을 적극적으로 메모하며 읽고, 음악·미술·캠핑 같은 다양한 정서적 경험을 통해 감정을 풍부하게 만들며, 여행이나 이사처럼 삶의 맥락을 바꾸는 경험을 해야 새로운 관점과 소통 능력이 생긴다고 설명한다. 결국 행복은 빠른 성공이 아니라 자",
+      "url": "https://www.youtube.com/shorts/I1TOwb5Ctl8",
+      "thumbnail": "https://i.ytimg.com/vi/I1TOwb5Ctl8/hqdefault.jpg",
+      "source": "언더스탠딩 : 세상의 모든 지식",
+      "country": "대한민국",
+      "category": "경제 유튜브",
+      "published_at": "2026-07-17T14:15:37+00:00",
+      "importance_score": 43
     },
     {
       "id": "741e9c4599715e50",
@@ -536,7 +537,7 @@
       "country": "대한민국",
       "category": "경제 유튜브",
       "published_at": "2026-07-15T14:15:18+00:00",
-      "importance_score": 43
+      "importance_score": 40
     },
     {
       "id": "384a8b06ee2847a9",
@@ -601,19 +602,6 @@
       "country": "대한민국",
       "category": "경제 유튜브",
       "published_at": "2026-07-14T04:31:19+00:00",
-      "importance_score": 40
-    },
-    {
-      "id": "5661c6bcd75f70a2",
-      "type": "youtube",
-      "title": "쾌락 아닙니다 도파민 이때 터집니다 (이승훈 교수)",
-      "description": "💡내용 요약 서울대병원 신경과 이승훈 교수와 함께 '낭만'이라는 개념을 뇌과학의 관점에서 다시 짚어본다. 흔히 쓰이는 '도파민이 터진다'는 표현과 낭만을 쾌락이나 행복감으로 동일시하는 통념에 문제를 제기하며, 낭만의 어원인 로맨스가 중세 유럽의 통속소설에서 비롯됐다는 점과 18세기 말 낭만주의가 등장한 배경을 살핀다. 이를 근거로 현재 통용되는 낭만의 사전적 의미가 지나치게 협소해졌다는 진단을 내놓는다. 이승훈 교수는 신경전달물질과 신경조절물질의 차이를 설명하며, 도파민이 실제로는 쾌락이 아니라 동기 유발과 추구, 희망을 만들어내는 물질이라는 점을 강조한다. 도파민 회로가 선조체로 향하면 반복 운동 학습을 담당해 손상 시 파킨슨병으로 이",
-      "url": "https://www.youtube.com/shorts/Az9LBgm3_h0",
-      "thumbnail": "https://i.ytimg.com/vi/Az9LBgm3_h0/hqdefault.jpg",
-      "source": "언더스탠딩 : 세상의 모든 지식",
-      "country": "대한민국",
-      "category": "경제 유튜브",
-      "published_at": "2026-07-13T14:15:30+00:00",
       "importance_score": 40
     },
     {
