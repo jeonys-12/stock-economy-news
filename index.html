@@ -3,116 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="대한민국과 미국의 경제정책, 금융시장, 건설·부동산 뉴스를 한곳에서 확인하는 대시보드">
+  <meta name="description" content="대한민국과 미국의 경제정책, 금융시장, 건설·부동산 뉴스와 주요 경제 유튜브를 한곳에서 확인하는 대시보드">
   <title>주식 / 경제 뉴스 몰아보기</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="container hero-inner">
-      <div>
-        <p class="eyebrow">KOREA · UNITED STATES</p>
-        <h1>주식 / 경제 뉴스 몰아보기</h1>
-        <p class="hero-copy">경제정책, 금융시장, 건설·부동산 뉴스를 매일 아침 빠르게 확인합니다.</p>
-      </div>
-      <div class="update-box">
-        <span>최근 업데이트</span>
-        <strong id="updatedAt">확인 중</strong>
-        <button id="refreshButton" type="button">새로고침</button>
-      </div>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><span class="brand-mark">ECON</span><span>Stock & Economy Monitor</span></a>
+      <nav class="top-nav" aria-label="주요 메뉴">
+        <a href="#brief">Today Brief</a><a href="#data">News</a><a href="#youtube">YouTube</a><a href="#sources">Sources</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="summary-grid" aria-label="뉴스 요약">
-      <article class="summary-card"><span>전체 뉴스</span><strong id="totalCount">0</strong></article>
-      <article class="summary-card"><span>최근 24시간</span><strong id="dailyCount">0</strong></article>
-      <article class="summary-card"><span>대한민국</span><strong id="koreaCount">0</strong></article>
-      <article class="summary-card"><span>미국</span><strong id="usaCount">0</strong></article>
-    </section>
-
-    <section class="control-panel" aria-label="뉴스 필터">
-      <div class="control-row">
-        <div class="control-group">
-          <span class="control-label">국가</span>
-          <div class="button-group" id="countryFilters">
-            <button class="filter-button active" data-country="all">전체</button>
-            <button class="filter-button" data-country="대한민국">대한민국</button>
-            <button class="filter-button" data-country="미국">미국</button>
-          </div>
-        </div>
-        <div class="control-group">
-          <span class="control-label">기간</span>
-          <div class="button-group" id="periodFilters">
-            <button class="filter-button active" data-period="7">7일</button>
-            <button class="filter-button" data-period="1">24시간</button>
-            <button class="filter-button" data-period="30">30일</button>
-          </div>
-        </div>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy-wrap">
+        <p class="eyebrow">KOREA · UNITED STATES · MARKET INTELLIGENCE</p>
+        <h1>주식 / 경제 뉴스 몰아보기</h1>
+        <p class="hero-copy">매일 아침 경제정책 · 금융시장 · 건설·부동산 뉴스와 주요 경제 유튜브를 빠르게 선별합니다.</p>
       </div>
+      <div class="update-box">
+        <span>최근 업데이트</span><strong id="updatedAt">확인 중</strong>
+        <button id="refreshButton" type="button">데이터 새로고침</button>
+      </div>
+    </div>
+  </section>
 
-      <div class="control-row category-row">
-        <div class="control-group grow">
-          <span class="control-label">분야</span>
-          <div class="button-group" id="categoryFilters">
-            <button class="filter-button active" data-category="all">전체</button>
-            <button class="filter-button" data-category="경제정책">경제정책</button>
-            <button class="filter-button" data-category="금융시장">금융시장</button>
-            <button class="filter-button" data-category="건설·부동산">건설·부동산</button>
-          </div>
-        </div>
-        <label class="search-box">
-          <span class="sr-only">뉴스 검색</span>
-          <input id="searchInput" type="search" placeholder="기업명, 정책, 종목 키워드 검색">
-        </label>
+  <main>
+    <section class="container brief-section" id="brief">
+      <div class="section-title compact"><div><p class="section-kicker">TODAY BRIEF</p><h2>시장 모니터링 현황</h2></div><p id="briefText">데이터를 불러오는 중입니다.</p></div>
+      <div class="period-tabs" id="quickPeriods">
+        <button class="period-tab" data-quick-period="1"><strong>일간 베스트</strong><span>24시간 이내</span></button>
+        <button class="period-tab active" data-quick-period="7"><strong>주간 베스트</strong><span>7일 이내</span></button>
+        <button class="period-tab" data-quick-period="30"><strong>월간 추세</strong><span>30일 이내</span></button>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card"><span>전체</span><strong id="totalCount">0</strong><small>최대 300개</small></article>
+        <article class="summary-card"><span>일간</span><strong id="dailyCount">0</strong><small>24시간 이내</small></article>
+        <article class="summary-card"><span>대한민국</span><strong id="koreaCount">0</strong><small>국내 정책·시장</small></article>
+        <article class="summary-card"><span>미국</span><strong id="usaCount">0</strong><small>미국 정책·시장</small></article>
+        <article class="summary-card accent"><span>YouTube</span><strong id="youtubeCount">0</strong><small>지정 채널 영상</small></article>
       </div>
     </section>
 
-    <section class="section-heading">
-      <div>
-        <p class="eyebrow dark">LATEST MONITORING</p>
-        <h2>주요 뉴스</h2>
-      </div>
-      <div class="sort-control">
-        <label for="sortSelect">정렬</label>
-        <select id="sortSelect">
-          <option value="importance">중요도순</option>
-          <option value="latest">최신순</option>
-        </select>
+    <section class="container data-section" id="data">
+      <div class="section-title"><div><p class="section-kicker">DATA</p><h2>기사·영상 목록</h2></div><button id="resetButton" class="text-button" type="button">필터 초기화</button></div>
+      <section class="control-panel" aria-label="콘텐츠 필터">
+        <div class="control-row">
+          <div class="control-group"><span class="control-label">콘텐츠</span><div class="button-group" id="typeFilters"><button class="filter-button active" data-type="all">전체</button><button class="filter-button" data-type="news">뉴스</button><button class="filter-button youtube-filter" data-type="youtube">YouTube</button></div></div>
+          <div class="control-group"><span class="control-label">국가</span><div class="button-group" id="countryFilters"><button class="filter-button active" data-country="all">전체</button><button class="filter-button" data-country="대한민국">대한민국</button><button class="filter-button" data-country="미국">미국</button></div></div>
+          <div class="control-group"><span class="control-label">기간</span><div class="button-group" id="periodFilters"><button class="filter-button" data-period="1">24시간</button><button class="filter-button active" data-period="7">7일</button><button class="filter-button" data-period="30">30일</button></div></div>
+        </div>
+        <div class="control-row second-row">
+          <div class="control-group grow"><span class="control-label">카테고리</span><div class="button-group" id="categoryFilters"><button class="filter-button active" data-category="all">전체</button><button class="filter-button" data-category="경제정책">경제정책</button><button class="filter-button" data-category="금융시장">금융시장</button><button class="filter-button" data-category="건설·부동산">건설·부동산</button><button class="filter-button" data-category="경제 유튜브">경제 유튜브</button></div></div>
+          <label class="search-box"><span class="sr-only">검색</span><input id="searchInput" type="search" placeholder="기업명, 정책, 종목, 채널명 검색"></label>
+          <div class="sort-control"><label for="sortSelect">정렬</label><select id="sortSelect"><option value="importance">중요도순</option><option value="latest">최신순</option></select></div>
+        </div>
+      </section>
+      <p class="result-info" id="resultInfo">데이터 로딩 중</p>
+      <section id="newsGrid" class="news-grid" aria-live="polite"></section>
+      <div id="emptyState" class="empty-state" hidden>조건에 맞는 콘텐츠가 없습니다.</div>
+      <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
+    </section>
+
+    <section class="youtube-section" id="youtube">
+      <div class="container">
+        <div class="section-title light"><div><p class="section-kicker">YOUTUBE MONITOR</p><h2>자주 보는 경제 채널</h2></div><p>최신 영상은 자동수집 후 뉴스 목록과 함께 표시됩니다.</p></div>
+        <div class="channel-grid">
+          <a href="https://www.youtube.com/channel/UCiYbaVEODktcsh09454Grow" target="_blank" rel="noopener"><strong>손에잡히는경제</strong><span>생활경제 · 시장 이슈</span></a>
+          <a href="https://www.youtube.com/channel/UCIUni4ScRp4mqPXsxy62L5w" target="_blank" rel="noopener"><strong>언더스탠딩</strong><span>산업 · 경제 심층분석</span></a>
+          <a href="https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg" target="_blank" rel="noopener"><strong>슈카월드</strong><span>경제 · 국제 이슈 해설</span></a>
+        </div>
       </div>
     </section>
 
-    <section id="newsGrid" class="news-grid" aria-live="polite"></section>
-    <div id="emptyState" class="empty-state" hidden>조건에 맞는 뉴스가 없습니다.</div>
-    <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
+    <section class="container sources-section" id="sources">
+      <div class="section-title"><div><p class="section-kicker">SOURCES</p><h2>수집 기준</h2></div></div>
+      <p>공개 Google News RSS와 YouTube 공식 채널 RSS를 사용합니다. 투자 판단 전 기사·영상 원문과 공식 발표자료를 반드시 확인하십시오.</p>
+    </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <p>공개 RSS 기반 뉴스 모니터링 · 기사 원문은 각 언론사에서 확인</p>
-      <p>투자 참고용이며 투자 판단과 결과의 책임은 이용자에게 있습니다.</p>
-    </div>
-  </footer>
+  <footer><div class="container footer-inner"><p>주식 / 경제 뉴스 몰아보기</p><a href="#top">TOP ↑</a></div></footer>
 
   <template id="newsCardTemplate">
     <article class="news-card">
-      <div class="card-meta">
-        <span class="country-badge"></span>
-        <span class="category-badge"></span>
-        <span class="importance-badge"></span>
-      </div>
-      <h3><a class="news-link" target="_blank" rel="noopener noreferrer"></a></h3>
-      <p class="news-description"></p>
-      <div class="card-footer">
-        <span class="news-source"></span>
-        <time class="news-date"></time>
-      </div>
+      <a class="thumbnail-link" target="_blank" rel="noopener noreferrer"><img class="news-thumbnail" alt="" loading="lazy"></a>
+      <div class="card-body"><div class="card-meta"><span class="type-badge"></span><span class="country-badge"></span><span class="category-badge"></span><span class="importance-badge"></span></div><h3><a class="news-link" target="_blank" rel="noopener noreferrer"></a></h3><p class="news-description"></p><div class="card-footer"><span class="news-source"></span><time class="news-date"></time></div></div>
     </article>
   </template>
-
   <script src="app.js" defer></script>
 </body>
 </html>
