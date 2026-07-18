@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-19T00:07:56.948659+09:00",
-  "count": 67,
+  "updated_at": "2026-07-19T00:08:24.775291+09:00",
+  "count": 50,
   "errors": [],
   "news": [
     {
@@ -14,7 +14,7 @@
       "country": "대한민국",
       "category": "경제 유튜브",
       "published_at": "2026-07-17T00:06:49+00:00",
-      "importance_score": 105
+      "importance_score": 100
     },
     {
       "id": "bb51bef53e4797b0",
@@ -27,7 +27,7 @@
       "country": "대한민국",
       "category": "경제 유튜브",
       "published_at": "2026-07-16T12:25:09+00:00",
-      "importance_score": 103
+      "importance_score": 100
     },
     {
       "id": "26fe5089f4f786a3",
@@ -121,18 +121,6 @@
       "importance_score": 63
     },
     {
-      "id": "11ef38f2b68fbffa",
-      "type": "news",
-      "title": "물가 둔화에 뉴욕증시 상승…SK하이닉스 ADR 27% 급등",
-      "description": "물가 둔화에 뉴욕증시 상승…SK하이닉스 ADR 27% 급등 산경투데이",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0xbExmQWFSYUttVDdwem9BcmdDakVNWk1yQkpfR2dPbmQxUThremhDZWRncTVMWnFrYW5pMlBuZXB5eGRWb3piYjBsWUszQlVySnprcVp4emEwNmJKUmNzcFd1YVdoUE1XVkEwM1NEQ1XSAXRBVV95cUxNazNIZ04zV1dhWmJnci1oUUxrYzV4cldQSEw4REZaRWJkQkxOMTBjUWpNTk1QYXlkODVjTmhTU09FWEpHUWd6ZkpneW5SdGJ5WEJnZDMtOU1fejYwU3VZamdxMEI4MXJhNlppQWtvRU80c2hJag?oc=5",
-      "source": "산경투데이",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-07-14T23:03:53+00:00",
-      "importance_score": 61
-    },
-    {
       "id": "6559ce31dd22a73b",
       "type": "youtube",
       "title": "홈플러스 빚잔치 메리츠 손에 달렸다 (언더스탠딩 김상훈 기자)",
@@ -208,42 +196,6 @@
       "category": "경제 유튜브",
       "published_at": "2026-07-14T00:17:08+00:00",
       "importance_score": 54
-    },
-    {
-      "id": "454b8eeb8f528578",
-      "type": "news",
-      "title": "[미국증시] 뉴욕증시 연준 충격 하루 만에 반등, 반도체지수 사상 최고",
-      "description": "[미국증시] 뉴욕증시 연준 충격 하루 만에 반등, 반도체지수 사상 최고 자본시장뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBYVmxNSk9xSGhEWVFzT2tfVmlQY3hiTFpzWURBR09DWDMyQ25XX1FDd0E1Q0lOeHpiUVFONXZtZkJwSVJrQVhaRFhOek56UElzcjNDbDViUk96UnVVaGVlS3k1TEZJSWM?oc=5",
-      "source": "자본시장뉴스",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-19T07:00:00+00:00",
-      "importance_score": 53
-    },
-    {
-      "id": "5ff32664d07b17e7",
-      "type": "news",
-      "title": "美 도매물가 둔화에 뉴욕증시 상승…빅테크 강세가 견인",
-      "description": "美 도매물가 둔화에 뉴욕증시 상승…빅테크 강세가 견인 산경투데이",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBSMjQxblVpc3dMQ1lvQmxDbXlzRUVPODhQZkM2SDZ5WXJlX1llTTdDa0RPci03UElwcktYU3ZjbGhySlZZbzhvUnFiNktSRTRFY3k1VVVxSXlYU2h6dFN5UDg3R2owY2NhZXZ2dEJLLVjSAXRBVV95cUxQOFRnUGszRC1mcEJ0RDJScGk4cWRzVWZMVHNWSmV3eTNTVmxVRk5fa0NjLU9iUGhTWEp5eG1PRjExUEE0Tkx4aVZTZWh3QWpGd0JOd0ZOTldMNzJRU0dmUHpNYjlJOEhuQ24zcnVJZDNtSkhQSg?oc=5",
-      "source": "산경투데이",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-07-15T22:56:23+00:00",
-      "importance_score": 52
-    },
-    {
-      "id": "dd9e98a22c417d55",
-      "type": "news",
-      "title": "물가 둔화 신호에 뉴욕증시 웃었다…다우·S&P500·나스닥 동반 상승",
-      "description": "물가 둔화 신호에 뉴욕증시 웃었다…다우·S&P500·나스닥 동반 상승 핀포인트뉴스",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9kTnUwMkpEdjlpRWpJQ2xBR1NiQ3dhR2xEQ3pXbmFHb3hfTWdvR2lCLTVVNklkT1hFTzNqa0tHTXlQSWt0OVhpVzNhRGlqSzF6bUh4QU5XclFBRnpxUkM4cm9CZFRnTUkyZ1g1VVpsbGtBYzDSAXdBVV95cUxQanNzMFh1X2NIdGNQY19WeU1nRWwwcUcwZlM3a0JFbXB6Zy1EY2FoeU5oY010UUxCRl9tTTNzQTZPTXF5UGlCS0VwT1VmcGZLMXJKR1R1YXladkFvTkJQQm1BUU5laW42dF9hZ2JBeFJfZEtvbHdQZw?oc=5",
-      "source": "핀포인트뉴스",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-07-15T21:28:40+00:00",
-      "importance_score": 52
     },
     {
       "id": "acfc216bbe6227f7",
@@ -362,18 +314,6 @@
       "importance_score": 50
     },
     {
-      "id": "e12eaab6265786c0",
-      "type": "news",
-      "title": "뉴욕증시, 물가안정 기대 모이며 상승 마감",
-      "description": "뉴욕증시, 물가안정 기대 모이며 상승 마감 세이프머니",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBsbmdSX0RKOGdPNXpLMDNnMHlnVnlqZDk5UmFBR0NvTEdWbDdLUlFJVlRadUVPS2RjYWdaRGEwaE1OMXprc1NsTHBicFNfS05RYjlzZ3JNWnBSbmNlRExtakpUczkwTmh6MTRfRWtn?oc=5",
-      "source": "세이프머니",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-07-15T05:32:40+00:00",
-      "importance_score": 49
-    },
-    {
       "id": "06e305bea4f62a03",
       "type": "youtube",
       "title": "캐나다 잠수함 한국 수주 불발 원인",
@@ -398,30 +338,6 @@
       "category": "경제 유튜브",
       "published_at": "2026-07-14T10:00:16+00:00",
       "importance_score": 48
-    },
-    {
-      "id": "2a2ab36334d90a82",
-      "type": "news",
-      "title": "호르무즈 긴장에 뉴욕증시 하락…유가 10% 급등·나스닥 1.55%↓",
-      "description": "호르무즈 긴장에 뉴욕증시 하락…유가 10% 급등·나스닥 1.55%↓ 산경투데이",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9DNUpsY1kzMjREdEZwZDVHNWtZRVdiYU9VbHJWRnBNR1RSaWVGUnRCSUtUU1gteVFOcDgtdG1GNmJHak9Rci1nQTUxMXRoM0hHV3JRVlBFbjlhdVdtallOVWZlTDhkc1ZQR19pcUsxREPSAXRBVV95cUxQMV82QWEzZU9lMDlzcUY4S2dYdkxXY2d6a3ZTR2FDMFBlZmhpU0tybXN1ZDdhdGJmN2lUMjZqRXpGRldnSEVLMlNlZzltOXJmQ25HZ2VYM0F4ZkhraEsxb3NyWHlXZ3NqeEppbjM0T2c2MVowMg?oc=5",
-      "source": "산경투데이",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-07-13T22:15:45+00:00",
-      "importance_score": 47
-    },
-    {
-      "id": "53d0e6a5f5cc7b7c",
-      "type": "news",
-      "title": "뉴욕증시, 반도체 랠리에 상승 마감…나스닥 1.91% 급등",
-      "description": "뉴욕증시, 반도체 랠리에 상승 마감…나스닥 1.91% 급등 산경투데이",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAwSEpVazYtLUV1UG04RzE2LU1JZ20xU0NlNTNyVURjQXJVbkJEMTExcHM5RXV6QkRxY1F6LXpncy1FVjd5dzFsLUl2Z1JpX19rT24tbVAtZDh0U1ZiSENld2N4d1d6REZndU5PV2FTenbSAXRBVV95cUxNYmZDQXltZURyUkxfR3hhMHV5MTdsaGRXTGJHbjBtWFE2c0M4T0RJRnZTSlBmaWFLQzhSNDMzZHFoWG5kRlFqalJkdjFhWmhjel9NOURmU1lFMGhGUEJSRVJwYXRCRGNCQ1A5TlhaMHdJbF8yeg?oc=5",
-      "source": "산경투데이",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-19T07:00:00+00:00",
-      "importance_score": 47
     },
     {
       "id": "8be157dc27419b09",
@@ -709,54 +625,6 @@
       "importance_score": 40
     },
     {
-      "id": "66cb06ee15dd8424",
-      "type": "news",
-      "title": "[MK시그널] 피플스 뱅코프 오브 노스 캐롤라이나 매도신호 포착, 수익률 34.7% 달성",
-      "description": "[MK시그널] 피플스 뱅코프 오브 노스 캐롤라이나 매도신호 포착, 수익률 34.7% 달성 매일경제 마켓",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBfajVRUW54eFFXU2RpWWxfSTk0SVd2T0ZJSUt0OFc3Y0FYbmIyZG9hN0VwQmhoR2xQT3BFb09wVDFrdFltbUpzNHdQNmdQRXVKVUE?oc=5",
-      "source": "매일경제 마켓",
-      "country": "미국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-14T01:11:18+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "7e9759fe9311bbb3",
-      "type": "news",
-      "title": "미국 뉴욕증시, 트럼프 '호르무즈 통행료' 방침에 일제히 다우존스·S&P500·나스닥지수 하락 마감",
-      "description": "미국 뉴욕증시, 트럼프 '호르무즈 통행료' 방침에 일제히 다우존스·S&P500·나스닥지수 하락 마감 한국강사신문",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ZYS1taUVrWU1oUkxrdHVEU1Jqekw2Z3AzSC15eGd3cUhNVERHallkXzlmWm1HMnJxNlhJQWJIZk10NkdaZFdValIyUFJrd2JDbTViWHJYbXdxM0k4aVA2NXdIYUxPR1A5XzhPbW52N1E?oc=5",
-      "source": "한국강사신문",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-07-13T21:49:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "bdfe44fb6ca8455d",
-      "type": "news",
-      "title": "부동산 시장 글로벌 예측 2026-2035",
-      "description": "부동산 시장 글로벌 예측 2026-2035 Business Research Insights",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaTA5U0pST08xeHBZdkRGbkxYQkM1RzBreDlPRHI4dnZPV3ZkZXBuUW92OHZoaFV4dHZsaUc4NE1Jd2JvSWxJR2FIcC1na2VoZHNIWC02R3h2OFVRYzN2WUVNempQWmhfWXBCcnJ2LTR6U25FcU1nZ1BvNFBtLVgxZ1N4Wml2cVQ1S3ozcQ?oc=5",
-      "source": "Business Research Insights",
-      "country": "미국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-09T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "81196aded5ccefa4",
-      "type": "news",
-      "title": "[뉴욕증시] 빅테크 약세가 반도체 낙관론 압도하며 나스닥·S&P500하락",
-      "description": "[뉴욕증시] 빅테크 약세가 반도체 낙관론 압도하며 나스닥·S&P500하락 뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4zdmRUOVhzXzVQb3JMTDlDLUZ3dXRheWtOLVJjUl8yb0RmQmV3RmhicEJaTkIxbUI2aWtTRkFteEw4T0UyODhQZUdhbmxCUTVMaUx5VTRYOTFIYWZt?oc=5",
-      "source": "뉴스핌",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-26T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
       "id": "e13836d012f6d20f",
       "type": "news",
       "title": "[현장에서] '착공' 내세운 국토부, 현장 지연엔 \"정상적 시차\"",
@@ -769,30 +637,6 @@
       "importance_score": 35
     },
     {
-      "id": "2acbaf56acb6a1a0",
-      "type": "news",
-      "title": "뉴욕 증시 3대 지수 일제히 하락…나스닥, 2% 넘게 뚝",
-      "description": "뉴욕 증시 3대 지수 일제히 하락…나스닥, 2% 넘게 뚝 조선일보",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZXBXTDNrRm5oZUNUallxZ3JXN3ZWTHc0S1BrUTZSYWduSm40c3owSzdkcDJjeWFVQzg4VWVOeDFEbWo2VnNQbFBmV3N1YVhUaExNRThJYkMxOS05S1ktS3Zra3RzRFdiQnUxaVhhMm1iTzVIcm91NmJ2MThiMWltODhKaVJXQmVWdjFxMHBIa3VOLUpVYzhVZGdPMTZ3Zw?oc=5",
-      "source": "조선일보",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-24T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "e23a35aea5116a57",
-      "type": "news",
-      "title": "✅6/24(수) 관심종목 & 전략",
-      "description": "✅6/24(수) 관심종목 & 전략 네이버 프리미엄콘텐츠",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQU1ZDRkhrNGpLTWIyNF9ZUGtJdEtPQTE1RXg1dkxnMENKdjE4WjloVXVObzlkYkxucG5fbEhmcUNaRV9ETERnZ2xONFV1RUt6cFdkX05tYm5mQ3ZFUHZUOVM2cHduc25Pc00tMlRpWWh5VFJRZFppeldYRkgzOF9wMVg4YTZLOXNQZ3ZV?oc=5",
-      "source": "네이버 프리미엄콘텐츠",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-24T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
       "id": "fdf5e8ad78015c06",
       "type": "news",
       "title": "전쟁 끝나자마자 움직였다…대우건설, 중동 재건시장 겨냥",
@@ -802,54 +646,6 @@
       "country": "대한민국",
       "category": "건설·부동산",
       "published_at": "2026-06-23T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "5f4b310c155831e3",
-      "type": "news",
-      "title": "[뉴욕증시 마감] 빅테크 약세에 나스닥 1.3% 하락…다우는 상승",
-      "description": "[뉴욕증시 마감] 빅테크 약세에 나스닥 1.3% 하락…다우는 상승 아주경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1KX29VM3JObkI5N01URVpzcXJnMnZkSktKTDBoaVFhV2NxbUdLbXpNSExCZ3RoX0N2dUNROHI2RHZBY04yX05SckF5OEpaOXdJS1BOVDhuRVJLd9IBWEFVX3lxTFBkcWl5eXBHSnBrNHZlaUdMMHp5OG51ZVRHMFhxX3JnMFVnOGFpbzB5aXVjSWRHcWFrVUhtU2Q0ZUFibmgxS28ycmtTTFJKNlZPcUhJM3J1NEI?oc=5",
-      "source": "아주경제",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-23T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "116cebf422d579f2",
-      "type": "news",
-      "title": "[미장 브리핑] 뉴욕증시, 다우 강세... S&P 500·나스닥 기술주 약세",
-      "description": "[미장 브리핑] 뉴욕증시, 다우 강세... S&P 500·나스닥 기술주 약세 센머니",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5wR0NDRWlobVVvYUpJVlZPRnpMYzFfWGVZQWhER3ZkdTBpMUNKemFhb2JHWEJWZTNJbkJScTFnS2ZoMW94MzFzd1dCaW83Vm1BMThjd0RFUm1WVUhUc0xkYWNxN0tKUlBsbnBPNg?oc=5",
-      "source": "센머니",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-23T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "397ca135bd60fca1",
-      "type": "news",
-      "title": "반도체 훈풍에 코스피 장중 최고치…금리 부담에 9060선 후퇴",
-      "description": "반도체 훈풍에 코스피 장중 최고치…금리 부담에 9060선 후퇴 mstoday.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAwczlTbTFlYmlCWkZPQkpJZEd5YlNHTmpyYzNGWlBhTkJBS1NIMjFaU0FDZXp0b3BHVjhscy1pZEdNSDlZN3hTdHhadEhNSVBfcUdfSnpOT0VXb0VxTU1Vemd0TzhfemtVbWVubA?oc=5",
-      "source": "mstoday.co.kr",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-19T07:00:00+00:00",
-      "importance_score": 35
-    },
-    {
-      "id": "4e9f26b6d1d7459a",
-      "type": "news",
-      "title": "[미국 뉴욕증시] 반도체주 강세에 일제히 상승…다우존스·S&P500·나스닥지수 상승 마감",
-      "description": "[미국 뉴욕증시] 반도체주 강세에 일제히 상승…다우존스·S&P500·나스닥지수 상승 마감 한국강사신문",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9WYWp5RkJIRlZOakpEcnVGZFRoT19SR0F4U0R6WkRuS3cwRWplakFjcWZ0ZDR4cnRpUnAxX2FxeU5sVzFESEwyYXktbWZlWHQ0eVhzM010d1NlV2paQU5HamVlSkpoOUpDczQ3VDg2bE8?oc=5",
-      "source": "한국강사신문",
-      "country": "미국",
-      "category": "금융시장",
-      "published_at": "2026-06-19T07:00:00+00:00",
       "importance_score": 35
     }
   ]
