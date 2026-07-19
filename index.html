@@ -33,12 +33,6 @@
         <button class="period-tab active" data-quick-period="7"><strong>주간 베스트</strong><span>최근 7일</span></button>
       </div>
       <p id="briefText" class="brief-text">데이터를 불러오는 중입니다.</p>
-      <div class="summary-grid">
-        <article><span>전체</span><strong id="totalCount">0</strong></article>
-        <article><span>24시간</span><strong id="dailyCount">0</strong></article>
-        <article><span>국내 뉴스</span><strong id="koreaCount">0</strong></article>
-        <article><span>YouTube</span><strong id="youtubeCount">0</strong></article>
-      </div>
     </section>
 
     <section class="investment-briefing" id="investmentBriefing">
@@ -104,6 +98,13 @@
       <section id="newsGrid" class="news-grid" aria-live="polite"></section>
       <div id="emptyState" class="empty-state" hidden>조건에 맞는 콘텐츠가 없습니다.</div>
       <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
+
+      <div class="summary-grid monitoring-summary-grid" aria-label="기사·영상 수집 현황">
+        <article><span>전체</span><strong id="totalCount">0</strong></article>
+        <article><span>24시간</span><strong id="dailyCount">0</strong></article>
+        <article><span>국내 뉴스</span><strong id="koreaCount">0</strong></article>
+        <article><span>YouTube</span><strong id="youtubeCount">0</strong></article>
+      </div>
     </section>
 
     <section class="source-section" id="sources">
