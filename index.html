@@ -77,22 +77,9 @@
         <button id="resetButton" class="reset-button" type="button">필터 초기화</button>
       </div>
 
-      <section class="control-panel" aria-label="콘텐츠 필터">
-        <div class="filter-line">
-          <span class="filter-label">콘텐츠</span>
-          <div class="button-group" id="typeFilters">
-            <button class="filter-button active" data-type="all">전체</button>
-            <button class="filter-button" data-type="news">뉴스</button>
-            <button class="filter-button" data-type="youtube">YouTube</button>
-          </div>
-        </div>
-        <div class="filter-line">
-          <span class="filter-label">기간</span>
-          <div class="button-group" id="periodFilters">
-            <button class="filter-button" data-period="1">일간 베스트</button>
-            <button class="filter-button active" data-period="7">주간 베스트</button>
-          </div>
-        </div>
+      <section class="control-panel" aria-label="기사·영상 분야 및 검색 필터">
+        <div id="typeFilters" hidden></div>
+        <div id="periodFilters" hidden></div>
         <div class="filter-line wide">
           <span class="filter-label">분야</span>
           <div class="button-group" id="categoryFilters">
