@@ -29,8 +29,8 @@
   <main class="container">
     <section class="summary-section" id="brief">
       <div class="period-tabs" id="quickPeriods">
-        <button class="period-tab" data-quick-period="1"><strong>일간 베스트 <span class="count-badge" id="dailyBestCount">0</span></strong><span>최근 24시간</span></button>
-        <button class="period-tab active" data-quick-period="7"><strong>주간 베스트 <span class="count-badge" id="weeklyBestCount">0</span></strong><span>최근 7일</span></button>
+        <button class="period-tab active" data-quick-period="1"><strong>일간 베스트 <span class="count-badge" id="dailyBestCount">0</span></strong><span>최근 24시간</span></button>
+        <button class="period-tab" data-quick-period="7"><strong>주간 베스트 <span class="count-badge" id="weeklyBestCount">0</span></strong><span>최근 7일</span></button>
       </div>
       <p id="briefText" class="brief-text" hidden></p>
     </section>
@@ -38,7 +38,7 @@
     <section class="investment-briefing" id="investmentBriefing">
       <div class="section-heading briefing-heading">
         <div><p class="section-kicker">MARKET BRIEFING</p><h2>주식시장 전망·종목 브리핑</h2></div>
-        <span id="briefingPeriod" class="analysis-period">최근 7일 기준</span>
+        <span id="briefingPeriod" class="analysis-period">최근 24시간 기준</span>
       </div>
       <p class="briefing-disclaimer">수집 뉴스의 제목·요약을 규칙 기반으로 분석한 참고 신호입니다. 실제 매매 전 기업공시, 실적, 밸류에이션과 가격 흐름을 추가 확인하십시오.</p>
       <div class="market-outlook-card">
@@ -136,5 +136,6 @@
   <script src="app.js" defer></script>
   <script src="priority-sort.js" defer></script>
   <script src="count-badges.js" defer></script>
+  <script src="default-daily.js" defer></script>
 </body>
 </html>
