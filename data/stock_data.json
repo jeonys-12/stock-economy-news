@@ -1,10 +1,23 @@
 {
-  "updated_at": "2026-07-19T23:38:42.805020+09:00",
+  "updated_at": "2026-07-20T05:41:57.832051+09:00",
+  "source_status": {
+    "opendart": {
+      "configured": true,
+      "status": "ok",
+      "corp_code_count": 3977
+    },
+    "fnguide": {
+      "mode": "optional_html_with_cache",
+      "cache_days": 7,
+      "cached_stocks_reused": 0
+    }
+  },
   "methodology": {
     "description": "OpenDART 재무, FnGuide 공개 컨센서스, KRX 가격·밸류에이션·외국인/기관 수급을 결합한 보조 점수",
     "buy_review_threshold": 15,
     "sell_review_threshold": -15,
     "minimum_dimensions": 2,
+    "fnguide_policy": "공개 HTML은 선택적 보조 데이터이며 실패 시 이전 정상 데이터를 최대 7일간 재사용합니다.",
     "notice": "업종별 적정 밸류에이션 차이를 완전히 반영하지 못하므로 최종 매매 판단이 아닙니다."
   },
   "stocks": {
@@ -24,25 +37,44 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:40:40.495440+09:00",
+        "assets": 633339604000000.0,
+        "assets_growth_pct": 11.71,
+        "equity": 486635976000000.0,
+        "equity_growth_pct": 11.53,
+        "liabilities": 146703628000000.0,
+        "liabilities_growth_pct": 12.31,
+        "operating_profit": 57232797000000.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 133873444000000.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 30.15
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:40:42.761167+09:00"
       },
       "quantitative": {
-        "score": -1,
+        "score": 2,
         "components": {
-          "financials": 0,
+          "financials": 3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": -1
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -62,25 +94,44 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:40:46.627194+09:00",
+        "assets": 222828744000000.0,
+        "assets_growth_pct": 26.53,
+        "equity": 164379799000000.0,
+        "equity_growth_pct": 36.23,
+        "liabilities": 58448945000000.0,
+        "liabilities_growth_pct": 5.43,
+        "operating_profit": 37610283000000.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 52576287000000.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 35.56
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:40:48.924234+09:00"
       },
       "quantitative": {
-        "score": -6,
+        "score": -3,
         "components": {
-          "financials": 0,
+          "financials": 3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": -6
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -100,14 +151,33 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:40:52.520670+09:00",
+        "assets": 383834207000000.0,
+        "assets_growth_pct": 4.06,
+        "equity": 132226735000000.0,
+        "equity_growth_pct": 3.59,
+        "liabilities": 251607472000000.0,
+        "liabilities_growth_pct": 4.32,
+        "operating_profit": 2514686000000.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 45938886000000.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 190.28
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:40:54.259597+09:00"
       },
       "quantitative": {
         "score": -7,
@@ -118,7 +188,7 @@
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -138,25 +208,46 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:40:57.710805+09:00",
+        "assets": 105359955000000.0,
+        "assets_growth_pct": 6.45,
+        "equity": 61638039000000.0,
+        "equity_growth_pct": 0.73,
+        "liabilities": 43721916000000.0,
+        "liabilities_growth_pct": 15.7,
+        "operating_profit": 2205091000000.0,
+        "operating_profit_growth_pct": null,
+        "net_income": 1830207000000.0,
+        "net_income_growth_pct": null,
+        "revenue": 29501881000000.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 70.93
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:40:59.547446+09:00"
       },
       "quantitative": {
-        "score": 0,
+        "score": 3,
         "components": {
-          "financials": 0,
+          "financials": 3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": 0
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -176,14 +267,26 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:03.132937+09:00",
+        "assets": 56659594923000.0,
+        "assets_growth_pct": 5.02,
+        "operating_profit": 638892160000.0,
+        "operating_profit_growth_pct": null
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:04.839619+09:00"
       },
       "quantitative": {
         "score": -7,
@@ -194,7 +297,7 @@
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -214,14 +317,33 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:08.425016+09:00",
+        "assets": 27577187358000.0,
+        "assets_growth_pct": 5.41,
+        "equity": 9713237014000.0,
+        "equity_growth_pct": 3.98,
+        "liabilities": 17863950344000.0,
+        "liabilities_growth_pct": 6.2,
+        "operating_profit": 905385908000.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 5916331790000.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 183.91
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:10.011521+09:00"
       },
       "quantitative": {
         "score": -4,
@@ -232,7 +354,7 @@
           "flow": 0,
           "momentum": -4
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -252,25 +374,44 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:13.573231+09:00",
+        "assets": 16568722984124.0,
+        "assets_growth_pct": 10.84,
+        "equity": 4455492782205.0,
+        "equity_growth_pct": 8.8,
+        "liabilities": 12113230201919.0,
+        "liabilities_growth_pct": 11.6,
+        "operating_profit": 273118473369.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 2902250597972.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 271.87
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:14.693138+09:00"
       },
       "quantitative": {
-        "score": -7,
+        "score": -10,
         "components": {
-          "financials": 0,
+          "financials": -3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -290,25 +431,44 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:18.279114+09:00",
+        "assets": 108345622758072.0,
+        "assets_growth_pct": 3.0,
+        "equity": 63393155104641.0,
+        "equity_growth_pct": 1.63,
+        "liabilities": 44952467653431.0,
+        "liabilities_growth_pct": 4.99,
+        "operating_profit": 706831933233.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 17876106277867.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 70.91
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005490&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:19.567307+09:00"
       },
       "quantitative": {
-        "score": -7,
+        "score": -4,
         "components": {
-          "financials": 0,
+          "financials": 3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -328,14 +488,31 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:22.931914+09:00",
+        "assets": 71805610000000.0,
+        "assets_growth_pct": 6.94,
+        "equity": 29916304000000.0,
+        "equity_growth_pct": 2.03,
+        "liabilities": 41889306000000.0,
+        "liabilities_growth_pct": 10.74,
+        "operating_profit": -207755000000.0,
+        "operating_profit_growth_pct": null,
+        "debt_ratio_pct": 140.02
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:24.690953+09:00"
       },
       "quantitative": {
         "score": -7,
@@ -346,7 +523,7 @@
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -366,14 +543,26 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:28.332890+09:00",
+        "equity": 24909922230108.0,
+        "equity_growth_pct": 5.68,
+        "revenue": 3576353183422.0,
+        "revenue_growth_pct": null
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006400&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:29.581885+09:00"
       },
       "quantitative": {
         "score": -7,
@@ -384,7 +573,7 @@
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -404,25 +593,44 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:32.705278+09:00",
+        "assets": 44914004920132.0,
+        "assets_growth_pct": 9.32,
+        "equity": 30930035783908.0,
+        "equity_growth_pct": 6.83,
+        "liabilities": 13983969136224.0,
+        "liabilities_growth_pct": 15.27,
+        "operating_profit": 541757341691.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 3241061102900.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 45.21
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035420&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:33.955848+09:00"
       },
       "quantitative": {
-        "score": -4,
+        "score": -1,
         "components": {
-          "financials": 0,
+          "financials": 3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": -4
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -442,25 +650,46 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:37.580382+09:00",
+        "assets": 28802759972472.0,
+        "assets_growth_pct": 3.67,
+        "equity": 15420486660552.0,
+        "equity_growth_pct": 1.28,
+        "liabilities": 13382273311920.0,
+        "liabilities_growth_pct": 6.56,
+        "operating_profit": 211397661586.0,
+        "operating_profit_growth_pct": null,
+        "net_income": 226836078738.0,
+        "net_income_growth_pct": null,
+        "revenue": 1942077123047.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 86.78
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:38.573490+09:00"
       },
       "quantitative": {
-        "score": -3,
+        "score": 0,
         "components": {
-          "financials": 0,
+          "financials": 3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": -3
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -480,25 +709,42 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:42.152941+09:00",
+        "assets": 829740827000000.0,
+        "assets_growth_pct": 3.99,
+        "equity": 61140136000000.0,
+        "equity_growth_pct": 0.51,
+        "liabilities": 768600691000000.0,
+        "liabilities_growth_pct": 4.27,
+        "operating_profit": 2727566000000.0,
+        "operating_profit_growth_pct": null,
+        "debt_ratio_pct": 1257.11
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A105560&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:43.400239+09:00"
       },
       "quantitative": {
-        "score": 8,
+        "score": 5,
         "components": {
-          "financials": 0,
+          "financials": -3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": 8
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -518,25 +764,42 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:47.179625+09:00",
+        "assets": 816718546000000.0,
+        "assets_growth_pct": 3.91,
+        "equity": 61474363000000.0,
+        "equity_growth_pct": 1.83,
+        "liabilities": 755244183000000.0,
+        "liabilities_growth_pct": 4.08,
+        "operating_profit": 2154453000000.0,
+        "operating_profit_growth_pct": null,
+        "debt_ratio_pct": 1228.55
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:48.178366+09:00"
       },
       "quantitative": {
-        "score": 8,
+        "score": 5,
         "components": {
-          "financials": 0,
+          "financials": -3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": 8
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -556,14 +819,33 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:51.641423+09:00",
+        "assets": 28405874000000.0,
+        "assets_growth_pct": 1.06,
+        "equity": 11028599000000.0,
+        "equity_growth_pct": 5.68,
+        "liabilities": 17377275000000.0,
+        "liabilities_growth_pct": -1.67,
+        "operating_profit": 180890000000.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 6281265000000.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 157.57
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:52.770137+09:00"
       },
       "quantitative": {
         "score": -7,
@@ -574,7 +856,7 @@
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     },
@@ -594,46 +876,47 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "unavailable",
-        "reason": "DART 고유번호 또는 API 키 없음",
-        "source": "OpenDART"
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T05:41:56.001592+09:00",
+        "assets": 14078103092832.0,
+        "assets_growth_pct": 5.39,
+        "equity": 3727659217429.0,
+        "equity_growth_pct": 7.28,
+        "liabilities": 10350443875403.0,
+        "liabilities_growth_pct": 4.72,
+        "operating_profit": 255631837181.0,
+        "operating_profit_growth_pct": null,
+        "revenue": 1951410038476.0,
+        "revenue_growth_pct": null,
+        "debt_ratio_pct": 277.67
       },
       "consensus": {
-        "status": "failed",
-        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A047040&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
-        "source": "FnGuide CompanyGuide"
+        "status": "ok",
+        "target_price": null,
+        "target_upside_pct": null,
+        "opinion": "목표주가",
+        "analyst_count": null,
+        "source": "FnGuide CompanyGuide",
+        "source_url": "https://wcomp.fnguide.com",
+        "fetched_at": "2026-07-20T05:41:57.581674+09:00"
       },
       "quantitative": {
-        "score": -7,
+        "score": -10,
         "components": {
-          "financials": 0,
+          "financials": -3,
           "consensus": 0,
           "valuation": 0,
           "flow": 0,
           "momentum": -7
         },
-        "available_dimensions": 1,
+        "available_dimensions": 3,
         "signal": "중립"
       }
     }
   },
-  "errors": [
-    "OPENDART_API_KEY 미설정",
-    "삼성전자 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764af30>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "SK하이닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d776216a0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "현대차 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77649be0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "기아 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77620fe0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "한화에어로스페이스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764b470>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "HD현대중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77621a90>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "삼성중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764a450>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "POSCO홀딩스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005490&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77620860>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "LG에너지솔루션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77649850>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "삼성SDI FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006400&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d776332f0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "NAVER FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035420&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764b140>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "카카오 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7760d6d0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "KB금융 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A105560&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d776200e0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "신한지주 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7760cb30>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "현대건설 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77630980>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
-    "대우건설 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A047040&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77649ee0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))"
-  ]
+  "errors": []
 }
