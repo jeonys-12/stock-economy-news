@@ -44,7 +44,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Collect news
+        env:
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
         run: python scripts/collect_news.py
+
+      - name: Generate OpenAI market briefing
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-5-mini
+        run: python scripts/generate_ai_briefing.py
 
       - name: Commit updated news data
         run: |
