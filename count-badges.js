@@ -17,6 +17,12 @@ function updateCountBadges(){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
+  if(!document.querySelector('link[href="count-badges.css"]')){
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='count-badges.css';
+    document.head.appendChild(link);
+  }
   updateCountBadges();
   const updatedAt=document.querySelector('#updatedAt');
   if(updatedAt)new MutationObserver(()=>updateCountBadges()).observe(updatedAt,{childList:true,subtree:true});
