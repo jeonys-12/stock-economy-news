@@ -11,6 +11,7 @@ from openai import OpenAI
 
 KST = timezone(timedelta(hours=9))
 DATA_FILE = Path("data/news.json")
+STOCK_DATA_FILE = Path("data/stock_data.json")
 MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini").strip() or "gpt-5-mini"
 MAX_INPUT_ITEMS = 35
 WATCHLIST = [
@@ -38,7 +39,6 @@ def select_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         ),
         reverse=True,
     )
-
     selected: list[dict[str, Any]] = []
     source_counts: dict[str, int] = {}
     for item in recent:
@@ -71,21 +71,77 @@ def build_news_text(items: list[dict[str, Any]]) -> str:
     return "\n\n".join(rows)
 
 
-def prompt_for(items: list[dict[str, Any]]) -> str:
+def compact_stock_data(stock_payload: dict[str, Any]) -> dict[str, Any]:
+    compact: dict[str, Any] = {}
+    for name, row in stock_payload.get("stocks", {}).items():
+        if name not in WATCHLIST or not isinstance(row, dict):
+            continue
+        market = row.get("market", {}) if isinstance(row.get("market"), dict) else {}
+        financials = row.get("financials", {}) if isinstance(row.get("financials"), dict) else {}
+        consensus = row.get("consensus", {}) if isinstance(row.get("consensus"), dict) else {}
+        quantitative = row.get("quantitative", {}) if isinstance(row.get("quantitative"), dict) else {}
+        compact[name] = {
+            "code": row.get("code"),
+            "sector": row.get("sector"),
+            "quantitative": quantitative,
+            "market": {
+                "status": market.get("status"),
+                "as_of": market.get("as_of"),
+                "current_price": market.get("current_price"),
+                "return_5d_pct": market.get("return_5d_pct"),
+                "return_20d_pct": market.get("return_20d_pct"),
+                "return_60d_pct": market.get("return_60d_pct"),
+                "valuation": market.get("valuation", {}),
+                "investor_flow": market.get("investor_flow", {}),
+            },
+            "financials": {
+                "status": financials.get("status"),
+                "business_year": financials.get("business_year"),
+                "report_name": financials.get("report_name"),
+                "revenue": financials.get("revenue"),
+                "revenue_growth_pct": financials.get("revenue_growth_pct"),
+                "operating_profit": financials.get("operating_profit"),
+                "operating_profit_growth_pct": financials.get("operating_profit_growth_pct"),
+                "net_income": financials.get("net_income"),
+                "net_income_growth_pct": financials.get("net_income_growth_pct"),
+                "debt_ratio_pct": financials.get("debt_ratio_pct"),
+            },
+            "consensus": {
+                "status": consensus.get("status"),
+                "target_price": consensus.get("target_price"),
+                "target_upside_pct": consensus.get("target_upside_pct"),
+                "opinion": consensus.get("opinion"),
+                "analyst_count": consensus.get("analyst_count"),
+            },
+        }
+    return compact
+
+
+def prompt_for(items: list[dict[str, Any]], stock_data: dict[str, Any]) -> str:
     now = datetime.now(KST).isoformat(timespec="minutes")
     return f"""
 현재 시각은 {now}입니다. 당신은 한국 주식시장 리서치팀의 보조 분석가입니다.
-아래에 제공된 공개 뉴스 제목과 요약만을 근거로, 최근 24시간과 최근 7일 브리핑을 각각 작성하십시오.
+아래 공개 뉴스와 정량 데이터를 함께 사용해 최근 24시간 및 최근 7일 브리핑을 각각 작성하십시오.
+
+정량 데이터 구성:
+- OpenDART: 최근 연결재무제표의 매출·영업이익·순이익·부채비율과 전년 동기 증감률
+- FnGuide CompanyGuide 공개 화면: 투자의견·목표주가·상승여력·추정기관 수
+- KRX/pykrx: 현재가, 5·20·60거래일 수익률, PER·PBR·배당수익률, 최근 약 10거래일 외국인·기관 순매수
+- quantitative.score: 위 데이터로 계산한 보조 점수. 15 이상은 긍정, -15 이하는 부정, 그 사이는 중립
 
 필수 원칙:
-- 제공되지 않은 주가, 재무수치, 목표주가, 밸류에이션, 사건을 추정하거나 만들어내지 마십시오.
-- 사실과 해석을 구분하고, 상반된 신호와 반대 시나리오를 함께 반영하십시오.
-- 종목 의견은 아래 WATCHLIST에 포함된 종목만 허용합니다.
-- 종목과 직접 연결되는 근거가 부족하면 추천 목록에 넣지 마십시오.
+- 제공되지 않은 수치, 목표주가, 사건을 추정하거나 만들어내지 마십시오.
+- 뉴스만 긍정적이거나 정량 데이터만 긍정적인 경우 추천하지 말고 상충 신호로 설명하십시오.
+- 관심·분할매수 검토는 quantitative.score가 15 이상이고 available_dimensions가 2 이상이며, 해당 종목의 직접 뉴스 근거가 있을 때만 허용합니다.
+- 비중 축소·매도 검토는 quantitative.score가 -15 이하이고 available_dimensions가 2 이상이며, 해당 종목의 직접 뉴스 근거가 있을 때만 허용합니다.
+- 각 후보 reason에는 재무, 컨센서스, 밸류에이션, 수급, 모멘텀 중 확보된 근거를 최소 2개 명시하십시오.
+- 단순 저PER·저PBR만으로 매수 후보를 만들지 말고 이익 추세 및 수급과 함께 판단하십시오.
+- 목표주가 상승여력이 높아도 실적 악화나 외국인·기관 동반 순매도이면 위험을 명시하십시오.
+- 급등 종목은 추격매수 위험을, 급락 종목은 가치함정 가능성을 반대 시나리오로 검토하십시오.
+- 종목 의견은 WATCHLIST에 포함된 종목만 허용합니다.
 - 매수·매도 확정 지시가 아니라 '관심·분할매수 검토'와 '비중 축소·매도 검토'로 표현하십시오.
 - 각 핵심 근거와 종목 의견에는 반드시 실제 뉴스 ID를 evidence_ids에 넣으십시오.
-- 동일 이슈를 여러 매체가 반복 보도한 경우 하나의 근거로 묶으십시오.
-- confidence는 0~100 정수이며 자료의 양, 출처 신뢰도, 신호 일관성을 반영하십시오.
+- confidence는 자료 가용성, 출처 신뢰도, 뉴스와 정량 신호의 일관성을 반영하십시오.
 - 출력은 설명이나 마크다운 없이 유효한 JSON 객체 하나만 반환하십시오.
 
 WATCHLIST:
@@ -99,8 +155,8 @@ JSON 형식:
     "summary": "3~5문장의 균형 잡힌 요약",
     "confidence": 0,
     "drivers": [{{"sentiment":"긍정|부정|중립","title":"핵심 근거","evidence_ids":["뉴스ID"]}}],
-    "buy_candidates": [{{"name":"종목명","code":"종목코드 또는 빈 문자열","sector":"업종","reason":"검토 이유","risk":"반대 시나리오 또는 위험","evidence_ids":["뉴스ID"]}}],
-    "sell_candidates": [{{"name":"종목명","code":"종목코드 또는 빈 문자열","sector":"업종","reason":"축소 검토 이유","risk":"반대 시나리오 또는 확인사항","evidence_ids":["뉴스ID"]}}],
+    "buy_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
+    "sell_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
     "risks": ["핵심 리스크"],
     "checks": ["투자 전 추가 확인사항"]
   }},
@@ -110,12 +166,15 @@ JSON 형식:
     "summary": "3~5문장의 균형 잡힌 요약",
     "confidence": 0,
     "drivers": [{{"sentiment":"긍정|부정|중립","title":"핵심 근거","evidence_ids":["뉴스ID"]}}],
-    "buy_candidates": [{{"name":"종목명","code":"종목코드 또는 빈 문자열","sector":"업종","reason":"검토 이유","risk":"반대 시나리오 또는 위험","evidence_ids":["뉴스ID"]}}],
-    "sell_candidates": [{{"name":"종목명","code":"종목코드 또는 빈 문자열","sector":"업종","reason":"축소 검토 이유","risk":"반대 시나리오 또는 확인사항","evidence_ids":["뉴스ID"]}}],
+    "buy_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
+    "sell_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
     "risks": ["핵심 리스크"],
     "checks": ["투자 전 추가 확인사항"]
   }}
 }}
+
+종목 정량 데이터:
+{json.dumps(compact_stock_data(stock_data), ensure_ascii=False)}
 
 뉴스 자료:
 {build_news_text(items)}
@@ -130,8 +189,9 @@ def extract_json(text: str) -> dict[str, Any]:
     return json.loads(cleaned)
 
 
-def normalize_briefing(raw: dict[str, Any], items: list[dict[str, Any]]) -> dict[str, Any]:
+def normalize_briefing(raw: dict[str, Any], items: list[dict[str, Any]], stock_data: dict[str, Any]) -> dict[str, Any]:
     item_map = {str(item.get("id", "")): item for item in items if item.get("id")}
+    stock_map = stock_data.get("stocks", {}) if isinstance(stock_data.get("stocks"), dict) else {}
     allowed_names = set(WATCHLIST)
 
     def evidence_links(ids: Any) -> list[dict[str, str]]:
@@ -146,6 +206,14 @@ def normalize_briefing(raw: dict[str, Any], items: list[dict[str, Any]]) -> dict
                     "source": str(item.get("source", "")),
                 })
         return result[:3]
+
+    def candidate_allowed(name: str, key: str) -> tuple[bool, dict[str, Any]]:
+        row = stock_map.get(name, {}) if isinstance(stock_map.get(name), dict) else {}
+        quantitative = row.get("quantitative", {}) if isinstance(row.get("quantitative"), dict) else {}
+        score = float(quantitative.get("score", 0) or 0)
+        dimensions = int(quantitative.get("available_dimensions", 0) or 0)
+        threshold_ok = score >= 15 if key == "buy_candidates" else score <= -15
+        return dimensions >= 2 and threshold_ok, row
 
     def normalize_period(value: Any) -> dict[str, Any]:
         value = value if isinstance(value, dict) else {}
@@ -177,28 +245,40 @@ def normalize_briefing(raw: dict[str, Any], items: list[dict[str, Any]]) -> dict
                     continue
                 name = str(candidate.get("name", "")).strip()
                 evidence = evidence_links(candidate.get("evidence_ids"))
-                if name not in allowed_names or not evidence:
+                allowed, row = candidate_allowed(name, key)
+                if name not in allowed_names or not evidence or not allowed:
                     continue
+                quantitative = row.get("quantitative", {})
+                market = row.get("market", {})
                 result.append({
                     "name": name,
-                    "code": str(candidate.get("code", ""))[:12],
-                    "sector": str(candidate.get("sector", ""))[:30],
-                    "reason": str(candidate.get("reason", ""))[:300],
-                    "risk": str(candidate.get("risk", ""))[:240],
+                    "code": str(row.get("code") or candidate.get("code", ""))[:12],
+                    "sector": str(row.get("sector") or candidate.get("sector", ""))[:30],
+                    "reason": str(candidate.get("reason", ""))[:420],
+                    "risk": str(candidate.get("risk", ""))[:300],
                     "evidence": evidence,
+                    "quantitative_score": quantitative.get("score"),
+                    "score_components": quantitative.get("components", {}),
+                    "data_dimensions": quantitative.get("available_dimensions", 0),
+                    "metrics": {
+                        "current_price": market.get("current_price"),
+                        "return_20d_pct": market.get("return_20d_pct"),
+                        "per": market.get("valuation", {}).get("per") if isinstance(market.get("valuation"), dict) else None,
+                        "pbr": market.get("valuation", {}).get("pbr") if isinstance(market.get("valuation"), dict) else None,
+                    },
                 })
             return result[:5]
 
         return {
             "signal": signal,
-            "title": str(value.get("title", "뉴스 흐름을 종합한 시장 전망"))[:180],
-            "summary": str(value.get("summary", "분석 결과가 충분하지 않습니다."))[:900],
+            "title": str(value.get("title", "뉴스와 정량지표를 종합한 시장 전망"))[:180],
+            "summary": str(value.get("summary", "분석 결과가 충분하지 않습니다."))[:1000],
             "confidence": confidence,
             "drivers": drivers[:4],
             "buy_candidates": candidates("buy_candidates"),
             "sell_candidates": candidates("sell_candidates"),
-            "risks": [str(x)[:80] for x in value.get("risks", []) if str(x).strip()][:6],
-            "checks": [str(x)[:120] for x in value.get("checks", []) if str(x).strip()][:5],
+            "risks": [str(x)[:100] for x in value.get("risks", []) if str(x).strip()][:6],
+            "checks": [str(x)[:140] for x in value.get("checks", []) if str(x).strip()][:6],
         }
 
     return {
@@ -206,7 +286,8 @@ def normalize_briefing(raw: dict[str, Any], items: list[dict[str, Any]]) -> dict
         "weekly": normalize_period(raw.get("weekly")),
         "model": MODEL,
         "generated_at": datetime.now(KST).isoformat(),
-        "analysis_type": "openai",
+        "analysis_type": "openai_multifactor",
+        "methodology": stock_data.get("methodology", {}),
     }
 
 
@@ -215,8 +296,16 @@ def main() -> None:
         raise SystemExit("data/news.json not found")
 
     payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    stock_data = json.loads(STOCK_DATA_FILE.read_text(encoding="utf-8")) if STOCK_DATA_FILE.exists() else {"stocks": {}}
     items = select_items(payload.get("news", []))
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
+
+    payload["stock_data_status"] = {
+        "status": "ok" if stock_data.get("stocks") else "unavailable",
+        "updated_at": stock_data.get("updated_at"),
+        "stock_count": len(stock_data.get("stocks", {})),
+        "errors": stock_data.get("errors", [])[:10],
+    }
 
     if not api_key:
         payload["ai_status"] = {"status": "skipped", "reason": "OPENAI_API_KEY is not configured"}
@@ -231,21 +320,19 @@ def main() -> None:
         return
 
     try:
-        client = OpenAI(api_key=api_key, timeout=90.0, max_retries=2)
-        response = client.responses.create(
-            model=MODEL,
-            input=prompt_for(items),
-            store=False,
-        )
+        client = OpenAI(api_key=api_key, timeout=120.0, max_retries=2)
+        response = client.responses.create(model=MODEL, input=prompt_for(items, stock_data), store=False)
         raw = extract_json(response.output_text)
-        payload["ai_briefings"] = normalize_briefing(raw, items)
+        payload["ai_briefings"] = normalize_briefing(raw, items, stock_data)
         payload["ai_status"] = {
             "status": "ok",
             "model": MODEL,
             "input_items": len(items),
+            "stock_factors": len(stock_data.get("stocks", {})),
+            "analysis_type": "openai_multifactor",
             "generated_at": datetime.now(KST).isoformat(),
         }
-        print(f"OpenAI briefing generated with {MODEL} from {len(items)} items")
+        print(f"OpenAI multifactor briefing generated with {MODEL} from {len(items)} news and {len(stock_data.get('stocks', {}))} stocks")
     except Exception as exc:
         payload["ai_status"] = {"status": "failed", "reason": str(exc)[:300], "model": MODEL}
         print(f"OpenAI briefing failed: {exc}")

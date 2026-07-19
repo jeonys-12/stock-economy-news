@@ -11,6 +11,8 @@ on:
       - "index.html"
       - "style.css"
       - "app.js"
+      - "multifactor-ui.js"
+      - "multifactor-ui.css"
       - "priority-sort.js"
       - "count-badges.js"
       - "count-badges.css"
@@ -52,21 +54,28 @@ jobs:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
         run: python scripts/collect_news.py
 
-      - name: Generate OpenAI market briefing
+      - name: Collect DART FnGuide KRX stock factors
+        continue-on-error: true
+        env:
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+        run: python scripts/collect_stock_data.py
+
+      - name: Generate OpenAI multifactor market briefing
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5-mini
         run: python scripts/generate_ai_briefing.py
 
-      - name: Commit updated news data
+      - name: Commit updated data
         run: |
-          if git diff --quiet data/news.json; then
+          if git diff --quiet data/news.json data/stock_data.json; then
             echo "No data changes"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/news.json
-            git commit -m "chore: update economic news data"
+            if [ -f data/stock_data.json ]; then git add data/stock_data.json; fi
+            git commit -m "chore: update news and stock factor data"
             git push origin main
           fi
 
@@ -74,8 +83,9 @@ jobs:
         run: |
           rm -rf public
           mkdir -p public/data
-          cp index.html style.css app.js priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
+          cp index.html style.css app.js multifactor-ui.js multifactor-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
           cp data/news.json public/data/news.json
+          if [ -f data/stock_data.json ]; then cp data/stock_data.json public/data/stock_data.json; fi
 
       - name: Publish to gh-pages branch
         env:

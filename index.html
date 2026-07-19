@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="multifactor-ui.css">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -40,7 +41,7 @@
         <div><p class="section-kicker">MARKET BRIEFING</p><h2>주식시장 전망·종목 브리핑</h2></div>
         <span id="briefingPeriod" class="analysis-period">최근 24시간 기준</span>
       </div>
-      <p class="briefing-disclaimer">수집 뉴스의 제목·요약을 규칙 기반으로 분석한 참고 신호입니다. 실제 매매 전 기업공시, 실적, 밸류에이션과 가격 흐름을 추가 확인하십시오.</p>
+      <p class="briefing-disclaimer">뉴스, OpenDART 재무, FnGuide 공개 컨센서스, KRX 주가·밸류에이션·외국인/기관 수급을 종합한 참고 신호입니다. 데이터 누락과 지연 가능성이 있으므로 실제 매매 전 원문과 최신 수치를 확인하십시오.</p>
       <div class="market-outlook-card">
         <div class="outlook-topline">
           <span id="marketSignal" class="market-signal neutral">중립</span>
@@ -51,11 +52,11 @@
       </div>
       <div class="recommendation-grid">
         <article class="recommendation-panel buy-panel">
-          <div class="recommendation-title"><span>관심·매수 검토</span><small>긍정 뉴스 신호</small></div>
+          <div class="recommendation-title"><span>관심·매수 검토</span><small>뉴스+정량 신호</small></div>
           <div id="buyRecommendations" class="recommendation-list"><p class="result-info">분석 중</p></div>
         </article>
         <article class="recommendation-panel sell-panel">
-          <div class="recommendation-title"><span>비중 축소·매도 검토</span><small>부정 뉴스 신호</small></div>
+          <div class="recommendation-title"><span>비중 축소·매도 검토</span><small>뉴스+정량 신호</small></div>
           <div id="sellRecommendations" class="recommendation-list"><p class="result-info">분석 중</p></div>
         </article>
       </div>
@@ -134,6 +135,7 @@
     </article>
   </template>
   <script src="app.js" defer></script>
+  <script src="multifactor-ui.js" defer></script>
   <script src="priority-sort.js" defer></script>
   <script src="count-badges.js" defer></script>
   <script src="default-daily.js" defer></script>
