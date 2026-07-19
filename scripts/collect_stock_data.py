@@ -17,6 +17,7 @@ from pykrx import stock
 
 KST = timezone(timedelta(hours=9))
 OUTPUT = Path("data/stock_data.json")
+FNGUIDE_CACHE_DAYS = 7
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; StockEconomyNewsBot/1.0; +https://github.com/jeonys-12/stock-economy-news)"
 }
@@ -64,6 +65,53 @@ def safe_round(value: Any, digits: int = 2) -> float | None:
         return round(float(value), digits)
     except (TypeError, ValueError):
         return None
+
+
+def parse_iso_datetime(value: Any) -> datetime | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=KST)
+        return parsed.astimezone(KST)
+    except (TypeError, ValueError):
+        return None
+
+
+def load_previous_payload() -> dict[str, Any]:
+    if not OUTPUT.exists():
+        return {}
+    try:
+        payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        return payload if isinstance(payload, dict) else {}
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def cached_fnguide_consensus(previous_payload: dict[str, Any], name: str) -> dict[str, Any] | None:
+    previous_stock = previous_payload.get("stocks", {}).get(name, {})
+    previous = previous_stock.get("consensus", {}) if isinstance(previous_stock, dict) else {}
+    if not isinstance(previous, dict) or previous.get("status") not in {"ok", "cached"}:
+        return None
+
+    fetched_at = parse_iso_datetime(previous.get("fetched_at") or previous.get("cached_from"))
+    if fetched_at is None:
+        fetched_at = parse_iso_datetime(previous_payload.get("updated_at"))
+    if fetched_at is None:
+        return None
+
+    age = datetime.now(KST) - fetched_at
+    if age < timedelta(0) or age > timedelta(days=FNGUIDE_CACHE_DAYS):
+        return None
+
+    cached = dict(previous)
+    cached["status"] = "cached"
+    cached["cached_from"] = fetched_at.isoformat()
+    cached["cache_age_hours"] = round(age.total_seconds() / 3600, 1)
+    cached["cache_expires_at"] = (fetched_at + timedelta(days=FNGUIDE_CACHE_DAYS)).isoformat()
+    cached["source"] = "FnGuide CompanyGuide (7일 캐시)"
+    return cached
 
 
 def get_corp_codes(api_key: str) -> dict[str, str]:
@@ -139,6 +187,7 @@ def latest_dart_financials(api_key: str, corp_code: str) -> dict[str, Any]:
             "report_code": report_code,
             "report_name": {"11013": "1분기", "11012": "반기", "11014": "3분기", "11011": "사업보고서"}.get(report_code, report_code),
             "source": "OpenDART",
+            "fetched_at": datetime.now(KST).isoformat(),
         }
         for key, pair in values.items():
             result[key] = pair["current"]
@@ -222,7 +271,7 @@ def find_row_value(soup: BeautifulSoup, labels: tuple[str, ...]) -> str | None:
 def collect_fnguide_consensus(code: str, current_price: int | None) -> dict[str, Any]:
     url = "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp"
     params = {"pGB": "1", "gicode": f"A{code}", "cID": "", "MenuYn": "Y", "ReportGB": "", "NewMenuID": "101", "stkGb": "701"}
-    response = requests.get(url, params=params, headers=HEADERS, timeout=35)
+    response = requests.get(url, params=params, headers=HEADERS, timeout=(10, 35))
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
 
@@ -242,11 +291,11 @@ def collect_fnguide_consensus(code: str, current_price: int | None) -> dict[str,
         "analyst_count": int(number(analyst_text) or 0) or None,
         "source": "FnGuide CompanyGuide",
         "source_url": response.url,
+        "fetched_at": datetime.now(KST).isoformat(),
     }
 
 
 def score_stock(financials: dict[str, Any], market: dict[str, Any], consensus: dict[str, Any]) -> dict[str, Any]:
-    score = 0.0
     components: dict[str, float] = {"financials": 0, "consensus": 0, "valuation": 0, "flow": 0, "momentum": 0}
     available = 0
 
@@ -262,7 +311,7 @@ def score_stock(financials: dict[str, Any], market: dict[str, Any], consensus: d
         if debt_ratio is not None:
             components["financials"] += 3 if debt_ratio < 100 else -3 if debt_ratio > 200 else 0
 
-    if consensus.get("status") == "ok":
+    if consensus.get("status") in {"ok", "cached"}:
         available += 1
         upside = consensus.get("target_upside_pct")
         if upside is not None:
@@ -308,18 +357,28 @@ def score_stock(financials: dict[str, Any], market: dict[str, Any], consensus: d
 
 
 def main() -> None:
+    previous_payload = load_previous_payload()
     dart_key = os.getenv("OPENDART_API_KEY", "").strip()
     corp_codes: dict[str, str] = {}
     errors: list[str] = []
+    dart_status: dict[str, Any] = {
+        "configured": bool(dart_key),
+        "status": "pending" if dart_key else "missing",
+        "corp_code_count": 0,
+    }
     if dart_key:
         try:
             corp_codes = get_corp_codes(dart_key)
+            dart_status.update({"status": "ok", "corp_code_count": len(corp_codes)})
+            print(f"OpenDART key recognized: {len(corp_codes)} corp codes loaded")
         except Exception as exc:
+            dart_status.update({"status": "failed", "reason": str(exc)[:180]})
             errors.append(f"OpenDART corpCode: {exc}")
     else:
         errors.append("OPENDART_API_KEY 미설정")
 
     result: dict[str, Any] = {}
+    cache_reused = 0
     for name, meta in STOCKS.items():
         code = meta["code"]
         row: dict[str, Any] = {"name": name, "code": code, "sector": meta["sector"]}
@@ -339,12 +398,26 @@ def main() -> None:
             row["financials"] = {"status": "failed", "reason": str(exc)[:180], "source": "OpenDART"}
             errors.append(f"{name} DART: {exc}")
 
+        current_price = row.get("market", {}).get("current_price")
+        live_consensus: dict[str, Any]
         try:
-            current_price = row.get("market", {}).get("current_price")
-            row["consensus"] = collect_fnguide_consensus(code, current_price)
+            live_consensus = collect_fnguide_consensus(code, current_price)
         except Exception as exc:
-            row["consensus"] = {"status": "failed", "reason": str(exc)[:180], "source": "FnGuide CompanyGuide"}
+            live_consensus = {"status": "failed", "reason": str(exc)[:180], "source": "FnGuide CompanyGuide"}
             errors.append(f"{name} FnGuide: {exc}")
+
+        if live_consensus.get("status") == "ok":
+            row["consensus"] = live_consensus
+        else:
+            cached = cached_fnguide_consensus(previous_payload, name)
+            if cached:
+                cached["live_collection_status"] = live_consensus.get("status", "failed")
+                cached["live_collection_reason"] = str(live_consensus.get("reason", ""))[:180]
+                row["consensus"] = cached
+                cache_reused += 1
+                print(f"{name}: FnGuide live collection failed; reused cache ({cached['cache_age_hours']}h old)")
+            else:
+                row["consensus"] = live_consensus
 
         row["quantitative"] = score_stock(row["financials"], row["market"], row["consensus"])
         result[name] = row
@@ -353,11 +426,20 @@ def main() -> None:
 
     payload = {
         "updated_at": datetime.now(KST).isoformat(),
+        "source_status": {
+            "opendart": dart_status,
+            "fnguide": {
+                "mode": "optional_html_with_cache",
+                "cache_days": FNGUIDE_CACHE_DAYS,
+                "cached_stocks_reused": cache_reused,
+            },
+        },
         "methodology": {
             "description": "OpenDART 재무, FnGuide 공개 컨센서스, KRX 가격·밸류에이션·외국인/기관 수급을 결합한 보조 점수",
             "buy_review_threshold": 15,
             "sell_review_threshold": -15,
             "minimum_dimensions": 2,
+            "fnguide_policy": "공개 HTML은 선택적 보조 데이터이며 실패 시 이전 정상 데이터를 최대 7일간 재사용합니다.",
             "notice": "업종별 적정 밸류에이션 차이를 완전히 반영하지 못하므로 최종 매매 판단이 아닙니다.",
         },
         "stocks": result,
@@ -365,7 +447,7 @@ def main() -> None:
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Saved stock factors for {len(result)} stocks to {OUTPUT}")
+    print(f"Saved stock factors for {len(result)} stocks to {OUTPUT}; FnGuide cache reused for {cache_reused} stocks")
 
 
 if __name__ == "__main__":

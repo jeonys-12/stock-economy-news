@@ -49,6 +49,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Verify OpenDART configuration
+        env:
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          key = os.getenv("OPENDART_API_KEY", "").strip()
+          if not key:
+              raise SystemExit("OPENDART_API_KEY is not configured")
+          print(f"OPENDART_API_KEY configured: yes (length={len(key)})")
+          PY
+
       - name: Collect news
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
