@@ -11,6 +11,7 @@ on:
       - "index.html"
       - "style.css"
       - "app.js"
+      - "priority-sort.js"
       - "scripts/**"
       - "requirements.txt"
       - ".github/workflows/update-news.yml"
@@ -70,7 +71,7 @@ jobs:
         run: |
           rm -rf public
           mkdir -p public/data
-          cp index.html style.css app.js .nojekyll public/
+          cp index.html style.css app.js priority-sort.js .nojekyll public/
           cp data/news.json public/data/news.json
 
       - name: Publish to gh-pages branch
