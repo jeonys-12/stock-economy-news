@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T22:20:44.573319+09:00",
+  "updated_at": "2026-07-19T22:50:04.400813+09:00",
   "count": 147,
   "source_status": [
     {
@@ -288,6 +288,22 @@
       "importance_score": 82
     },
     {
+      "id": "bfb7a2e681b9229d",
+      "type": "news",
+      "title": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) - KRX KIND",
+      "description": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) KRX KIND",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRmdMWks5d1pxa1RHNkxaeTVPMFloeWp3dmlYQTVlRGpFd21adWlVbUNmNVd1Sk1DTVhmVEU3dTJXbHRkUUgtMFA5d2pvR3BrUmRHYnRLcm5WeFBkX0dyUlg2U1lCR2dQd2hHQXBQOUliOVUyajJ6TlhCRlBWbzJlQWlPNXNVM2lv?oc=5",
+      "source": "한국거래소 KIND",
+      "source_domain": "kind.krx.co.kr",
+      "source_priority": 3,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-17T06:00:07+00:00",
+      "importance_score": 73
+    },
+    {
       "id": "4d24406f77dc7c8e",
       "type": "news",
       "title": "건 인도의 제2차 5개년계획의 내용과 문제점 - 한국은행 디지털아카이브",
@@ -320,27 +336,11 @@
       "importance_score": 70
     },
     {
-      "id": "437d1e5f1426f215",
-      "type": "news",
-      "title": "김용범 “삼전닉스 레버리지 고민…상장폐지는 어려워”",
-      "description": "괴리율 최소화 모색 추가 보완책 마련 시사김용범 청와대 정책실장이 19일 삼성전자·SK하이닉스 단일종목 레버리지 상장지수펀드(ETF)와 관련해 “이 상품이 특정 시기에 시장에 주는..",
-      "url": "https://www.mk.co.kr/news/stock/12101595",
-      "source": "매일경제",
-      "source_domain": "mk.co.kr",
-      "source_priority": 1,
-      "collection_method": "official_rss",
-      "collection_label": "공식 증권 RSS",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-19T01:40:35+00:00",
-      "importance_score": 70
-    },
-    {
-      "id": "d05be6866062c83c",
+      "id": "8996e6b88529911f",
       "type": "news",
       "title": "[IBKS제23호스팩] 주권매매거래정지 - KRX KIND",
       "description": "[IBKS제23호스팩] 주권매매거래정지 KRX KIND",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOU41b0hNSm1XYzhvamQ2TkptTDkzSjcxWVpjSEtpbEk3TndZdHZCcWFnVmRjUVRPSE1tNkpKNmM2VklVVlZnbDA4WG5DcTdndk0tNjZJVnlua3EyTUthRzZFcTlhanRUOXpveFYzSUxZdEp4VERtUDlsa25uZXY5SjYxekUxdWtYSzdIVVpDeEV5LVltUzlIR3E0VE11ZTNzdkQ1Nm15ZkFSd0RtMlZKbnIzcUZWRjFFcUJXenpPMlpjTzAweXc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNenF2SlhiZmw3bzRkbEFwY3Nfem1wekEtQXEwMmlmZk4yTFpFZmZSTnd1cUxWZFhfRjhzbkp3TXRMMG5qV2VPZzZhTEZDT3E0V0V5TDZtWGV1Q1Z2aEJrandCQ2RnaTVkZHFCcTZnNXJITTZVbHZLRl9yZXRSZVBMNWxMdmJ4VHI3WDNwQlhDQVU5RjNUNGZUbjFQRVQtUGRMNVYtMmNnMm9lOF9yRHFva1NDMlRaSkVYTElONDVVUWEtQUFNSU40?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
       "source_priority": 3,
@@ -348,7 +348,7 @@
       "collection_label": "Google News RSS 대체",
       "country": "대한민국",
       "category": "기업공시",
-      "published_at": "2026-07-15T03:49:06+00:00",
+      "published_at": "2026-07-14T07:00:00+00:00",
       "importance_score": 70
     },
     {
@@ -384,6 +384,22 @@
       "importance_score": 68
     },
     {
+      "id": "437d1e5f1426f215",
+      "type": "news",
+      "title": "김용범 “삼전닉스 레버리지 고민…상장폐지는 어려워”",
+      "description": "괴리율 최소화 모색 추가 보완책 마련 시사김용범 청와대 정책실장이 19일 삼성전자·SK하이닉스 단일종목 레버리지 상장지수펀드(ETF)와 관련해 “이 상품이 특정 시기에 시장에 주는..",
+      "url": "https://www.mk.co.kr/news/stock/12101595",
+      "source": "매일경제",
+      "source_domain": "mk.co.kr",
+      "source_priority": 1,
+      "collection_method": "official_rss",
+      "collection_label": "공식 증권 RSS",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-19T01:40:35+00:00",
+      "importance_score": 66
+    },
+    {
       "id": "4d6862cfe36871d2",
       "type": "news",
       "title": "韓 2분기 GDP 발표…깜짝 성장 이어가나 - 한국경제",
@@ -413,22 +429,6 @@
       "country": "대한민국",
       "category": "금융시장",
       "published_at": "2026-07-19T05:06:01+00:00",
-      "importance_score": 65
-    },
-    {
-      "id": "65c9e8baff565d13",
-      "type": "news",
-      "title": "LG전자, 압구정 재건축에 ‘가전 구독’ 전격 도입… B2B 시장 정조준 - 대한경제",
-      "description": "LG전자, 압구정 재건축에 ‘가전 구독’ 전격 도입… B2B 시장 정조준 대한경제",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8zNWx0TkZZZkNsd1dkZGdJY3VfX1VjU0ljRTl6Y01pVTBRNEY5ZnRhaVczbk5xbWg5TTJ2TGJlOGU3cWlxeUphaHh4QkZtS0hsOTVoSUV4T2ItMnJjWTM4QjY0MUlnSVhOZE1rWWJMRFExbWJu?oc=5",
-      "source": "대한경제",
-      "source_domain": "dnews.co.kr",
-      "source_priority": 2,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-19T01:24:46+00:00",
       "importance_score": 65
     },
     {
@@ -654,6 +654,22 @@
       "category": "금융시장",
       "published_at": "2026-07-19T06:31:22+00:00",
       "importance_score": 62
+    },
+    {
+      "id": "65c9e8baff565d13",
+      "type": "news",
+      "title": "LG전자, 압구정 재건축에 ‘가전 구독’ 전격 도입… B2B 시장 정조준 - 대한경제",
+      "description": "LG전자, 압구정 재건축에 ‘가전 구독’ 전격 도입… B2B 시장 정조준 대한경제",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8zNWx0TkZZZkNsd1dkZGdJY3VfX1VjU0ljRTl6Y01pVTBRNEY5ZnRhaVczbk5xbWg5TTJ2TGJlOGU3cWlxeUphaHh4QkZtS0hsOTVoSUV4T2ItMnJjWTM4QjY0MUlnSVhOZE1rWWJMRFExbWJu?oc=5",
+      "source": "대한경제",
+      "source_domain": "dnews.co.kr",
+      "source_priority": 2,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "건설·부동산",
+      "published_at": "2026-07-19T01:24:46+00:00",
+      "importance_score": 61
     },
     {
       "id": "96d8437aaf10e742",
@@ -962,22 +978,6 @@
       "importance_score": 57
     },
     {
-      "id": "01125778bd09b5f8",
-      "type": "news",
-      "title": "국토부 보도자료 - oclt.molit.go.kr",
-      "description": "국토부 보도자료 oclt.molit.go.kr",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVUx4T1VHTF9EMHBVUHl0Zk5UWE1HVFlTanJneUFQcVo0SFYxNkdncnVtVlNPVjFYaTlfOUlIVWxEZGxYSVV4dVh3U1R3aTVHQU5yV0JiOExTMTNvZXZPR2lSLXhaejRiOU9JdHRWb0N0dnRfYkI3NnpZS0Y4WldhZjloQUJKdXc?oc=5",
-      "source": "국토교통부",
-      "source_domain": "molit.go.kr",
-      "source_priority": 3,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-19T01:16:28+00:00",
-      "importance_score": 56
-    },
-    {
       "id": "37d75bd6ba048e5c",
       "type": "news",
       "title": "공개 임박 삼성전자 8세대 갤럭시 Z…비메모리 반등 이끌까",
@@ -1078,7 +1078,7 @@
     {
       "id": "6164c977277b11b5",
       "type": "youtube",
-      "title": "게으른 천재 vs 평범한 독종 명장의 선택은? | 북언더스탠딩 | 리딩(Leading) | 비즈니스 칼럼니스트 박소령",
+      "title": "게으른 천재 vs 평범한 독종, 명장의 선택은? | 북언더스탠딩 | 리딩(Leading) | 비즈니스 칼럼니스트 박소령",
       "description": "💡내용 요약 이번 북언더스탠딩에서는 알렉스 퍼거슨 전 맨체스터 유나이티드 감독의 책 《리딩(Leading)》을 통해 장기적으로 성공하는 조직과 리더의 원칙을 다뤘다. 퍼거슨은 26년 동안 맨유를 이끌며 38개의 우승컵을 들어 올렸지만, 그 성공의 핵심은 전술보다 규율, 태도, 인재 선발, 목표 설정에 있었다고 강조한다. 퍼거슨은 선수들의 복장, 시간 준수, 체중 관리 같은 작은 규율까지 철저하게 관리했으며, 단기 성과보다 조직 문화를 지키는 것이 더 중요하다고 봤다. 실제로 규율을 어긴 핵심 선수들을 징계해 우승을 놓친 적이 있어도 원칙을 바꾸지 않았다. 또한 재능보다 성실함과 자기 동기부여를 높이 평가했고, 호날두와 베컴처럼 끊임없이 훈련하는 선수들을 최고의 인재로 꼽았다. 채용에서도 단순히 뛰어난 실력보다 태도와 성장 가능성을 중시했으며,",
       "summary_source": "description",
       "url": "https://www.youtube.com/watch?v=u0gkeaEubUo",
@@ -1381,6 +1381,22 @@
       "importance_score": 53
     },
     {
+      "id": "30ba9f7c94372730",
+      "type": "news",
+      "title": "국토부 보도자료 - oclt.molit.go.kr",
+      "description": "국토부 보도자료 oclt.molit.go.kr",
+      "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxPVmlaTXo0R3J5SEYyLWJHUDdMRDlYajluSUdnZVZoS1Etc25ZTWViQWVTam1LX01Vdm1DblEwM1AwLTdEeEF5bkM5TVYxbVNPYTJleFBaQVo4OEZsbHd3eTdyNHdLdTRzQ3lxMjEtZGxJdmNpODJMUXROVnJuV3ppLWVzbllNU3lOZENnNXZna2tUQTU4VnF2cmVaYUhlVzhDZkxUWUR6TGRPTlJmWWtHYU5uSEVhTmFsejlGLS1QZUs5ZUx1Q2NEY0J4MXV2Y2J1LVk3Wm9XbEZDdDFvYlBIM19lNFZHLVllMUxTZ2RITGc5NlZ2OWMwSTdyWUxReEZyQkE1dnJpdjBDLXd5bUxGQXJyVnM2b0VqZlRMOFZ6R2JqQ2JzMTE0Y050RWpRVF9TTnZiOFgwUkdJVGE2YklzSmR0V1lRdFFrWmV2TGVoS1BnUnk5TVl6bXVpb1VBRW5Gb28wbHN5MUo0NmN4Ny1hNXpHai1EUjFlcS0zMjRWX1hmT0RMRFI1NHVHX3M4YkIxR3c?oc=5",
+      "source": "국토교통부",
+      "source_domain": "molit.go.kr",
+      "source_priority": 3,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "건설·부동산",
+      "published_at": "2026-07-17T22:03:47+00:00",
+      "importance_score": 53
+    },
+    {
       "id": "dd232e11f0e5cdef",
       "type": "news",
       "title": "[재정용어 이러닝] 예산은 어디에 쓰일까? 실제 흐름 20분 정리 - 기획예산처",
@@ -1462,11 +1478,11 @@
       "importance_score": 53
     },
     {
-      "id": "29dc820141a49f14",
+      "id": "9e7a7dca232a0a96",
       "type": "news",
-      "title": "올 상반기 해외건설 수주액 112억달러… 체코원전 기저효과ㆍ중동리스크에 63%↓ - 대한경제",
-      "description": "올 상반기 해외건설 수주액 112억달러… 체코원전 기저효과ㆍ중동리스크에 63%↓ 대한경제",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9fQllpcUFWSHY4cklEY2NnQmdaMlMwWlhnTDBLREZvamJ1WVNRRTZ4ZHRUdk1JMGNCR2labkNPaEp2bjlZVFYydlNTUGQ2ZTVjYWJ6VUdOa19iaTNMaFpBc2pQRmlpRFhld3FGaDJ6ejNjUmM?oc=5",
+      "title": "반도건설, 2200억 규모 의정부 가재울구역 재개발 사업 수주 - 대한경제",
+      "description": "반도건설, 2200억 규모 의정부 가재울구역 재개발 사업 수주 대한경제",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1OS1pGUWI3YnV0WEw1ZXlWT2JHeGViR0JXSGxvLWsyZm56ZlNwTjRUVE01a3pLcXd3NHNMSldwYzhzMEtzLTQzd3JoUm84QmJZaGRhenRoVmZpU3NhWE5UTTlqZHlaQ01jNjBKLXUxcmROcms?oc=5",
       "source": "대한경제",
       "source_domain": "dnews.co.kr",
       "source_priority": 2,
@@ -1474,7 +1490,7 @@
       "collection_label": "Google News RSS 대체",
       "country": "대한민국",
       "category": "건설·부동산",
-      "published_at": "2026-07-14T21:00:30+00:00",
+      "published_at": "2026-07-13T04:46:15+00:00",
       "importance_score": 53
     },
     {
@@ -2152,22 +2168,6 @@
       "importance_score": 50
     },
     {
-      "id": "429fa36ccc477f15",
-      "type": "news",
-      "title": "[대신밸런스제17호스팩] 관리종목지정 - KRX KIND",
-      "description": "[대신밸런스제17호스팩] 관리종목지정 KRX KIND",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTXdybnM3Y0lIaU9nekNfS3FGN2stM2pxX3REWDRTa2tDWEJwUTN2dk1hR0dSaXdCb3Q1TkF0UDR0UlZXdEszWklwX1FMWlMwcGhnMk5Yd29oV1gzaDlUd3pxeXdJMnViZ0lDVmF4azRjTzNtMVQ0ci1iTnBnSzJuRUtNYTdNWnRyV1dDY1Y5dlR2b2FNeVYtVzBRc3RIMVNtcjJr?oc=5",
-      "source": "한국거래소 KIND",
-      "source_domain": "kind.krx.co.kr",
-      "source_priority": 3,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "기업공시",
-      "published_at": "2026-07-16T07:00:00+00:00",
-      "importance_score": 50
-    },
-    {
       "id": "0807f159d251df75",
       "type": "news",
       "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
@@ -2216,22 +2216,6 @@
       "importance_score": 50
     },
     {
-      "id": "d49b96a6b75ab44a",
-      "type": "news",
-      "title": "'17년 11월 재정교육 실시 및 교육생 모집 안내 - 기획예산처",
-      "description": "'17년 11월 재정교육 실시 및 교육생 모집 안내 기획예산처",
-      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPNG5JNHV5TXNZRVNaaWI1OS16TVZRVTJZdlZwQ01SUTY4ZVFjZkV5bWh2azVaWmNUR184X05nVlBkZUwtcVpWVXRZYUtzanQwY3I4eURBV2hkT0RBckk4bnFUbFFxOUFZWm05SGEyX3lmbkVNNzVDaTlQV0RMcm1qMUF0OFE0Y2JjUU5zVkNyYkNKb3pfTmpRWkRLZjY5dUNyajdMTzVIbU5oaTFrTTlBSDVNWWVDSkZqMHRfTk5fMDd6OExqZzFuQTdVUVJ1VW5rU0x2WVo1WjV1TEpUVXJmVFB2X2VJRWxlODIzUHJ3Y2ZIaFRLSFBzS1czdFUxWHZKRTBleEVYVmNBcnZaZVlxRWdoUUJUX3NRY1U5bll6NEZKMVlUcndLWmRJY0VhbEQ5SGx0dXhhRERBQVIwWjZYUFpB?oc=5",
-      "source": "기획재정부",
-      "source_domain": "moef.go.kr",
-      "source_priority": 3,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "경제정책",
-      "published_at": "2026-07-15T17:18:56+00:00",
-      "importance_score": 50
-    },
-    {
       "id": "940f3abd1af97611",
       "type": "news",
       "title": "참고 6. - file-cdn.bok.or.kr",
@@ -2245,6 +2229,22 @@
       "country": "대한민국",
       "category": "금융시장",
       "published_at": "2026-07-15T13:59:17+00:00",
+      "importance_score": 50
+    },
+    {
+      "id": "641389fdcdd40930",
+      "type": "news",
+      "title": "[통화정책 경시대회] 「2026년 제23회 통화정책 경시대회」 지역예선대회 개최 결과 - bok.or.kr",
+      "description": "[통화정책 경시대회] 「2026년 제23회 통화정책 경시대회」 지역예선대회 개최 결과 bok.or.kr",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPM3d5bGZ1azRuTDJEVFUwdnFBSmhiazVBblF2UDdVVHFuUXVLTVQ4YzBuYlpUeGdvOWRmLUpGeXhKU0tPQm8tOG5iNHA1MHlMYTFNSHRQUDF3WHU0clFYZTF2amY4aG5VNUtmXzFKUHlMWGM3U2xhd1dwT2cxZzQwYXVOa2Nkb3dUVC14eWE1T29RREdpVUFjSjNqZzVYbWpsYlVJSUZTMTljQTdfNGNPOVF1ajd2bDE0VTZ4Q0VvMzc1MGFkVi1oMVN1eEF2STg1VUNGbQ?oc=5",
+      "source": "한국은행",
+      "source_domain": "bok.or.kr",
+      "source_priority": 3,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-15T07:57:04+00:00",
       "importance_score": 50
     },
     {
@@ -2544,13 +2544,13 @@
   "ai_briefings": {
     "daily": {
       "signal": "중립",
-      "title": "단기적으로 경기 지표와 부문별 뉴스가 혼재해 방향성 불분명 — 변동성 지속에 따른 선별적 접근 권고",
-      "summary": "최근 24시간 주요 공개 뉴스는 한국의 2분기 GDP 관련 보도와 부동산·건설 관련 수주·공급 뉴스, 그리고 급락 후 개미 매수와 같은 시장 반발 동향이 섞여 있습니다. 매크로(성장지표)와 수급(대규모 분양·건설 뉴스)이 상반된 신호를 주며 단기 변동성을 키울 가능성이 큽니다. 개별 종목은 관련 근거가 명확한 경우에만 선별적으로 접근하고, 불확실성 높은 상황에서는 분할매수·관심 관점이 적절합니다. 추가 금리·정책 발표와 기업별 실사 결과가 나오기 전까지는 포지션 확대를 자제할 필요가 있습니다.",
-      "confidence": 56,
+      "title": "2분기 GDP 기대와 개별 주식 매수 수요가 혼재된 가운데 단기 변동성 지속 전망",
+      "summary": "최근 공개된 지표·시장 관련 뉴스는 혼조 신호를 보내고 있다. 2분기 GDP 관련 보도가 성장 지속 가능성을 시사하는 반면(불확실성 존재), 개미들의 삼성전자·하이닉스 순매수는 밸류에이션이 아닌 반등 시도로 해석될 수 있다. 건설·주택 공급 관련 기사도 다수 확인되어 건설업계의 계절적·사업 수주 현황이 엇갈린 영향을 줄 수 있다. 단기적으론 변동성이 이어질 가능성이 크므로 분할매수·리밸런싱 위주 접근이 권고된다.",
+      "confidence": 60,
       "drivers": [
         {
-          "sentiment": "중립",
-          "title": "한국 2분기 GDP 관련 보도(시장 방향성에 영향 가능)",
+          "sentiment": "긍정",
+          "title": "2분기 GDP 관련 보도 — 성장세 기대",
           "evidence": [
             {
               "id": "4d6862cfe36871d2",
@@ -2561,8 +2561,20 @@
           ]
         },
         {
-          "sentiment": "부정",
-          "title": "부동산·건설: 대단지 분양·수주 관련 보도(공급 증가·지역별 수급 영향)",
+          "sentiment": "중립",
+          "title": "개인투자자들의 대량 매수(삼전·하이닉스) — 단기 매수 수요",
+          "evidence": [
+            {
+              "id": "be7227f6b0743c35",
+              "title": "“그래도 오르겠지”…코스피 급락에도 개미들 삼전닉스 3조원대 매수",
+              "url": "https://www.mk.co.kr/news/stock/12101670",
+              "source": "매일경제"
+            }
+          ]
+        },
+        {
+          "sentiment": "중립",
+          "title": "여름 대규모 분양·개별 공사 수주 보도 — 건설업계의 계절적 활동",
           "evidence": [
             {
               "id": "7f111f871b782749",
@@ -2583,27 +2595,15 @@
               "source": "대한경제"
             }
           ]
-        },
-        {
-          "sentiment": "중립",
-          "title": "급락 이후 개인투자자 매수 관찰(반발 매수·변동성 신호)",
-          "evidence": [
-            {
-              "id": "be7227f6b0743c35",
-              "title": "“그래도 오르겠지”…코스피 급락에도 개미들 삼전닉스 3조원대 매수",
-              "url": "https://www.mk.co.kr/news/stock/12101670",
-              "source": "매일경제"
-            }
-          ]
         }
       ],
       "buy_candidates": [
         {
           "name": "삼성전자",
           "code": "",
-          "sector": "반도체/전자",
-          "reason": "최근 급락 구간에서 개인 매수세 관찰되며 단기 반발 가능성이 존재하므로 '관심·분할매수 검토' 관점에서 모니터 대상. 개별 호재(실적·수주 등) 확인 시 추가 분할매수 고려.",
-          "risk": "데이터센터 건설 지연·AI 인프라 투자 둔화, 그리고 금리 인상 등 매크로 리스크가 추가 하방 요인으로 작용할 수 있음.",
+          "sector": "반도체/IT",
+          "reason": "최근 급락 후 개인투자자 중심의 대규모 매수가 관찰되어 단기 분할매수(관심·분할매수 검토) 기회를 모색할 수 있음.",
+          "risk": "데이터센터 관련 투자 둔화, 거시적 금리 인상·변동성 재확산 시 추가 하방 위험 존재—분할매수 시에도 손절·분산 필요.",
           "evidence": [
             {
               "id": "be7227f6b0743c35",
@@ -2629,8 +2629,8 @@
           "name": "SK하이닉스",
           "code": "",
           "sector": "반도체",
-          "reason": "삼전·SK하이닉스(‘삼전닉스’) 관련 급락 후 개인 매수와 함께 업종 차원의 반발 가능성이 있어 '관심·분할매수 검토' 대상.",
-          "risk": "AI·데이터센터 관련 설비투자 취소·지연 우려와 글로벌 수요 둔화가 이어질 경우 추가 하방 위험이 존재.",
+          "reason": "삼전·하이닉스에 대한 단기 개인 매수 유입이 관찰돼 변동성 구간에서 분할매수(관심·분할매수 검토)를 고려할 만함.",
+          "risk": "데이터센터·AI 인프라 투자 지연 및 금리·수급 악화 시 실적·주가 동반 약세 가능성.",
           "evidence": [
             {
               "id": "be7227f6b0743c35",
@@ -2643,37 +2643,54 @@
               "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
               "url": "https://www.mk.co.kr/news/stock/12100535",
               "source": "매일경제"
-            },
-            {
-              "id": "1ec026cc1233fdfe",
-              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
-              "url": "https://www.mk.co.kr/news/stock/12100641",
-              "source": "매일경제"
             }
           ]
         }
       ],
       "sell_candidates": [],
       "risks": [
-        "AI 인프라(데이터센터) 건설 지연 또는 수요 둔화로 반도체 업황 추가 약화 (증거: ID 2d434da1e1ced78b, ID 1ec026cc",
-        "단기적으로 매크로 변수(금리·GDP 발표)에 따른 시장 변동성 확대 (증거: ID 278bd5bbaeceaf0b, ID 4d6862cfe3687",
-        "부동산 공급 확대 및 건설수주·분양 소식이 지역·업종별 수급 불균형을 유발할 가능성 (증거: ID 7f111f871b782749, ID 1020"
+        "데이터센터·AI 인프라 관련 투자 취소·지연에 따른 반도체 수요 하방(시장 변동성 확대) — 뉴스에서 관련 언급 다수 확인됨.",
+        "단기 거시 불확실성(금리·글로벌 수요)으로 인한 시장 변동성 재확산."
       ],
       "checks": [
-        "삼성전자·SK하이닉스: 최근 분기 실적과 기업의 AI·데이터센터 관련 수주·가이던스(공급업체 주문 동향) 확인.",
-        "거시: 한국은행 통화정책(금리) 관련 추가 발표·언급과 2분기 GDP 발표 내용 확인 (증거: ID 278bd5bbaeceaf0b, ID 4d6862cfe36871d2).",
-        "부동산·건설 관련: 대단지 공급이 해당 건설사 실적이나 지역 수요에 미칠 영향(수주·도급 구조) 점검."
+        "2분기 GDP 본편 발표 내용(세부 항목과 서프라이즈 요인) 확인 — 관련 보도 ID: 4d6862cfe36871d2",
+        "삼성전자·SK하이닉스의 사업별(데이터센터·서버 등) 수요 가시성 및 기업 공시 확인",
+        "건설 수주·분양의 지역·규모별 실질 영향(관계사 수주 여부) 확인"
       ]
     },
     "weekly": {
       "signal": "경계",
-      "title": "기준금리 인상과 레버리지 상품 규제, AI 인프라 투자 변수로 변동성 확대 — 선별적·신중 접근 권고",
-      "summary": "지난 7일간 공개 뉴스는 한국은행의 통화정책 방향(금리 인상)과 단일종목 레버리지 ETF·ETN 보완방안, 반도체 섹터에 대한 데이터센터 투자 우려가 복합적으로 작용해 시장 변동성을 키웠습니다. 은행주는 금리 민감 수혜 기대에 상대적으로 강세를 보였고, 반도체주는 AI 인프라 투자 불확실성에 따른 하방 압력을 받았습니다. 규제·정책 리스크와 수급 충격 가능성이 높아 기업별 실적·수주 확인을 기반으로 분할매수·비중 재조정이 권고됩니다.",
-      "confidence": 64,
+      "title": "기준금리 인상과 레버리지 상품 규제, 반도체 수요 불확실성으로 단기적 경계 필요",
+      "summary": "최근 일주일간 공개된 뉴스는 금리·시장구조 변화와 반도체 업종을 중심으로 한 수급 불안이 혼재한다. 한국은행의 통화정책 방향과(기준금리 인상 신호) 단일종목 레버리지 ETF 보완방안은 시장 변동성 및 거래구조에 영향을 미칠 수 있다. 데이터센터 관련 투자 우려가 반도체주에 부정적 신호로 작용한 반면, 기준금리 인상에 따른 은행주 매력 부각도 관찰됐다. 상반된 신호가 공존하므로 포지션은 분할·리스크 관리 중심으로 운용할 필요가 있다.",
+      "confidence": 55,
       "drivers": [
         {
+          "sentiment": "부정",
+          "title": "데이터센터·AI 인프라 투자 회의론과 반도체 관련 대규모 조정",
+          "evidence": [
+            {
+              "id": "1ec026cc1233fdfe",
+              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
+              "url": "https://www.mk.co.kr/news/stock/12100641",
+              "source": "매일경제"
+            },
+            {
+              "id": "2d434da1e1ced78b",
+              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
+              "url": "https://www.mk.co.kr/news/stock/12100535",
+              "source": "매일경제"
+            },
+            {
+              "id": "8996e6b88529911f",
+              "title": "[IBKS제23호스팩] 주권매매거래정지 - KRX KIND",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNenF2SlhiZmw3bzRkbEFwY3Nfem1wekEtQXEwMmlmZk4yTFpFZmZSTnd1cUxWZFhfRjhzbkp3TXRMMG5qV2VPZzZhTEZDT3E0V0V5TDZtWGV1Q1Z2aEJrandCQ2RnaTVkZHFCcTZnNXJITTZVbHZLRl9yZXRSZVBMNWxMdmJ4VHI3WDNwQlhDQVU5RjNUNGZUbjFQRVQtUGRMNVYtMmNnMm9lOF9yRHFva1NDMlRaSkVYTElONDVVUWEtQUFNSU40?oc=5",
+              "source": "한국거래소 KIND"
+            }
+          ]
+        },
+        {
           "sentiment": "중립",
-          "title": "한국은행의 통화정책(금리 인상)과 관련 언급 — 매크로·금리 민감 업종 영향",
+          "title": "한국은행의 통화정책 방향(금리 인상 신호) 및 관련 보도 — 거시금융 영향",
           "evidence": [
             {
               "id": "278bd5bbaeceaf0b",
@@ -2691,7 +2708,7 @@
         },
         {
           "sentiment": "중립",
-          "title": "단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 — 파생·레버리지 거래 환경 변화 가능",
+          "title": "단일종목 레버리지 ETF·ETN 규제 보완안 — 거래구조·유동성 영향",
           "evidence": [
             {
               "id": "0807f159d251df75",
@@ -2702,26 +2719,8 @@
           ]
         },
         {
-          "sentiment": "부정",
-          "title": "데이터센터 건설 지연·AI 인프라 투자 우려로 반도체 관련주 급락",
-          "evidence": [
-            {
-              "id": "2d434da1e1ced78b",
-              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
-              "url": "https://www.mk.co.kr/news/stock/12100535",
-              "source": "매일경제"
-            },
-            {
-              "id": "1ec026cc1233fdfe",
-              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
-              "url": "https://www.mk.co.kr/news/stock/12100641",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
           "sentiment": "긍정",
-          "title": "금리 인상 국면에서 은행주 상대적 강세(배당·이자마진 기대)",
+          "title": "기준금리 인상 국면에서 은행주 수요 이동 관찰",
           "evidence": [
             {
               "id": "c68164db5c317ab3",
@@ -2734,65 +2733,11 @@
       ],
       "buy_candidates": [
         {
-          "name": "삼성전자",
-          "code": "",
-          "sector": "반도체/전자",
-          "reason": "최근 섹터 급락 이후 개인 매수와 변동성 확대가 관찰되며, 업황 회복 시 반등 가능성이 있어 '관심·분할매수 검토' 대상. 기업별 실적·AI 수요 지표를 확인하며 접근 권고.",
-          "risk": "데이터센터·AI 인프라 투자 둔화와 지속적인 금리·수급 악화는 추가 하방 위험. 레버리지 거래 규제 강화로 단기 변동성 확대 가능.",
-          "evidence": [
-            {
-              "id": "be7227f6b0743c35",
-              "title": "“그래도 오르겠지”…코스피 급락에도 개미들 삼전닉스 3조원대 매수",
-              "url": "https://www.mk.co.kr/news/stock/12101670",
-              "source": "매일경제"
-            },
-            {
-              "id": "2d434da1e1ced78b",
-              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
-              "url": "https://www.mk.co.kr/news/stock/12100535",
-              "source": "매일경제"
-            },
-            {
-              "id": "1ec026cc1233fdfe",
-              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
-              "url": "https://www.mk.co.kr/news/stock/12100641",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
-          "name": "SK하이닉스",
-          "code": "",
-          "sector": "반도체",
-          "reason": "반도체 업종 우려로 조정이 컸지만 기술 수요(특히 AI 관련 메모리 수요) 회복 시 수혜 가능성이 있어 '관심·분할매수 검토' 관점.",
-          "risk": "AI 인프라 투자 불확실성과 글로벌 수요 둔화가 지속되면 추가 하방 위험이 존재.",
-          "evidence": [
-            {
-              "id": "2d434da1e1ced78b",
-              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
-              "url": "https://www.mk.co.kr/news/stock/12100535",
-              "source": "매일경제"
-            },
-            {
-              "id": "1ec026cc1233fdfe",
-              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
-              "url": "https://www.mk.co.kr/news/stock/12100641",
-              "source": "매일경제"
-            },
-            {
-              "id": "be7227f6b0743c35",
-              "title": "“그래도 오르겠지”…코스피 급락에도 개미들 삼전닉스 3조원대 매수",
-              "url": "https://www.mk.co.kr/news/stock/12101670",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
           "name": "KB금융",
           "code": "",
-          "sector": "금융(은행)",
-          "reason": "금리 인상 국면에서 은행주는 이자마진 개선 기대와 배당 매력으로 상대적 강세를 보였음. 섹터 노출을 일부 고려할 수 있어 '관심·분할매수 검토' 대상.",
-          "risk": "경기 둔화·여신 부실화 우려가 커지면 긍정적 효과가 제한될 수 있음.",
+          "sector": "은행/금융",
+          "reason": "금리 인상 기조 속에서 은행업종에 대한 수요가 상대적으로 유입되는 흐름 관찰—이익 개선 가능성으로 분할매수 검토.",
+          "risk": "경기 둔화·대손비용 상승 또는 대출 수요 약화 시 수혜가 제한될 수 있음.",
           "evidence": [
             {
               "id": "c68164db5c317ab3",
@@ -2811,9 +2756,9 @@
         {
           "name": "신한지주",
           "code": "",
-          "sector": "금융(은행)",
-          "reason": "금리 상승에 따른 이자이익 개선 기대와 섹터 흐름을 근거로 '관심·분할매수 검토' 대상.",
-          "risk": "대출 연체율 상승이나 경기 둔화 시 이익 개선폭이 축소될 수 있음.",
+          "sector": "은행/금융",
+          "reason": "시장금리 상승에 따른 순이자마진 개선 기대감과 은행주 순환 매수 관찰—관심·분할매수 검토.",
+          "risk": "금리 상승이 가계·기업의 부담으로 전이될 경우 건전성 리스크가 확대될 수 있음.",
           "evidence": [
             {
               "id": "c68164db5c317ab3",
@@ -2828,29 +2773,119 @@
               "source": "한국은행"
             }
           ]
+        },
+        {
+          "name": "삼성전자",
+          "code": "",
+          "sector": "반도체/IT",
+          "reason": "대형주·반도체 중심의 변동성 구간에서 저가 매수 수요가 유입되는 사례가 확인되어 관심·분할매수 검토 대상.",
+          "risk": "데이터센터·AI 인프라 투자 둔화가 확산되면 수요 하향 지속 가능—실적·수요 지표 확인 필요.",
+          "evidence": [
+            {
+              "id": "be7227f6b0743c35",
+              "title": "“그래도 오르겠지”…코스피 급락에도 개미들 삼전닉스 3조원대 매수",
+              "url": "https://www.mk.co.kr/news/stock/12101670",
+              "source": "매일경제"
+            },
+            {
+              "id": "1ec026cc1233fdfe",
+              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
+              "url": "https://www.mk.co.kr/news/stock/12100641",
+              "source": "매일경제"
+            },
+            {
+              "id": "2d434da1e1ced78b",
+              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
+              "url": "https://www.mk.co.kr/news/stock/12100535",
+              "source": "매일경제"
+            }
+          ]
+        },
+        {
+          "name": "SK하이닉스",
+          "code": "",
+          "sector": "반도체",
+          "reason": "반도체 업종의 구조적 변동성 속에서 단기적 저가 매수 기회가 발생할 수 있어 분할매수 검토.",
+          "risk": "AI·데이터센터 투자 축소 논의가 지속될 경우 실적 회복 지연 가능.",
+          "evidence": [
+            {
+              "id": "be7227f6b0743c35",
+              "title": "“그래도 오르겠지”…코스피 급락에도 개미들 삼전닉스 3조원대 매수",
+              "url": "https://www.mk.co.kr/news/stock/12101670",
+              "source": "매일경제"
+            },
+            {
+              "id": "2d434da1e1ced78b",
+              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
+              "url": "https://www.mk.co.kr/news/stock/12100535",
+              "source": "매일경제"
+            }
+          ]
         }
       ],
-      "sell_candidates": [],
+      "sell_candidates": [
+        {
+          "name": "삼성전자",
+          "code": "",
+          "sector": "반도체/IT",
+          "reason": "데이터센터 투자 둔화·거시금리 상승에 따른 시장 리레이팅 위험으로 단기 비중 축소 검토 대상.",
+          "risk": "반도체 수요 회복 또는 기업별 가시적 수주·실적 개선 시 축소 판단이 기회비용이 될 수 있음.",
+          "evidence": [
+            {
+              "id": "1ec026cc1233fdfe",
+              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
+              "url": "https://www.mk.co.kr/news/stock/12100641",
+              "source": "매일경제"
+            },
+            {
+              "id": "2d434da1e1ced78b",
+              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
+              "url": "https://www.mk.co.kr/news/stock/12100535",
+              "source": "매일경제"
+            }
+          ]
+        },
+        {
+          "name": "SK하이닉스",
+          "code": "",
+          "sector": "반도체",
+          "reason": "반도체 업종 내 매출 가시성이 약화될 경우 단기 비중 축소·리스크 관리 필요.",
+          "risk": "업황 개선 시 과도한 축소는 리바운드 기회를 놓칠 위험.",
+          "evidence": [
+            {
+              "id": "2d434da1e1ced78b",
+              "title": "데이터센터 건설 지연 우려에… 삼전닉스 급락",
+              "url": "https://www.mk.co.kr/news/stock/12100535",
+              "source": "매일경제"
+            },
+            {
+              "id": "1ec026cc1233fdfe",
+              "title": "“홀짝홀짝 증시에 없던 병 생길 판”…7천피 붕괴이유 있다는데",
+              "url": "https://www.mk.co.kr/news/stock/12100641",
+              "source": "매일경제"
+            }
+          ]
+        }
+      ],
       "risks": [
-        "한국은행의 추가 금리 인상(또는 긴축 유지)으로 증시 전반의 위험선호 악화 가능 (증거: ID 278bd5bbaeceaf0b).",
-        "단일종목 레버리지·ETN 관련 규제 강화로 레버리지 수요 위축 및 단기 유동성 충격 발생 가능 (증거: ID 0807f159d251df75).",
-        "AI 인프라(데이터센터) 관련 설비투자 취소·지연 우려로 반도체 업종 실적·수요에 부정적 영향 (증거: ID 2d434da1e1ced78b, I"
+        "기준금리 추가 인상 또는 장기 금리 상승에 따른 성장주(반도체·IT) 밸류에이션 하방 압력.",
+        "데이터센터·AI 인프라 투자 관련 불확실성 확산 시 반도체 중심의 실적 및 주가 영향 확대.",
+        "거래구조(레버리지 ETF 등) 규제 강화로 인한 유동성 변동성 증가."
       ],
       "checks": [
-        "중기 관점: 반도체(삼성전자·SK하이닉스) 관련 기업의 고객사(데이터센터·클라우드 사업자) 수요 가이던스·대형 수주 현황 확인.",
-        "금융주(KB·신한 등): 대출포트폴리오·NIM(순이자마진) 추이와 잠재적 연체율 변화 확인.",
-        "시장 구조: 레버리지 상품 규제 내용의 세부 적용시점·범위와 시장 유동성 영향 확인 (증거: ID 0807f159d251df75).",
-        "거시: 2분기 GDP 확정치와 한은의 추가 정책 스탠스(성명·회의록) 확인 (증거: ID 4d6862cfe36871d2, ID 278bd5bbaeceaf0b)."
+        "한국은행의 추후 통화정책 및 기자설명(금리 경로·향후 전망) 확인 — 관련 보도 ID: 278bd5bbaeceaf0b",
+        "금융당국의 레버리지 ETF 보완방안 세부 내용과 시행 일정 확인 — 관련 보도 ID: 0807f159d251df75",
+        "기업별 수주·매출·가이던스(특히 반도체의 데이터센터 관련 수요) 및 은행권 대손비용·자산건전성 지표 확인"
       ]
     },
     "model": "gpt-5-mini",
-    "generated_at": "2026-07-19T22:21:55.807926+09:00",
+    "generated_at": "2026-07-19T22:51:10.110102+09:00",
     "analysis_type": "openai"
   },
   "ai_status": {
     "status": "ok",
     "model": "gpt-5-mini",
     "input_items": 35,
-    "generated_at": "2026-07-19T22:21:55.807942+09:00"
+    "generated_at": "2026-07-19T22:51:10.110119+09:00"
   }
 }
