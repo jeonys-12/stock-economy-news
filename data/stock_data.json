@@ -1,0 +1,639 @@
+{
+  "updated_at": "2026-07-19T23:38:42.805020+09:00",
+  "methodology": {
+    "description": "OpenDART 재무, FnGuide 공개 컨센서스, KRX 가격·밸류에이션·외국인/기관 수급을 결합한 보조 점수",
+    "buy_review_threshold": 15,
+    "sell_review_threshold": -15,
+    "minimum_dimensions": 2,
+    "notice": "업종별 적정 밸류에이션 차이를 완전히 반영하지 못하므로 최종 매매 판단이 아닙니다."
+  },
+  "stocks": {
+    "삼성전자": {
+      "name": "삼성전자",
+      "code": "005930",
+      "sector": "반도체",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 255000,
+        "return_5d_pct": -8.27,
+        "return_20d_pct": -29.66,
+        "return_60d_pct": 18.06,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -1,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -1
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "SK하이닉스": {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "sector": "반도체",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 1842000,
+        "return_5d_pct": -15.74,
+        "return_20d_pct": -31.4,
+        "return_60d_pct": 63.3,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -6,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -6
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "현대차": {
+      "name": "현대차",
+      "code": "005380",
+      "sector": "자동차",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 425000,
+        "return_5d_pct": -4.6,
+        "return_20d_pct": -29.28,
+        "return_60d_pct": -21.0,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "기아": {
+      "name": "기아",
+      "code": "000270",
+      "sector": "자동차",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 149700,
+        "return_5d_pct": 3.38,
+        "return_20d_pct": -5.73,
+        "return_60d_pct": -5.97,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": 0,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": 0
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "한화에어로스페이스": {
+      "name": "한화에어로스페이스",
+      "code": "012450",
+      "sector": "방산",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 943000,
+        "return_5d_pct": -1.05,
+        "return_20d_pct": -20.69,
+        "return_60d_pct": -33.73,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "HD현대중공업": {
+      "name": "HD현대중공업",
+      "code": "329180",
+      "sector": "조선",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 484000,
+        "return_5d_pct": -4.54,
+        "return_20d_pct": -29.24,
+        "return_60d_pct": -5.84,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -4,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -4
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "삼성중공업": {
+      "name": "삼성중공업",
+      "code": "010140",
+      "sector": "조선",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 22300,
+        "return_5d_pct": 6.44,
+        "return_20d_pct": -19.49,
+        "return_60d_pct": -23.24,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "POSCO홀딩스": {
+      "name": "POSCO홀딩스",
+      "code": "005490",
+      "sector": "소재",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 311500,
+        "return_5d_pct": 4.88,
+        "return_20d_pct": -15.12,
+        "return_60d_pct": -19.09,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005490&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "LG에너지솔루션": {
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "sector": "이차전지",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 334000,
+        "return_5d_pct": 6.54,
+        "return_20d_pct": -16.5,
+        "return_60d_pct": -20.1,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "삼성SDI": {
+      "name": "삼성SDI",
+      "code": "006400",
+      "sector": "이차전지",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 434500,
+        "return_5d_pct": 8.22,
+        "return_20d_pct": -16.76,
+        "return_60d_pct": -15.3,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006400&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "NAVER": {
+      "name": "NAVER",
+      "code": "035420",
+      "sector": "인터넷",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 190000,
+        "return_5d_pct": 3.04,
+        "return_20d_pct": -19.15,
+        "return_60d_pct": -12.24,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035420&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -4,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -4
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "카카오": {
+      "name": "카카오",
+      "code": "035720",
+      "sector": "인터넷",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 35900,
+        "return_5d_pct": 6.69,
+        "return_20d_pct": -8.65,
+        "return_60d_pct": -28.2,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -3,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -3
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "KB금융": {
+      "name": "KB금융",
+      "code": "105560",
+      "sector": "금융",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 181100,
+        "return_5d_pct": 5.66,
+        "return_20d_pct": 11.04,
+        "return_60d_pct": 11.58,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A105560&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": 8,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": 8
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "신한지주": {
+      "name": "신한지주",
+      "code": "055550",
+      "sector": "금융",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 107900,
+        "return_5d_pct": 2.76,
+        "return_20d_pct": 7.04,
+        "return_60d_pct": 8.33,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": 8,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": 8
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "현대건설": {
+      "name": "현대건설",
+      "code": "000720",
+      "sector": "건설",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 99000,
+        "return_5d_pct": 0.1,
+        "return_20d_pct": -25.68,
+        "return_60d_pct": -44.07,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    },
+    "대우건설": {
+      "name": "대우건설",
+      "code": "047040",
+      "sector": "건설",
+      "market": {
+        "status": "ok",
+        "as_of": "20260716",
+        "current_price": 15150,
+        "return_5d_pct": -5.55,
+        "return_20d_pct": -33.99,
+        "return_60d_pct": -47.21,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "failed",
+        "reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A047040&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7,
+        "components": {
+          "financials": 0,
+          "consensus": 0,
+          "valuation": 0,
+          "flow": 0,
+          "momentum": -7
+        },
+        "available_dimensions": 1,
+        "signal": "중립"
+      }
+    }
+  },
+  "errors": [
+    "OPENDART_API_KEY 미설정",
+    "삼성전자 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764af30>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "SK하이닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d776216a0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "현대차 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77649be0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "기아 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77620fe0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "한화에어로스페이스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764b470>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "HD현대중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77621a90>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "삼성중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764a450>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "POSCO홀딩스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005490&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77620860>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "LG에너지솔루션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77649850>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "삼성SDI FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006400&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d776332f0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "NAVER FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035420&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7764b140>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "카카오 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7760d6d0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "KB금융 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A105560&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d776200e0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "신한지주 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d7760cb30>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "현대건설 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77630980>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))",
+    "대우건설 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A047040&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f5d77649ee0>, 'Connection to comp.fnguide.com timed out. (connect timeout=35)'))"
+  ]
+}
