@@ -3,3 +3,6 @@ requests==2.32.4
 beautifulsoup4==4.13.4
 youtube-transcript-api==1.2.4
 openai>=1.66.0,<3.0.0
+pykrx>=1.0.48,<2.0.0
+pandas>=2.2.0,<3.0.0
+lxml>=5.0.0,<7.0.0
