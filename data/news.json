@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-20T22:27:19.297201+09:00",
-  "count": 173,
+  "updated_at": "2026-07-20T22:42:32.594167+09:00",
+  "count": 172,
   "source_status": [
     {
       "name": "금융감독원 DART",
@@ -2210,22 +2210,6 @@
       "importance_score": 53
     },
     {
-      "id": "55f53e522cbff7df",
-      "type": "news",
-      "title": "부서소개 - reb.or.kr",
-      "description": "부서소개 reb.or.kr",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQT2thWVBBUEZFTElSMGFlanZNSVFXLWYzb2dVOUdYLWZ3czA0akhmVUNzR29Xd3ZZcUJlazdpb0JRMXJzLWRCXzZscVZXR0MtLXphUjRrdk5XWlc2UlBjVkxLeUhWamZsWl9NMU1ObnhWY2hnU0V0eDhya3ZiMmU1bkY4QllOaWw4cjF5bTlwOWh2dUdjbE5HQlZ4akhLRUEtMEQtLTlrV042VmpsTnZKRnY1bThVQWppcXI5NnlUeWVpbERLQ2w1bkxrTko0Wl9YckZISGNRazB6cThOTzYzbVFhYWlQeDFNeGptY1ROTW9qbk5USGxpbHNpSEs0b0E?oc=5",
-      "source": "한국부동산원",
-      "source_domain": "reb.or.kr",
-      "source_priority": 2,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-19T22:37:47+00:00",
-      "importance_score": 51
-    },
-    {
       "id": "568c60f92d150580",
       "type": "youtube",
       "title": "뇌가 자체적으로 만드는 이모티콘? (이승훈 교수)",
@@ -2241,6 +2225,22 @@
       "category": "경제 유튜브",
       "published_at": "2026-07-19T14:15:22+00:00",
       "importance_score": 51
+    },
+    {
+      "id": "287cf64245e9019d",
+      "type": "news",
+      "title": "“원금 녹아 내린다”…‘ETF 아버지’ 배재규 “비난 하겠지만 지금이라도 멈춰야”",
+      "description": "배재규 한투신탁운용 대표 글 올려 “지금처럼 변동성 크면 매일 손실 불어나”국내에서 최초로 상장지수펀드(ETF)를 도입해 ‘한국 ETF의 아버지’로 불리는 배재규 한국투자신탁운용 ..",
+      "url": "https://www.mk.co.kr/news/economy/12102829",
+      "source": "매일경제",
+      "source_domain": "mk.co.kr",
+      "source_priority": 1,
+      "collection_method": "official_rss",
+      "collection_label": "공식 증권 RSS",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T13:40:47+00:00",
+      "importance_score": 50
     },
     {
       "id": "7e59e4bf3320d43e",
@@ -2568,22 +2568,6 @@
       "title": "증권·파생상품 시장 지원 … 거래소, 학술연구사업 공모",
       "description": "한국거래소가 국내 자본시장 발전을 도모하고 증권·파생상품 시장의 학술 연구 저변을 확대하기 위해 연구 지원 사업을 실시한다. 20일 한국거래소 증권·파생상품연구센터에 따르면 거래소..",
       "url": "https://www.mk.co.kr/news/stock/12102677",
-      "source": "매일경제",
-      "source_domain": "mk.co.kr",
-      "source_priority": 1,
-      "collection_method": "official_rss",
-      "collection_label": "공식 증권 RSS",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:47:58+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "114edb759cf4a248",
-      "type": "news",
-      "title": "구원투수 기다리는 코스피 … 등판 못하는 국민연금 왜?",
-      "description": "코스피 낙폭이 깊어지면서 역설적으로 국민연금에 대한 국내주식 매도 압력이 대폭 완화됐다. 떨어진 주가에 따라 전체 자산 대비 국내주식이 차지하는 비중이 낮아졌기 때문이다. 그럼에도..",
-      "url": "https://www.mk.co.kr/news/stock/12102678",
       "source": "매일경제",
       "source_domain": "mk.co.kr",
       "source_priority": 1,
@@ -2952,9 +2936,23 @@
       "importance_score": 45
     }
   ],
+  "exclusion_status": {
+    "excluded_count": 1,
+    "rules": [
+      "한국부동산원 부서소개 페이지 제외"
+    ],
+    "excluded_items": [
+      {
+        "id": "55f53e522cbff7df",
+        "title": "부서소개 - reb.or.kr",
+        "source": "한국부동산원",
+        "reason": "한국부동산원 부서소개 페이지"
+      }
+    ]
+  },
   "stock_data_status": {
     "status": "ok",
-    "updated_at": "2026-07-20T22:32:18.324875+09:00",
+    "updated_at": "2026-07-20T22:47:08.254227+09:00",
     "stock_count": 32,
     "errors": [
       "삼성전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -2972,570 +2970,45 @@
   "ai_briefings": {
     "daily": {
       "signal": "경계",
-      "title": "글로벌 빅테크·반도체 실적 불확실성과 국내 정책·원자재 변동이 복합된 하루 — 신중한 접근 권고",
-      "summary": "미·글로벌 빅테크 실적 기대에 따른 반도체 업종 변동성이 커진 가운데(실적 향방이 분수령), 국내 금융·부동산·건설 관련 정책(非아파트 공급 보완조치)과 철근 등 원자재 가격 변동이 업종별로 상충 신호를 만들고 있습니다. 대형 전자·반도체 기업의 최근 연결 실적 지표는 강하지만 단기 주가 모멘텀은 약화되어 있어 리레이팅 위험이 존재합니다. 건설·자재 업종은 정책 지원(공급 보완)과 원자재 비용 상승이 엇갈려 체계적 리스크 점검이 필요합니다. 단기 변동성 확대를 감안해 선별적·분할 접근을 권고합니다.",
+      "title": "실적 개선 신호가 있지만 거시·금융 리스크와 단기 모멘텀 약화로 경계 유지",
+      "summary": "대형 반도체·바이오 등 일부 대형주의 1분기 연결실적은 개선(정량 데이터 상 매출·영업이익 증가)이 관찰되나, 단기 주가 모멘텀은 약화되어 변동성이 확대된 상태입니다. GDP·CPI의 방향성 엇갈림과 단일종목 레버리지 규제 보완 방안 등 금융정책 이슈가 투자심리에 부담을 주고 있습니다. 국토부의 非아파트 공급 보완조치 시행은 건설·자재 업종에 긍정적이라는 점이 중립적 지지 요인입니다. 전반적으로 종목별 실적 개선을 확인하되 수급·매크로 리스크를 면밀히 점검할 필요가 있습니다.",
       "confidence": 0,
-      "drivers": [
-        {
-          "sentiment": "부정",
-          "title": "반도체 사이클·빅테크 실적 불확실성으로 단기 주가 변동성 확대",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "9ef6b506dc7290a3",
-              "title": "“코스피, 다음주 빅테크 실적 확인후 안정화”…NH증권 “6천이 하방지지선”",
-              "url": "https://www.mk.co.kr/news/stock/12102331",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "긍정",
-          "title": "국내 정책(非아파트 공급 보완 등)으로 건설·자재 부문의 수주·사업 부담 완화 가능성",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            }
-          ]
-        },
-        {
-          "sentiment": "중립",
-          "title": "단기 채권·금리·자금 흐름 변화로 주식시장 변동성 요인 상존",
-          "evidence": [
-            {
-              "id": "4f0f278d16a02176",
-              "title": "\"우려 덜었지만 방망이는 짧게\"…단기채로 몰리는 매수세",
-              "url": "https://www.yna.co.kr/view/AKR20260720065800008",
-              "source": "연합뉴스"
-            }
-          ]
-        }
-      ],
-      "buy_candidates": [
-        {
-          "name": "삼성전자",
-          "code": "005930",
-          "sector": "반도체",
-          "reason": "정량(연결실적) 측면에서 1분기 매출·영업이익이 큰 폭 개선되어 재무 체력이 강화된 점(quant financials)과 대형주·장기 밸류에이션 프리미엄의 회복 가능성(구글 등 빅테크 실적 분수령 이후 재평가 가능) 대비 단기 주가 모멘텀(5·20거래일 수익률)이 약화된 점을 함께 반영. 정량점수는 긍정(20.0)으로 재무 강점 + 모멘텀 약화의 상충 신호 존재.",
-          "risk": "단기적으로는 빅테크·반도체 실적 서프라이즈 여부에 따라 추가 하락 가능성(추격매수 리스크). 또한 최근 5·20거래일 급락으로 단기 모멘텀 약화가 리레이팅 리스크로 작용할 수 있음.",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "690941eb7b082370",
-              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
-              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
-              "source": "손에잡히는경제"
-            }
-          ],
-          "quantitative_score": 20.0,
-          "score_components": {
-            "financials": 21.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -1.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 244000,
-            "return_20d_pct": -31.07,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "SK하이닉스",
-          "code": "000660",
-          "sector": "반도체",
-          "reason": "정량(연결실적)에서 큰 폭의 매출·영업이익 개선이 확인되어 재무 트렌드가 강한 점(quant financials)과 동시에 단기 주가 모멘텀(5·20거래일 수익률)이 부진해 단가·수요 민감도(semiconductor cycle) 리스크가 존재함을 함께 고려. 정량점수는 경계 기준 상단(15.0)으로 관심 분할매수 검토 요건(정량 긍정·가용 차원 2개 충족).",
-          "risk": "글로벌 빅테크 실적·수요 신호가 부정적이면 추가 하락 가능(추격매수 위험).",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "690941eb7b082370",
-              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
-              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
-              "source": "손에잡히는경제"
-            }
-          ],
-          "quantitative_score": 15.0,
-          "score_components": {
-            "financials": 21.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -6.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 1764000,
-            "return_20d_pct": -36.18,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "LX하우시스",
-          "code": "108670",
-          "sector": "건축자재",
-          "reason": "1분기 연결 실적에서 영업이익 대폭 개선(operating profit 성장)으로 재무 트렌드가 확연히 양호(quant financials)하고, 최근 주가(60거래일 상대)는 횡보 내 상승 여지가 있어(policy) 정부의 非아파트 공급 보완조치가 자재 수요 측면에서 긍정적 재료로 작용할 수 있음. 다만 건설원자재(철근) 가격 상승은 마진 압박 요인으로 모멘텀 관찰 필요(quant momentum).",
-          "risk": "원자재(철근 등) 가격 상승과 프로젝트 지연 시 가치함정 가능성 — 정책 지원이 실수요로 이어지지 않으면 기대가치 하회할 수 있음.",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "c998c75ead5ff1c8",
-              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
-              "source": "국토교통부"
-            }
-          ],
-          "quantitative_score": 23.0,
-          "score_components": {
-            "financials": 15.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": 8.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 32450,
-            "return_20d_pct": 1.09,
-            "per": null,
-            "pbr": null
-          }
-        }
-      ],
-      "sell_candidates": [
-        {
-          "name": "현대건설",
-          "code": "000720",
-          "sector": "건설",
-          "reason": "정량 데이터상(quant financials) 최근 매출·영업이익이 감소했고(연간/분기 실적 악화), 주가 모멘텀도 약화되어(quant momentum) 재무·모멘텀 동반 약화 신호가 나타남. 정책(非아파트 공급 보완)은 중장기 수요에 일부 긍정이나, 철근 등 원자재 가격 상승으로 원가·마진에 대한 직접적 압박이 존재해 리스크가 확대됨.",
-          "risk": "정책 시행으로 비아파트 공급 확대가 가시화되면 중장기적으로 수주·실적 개선 가능성 존재 — 단기적 가치함정과 중장기 정책 개선 효과가 상충.",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "c998c75ead5ff1c8",
-              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
-              "source": "국토교통부"
-            }
-          ],
-          "quantitative_score": -25.0,
-          "score_components": {
-            "financials": -18.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -7.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 91000,
-            "return_20d_pct": -29.24,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "한미반도체",
-          "code": "042700",
-          "sector": "반도체장비",
-          "reason": "정량(연결실적)에서 매출·영업이익이 큰 폭으로 위축되어 재무 지표가 약화된 상황(quant financials)이고, 주가 모멘텀도 부진(quant momentum)해 업황 민감주로서 하방 리스크가 확대됨. 글로벌 빅테크·반도체 수요 신호가 불확실한 국면에서 장비업체의 실적 반등 가능성이 낮다는 점을 반영.",
-          "risk": "반도체 업황이 예상보다 빠르게 회복되면 실적·주가가 빠르게 개선될 수 있음(가치 반등 시나리오).",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "9ef6b506dc7290a3",
-              "title": "“코스피, 다음주 빅테크 실적 확인후 안정화”…NH증권 “6천이 하방지지선”",
-              "url": "https://www.mk.co.kr/news/stock/12102331",
-              "source": "매일경제"
-            }
-          ],
-          "quantitative_score": -22.0,
-          "score_components": {
-            "financials": -15.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -7.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 222000,
-            "return_20d_pct": -24.75,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "알테오젠",
-          "code": "196170",
-          "sector": "바이오",
-          "reason": "정량상(quant financials) 최근 실적·성장 지표가 약화되고 모멘텀이 부진(quant momentum)해 리스크가 확대된 가운데, 단일종목 레버리지·투기성 매매 규제·정책(레버리지 보완방안) 강화 가능성은 변동성·유동성 감소로 주가 추가 하방요인으로 작용할 수 있음(시장 구조적 리스크).",
-          "risk": "임상·기술·사업화 관련 긍정적 모멘텀이 나오면 급반등 가능성(가치 재평가).",
-          "evidence": [
-            {
-              "id": "0807f159d251df75",
-              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
-              "source": "금융위원회"
-            },
-            {
-              "id": "b6837966fa23ed8e",
-              "title": "기업이 돈을 벌면, 그 돈은 누구의 것인가?",
-              "url": "https://www.youtube.com/watch?v=tt-Ky5xqgCo",
-              "source": "슈카월드"
-            }
-          ],
-          "quantitative_score": -22.0,
-          "score_components": {
-            "financials": -15.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -7.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 269500,
-            "return_20d_pct": -23.76,
-            "per": null,
-            "pbr": null
-          }
-        }
-      ],
+      "drivers": [],
+      "buy_candidates": [],
+      "sell_candidates": [],
       "risks": [
-        "빅테크·반도체 실적(특히 미국 기업) 변동성이 반도체·IT 대형주에 즉시 영향 — 실적 방향성에 따른 추가 급락 위험.",
-        "국내 건설업종은 정책(공급 보완)과 원자재(철근) 가격이 상충하여 실적 및 마진에 대한 불확실성이 확대."
+        "반도체 사이클의 피크아웃 우려(대형 실적 개선에도 향후 수요 둔화 시 주가 조정 가능)",
+        "미국 금리·지정학(중동 리스크 등) 재부각 시 위험자산 회피 심리 강화",
+        "단기 외국인·기관 수급 부진으로 실적 개선 신호가 즉시 주가 반영되지 않을 가능성"
       ],
       "checks": [
-        "빅테크(미국) 2분기 실적 발표 결과와 반도체 수요(메모리·비메모리) 신호 확인",
-        "국내 건설 프로젝트별 철근·원자재 적용 단가와 회사별 수주 잔고·수익성 민감도 점검",
-        "단일종목 레버리지 관련 규제·보완방안(금융위) 세부 내용 및 시행 일정 확인"
+        "관심 종목별(Watchlist) 최신 분기 실적 상세(매출·영업이익)과 정량 점수 구성요소 확인",
+        "외국인·기관의 최근 10거래일 순매수·순매도 흐름 및 대량거래 발생 여부 점검",
+        "향후 1~2주 내 발표 예정된 글로벌 빅테크(예: 구글 등) 실적과 연동되는 수요지표 확인",
+        "단일종목 레버리지·ETN 관련 규제 변화의 영향(공매도·레버리지 유통 구조) 점검"
       ]
     },
     "weekly": {
       "signal": "경계",
-      "title": "단기 실적 불확실성과 정책·원자재 요인이 혼재된 주간 — 선별적 접근 필요",
-      "summary": "이번 주(7일) 지표와 뉴스 흐름은 반도체·빅테크 실적에 따른 업황 분기점 가능성, 금융당국의 상품·레버리지 규제 이슈, 그리고 국토부의 비아파트 공급 보완조치와 철근 가격 변동 등 업종별 상충 요인이 존재합니다. 정량적으로 대형 전자·반도체·일부 건자재 기업은 실적 개선 신호가 있으나 단기 주가 모멘텀은 약화되어 리스크 관리가 중요합니다. 투자 접근은 분할매수·관심 종목 중심의 모니터링을 권고합니다.",
+      "title": "실적 개선에도 단기 모멘텀 부재와 정책·거시 불확실성으로 보수적 관망 권고",
+      "summary": "최근 7일간 대형주의 연결실적 발표는 일부 업종(반도체·바이오·전자부품 등)에서 개선 신호를 보였으나 주가 단기 조정이 이어졌습니다. 한국은행·정부·금융당국의 정책·규제 이슈(단일종목 레버리지 보완·금융외교·거시지표 혼조)가 향후 수급에 영향을 줄 가능성이 큽니다. 건설·비아파트 공급지원 강화는 중기적 업종 지원 요인이지만, 재무·수급 관점에서 종목별 리스크는 상존합니다. 주간 관점에서는 종목 선택 시 실적·수급·밸류에이션을 함께 확인한 후 비중을 조절하는 접근이 바람직합니다.",
       "confidence": 0,
-      "drivers": [
-        {
-          "sentiment": "부정",
-          "title": "반도체 사이클 피크아웃 우려 및 실적 변동성 → 업종 전체 변동성 확대",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "9ef6b506dc7290a3",
-              "title": "“코스피, 다음주 빅테크 실적 확인후 안정화”…NH증권 “6천이 하방지지선”",
-              "url": "https://www.mk.co.kr/news/stock/12102331",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "긍정",
-          "title": "국토부의 非아파트 공급 보완조치 시행으로 건설·자재 중장기 수요 개선 가능",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            }
-          ]
-        },
-        {
-          "sentiment": "부정",
-          "title": "단일종목 레버리지 상품 보완 방안 발표 등으로 단기 유동성·투기성 매매 축소 가능",
-          "evidence": [
-            {
-              "id": "0807f159d251df75",
-              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
-              "source": "금융위원회"
-            },
-            {
-              "id": "b6837966fa23ed8e",
-              "title": "기업이 돈을 벌면, 그 돈은 누구의 것인가?",
-              "url": "https://www.youtube.com/watch?v=tt-Ky5xqgCo",
-              "source": "슈카월드"
-            }
-          ]
-        }
-      ],
-      "buy_candidates": [
-        {
-          "name": "삼성전자",
-          "code": "005930",
-          "sector": "반도체",
-          "reason": "연결 재무제표 기준 1분기 매출·영업이익이 큰 폭 개선되어 재무 펀더멘털이 강화된 반면, 단기 주가 모멘텀은 약화된 상태(quant financials + quant momentum). 주간 관점에서는 빅테크 실적 확인 후 반등 여지가 있으므로 관심·분할매수 검토(정량점수 20.0, available_dimensions 2).",
-          "risk": "글로벌 수요 신호(빅테크 실적)가 부정적일 경우 추가 하락 가능성(추격매수 위험).",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "690941eb7b082370",
-              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
-              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
-              "source": "손에잡히는경제"
-            }
-          ],
-          "quantitative_score": 20.0,
-          "score_components": {
-            "financials": 21.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -1.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 244000,
-            "return_20d_pct": -31.07,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "SK하이닉스",
-          "code": "000660",
-          "sector": "반도체",
-          "reason": "1분기 연결 실적에서 매출·영업이익이 큰 폭 개선(quant financials)되어 업황 회복 시 수혜 가능성이 높으나 단기 모멘텀(5·20일 수익률) 부진이 관찰됨. 주간 관점에서는 실적 관련 글로벌 수요 신호 확인 후 분할매수 고려(quant score 15.0, available_dimensions 2).",
-          "risk": "반도체 수요 피크아웃 우려로 추가 약세 시 단기 손실 발생 가능.",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "690941eb7b082370",
-              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
-              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
-              "source": "손에잡히는경제"
-            }
-          ],
-          "quantitative_score": 15.0,
-          "score_components": {
-            "financials": 21.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -6.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 1764000,
-            "return_20d_pct": -36.18,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "LX하우시스",
-          "code": "108670",
-          "sector": "건축자재",
-          "reason": "연결 실적에서 영업이익 개선(quant financials)과 함께 정부의 非아파트 공급 보완조치 시행이 자재 수요 측면에서 긍정적(정책·수급), 다만 철근 등 원자재 가격 상승은 수익성 리스크로 작용하므로 분할 접근 권고(quant score 23.0, available_dimensions 2).",
-          "risk": "원자재 가격 상승 지속 시 마진 압박으로 기대치 미달 가능성(가치함정 위험).",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "c998c75ead5ff1c8",
-              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
-              "source": "국토교통부"
-            }
-          ],
-          "quantitative_score": 23.0,
-          "score_components": {
-            "financials": 15.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": 8.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 32450,
-            "return_20d_pct": 1.09,
-            "per": null,
-            "pbr": null
-          }
-        }
-      ],
-      "sell_candidates": [
-        {
-          "name": "현대건설",
-          "code": "000720",
-          "sector": "건설",
-          "reason": "정량적으로 매출 및 영업이익 감소(quant financials)와 약한 주가 모멘텀(quant momentum)을 보이며, 높은 부채비율 등 재무 부담도 존재해(quant financials) 단기 비중 축소·매도 검토 대상(quant score -25.0, available_dimensions 2). 정책의 실효성에 따라 회복 가능성이 있으므로 타이밍 분배 필요.",
-          "risk": "정부의 공급 보완조치가 실수요로 연결될 경우 중장기 수주·실적 개선으로 반등할 수 있음.",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "c998c75ead5ff1c8",
-              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
-              "source": "국토교통부"
-            }
-          ],
-          "quantitative_score": -25.0,
-          "score_components": {
-            "financials": -18.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -7.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 91000,
-            "return_20d_pct": -29.24,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "한미반도체",
-          "code": "042700",
-          "sector": "반도체장비",
-          "reason": "연결 실적 악화(매출·영업이익 큰 폭 축소, quant financials) 및 단기 주가 모멘텀 부진(quant momentum)이 동반되어 업황 민감주로서 비중 축소 검토 대상(quant score -22.0, available_dimensions 2). 반도체 수요 약화 국면에서 장비업체의 실적 회복은 더딜 가능성이 큼.",
-          "risk": "반도체 업황이 예상보다 빠르게 회복될 경우 장비 수주·실적이 빠르게 개선될 수 있음.",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "9ef6b506dc7290a3",
-              "title": "“코스피, 다음주 빅테크 실적 확인후 안정화”…NH증권 “6천이 하방지지선”",
-              "url": "https://www.mk.co.kr/news/stock/12102331",
-              "source": "매일경제"
-            }
-          ],
-          "quantitative_score": -22.0,
-          "score_components": {
-            "financials": -15.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -7.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 222000,
-            "return_20d_pct": -24.75,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "알테오젠",
-          "code": "196170",
-          "sector": "바이오",
-          "reason": "정량상 매출·영업이익 축소와 모멘텀 약화(quant financials·momentum) 신호가 확인되며, 단일종목 레버리지·투기성 매매 보완방안 등의 정책·시장구조 변화가 유동성·변동성 축소로 이어질 경우 추가 하방압력이 될 수 있어 비중 축소 검토(quant score -22.0, available_dimensions 2).",
-          "risk": "임상·기술적 호재 또는 제휴·라이선스 이슈 발생 시 빠른 주가 반등 가능성(가치 재평가).",
-          "evidence": [
-            {
-              "id": "0807f159d251df75",
-              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
-              "source": "금융위원회"
-            },
-            {
-              "id": "b6837966fa23ed8e",
-              "title": "기업이 돈을 벌면, 그 돈은 누구의 것인가?",
-              "url": "https://www.youtube.com/watch?v=tt-Ky5xqgCo",
-              "source": "슈카월드"
-            }
-          ],
-          "quantitative_score": -22.0,
-          "score_components": {
-            "financials": -15.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -7.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 269500,
-            "return_20d_pct": -23.76,
-            "per": null,
-            "pbr": null
-          }
-        }
-      ],
+      "drivers": [],
+      "buy_candidates": [],
+      "sell_candidates": [],
       "risks": [
-        "글로벌 빅테크 실적·미국 경기·금리 변수에 따른 기술·반도체 섹터의 급격한 방향 전환 가능성.",
-        "국내 건설·자재 업종은 정책(공급 보완)과 원자재 가격(철근 등) 변화가 엇갈려 실적 및 마진에 대한 불확실성 지속."
+        "글로벌 빅테크 실적(특히 수요 지표) 변동에 따른 반도체 수요 충격",
+        "금리·유동성 쇼크 발생 시 성장주·레버리지 상품 중심으로 급락 가능",
+        "정책·규제(레버리지·상장폐지 이슈 등)에 따른 특정 섹터 변동성 확대"
       ],
       "checks": [
-        "미·글로벌 빅테크(예: 구글 등) 실적 발표와 메모리·비메모리 수요 지표 추적",
-        "국내 건설업체별 수주 잔고·원가(철근 등) 민감도 및 계약단가 반영 시점 확인",
-        "금융위의 단일종목 레버리지 보완방안 세부 시행계획 및 영향 범위(ETF·ETN 대상 등) 확인"
+        "Watchlist 종목별로 컨센서스·목표주가(가능시), 최근 외국인·기관 수급 데이터 확인",
+        "향후 2주 내 예정된 글로벌 실적·거시지표 일정을 확인(빅테크 실적, CPI 등)",
+        "건설·부동산 관련 정책(국토부 시행세부안)과 각사 수혜 정도(프로젝트·공사수주) 점검"
       ]
     },
     "model": "gpt-5-mini",
-    "generated_at": "2026-07-20T22:33:37.613662+09:00",
+    "generated_at": "2026-07-20T22:47:49.844237+09:00",
     "analysis_type": "openai_multifactor",
     "methodology": {
       "description": "OpenDART 재무, FnGuide 공개 컨센서스, KRX 가격·밸류에이션·외국인/기관 수급을 결합한 보조 점수",
@@ -3550,9 +3023,9 @@
   "ai_status": {
     "status": "ok",
     "model": "gpt-5-mini",
-    "input_items": 55,
+    "input_items": 54,
     "stock_factors": 32,
     "analysis_type": "openai_multifactor",
-    "generated_at": "2026-07-20T22:33:37.613681+09:00"
+    "generated_at": "2026-07-20T22:47:49.844257+09:00"
   }
 }
