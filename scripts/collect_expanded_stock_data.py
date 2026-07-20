@@ -14,24 +14,20 @@ OUTPUT = Path("data/stock_data.json")
 def main() -> None:
     universe, universe_status = build_stock_universe()
     if not universe:
-        raise SystemExit("확장 모니터링 종목을 구성하지 못했습니다.")
+        raise SystemExit("추천 모니터링 종목을 구성하지 못했습니다.")
 
     collect_stock_data.STOCKS = universe
-    print(
-        "Expanded universe loaded: "
-        f"total={len(universe)}, "
-        f"top50={universe_status.get('top_kospi_loaded', 0)}, "
-        f"hanwha={universe_status.get('hanwha_group_count', 0)}, "
-        f"lg={universe_status.get('lg_group_count', 0)}"
-    )
+    print(f"Fixed recommendation watchlist loaded: total={len(universe)}")
     collect_stock_data.main()
 
     if not OUTPUT.exists():
         return
+
     payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
     payload.setdefault("source_status", {})["stock_universe"] = universe_status
     payload["universe"] = {
         "policy": universe_status.get("policy"),
+        "mode": universe_status.get("mode"),
         "updated_at": datetime.now(KST).isoformat(),
         "stock_count": len(universe),
         "stocks": [
@@ -40,9 +36,8 @@ def main() -> None:
                 "code": meta.get("code"),
                 "sector": meta.get("sector"),
                 "business_sector": meta.get("business_sector"),
-                "group": meta.get("group"),
                 "tags": meta.get("universe_tags", []),
-                "market_cap_rank": meta.get("market_cap_rank"),
+                "watchlist_order": meta.get("watchlist_order"),
             }
             for name, meta in universe.items()
         ],
@@ -53,13 +48,12 @@ def main() -> None:
         if not isinstance(row, dict):
             continue
         row["universe_tags"] = meta.get("universe_tags", [])
-        row["market_cap_rank"] = meta.get("market_cap_rank")
-        row["group"] = meta.get("group")
+        row["watchlist_order"] = meta.get("watchlist_order")
         if meta.get("business_sector"):
             row["business_sector"] = meta["business_sector"]
 
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Expanded universe metadata saved for {len(universe)} stocks")
+    print(f"Fixed recommendation watchlist metadata saved for {len(universe)} stocks")
 
 
 if __name__ == "__main__":
