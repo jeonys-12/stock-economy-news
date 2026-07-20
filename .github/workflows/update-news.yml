@@ -61,6 +61,18 @@ jobs:
           print(f"OPENDART_API_KEY configured: yes (length={len(key)})")
           PY
 
+      - name: Verify KRX configuration
+        env:
+          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          key = os.getenv("KRX_API_KEY", "").strip()
+          if not key:
+              raise SystemExit("KRX_API_KEY is not configured")
+          print(f"KRX_API_KEY configured: yes (length={len(key)})")
+          PY
+
       - name: Collect news
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
@@ -70,7 +82,14 @@ jobs:
         continue-on-error: true
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
         run: python scripts/collect_stock_data.py
+
+      - name: Enrich with KRX official market data
+        continue-on-error: true
+        env:
+          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
+        run: python scripts/collect_krx_official.py
 
       - name: Generate OpenAI multifactor market briefing
         env:
