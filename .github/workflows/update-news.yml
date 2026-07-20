@@ -13,6 +13,8 @@ on:
       - "app.js"
       - "multifactor-ui.js"
       - "multifactor-ui.css"
+      - "stock-monitoring-ui.js"
+      - "stock-monitoring-ui.css"
       - "priority-sort.js"
       - "count-badges.js"
       - "count-badges.css"
@@ -138,7 +140,7 @@ jobs:
         run: |
           rm -rf public
           mkdir -p public/data
-          cp index.html style.css app.js multifactor-ui.js multifactor-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
+          cp index.html style.css app.js multifactor-ui.js multifactor-ui.css stock-monitoring-ui.js stock-monitoring-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
           cp data/news.json public/data/news.json
           if [ -f data/stock_data.json ]; then cp data/stock_data.json public/data/stock_data.json; fi
 
