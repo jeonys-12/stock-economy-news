@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="multifactor-ui.css">
+  <link rel="stylesheet" href="stock-monitoring-ui.css">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -115,6 +116,26 @@
         <a href="https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg" target="_blank" rel="noopener">슈카월드</a>
       </div>
     </section>
+
+    <section class="stock-diagnostics-section" id="stockDiagnostics">
+      <div class="stock-diagnostics-header">
+        <div class="section-heading"><div><p class="section-kicker">STOCK DATA DIAGNOSTICS</p><h2>매수·매도 검토 종목 수집 결과</h2></div></div>
+        <div class="stock-diagnostics-meta"><span>종목 데이터 업데이트: <strong id="stockDiagnosticsUpdatedAt">확인 중</strong></span><button id="stockDiagnosticRefresh" class="stock-diagnostics-refresh" type="button">상태 새로고침</button></div>
+      </div>
+      <p class="stock-diagnostics-help">모니터링 대상 전체 종목의 OpenDART 재무, FnGuide 컨센서스, 주가, PER·PBR, 외국인·기관 수급 및 정량 추천조건을 표시합니다. 종목을 펼치면 수집 실패·자료 누락 원인과 수정 단서를 확인할 수 있습니다.</p>
+      <div id="stockGlobalStatus" class="stock-global-status"><p class="result-info">전체 수집 상태를 불러오는 중입니다.</p></div>
+      <div class="stock-diagnostics-controls">
+        <div id="stockDiagnosticFilters" class="stock-diagnostic-filters" aria-label="종목 수집 상태 필터">
+          <button class="active" type="button" data-stock-status="all">전체</button>
+          <button type="button" data-stock-status="ok">정상</button>
+          <button type="button" data-stock-status="warning">일부 누락</button>
+          <button type="button" data-stock-status="failed">수집 실패</button>
+        </div>
+        <input id="stockDiagnosticSearch" type="search" placeholder="종목명·종목코드·업종 검색">
+      </div>
+      <p id="stockDiagnosticsSummary" class="stock-diagnostics-summary">수집 결과 집계 중</p>
+      <div id="stockDiagnosticsList" class="stock-diagnostics-list" aria-live="polite"><p class="result-info">종목별 수집 결과를 불러오는 중입니다.</p></div>
+    </section>
   </main>
 
   <div hidden aria-hidden="true">
@@ -139,5 +160,6 @@
   <script src="priority-sort.js" defer></script>
   <script src="count-badges.js" defer></script>
   <script src="default-daily.js" defer></script>
+  <script src="stock-monitoring-ui.js" defer></script>
 </body>
 </html>
