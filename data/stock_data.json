@@ -1,29 +1,56 @@
 {
-  "updated_at": "2026-07-20T18:24:35.809457+09:00",
+  "updated_at": "2026-07-20T18:51:11.154971+09:00",
   "source_status": {
     "opendart": {
       "configured": true,
-      "status": "ok",
-      "corp_code_count": 3977
+      "status": "failed",
+      "corp_code_count": 0,
+      "reason": "HTTPSConnectionPool(host='opendart.fss.or.kr', port=443): Max retries exceeded with url: /api/corpCode.xml?crtfc_key=3e773d20d9536916a1d61092315aaad66596b191 (Caused by ConnectTime"
     },
     "fnguide": {
       "mode": "optional_html_with_cache",
       "cache_days": 7,
       "cached_stocks_reused": 0
     },
+    "stock_universe": {
+      "policy": "KOSPI 시가총액 상위 50개 보통주 + 한화그룹 + LG그룹 + 기존 핵심 종목",
+      "top_kospi_target": 50,
+      "market_cap_status": "failed",
+      "reason": "최근 KOSPI 시가총액 데이터를 찾지 못했습니다.",
+      "top_kospi_loaded": 0,
+      "group_scan_warning": "index -1 is out of bounds for axis 0 with size 0",
+      "total_stocks": 33,
+      "hanwha_group_count": 9,
+      "lg_group_count": 10,
+      "core_count": 16
+    },
     "data_quality_repair": {
       "status": "ok",
       "fnguide_valid_cache_reused": 0,
       "errors": [
+        "한화솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "한화오션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "한화생명 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "한화시스템 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "한화갤러리아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG이노텍 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG디스플레이 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG유플러스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG생활건강 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG화학 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG헬로비전 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG씨엔에스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "삼성전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "SK하이닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "현대차 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "기아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "HD현대중공업 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "삼성중공업 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "POSCO홀딩스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "삼성SDI market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "NAVER market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "카카오 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -32,14 +59,14 @@
         "현대건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "대우건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
       ],
-      "updated_at": "2026-07-20T18:24:34.657731+09:00"
+      "updated_at": "2026-07-20T18:51:10.192041+09:00"
     },
     "krx_open_api": {
       "configured": true,
       "status": "failed",
       "reason": "KRX API 인증 또는 서비스 활용승인 오류(HTTP 401)",
       "fallback": "기존 pykrx 데이터 유지",
-      "updated_at": "2026-07-20T18:24:35.809423+09:00"
+      "updated_at": "2026-07-20T18:51:11.154938+09:00"
     }
   },
   "methodology": {
@@ -52,6 +79,884 @@
     "dimension_policy": "재무·컨센서스·밸류에이션·수급·모멘텀을 실제 값 존재 여부로 각각 계산"
   },
   "stocks": {
+    "한화": {
+      "name": "한화",
+      "code": "000880",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 87200,
+        "return_5d_pct": -6.84,
+        "return_20d_pct": -24.31,
+        "return_60d_pct": -32.77,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "한화손해보험": {
+      "name": "한화손해보험",
+      "code": "000370",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 5630,
+        "return_5d_pct": -8.46,
+        "return_20d_pct": -16.59,
+        "return_60d_pct": -15.59,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "한화투자증권": {
+      "name": "한화투자증권",
+      "code": "003530",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 4270,
+        "return_5d_pct": -10.86,
+        "return_20d_pct": -23.61,
+        "return_60d_pct": -43.74,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "한화솔루션": {
+      "name": "한화솔루션",
+      "code": "009830",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 26750,
+        "return_5d_pct": -16.14,
+        "return_20d_pct": -29.7,
+        "return_60d_pct": -34.05,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "한화에어로스페이스": {
+      "name": "한화에어로스페이스",
+      "code": "012450",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 875000,
+        "return_5d_pct": -9.51,
+        "return_20d_pct": -22.01,
+        "return_60d_pct": -38.6,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP",
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹",
+      "business_sector": "방산"
+    },
+    "한화오션": {
+      "name": "한화오션",
+      "code": "042660",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 83200,
+        "return_5d_pct": 2.34,
+        "return_20d_pct": -35.2,
+        "return_60d_pct": -35.35,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "한화생명": {
+      "name": "한화생명",
+      "code": "088350",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 4315,
+        "return_5d_pct": -7.2,
+        "return_20d_pct": -17.34,
+        "return_60d_pct": -10.85,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -4.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -4.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "한화시스템": {
+      "name": "한화시스템",
+      "code": "272210",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 61100,
+        "return_5d_pct": -14.78,
+        "return_20d_pct": -32.93,
+        "return_60d_pct": -53.18,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "한화갤러리아": {
+      "name": "한화갤러리아",
+      "code": "452260",
+      "sector": "한화그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 1868,
+        "return_5d_pct": -9.54,
+        "return_20d_pct": -23.76,
+        "return_60d_pct": -23.76,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "HANWHA_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "한화그룹"
+    },
+    "LG": {
+      "name": "LG",
+      "code": "003550",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 95000,
+        "return_5d_pct": -6.22,
+        "return_20d_pct": -12.76,
+        "return_60d_pct": 1.6,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -1.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -1.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG이노텍": {
+      "name": "LG이노텍",
+      "code": "011070",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 602000,
+        "return_5d_pct": -18.87,
+        "return_20d_pct": -47.42,
+        "return_60d_pct": 47.01,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -6.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -6.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG디스플레이": {
+      "name": "LG디스플레이",
+      "code": "034220",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 9880,
+        "return_5d_pct": -10.26,
+        "return_20d_pct": -27.19,
+        "return_60d_pct": -31.72,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG유플러스": {
+      "name": "LG유플러스",
+      "code": "032640",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 14500,
+        "return_5d_pct": -3.07,
+        "return_20d_pct": -1.43,
+        "return_60d_pct": -16.71,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -3.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -3.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG생활건강": {
+      "name": "LG생활건강",
+      "code": "051900",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 245000,
+        "return_5d_pct": 0.0,
+        "return_20d_pct": 4.03,
+        "return_60d_pct": -2.58,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": 5.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": 5.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG화학": {
+      "name": "LG화학",
+      "code": "051910",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 253000,
+        "return_5d_pct": -4.17,
+        "return_20d_pct": -25.15,
+        "return_60d_pct": -30.78,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG전자": {
+      "name": "LG전자",
+      "code": "066570",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 167200,
+        "return_5d_pct": -8.33,
+        "return_20d_pct": -20.95,
+        "return_60d_pct": 34.3,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -4.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -4.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG헬로비전": {
+      "name": "LG헬로비전",
+      "code": "037560",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 1487,
+        "return_5d_pct": -7.87,
+        "return_20d_pct": -25.58,
+        "return_60d_pct": -37.52,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
+    "LG에너지솔루션": {
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 317500,
+        "return_5d_pct": -2.61,
+        "return_20d_pct": -21.51,
+        "return_60d_pct": -25.99,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -7.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -7.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP",
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹",
+      "business_sector": "이차전지"
+    },
+    "LG씨엔에스": {
+      "name": "LG씨엔에스",
+      "code": "064400",
+      "sector": "LG그룹",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 61800,
+        "return_5d_pct": -13.08,
+        "return_20d_pct": -27.97,
+        "return_60d_pct": -5.21,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": -4.0,
+        "components": {
+          "financials": 0.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -4.0
+        },
+        "available_dimensions": 1,
+        "dimension_names": [
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "LG_GROUP"
+      ],
+      "market_cap_rank": null,
+      "group": "LG그룹"
+    },
     "삼성전자": {
       "name": "삼성전자",
       "code": "005930",
@@ -68,23 +973,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:22:32.378256+09:00",
-        "assets": 633339604000000.0,
-        "assets_growth_pct": 11.71,
-        "equity": 486635976000000.0,
-        "equity_growth_pct": 11.53,
-        "liabilities": 146703628000000.0,
-        "liabilities_growth_pct": 12.31,
-        "operating_profit": 57232797000000.0,
-        "operating_profit_growth_pct": 756.1,
-        "revenue": 133873444000000.0,
-        "revenue_growth_pct": 69.16,
-        "debt_ratio_pct": 30.15
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -92,21 +983,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 20.0,
+        "score": -1.0,
         "components": {
-          "financials": 21.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -1.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
-        "signal": "긍정"
-      }
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "SK하이닉스": {
       "name": "SK하이닉스",
@@ -124,23 +1019,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:22:40.630179+09:00",
-        "assets": 222828744000000.0,
-        "assets_growth_pct": 26.53,
-        "equity": 164379799000000.0,
-        "equity_growth_pct": 36.23,
-        "liabilities": 58448945000000.0,
-        "liabilities_growth_pct": 5.43,
-        "operating_profit": 37610283000000.0,
-        "operating_profit_growth_pct": 405.48,
-        "revenue": 52576287000000.0,
-        "revenue_growth_pct": 198.07,
-        "debt_ratio_pct": 35.56
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -148,21 +1029,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 15.0,
+        "score": -6.0,
         "components": {
-          "financials": 21.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -6.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
-        "signal": "긍정"
-      }
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "현대차": {
       "name": "현대차",
@@ -180,23 +1065,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:22:45.811008+09:00",
-        "assets": 383834207000000.0,
-        "assets_growth_pct": 4.06,
-        "equity": 132226735000000.0,
-        "equity_growth_pct": 3.59,
-        "liabilities": 251607472000000.0,
-        "liabilities_growth_pct": 4.32,
-        "operating_profit": 2514686000000.0,
-        "operating_profit_growth_pct": -30.79,
-        "revenue": 45938886000000.0,
-        "revenue_growth_pct": 3.45,
-        "debt_ratio_pct": 190.28
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -204,21 +1075,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -16.0,
+        "score": -7.0,
         "components": {
-          "financials": -9.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -7.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
-        "signal": "부정"
-      }
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "기아": {
       "name": "기아",
@@ -236,25 +1111,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:22:52.971295+09:00",
-        "assets": 105359955000000.0,
-        "assets_growth_pct": 6.45,
-        "equity": 61638039000000.0,
-        "equity_growth_pct": 0.73,
-        "liabilities": 43721916000000.0,
-        "liabilities_growth_pct": 15.7,
-        "operating_profit": 2205091000000.0,
-        "operating_profit_growth_pct": -26.71,
-        "net_income": 1830207000000.0,
-        "net_income_growth_pct": -23.51,
-        "revenue": 29501881000000.0,
-        "revenue_growth_pct": 5.3,
-        "debt_ratio_pct": 70.93
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -262,69 +1121,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -3.0,
+        "score": 0.0,
         "components": {
-          "financials": -3.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": 0.0
-        },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "financials",
-          "momentum"
-        ],
-        "signal": "중립"
-      }
-    },
-    "한화에어로스페이스": {
-      "name": "한화에어로스페이스",
-      "code": "012450",
-      "sector": "방산",
-      "market": {
-        "status": "ok",
-        "as_of": "20260720",
-        "current_price": 875000,
-        "return_5d_pct": -9.51,
-        "return_20d_pct": -22.01,
-        "return_60d_pct": -38.6,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX/pykrx"
-      },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:00.032005+09:00",
-        "assets": 56659594923000.0,
-        "assets_growth_pct": 5.02,
-        "operating_profit": 638892160000.0,
-        "operating_profit_growth_pct": 20.56
-      },
-      "consensus": {
-        "status": "unavailable",
-        "reason": "FnGuide 유효 데이터 없음",
-        "source": "FnGuide CompanyGuide"
-      },
-      "quantitative": {
-        "score": 5.0,
-        "components": {
-          "financials": 12.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -7.0
         },
         "available_dimensions": 1,
         "dimension_names": [
           "momentum"
         ],
         "signal": "중립"
-      }
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "HD현대중공업": {
       "name": "HD현대중공업",
@@ -342,23 +1157,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:07.451197+09:00",
-        "assets": 27577187358000.0,
-        "assets_growth_pct": 5.41,
-        "equity": 9713237014000.0,
-        "equity_growth_pct": 3.98,
-        "liabilities": 17863950344000.0,
-        "liabilities_growth_pct": 6.2,
-        "operating_profit": 905385908000.0,
-        "operating_profit_growth_pct": 108.74,
-        "revenue": 5916331790000.0,
-        "revenue_growth_pct": 54.78,
-        "debt_ratio_pct": 183.91
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -366,21 +1167,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 14.0,
+        "score": -4.0,
         "components": {
-          "financials": 18.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -4.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
         "signal": "중립"
-      }
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "삼성중공업": {
       "name": "삼성중공업",
@@ -398,23 +1203,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:14.569208+09:00",
-        "assets": 16568722984124.0,
-        "assets_growth_pct": 10.84,
-        "equity": 4455492782205.0,
-        "equity_growth_pct": 8.8,
-        "liabilities": 12113230201919.0,
-        "liabilities_growth_pct": 11.6,
-        "operating_profit": 273118473369.0,
-        "operating_profit_growth_pct": 121.91,
-        "revenue": 2902250597972.0,
-        "revenue_growth_pct": 16.36,
-        "debt_ratio_pct": 271.87
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -422,21 +1213,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 8.0,
+        "score": -7.0,
         "components": {
-          "financials": 15.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -7.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
         "signal": "중립"
-      }
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "POSCO홀딩스": {
       "name": "POSCO홀딩스",
@@ -454,23 +1249,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:23.482328+09:00",
-        "assets": 108345622758072.0,
-        "assets_growth_pct": 3.0,
-        "equity": 63393155104641.0,
-        "equity_growth_pct": 1.63,
-        "liabilities": 44952467653431.0,
-        "liabilities_growth_pct": 4.99,
-        "operating_profit": 706831933233.0,
-        "operating_profit_growth_pct": 24.35,
-        "revenue": 17876106277867.0,
-        "revenue_growth_pct": 2.52,
-        "debt_ratio_pct": 70.91
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -478,75 +1259,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 11.0,
+        "score": -7.0,
         "components": {
-          "financials": 18.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -7.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
         "signal": "중립"
-      }
-    },
-    "LG에너지솔루션": {
-      "name": "LG에너지솔루션",
-      "code": "373220",
-      "sector": "이차전지",
-      "market": {
-        "status": "ok",
-        "as_of": "20260720",
-        "current_price": 317500,
-        "return_5d_pct": -2.61,
-        "return_20d_pct": -21.51,
-        "return_60d_pct": -25.99,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX/pykrx"
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:31.708282+09:00",
-        "assets": 71805610000000.0,
-        "assets_growth_pct": 6.94,
-        "equity": 29916304000000.0,
-        "equity_growth_pct": 2.03,
-        "liabilities": 41889306000000.0,
-        "liabilities_growth_pct": 10.74,
-        "operating_profit": -207755000000.0,
-        "operating_profit_growth_pct": -155.45,
-        "debt_ratio_pct": 140.02
-      },
-      "consensus": {
-        "status": "unavailable",
-        "reason": "FnGuide 유효 데이터 없음",
-        "source": "FnGuide CompanyGuide"
-      },
-      "quantitative": {
-        "score": -19.0,
-        "components": {
-          "financials": -12.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -7.0
-        },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "financials",
-          "momentum"
-        ],
-        "signal": "부정"
-      }
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "삼성SDI": {
       "name": "삼성SDI",
@@ -564,16 +1295,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:39.579597+09:00",
-        "equity": 24909922230108.0,
-        "equity_growth_pct": 5.68,
-        "revenue": 3576353183422.0,
-        "revenue_growth_pct": 12.58
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -581,9 +1305,9 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -1.0,
+        "score": -7.0,
         "components": {
-          "financials": 6.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
@@ -594,7 +1318,12 @@
           "momentum"
         ],
         "signal": "중립"
-      }
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "NAVER": {
       "name": "NAVER",
@@ -612,23 +1341,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:47.686668+09:00",
-        "assets": 44914004920132.0,
-        "assets_growth_pct": 9.32,
-        "equity": 30930035783908.0,
-        "equity_growth_pct": 6.83,
-        "liabilities": 13983969136224.0,
-        "liabilities_growth_pct": 15.27,
-        "operating_profit": 541757341691.0,
-        "operating_profit_growth_pct": 7.21,
-        "revenue": 3241061102900.0,
-        "revenue_growth_pct": 16.3,
-        "debt_ratio_pct": 45.21
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -636,21 +1351,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 11.0,
+        "score": -4.0,
         "components": {
-          "financials": 15.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -4.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
         "signal": "중립"
-      }
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "카카오": {
       "name": "카카오",
@@ -668,25 +1387,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:23:55.969189+09:00",
-        "assets": 28802759972472.0,
-        "assets_growth_pct": 3.67,
-        "equity": 15420486660552.0,
-        "equity_growth_pct": 1.28,
-        "liabilities": 13382273311920.0,
-        "liabilities_growth_pct": 6.56,
-        "operating_profit": 211397661586.0,
-        "operating_profit_growth_pct": 65.97,
-        "net_income": 226836078738.0,
-        "net_income_growth_pct": 13.23,
-        "revenue": 1942077123047.0,
-        "revenue_growth_pct": 11.11,
-        "debt_ratio_pct": 86.78
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -694,21 +1397,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 18.0,
+        "score": -3.0,
         "components": {
-          "financials": 21.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -3.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
-        "signal": "긍정"
-      }
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "KB금융": {
       "name": "KB금융",
@@ -726,21 +1433,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:24:06.723460+09:00",
-        "assets": 829740827000000.0,
-        "assets_growth_pct": 3.99,
-        "equity": 61140136000000.0,
-        "equity_growth_pct": 0.51,
-        "liabilities": 768600691000000.0,
-        "liabilities_growth_pct": 4.27,
-        "operating_profit": 2727566000000.0,
-        "operating_profit_growth_pct": 18.95,
-        "debt_ratio_pct": 1257.11
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -748,21 +1443,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 17.0,
+        "score": 8.0,
         "components": {
-          "financials": 9.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": 8.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
-        "signal": "긍정"
-      }
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "신한지주": {
       "name": "신한지주",
@@ -780,21 +1479,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:24:20.001157+09:00",
-        "assets": 816718546000000.0,
-        "assets_growth_pct": 3.91,
-        "equity": 61474363000000.0,
-        "equity_growth_pct": 1.83,
-        "liabilities": 755244183000000.0,
-        "liabilities_growth_pct": 4.08,
-        "operating_profit": 2154453000000.0,
-        "operating_profit_growth_pct": 10.81,
-        "debt_ratio_pct": 1228.55
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -802,21 +1489,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 11.0,
+        "score": 8.0,
         "components": {
-          "financials": 3.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": 8.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
         "signal": "중립"
-      }
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "현대건설": {
       "name": "현대건설",
@@ -834,23 +1525,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:24:26.961118+09:00",
-        "assets": 28405874000000.0,
-        "assets_growth_pct": 1.06,
-        "equity": 11028599000000.0,
-        "equity_growth_pct": 5.68,
-        "liabilities": 17377275000000.0,
-        "liabilities_growth_pct": -1.67,
-        "operating_profit": 180890000000.0,
-        "operating_profit_growth_pct": -15.35,
-        "revenue": 6281265000000.0,
-        "revenue_growth_pct": -15.75,
-        "debt_ratio_pct": 157.57
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -858,21 +1535,25 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -25.0,
+        "score": -7.0,
         "components": {
-          "financials": -18.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -7.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
-        "signal": "부정"
-      }
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     },
     "대우건설": {
       "name": "대우건설",
@@ -890,23 +1571,9 @@
         "source": "KRX/pykrx"
       },
       "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-20T18:24:34.657512+09:00",
-        "assets": 14078103092832.0,
-        "assets_growth_pct": 5.39,
-        "equity": 3727659217429.0,
-        "equity_growth_pct": 7.28,
-        "liabilities": 10350443875403.0,
-        "liabilities_growth_pct": 4.72,
-        "operating_profit": 255631837181.0,
-        "operating_profit_growth_pct": 68.93,
-        "revenue": 1951410038476.0,
-        "revenue_growth_pct": -6.03,
-        "debt_ratio_pct": 277.67
+        "status": "unavailable",
+        "reason": "DART 고유번호 또는 API 키 없음",
+        "source": "OpenDART"
       },
       "consensus": {
         "status": "unavailable",
@@ -914,33 +1581,69 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -4.0,
+        "score": -7.0,
         "components": {
-          "financials": 3.0,
+          "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
           "momentum": -7.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 1,
         "dimension_names": [
-          "financials",
           "momentum"
         ],
         "signal": "중립"
-      }
+      },
+      "universe_tags": [
+        "CORE"
+      ],
+      "market_cap_rank": null,
+      "group": null
     }
   },
   "errors": [
+    "OpenDART corpCode: HTTPSConnectionPool(host='opendart.fss.or.kr', port=443): Max retries exceeded with url: /api/corpCode.xml?crtfc_key=3e773d20d9536916a1d61092315aaad66596b191 (Caused by ConnectTimeoutError(<HTTPSConnection(host='opendart.fss.or.kr', port=443) at 0x7efd1b258ec0>, 'Connection to opendart.fss.or.kr timed out. (connect timeout=45)'))",
+    "한화손해보험 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000370&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1b090410>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "한화솔루션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009830&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1abaf140>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "한화오션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A042660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a9a2ae0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "한화시스템 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A272210&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a7a60c0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "LG헬로비전 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A037560&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a29eba0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "LG씨엔에스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A064400&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1aa55f40>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "SK하이닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a874c50>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "기아 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd19f64f20>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "삼성중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd19d47bf0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "삼성SDI FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006400&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1aa56f60>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "카카오 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1b14e630>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "신한지주 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1ae4a930>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "대우건설 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A047040&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a160560>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "OpenDART corp codes: HTTPSConnectionPool(host='opendart.fss.or.kr', port=443): Max retries exceeded with url: /api/corpCode.xml?crtfc_key=3e773d20d9536916a1d61092315aaad66596b191 (Caused by ConnectTimeoutError(<HTTPSConnection(host='opendart.fss.or.kr', port=443) at 0x7fdb0ef96510>, 'Connection to opendart.fss.or.kr timed out. (connect timeout=10)'))",
+    "한화 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화손해보험 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화투자증권 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화오션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화생명 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화시스템 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "한화갤러리아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG이노텍 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG디스플레이 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG유플러스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG생활건강 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG화학 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG헬로비전 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG씨엔에스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "삼성전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "SK하이닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "현대차 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "기아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "HD현대중공업 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "삼성중공업 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "POSCO홀딩스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "삼성SDI market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "NAVER market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "카카오 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -948,5 +1651,377 @@
     "신한지주 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "현대건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "대우건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
-  ]
+  ],
+  "universe": {
+    "policy": "KOSPI 시가총액 상위 50개 보통주 + 한화그룹 + LG그룹 + 기존 핵심 종목",
+    "updated_at": "2026-07-20T18:50:28.385521+09:00",
+    "stock_count": 33,
+    "stocks": [
+      {
+        "name": "한화",
+        "code": "000880",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화손해보험",
+        "code": "000370",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화투자증권",
+        "code": "003530",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화솔루션",
+        "code": "009830",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화에어로스페이스",
+        "code": "012450",
+        "sector": "한화그룹",
+        "business_sector": "방산",
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP",
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화오션",
+        "code": "042660",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화생명",
+        "code": "088350",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화시스템",
+        "code": "272210",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "한화갤러리아",
+        "code": "452260",
+        "sector": "한화그룹",
+        "business_sector": null,
+        "group": "한화그룹",
+        "tags": [
+          "HANWHA_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG",
+        "code": "003550",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG이노텍",
+        "code": "011070",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG디스플레이",
+        "code": "034220",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG유플러스",
+        "code": "032640",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG생활건강",
+        "code": "051900",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG화학",
+        "code": "051910",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG전자",
+        "code": "066570",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG헬로비전",
+        "code": "037560",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG에너지솔루션",
+        "code": "373220",
+        "sector": "LG그룹",
+        "business_sector": "이차전지",
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP",
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "LG씨엔에스",
+        "code": "064400",
+        "sector": "LG그룹",
+        "business_sector": null,
+        "group": "LG그룹",
+        "tags": [
+          "LG_GROUP"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "삼성전자",
+        "code": "005930",
+        "sector": "반도체",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "SK하이닉스",
+        "code": "000660",
+        "sector": "반도체",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "현대차",
+        "code": "005380",
+        "sector": "자동차",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "기아",
+        "code": "000270",
+        "sector": "자동차",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "HD현대중공업",
+        "code": "329180",
+        "sector": "조선",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "삼성중공업",
+        "code": "010140",
+        "sector": "조선",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "POSCO홀딩스",
+        "code": "005490",
+        "sector": "소재",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "삼성SDI",
+        "code": "006400",
+        "sector": "이차전지",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "NAVER",
+        "code": "035420",
+        "sector": "인터넷",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "카카오",
+        "code": "035720",
+        "sector": "인터넷",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "KB금융",
+        "code": "105560",
+        "sector": "금융",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "신한지주",
+        "code": "055550",
+        "sector": "금융",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "현대건설",
+        "code": "000720",
+        "sector": "건설",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      },
+      {
+        "name": "대우건설",
+        "code": "047040",
+        "sector": "건설",
+        "business_sector": null,
+        "group": null,
+        "tags": [
+          "CORE"
+        ],
+        "market_cap_rank": null
+      }
+    ]
+  }
 }
