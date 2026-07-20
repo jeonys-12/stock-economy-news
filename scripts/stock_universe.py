@@ -21,6 +21,7 @@ FIXED_RECOMMENDATION_STOCKS: dict[str, dict[str, str]] = {
     "LG에너지솔루션": {"code": "373220", "sector": "이차전지"},
     "LG이노텍": {"code": "011070", "sector": "전자부품"},
     "LG디스플레이": {"code": "034220", "sector": "디스플레이"},
+    "LG씨엔에스": {"code": "064400", "sector": "IT서비스"},
     "SK이노베이션": {"code": "096770", "sector": "에너지·이차전지"},
     "SK이터닉스": {"code": "475150", "sector": "신재생에너지"},
     "포스코퓨처엠": {"code": "003670", "sector": "이차전지소재"},
