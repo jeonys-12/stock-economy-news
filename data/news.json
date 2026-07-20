@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-20T19:16:59.791428+09:00",
-  "count": 172,
+  "updated_at": "2026-07-20T19:47:27.464980+09:00",
+  "count": 173,
   "source_status": [
     {
       "name": "금융감독원 DART",
@@ -218,20 +218,20 @@
       "importance_score": 79
     },
     {
-      "id": "00df3a7c14affe02",
+      "id": "ae68163f25a41aae",
       "type": "news",
-      "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
-      "description": "코스피 944개 종목 중 648개 하락 ‘반짝 반등’ 때 비반도체 상승폭 미미 “급등락 반복, 종목 선택 난이도↑”코스피가 단기간에 급등락을 반복하면서 업종별·종목별 차별화가 뚜렷..",
-      "url": "https://www.mk.co.kr/news/stock/12102104",
-      "source": "매일경제",
-      "source_domain": "mk.co.kr",
-      "source_priority": 1,
-      "collection_method": "official_rss",
-      "collection_label": "공식 증권 RSS",
+      "title": "모바일어플라이언스 · 주권매매거래정지 (상장적격성 실질심사 대상 (사유발생))",
+      "description": "제출인: 코스닥시장본부 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900812",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
       "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T00:18:51+00:00",
-      "importance_score": 77
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 76
     },
     {
       "id": "fe914bc4811afeef",
@@ -518,7 +518,7 @@
       "collection_label": "Google News RSS 대체",
       "country": "대한민국",
       "category": "금융시장",
-      "published_at": "2026-07-20T08:31:40+00:00",
+      "published_at": "2026-07-20T10:36:52+00:00",
       "importance_score": 70
     },
     {
@@ -571,10 +571,10 @@
       "importance_score": 70
     },
     {
-      "id": "bfb7a2e681b9229d",
+      "id": "27cf5ecaacb9f756",
       "type": "news",
-      "title": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) - KRX KIND",
-      "description": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) KRX KIND",
+      "title": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) - 한국거래소",
+      "description": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) 한국거래소",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRmdMWks5d1pxa1RHNkxaeTVPMFloeWp3dmlYQTVlRGpFd21adWlVbUNmNVd1Sk1DTVhmVEU3dTJXbHRkUUgtMFA5d2pvR3BrUmRHYnRLcm5WeFBkX0dyUlg2U1lCR2dQd2hHQXBQOUliOVUyajJ6TlhCRlBWbzJlQWlPNXNVM2lv?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -587,10 +587,10 @@
       "importance_score": 70
     },
     {
-      "id": "8996e6b88529911f",
+      "id": "165b44503c02892c",
       "type": "news",
-      "title": "[IBKS제23호스팩] 주권매매거래정지 - KRX KIND",
-      "description": "[IBKS제23호스팩] 주권매매거래정지 KRX KIND",
+      "title": "[IBKS제23호스팩] 주권매매거래정지 - 한국거래소",
+      "description": "[IBKS제23호스팩] 주권매매거래정지 한국거래소",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNenF2SlhiZmw3bzRkbEFwY3Nfem1wekEtQXEwMmlmZk4yTFpFZmZSTnd1cUxWZFhfRjhzbkp3TXRMMG5qV2VPZzZhTEZDT3E0V0V5TDZtWGV1Q1Z2aEJrandCQ2RnaTVkZHFCcTZnNXJITTZVbHZLRl9yZXRSZVBMNWxMdmJ4VHI3WDNwQlhDQVU5RjNUNGZUbjFQRVQtUGRMNVYtMmNnMm9lOF9yRHFva1NDMlRaSkVYTElONDVVUWEtQUFNSU40?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -778,6 +778,22 @@
       "category": "기업공시",
       "published_at": "2026-07-19T15:00:00+00:00",
       "importance_score": 66
+    },
+    {
+      "id": "736631e5fb26ebe8",
+      "type": "news",
+      "title": "“주가 급락에 6억 성과급? 못 참아”…삼성전자 소액주주 국민연금에 서한 발송",
+      "description": "삼성전자 소액주주들이 20일 반도체 부문 특별경영성과급에 제동을 걸기 위해 국민연금에 주주서한을 전달했다. 소액주주 플랫폼 액트는 이날 오후 4시 서울 국민연금 충정로사옥을 찾아 ..",
+      "url": "https://www.mk.co.kr/news/economy/12102757",
+      "source": "매일경제",
+      "source_domain": "mk.co.kr",
+      "source_priority": 1,
+      "collection_method": "official_rss",
+      "collection_label": "공식 증권 RSS",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:44:44+00:00",
+      "importance_score": 65
     },
     {
       "id": "e9f744d42b26a8af",
@@ -1565,6 +1581,22 @@
       "importance_score": 60
     },
     {
+      "id": "17aebca0328f274a",
+      "type": "news",
+      "title": "부록 - file-cdn.bok.or.kr",
+      "description": "부록 file-cdn.bok.or.kr",
+      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQYi1sSkFpb05LUDB6ZkxZdUo4eFAxSWNZaVlMWkRMSWFaNXV6VGpGTW9YV19hSjljSGQ5UnRndlZ1eXNoRHJyUFYzVURNQWhCcVZDaW91MVZOQ09CekJDYlNVT0I3dzNRSnNHc2FjZ3R3SlYwVHhXeFFwNzMxMXVjOWVWTU1vdFY3MmN4WElkQVV4bXhRbkwxc3pPcGxoYUpYUF9MWDFGQWhQLWtrOHBNdjVBLWtBb3lJbWlhcW9tZjAyS0NCUXJ3em1IZHFvc19FbHRQU0lzX3RhZk1DR0dKRm9MMkZEWFg0VDdiVUc4allHY3ZaYmJTMTFZTDVyZVdBalM2T3V2dmJTVmxRTHRCN1U5cDBDTnl5d3dJSTF6MWZfQjNJcVhlWk9DNzA1SElNVVl6OEVoVXhmUENlTTRxa2ZjNkV2Sk1oQ3hSdUtobko1MzFpdXdreG9aUXFfNEd0bjBnYk53?oc=5",
+      "source": "한국은행",
+      "source_domain": "bok.or.kr",
+      "source_priority": 3,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-19T23:02:00+00:00",
+      "importance_score": 60
+    },
+    {
       "id": "6fb2a778cb71620f",
       "type": "news",
       "title": "\"하나마이크론, 2분기 실적 예상치 웃돌 전망…목표가↑\"-한국 - 한국경제",
@@ -1578,22 +1610,6 @@
       "country": "대한민국",
       "category": "금융시장",
       "published_at": "2026-07-19T22:52:44+00:00",
-      "importance_score": 60
-    },
-    {
-      "id": "8687999bd91567db",
-      "type": "news",
-      "title": "\"하이브, 2분기 사상 최대 실적 전망…목표가는 하향\"-키움 - 한국경제",
-      "description": "\"하이브, 2분기 사상 최대 실적 전망…목표가는 하향\"-키움 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE02MUFGaFB4LS1IQlpPSmlUTUdOR2JSRWdXQndhTUpSeEUteklBY0NZWWQ3eXFUYzJuTngtQnpHRlhONGVBZ1I0RHJXdDVlVlBrS0V2S2xBYU9Qdw?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-19T22:37:46+00:00",
       "importance_score": 60
     },
     {
@@ -1643,6 +1659,22 @@
       "country": "대한민국",
       "category": "금융시장",
       "published_at": "2026-07-20T01:16:47+00:00",
+      "importance_score": 58
+    },
+    {
+      "id": "67a500e450cd3be4",
+      "type": "news",
+      "title": "\"LS일렉트릭, 2분기에만 2조원 이상 수주했을 것…목표가↑\"-KB - 한국경제",
+      "description": "\"LS일렉트릭, 2분기에만 2조원 이상 수주했을 것…목표가↑\"-KB 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VQkR6X2tjYXVJOUpQNzc4SnNvcWF5R3h1M0E2ZjBzWnFFdFpLbTVuVGpzZEZNVGRWbWZDQ2RlY1NaOGdPUHhwZzItZnU4WlNzZFQzYklsdnZ1Zw?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-19T22:50:09+00:00",
       "importance_score": 58
     },
     {
@@ -1711,6 +1743,22 @@
       "importance_score": 57
     },
     {
+      "id": "8687999bd91567db",
+      "type": "news",
+      "title": "\"하이브, 2분기 사상 최대 실적 전망…목표가는 하향\"-키움 - 한국경제",
+      "description": "\"하이브, 2분기 사상 최대 실적 전망…목표가는 하향\"-키움 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE02MUFGaFB4LS1IQlpPSmlUTUdOR2JSRWdXQndhTUpSeEUteklBY0NZWWQ3eXFUYzJuTngtQnpHRlhONGVBZ1I0RHJXdDVlVlBrS0V2S2xBYU9Qdw?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-19T22:37:46+00:00",
+      "importance_score": 56
+    },
+    {
       "id": "a817e1fc2d309ab5",
       "type": "news",
       "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
@@ -1724,6 +1772,22 @@
       "country": "대한민국",
       "category": "건설·부동산",
       "published_at": "2026-07-19T21:00:00+00:00",
+      "importance_score": 56
+    },
+    {
+      "id": "e82d4ec8bcbf22f3",
+      "type": "news",
+      "title": "모바일어플라이언스 · 불성실공시법인지정",
+      "description": "제출인: 코스닥시장본부 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900810",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
       "importance_score": 56
     },
     {
@@ -1764,38 +1828,6 @@
       "title": "파라택시스코리아 · 주주총회소집결의 (임시주주총회)",
       "description": "제출인: 파라택시스코리아 / 시장: K",
       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900802",
-      "source": "금융감독원 DART",
-      "source_domain": "dart.fss.or.kr",
-      "source_priority": 3,
-      "collection_method": "official_api",
-      "collection_label": "OpenDART 공식 API",
-      "country": "대한민국",
-      "category": "기업공시",
-      "published_at": "2026-07-19T15:00:00+00:00",
-      "importance_score": 56
-    },
-    {
-      "id": "23cc9686a5db04ac",
-      "type": "news",
-      "title": "캐리 · [기재정정]타인에대한채무보증결정",
-      "description": "제출인: 캐리 / 시장: K",
-      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900798",
-      "source": "금융감독원 DART",
-      "source_domain": "dart.fss.or.kr",
-      "source_priority": 3,
-      "collection_method": "official_api",
-      "collection_label": "OpenDART 공식 API",
-      "country": "대한민국",
-      "category": "기업공시",
-      "published_at": "2026-07-19T15:00:00+00:00",
-      "importance_score": 56
-    },
-    {
-      "id": "d1027bc282c54e4e",
-      "type": "news",
-      "title": "캐리 · [기재정정]타인에대한담보제공결정",
-      "description": "제출인: 캐리 / 시장: K",
-      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900785",
       "source": "금융감독원 DART",
       "source_domain": "dart.fss.or.kr",
       "source_priority": 3,
@@ -1857,7 +1889,7 @@
     {
       "id": "769333d8f0cb204e",
       "type": "youtube",
-      "title": "Live on 7/20(월) 미국이 두려워하는 브라질 결제 시스템 (어예진 / 해담경제연구소 소장)",
+      "title": "Live on 7/20(월) 책 안 팔리는데 왜 미국 서점은 늘어날까 (어예진 / 해담경제연구소 소장)",
       "description": "1부 : 미국이 두려워하는 브라질 결제 시스템 (어예진 / 해담경제연구소 소장) 2부 : 책 안 팔리는데 왜 미국 서점은 늘어날까 (어예진 / 해담경제연구소 소장) 제작 지원 (주) 고래사 / 듀오 주식회사 / 주식회사 이에프쥐 / 한화자산운용(주)",
       "summary_source": "description",
       "url": "https://www.youtube.com/watch?v=hTfhvfn2j8Y",
@@ -1965,22 +1997,6 @@
       "country": "대한민국",
       "category": "건설·부동산",
       "published_at": "2026-07-19T23:35:44+00:00",
-      "importance_score": 55
-    },
-    {
-      "id": "55f53e522cbff7df",
-      "type": "news",
-      "title": "부서소개 - reb.or.kr",
-      "description": "부서소개 reb.or.kr",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQT2thWVBBUEZFTElSMGFlanZNSVFXLWYzb2dVOUdYLWZ3czA0akhmVUNzR29Xd3ZZcUJlazdpb0JRMXJzLWRCXzZscVZXR0MtLXphUjRrdk5XWlc2UlBjVkxLeUhWamZsWl9NMU1ObnhWY2hnU0V0eDhya3ZiMmU1bkY4QllOaWw4cjF5bTlwOWh2dUdjbE5HQlZ4akhLRUEtMEQtLTlrV042VmpsTnZKRnY1bThVQWppcXI5NnlUeWVpbERLQ2w1bkxrTko0Wl9YckZISGNRazB6cThOTzYzbVFhYWlQeDFNeGptY1ROTW9qbk5USGxpbHNpSEs0b0E?oc=5",
-      "source": "한국부동산원",
-      "source_domain": "reb.or.kr",
-      "source_priority": 2,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-19T22:37:47+00:00",
       "importance_score": 55
     },
     {
@@ -2192,22 +2208,6 @@
       "importance_score": 53
     },
     {
-      "id": "6073bfb8536a261d",
-      "type": "news",
-      "title": "재정교육소개 - 재정교육통합시스템",
-      "description": "재정교육소개 재정교육통합시스템",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNTXdUbDNKU2NRMWkxQy1oTE9jbFVFZzhuVGlsUVV6SmN0a0gwaEFlQk5ucjZSRlpqc24yOTFUNy0xSUpTRHFWaWNuYTBySVFYcExaODJBbExQanV4RTlWY2syTjNhVkpRUVBSR2FYekE5dFRncTdGTXVGN21IVUJEV0FSQWVvdncyLXR1X0tfTENCVHhNdERtcURiYW5oaUhCNTZkMjBubGt3U3djQU1EazhqWXpyajJIYXJqSmdxbTZlSjh4cHkxSHZuaDViVnM0U0laMk1qMno1dVlWTHcxcmRVOFZmaVpuc2x2b3dFWjNuMzM2MlgzeVRLME5LNEFIc2JfRFVtczY5eHRzUUFDTjBra2UySTJSNkQwRVlFbzRnOU1LdlRUVGhZaldXR3lGQ0NxQjNHOHRxX3c5MWVvWjBpc2pXcEU?oc=5",
-      "source": "기획재정부",
-      "source_domain": "moef.go.kr",
-      "source_priority": 3,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "경제정책",
-      "published_at": "2026-07-17T10:35:20+00:00",
-      "importance_score": 53
-    },
-    {
       "id": "06e305bea4f62a03",
       "type": "youtube",
       "title": "캐나다 잠수함 한국 수주 불발 원인",
@@ -2242,6 +2242,22 @@
       "importance_score": 53
     },
     {
+      "id": "55f53e522cbff7df",
+      "type": "news",
+      "title": "부서소개 - reb.or.kr",
+      "description": "부서소개 reb.or.kr",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQT2thWVBBUEZFTElSMGFlanZNSVFXLWYzb2dVOUdYLWZ3czA0akhmVUNzR29Xd3ZZcUJlazdpb0JRMXJzLWRCXzZscVZXR0MtLXphUjRrdk5XWlc2UlBjVkxLeUhWamZsWl9NMU1ObnhWY2hnU0V0eDhya3ZiMmU1bkY4QllOaWw4cjF5bTlwOWh2dUdjbE5HQlZ4akhLRUEtMEQtLTlrV042VmpsTnZKRnY1bThVQWppcXI5NnlUeWVpbERLQ2w1bkxrTko0Wl9YckZISGNRazB6cThOTzYzbVFhYWlQeDFNeGptY1ROTW9qbk5USGxpbHNpSEs0b0E?oc=5",
+      "source": "한국부동산원",
+      "source_domain": "reb.or.kr",
+      "source_priority": 2,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "건설·부동산",
+      "published_at": "2026-07-19T22:37:47+00:00",
+      "importance_score": 51
+    },
+    {
       "id": "568c60f92d150580",
       "type": "youtube",
       "title": "뇌가 자체적으로 만드는 이모티콘? (이승훈 교수)",
@@ -2274,6 +2290,38 @@
       "category": "경제 유튜브",
       "published_at": "2026-07-19T11:25:00+00:00",
       "importance_score": 51
+    },
+    {
+      "id": "4a3db91bc21594af",
+      "type": "news",
+      "title": "“아직 국장 더 팔아야 될 판”…코스피 ‘구원투수’ 국민연금, 등판은 요원",
+      "description": "한달새 기금 1700조로 ‘뚝’ 리밸런싱 압력 낮아졌지만 국내주식 비중 목표치 상회 이달 연기금 순매도도 급감코스피 낙폭이 깊어지면서 역설적으로 국민연금에 대한 국내주식 매도 압력..",
+      "url": "https://www.mk.co.kr/news/stock/12102753",
+      "source": "매일경제",
+      "source_domain": "mk.co.kr",
+      "source_priority": 1,
+      "collection_method": "official_rss",
+      "collection_label": "공식 증권 RSS",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:29:43+00:00",
+      "importance_score": 50
+    },
+    {
+      "id": "8219200677ea92ad",
+      "type": "news",
+      "title": "전재수 \"대형 해운기업 본사, 부산으로 통째 이전\" - 한국경제",
+      "description": "전재수 \"대형 해운기업 본사, 부산으로 통째 이전\" 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80TlhBV092YUxucDVobUUwWjFVUmc3TGJSZXJ4UEZqNUN6MW1KYUp3OWJFcjJJUF9lcW1Ud2g3UXFuRjZiRVlBcUo2WUN3OENWbUhNa2t6ZlNtQQ?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:10:00+00:00",
+      "importance_score": 50
     },
     {
       "id": "cb5496af3bfce512",
@@ -2516,22 +2564,6 @@
       "importance_score": 50
     },
     {
-      "id": "d56b43583b1a72b1",
-      "type": "news",
-      "title": "亞기업이 美·유럽에 공장 설립…세계화 '기본 공식'이 바뀐다 - 한국경제",
-      "description": "亞기업이 美·유럽에 공장 설립…세계화 '기본 공식'이 바뀐다 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1felFXX245NFZWRUg5V1hTUW5wVXJhbEF2V3JxUTBwTXhxOEJSVmZOM0ZiLWNjTjk4UUxIdEZMREstYXZEdHRoaFQzeWJ0M2E3ZzAtTDV2dXRRUQ?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:48:40+00:00",
-      "importance_score": 50
-    },
-    {
       "id": "25720838becdada9",
       "type": "news",
       "title": "증권·파생상품 시장 지원 … 거래소, 학술연구사업 공모",
@@ -2564,22 +2596,6 @@
       "importance_score": 50
     },
     {
-      "id": "777446bb8361785a",
-      "type": "news",
-      "title": "靑 '기업 초과이윤 분배' 회의 개최 2시간 전 취소 - 한국경제",
-      "description": "靑 '기업 초과이윤 분배' 회의 개최 2시간 전 취소 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WLTNpLURDbHBsLVdBRHdhcS1VZTRHZlhrUUxyc1p3TEhMVk95TzlOUEJRRl8tV1d2bU54aG93elZ6NUxiVWotQVJ6OUxFZUVxVlR4cHE0RVhiQQ?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:46:23+00:00",
-      "importance_score": 50
-    },
-    {
       "id": "83abcb12ebecc5b0",
       "type": "news",
       "title": "원화 약세 틈타 … 외국 큰손들, 韓알짜기업 속속 인수",
@@ -2596,19 +2612,19 @@
       "importance_score": 50
     },
     {
-      "id": "dab4b4c9bc09f5f2",
+      "id": "6073bfb8536a261d",
       "type": "news",
-      "title": "[미국 주식 돋보기] 피 한 방울로 암 진단…美 가던트헬스 랠리",
-      "description": "혈액을 뽑아 각종 암을 진단하는 기술을 가진 미국 상장사 '가던트헬스'에 대한 투자자들의 관심이 커지고 있다. 특히 이달 들어 미국 최대 민간보험사인 유나이티드헬스와 파트너십을 맺..",
-      "url": "https://www.mk.co.kr/news/stock/12102563",
-      "source": "매일경제",
-      "source_domain": "mk.co.kr",
-      "source_priority": 1,
-      "collection_method": "official_rss",
-      "collection_label": "공식 증권 RSS",
+      "title": "재정교육소개 - 재정교육통합시스템",
+      "description": "재정교육소개 재정교육통합시스템",
+      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNTXdUbDNKU2NRMWkxQy1oTE9jbFVFZzhuVGlsUVV6SmN0a0gwaEFlQk5ucjZSRlpqc24yOTFUNy0xSUpTRHFWaWNuYTBySVFYcExaODJBbExQanV4RTlWY2syTjNhVkpRUVBSR2FYekE5dFRncTdGTXVGN21IVUJEV0FSQWVvdncyLXR1X0tfTENCVHhNdERtcURiYW5oaUhCNTZkMjBubGt3U3djQU1EazhqWXpyajJIYXJqSmdxbTZlSjh4cHkxSHZuaDViVnM0U0laMk1qMno1dVlWTHcxcmRVOFZmaVpuc2x2b3dFWjNuMzM2MlgzeVRLME5LNEFIc2JfRFVtczY5eHRzUUFDTjBra2UySTJSNkQwRVlFbzRnOU1LdlRUVGhZaldXR3lGQ0NxQjNHOHRxX3c5MWVvWjBpc2pXcEU?oc=5",
+      "source": "기획재정부",
+      "source_domain": "moef.go.kr",
+      "source_priority": 3,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
       "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:20:08+00:00",
+      "category": "경제정책",
+      "published_at": "2026-07-17T10:35:20+00:00",
       "importance_score": 50
     },
     {
@@ -2788,10 +2804,10 @@
       "importance_score": 50
     },
     {
-      "id": "27873fa5b9d72aaf",
+      "id": "fa55db70c24a0165",
       "type": "news",
-      "title": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) - KRX KIND",
-      "description": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) KRX KIND",
+      "title": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) - 한국거래소",
+      "description": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) 한국거래소",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNTdWUVk0YnFHaHlHdjlwWjltem15b1M1R0Z3MS1NaUZ0SHQ1Tm8xUHFVOXZPdmV5VTVnVnB2ak1LcUVseXdhR2RHMFFFNWZpSDYzbUg0X1FJLWs1Ny1VMWkyWEdUSXdzVmRYMzFPeG9mTF9JcG1nN3JoTWg2T0tYbm5pSEZrbGlaSnRZU3ZPNlc1bWhhQXpUazUxSm9YMlltUGhqMFE0OGF0Um5VWXpVQ1M2SUJWU1h4RmFMZmNveFNDSldUNmc?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -2938,181 +2954,42 @@
   ],
   "stock_data_status": {
     "status": "ok",
-    "updated_at": "2026-07-20T19:35:59.993778+09:00",
-    "stock_count": 33,
+    "updated_at": "2026-07-20T20:10:38.799330+09:00",
+    "stock_count": 31,
     "errors": [
-      "한화 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화손해보험 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화투자증권 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화오션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화생명 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화시스템 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "한화갤러리아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-      "LG market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
+      "삼성전자 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004634ce0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "SK하이닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004486450>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "한미반도체 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A042700&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0044cb050>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "삼성전기 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009150&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004634cb0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "LS ELECTRIC FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010120&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004487410>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "현대차 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004514e00>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "기아 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0044c9490>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "현대모비스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012330&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0045588f0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "한화에어로스페이스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004487170>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+      "HD현대중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0044ca3f0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))"
     ]
   },
   "ai_briefings": {
     "daily": {
       "signal": "경계",
-      "title": "단기 변동성 확대 속 금융주는 상대적 선방, 반도체·빅테크 중심 불확실성 지속",
-      "summary": "최근 24시간 시장은 거시 지표 불확실성과 섹터별 차별화가 뚜렷했습니다. 은행주는 금리·단기채 수급 회복 기대에 상대적 강세를 보이는 반면, 반도체·빅테크 관련주는 실적 불확실성과 사이클 우려로 높은 변동성을 지속했습니다. 단기 모멘텀은 전반적으로 약세여서 추격매수는 위험합니다. 포지션 조정 시 섹터별(금융 vs 반도체·대형주) 리스크와 최근 실적 데이터를 함께 점검하십시오.",
+      "title": "반도체 중심의 실적호조에도 단기 모멘텀 약화로 변동성 확대, 건설·자재 정책 변수 주시",
+      "summary": "최근 연결실적에서 반도체 대형주가 호실적을 발표했지만(매출·영업이익 큰 폭 증가) 단기 주가 모멘텀은 약화되어 단기 리스크가 커졌습니다. 국토교통부의 非아파트 공급 보완조치 시행은 건설·자재 업종에 방향성 있는 정책 변수로 작용합니다. 금융·거시 뉴스는 단기 금리·크레딧 흐름의 불확실성을 시사해 섹터별 등락이 클 전망입니다. 단기 매매는 모멘텀과 수급 확인을 우선하십시오.",
       "confidence": 0,
       "drivers": [
         {
-          "sentiment": "긍정",
-          "title": "은행주·금융업종의 상대적 선방(금리·실적 기대)",
-          "evidence": [
-            {
-              "id": "c95dbcec38bbda91",
-              "title": "KB금융·신한지주 … 증시 먹구름 뚫는 은행株",
-              "url": "https://www.mk.co.kr/news/stock/12102676",
-              "source": "매일경제"
-            },
-            {
-              "id": "690941eb7b082370",
-              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
-              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
-              "source": "손에잡히는경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "부정",
-          "title": "반도체·빅테크 중심 급락·급등 반복으로 종목 선정 난이도 상승",
-          "evidence": [
-            {
-              "id": "00df3a7c14affe02",
-              "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
-              "url": "https://www.mk.co.kr/news/stock/12102104",
-              "source": "매일경제"
-            },
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
           "sentiment": "중립",
-          "title": "거시 지표(2분기 GDP vs 7월 CPI) 방향성 엇갈림으로 통화정책·단기금리 불확실성 존재",
-          "evidence": [
-            {
-              "id": "6d69c3aca735cb94",
-              "title": "\"2분기 GDP·7월 CPI 방향성 엇갈릴 것…통화정책 긴장 지속\"",
-              "url": "https://www.yna.co.kr/view/AKR20260720120400008",
-              "source": "연합뉴스"
-            }
-          ]
-        }
-      ],
-      "buy_candidates": [
-        {
-          "name": "KB금융",
-          "code": "105560",
-          "sector": "금융",
-          "reason": "정량적으로 영업이익 증가(1분기 영업이익 전년비 +18.95%)와 긍정적 단기 모멘텀(return_20d +6.63, quantitative.score 17)을 보유합니다. 최근 언론에서 은행주가 금리 상승·변동성 심화 속에서 상대적 선방했다는 보도가 있어(수급·심리 개선)가시권에 있습니다. (근거: 재무·모멘텀 + 관련 뉴스)",
-          "risk": "금융 전반은 거시(물가·금리)와 신용환경 변화에 민감합니다. CPI·GDP 방향성이 엇갈리면 단기 금리·크레딧 프리미엄 변동으로 주가가 재차 조정될 수 있습니다.",
-          "evidence": [
-            {
-              "id": "c95dbcec38bbda91",
-              "title": "KB금융·신한지주 … 증시 먹구름 뚫는 은행株",
-              "url": "https://www.mk.co.kr/news/stock/12102676",
-              "source": "매일경제"
-            },
-            {
-              "id": "4f0f278d16a02176",
-              "title": "\"우려 덜었지만 방망이는 짧게\"…단기채로 몰리는 매수세",
-              "url": "https://www.yna.co.kr/view/AKR20260720065800008",
-              "source": "연합뉴스"
-            },
-            {
-              "id": "690941eb7b082370",
-              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
-              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
-              "source": "손에잡히는경제"
-            }
-          ],
-          "quantitative_score": 17.0,
-          "score_components": {
-            "financials": 9.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": 8.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 168800,
-            "return_20d_pct": 6.63,
-            "per": null,
-            "pbr": null
-          }
-        }
-      ],
-      "sell_candidates": [],
-      "risks": [
-        "단기적으로 시장 변동성(급락·반등 반복) 지속 가능성: 종목별 차별화 심화",
-        "거시 지표(2분기 GDP·CPI) 방향성 엇갈림에 따른 통화정책·금리 불확실성"
-      ],
-      "checks": [
-        "포지션 조정 전 해당 종목의 최신 분기 실적(매출·영업이익) 및 최근 20거래일 수급(외국인·기관 순매수 여부) 확인",
-        "단기 매수 시 분할매수·손절 기준 사전 설정(급등·급락 시 추격매수 위험)"
-      ]
-    },
-    "weekly": {
-      "signal": "중립",
-      "title": "주간 관점에선 실적 개선 기업과 거시 불확실성이 교차—반도체 실적 확인이 분수령",
-      "summary": "이번 주(7일)는 반도체·빅테크 실적 확인이 업황 방향성을 가를 전망입니다. 1분기 호실적을 보고한 일부 대형 IT·반도체 기업은 펀더멘털이 양호하지만 단기 모멘텀은 약세여서 기술적 리스크가 큽니다. 한편 금융주는 금리·단기채 흐름에 힘입어 방어력을 보였으나 거시 불확실성이 남아 있습니다. 섹터별 차별화가 심해 종목별 실적·수급을 병행 점검해야 합니다.",
-      "confidence": 0,
-      "drivers": [
-        {
-          "sentiment": "긍정",
-          "title": "대형 반도체사 실적 개선(펀더멘털 개선 신호)",
-          "evidence": [
-            {
-              "id": "4819a08e03e8d7ed",
-              "title": "[손경제] 중국 키미 K3 | 원화국제화 | 20260720(월)",
-              "url": "https://www.youtube.com/watch?v=k-uYUY1cGWc",
-              "source": "손에잡히는경제"
-            },
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "부정",
-          "title": "단기간 내 급락·반등 반복으로 단기 모멘텀 불안정성 확대",
-          "evidence": [
-            {
-              "id": "00df3a7c14affe02",
-              "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
-              "url": "https://www.mk.co.kr/news/stock/12102104",
-              "source": "매일경제"
-            },
-            {
-              "id": "9ef6b506dc7290a3",
-              "title": "“코스피, 다음주 빅테크 실적 확인후 안정화”…NH증권 “6천이 하방지지선”",
-              "url": "https://www.mk.co.kr/news/stock/12102331",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "중립",
-          "title": "국토교통부의 非아파트 공급 보완조치 전면 시행(건설업계 정책·수급 영향)",
+          "title": "국토부 非아파트 공급 보완조치 전면 시행 — 건설·자재 업종에 정책적 호재이나 경쟁·비용 변수 존재",
           "evidence": [
             {
               "id": "a817e1fc2d309ab5",
               "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
               "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
+              "source": "국토교통부"
+            },
+            {
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
               "source": "국토교통부"
             }
           ]
@@ -3120,103 +2997,209 @@
       ],
       "buy_candidates": [
         {
-          "name": "삼성전자",
-          "code": "005930",
-          "sector": "반도체",
-          "reason": "최근 1분기 연결실적에서 매출·영업이익이 대폭 개선(revenue +69.16%, operating_profit +756.1%)해 펀더멘털이 강한 반면, 단기 모멘텀은 약화(return_5d -14.39, return_20d -31.07)돼 리스크가 상존합니다. 정량적으로는 financials와 momentum 근거를 모두 확보(quantitative.score 20, available_dimensions 2). 이번 주 반도체·빅테크 실적 모멘텀이 향방을 결정하므로 분할매수 관점에서 모니터링할 만합니다.",
-          "risk": "단기적으로는 실적 대비 시장의 피크아웃(사이클 우려)과 급격한 기술적 매도 가능성이 있어 추격매수 위험이 큽니다.",
+          "name": "LX하우시스",
+          "code": "108670",
+          "sector": "건축자재",
+          "reason": "정량: 1분기 영업이익 대폭 개선(영업이익 성장 약 550%)로 financials 개선, 단기 모멘텀도 긍정적(return_5d 1.72%, quantitative.score 23). 뉴스: 국토부의 非아파트 공급 보완조치 7.20일부터 전면 시행(뉴스 a817e1fc2d309ab5)은 건자재·비아파트 공급 관련 수요에 우호적(직접 뉴스 근거). 재무·모멘텀이 모두 확보되어 '관심·분할매수 검토' 적격.",
+          "risk": "반대 시나리오: 원자재·철근 가격 상승(뉴스21)이나 PF·금융여건 악화 시 마진 압박 발생 가능 — 정책 호재에도 비용·수급 변수로 가치함정 리스크 존재.",
           "evidence": [
             {
-              "id": "4819a08e03e8d7ed",
-              "title": "[손경제] 중국 키미 K3 | 원화국제화 | 20260720(월)",
-              "url": "https://www.youtube.com/watch?v=k-uYUY1cGWc",
-              "source": "손에잡히는경제"
+              "id": "a817e1fc2d309ab5",
+              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
+              "source": "국토교통부"
             },
             {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
             },
             {
-              "id": "00df3a7c14affe02",
-              "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
-              "url": "https://www.mk.co.kr/news/stock/12102104",
-              "source": "매일경제"
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
             }
           ],
-          "quantitative_score": 20.0,
+          "quantitative_score": 23.0,
           "score_components": {
-            "financials": 21.0,
+            "financials": 15.0,
             "consensus": 0.0,
             "valuation": 0.0,
             "flow": 0.0,
-            "momentum": -1.0
+            "momentum": 8.0
           },
           "data_dimensions": 2,
           "metrics": {
-            "current_price": 244000,
-            "return_20d_pct": -31.07,
-            "per": null,
-            "pbr": null
-          }
-        },
-        {
-          "name": "SK하이닉스",
-          "code": "000660",
-          "sector": "반도체",
-          "reason": "1분기 실적 개선 폭이 큽니다(revenue +198.07%, operating_profit +405.48%)로 펀더멘털이 크게 개선된 반면 단기 주가는 이미 큰 조정(return_20d -36.18) 받았습니다. 정량적으로 financials(강한 실적)와 momentum(단기 조정 후 60일 수익률 플러스) 근거를 확보해 분할매수 검토 요건을 충족합니다(quantitative.score 15, available_dimensions 2). 반도체 업황 확인이 중요합니다.",
-          "risk": "반도체 사이클 피크아웃 우려와 대형주 중심 변동성 재확대로 추가 하락 가능성이 존재해 분할매수·손절 규칙 필요.",
-          "evidence": [
-            {
-              "id": "4819a08e03e8d7ed",
-              "title": "[손경제] 중국 키미 K3 | 원화국제화 | 20260720(월)",
-              "url": "https://www.youtube.com/watch?v=k-uYUY1cGWc",
-              "source": "손에잡히는경제"
-            },
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "00df3a7c14affe02",
-              "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
-              "url": "https://www.mk.co.kr/news/stock/12102104",
-              "source": "매일경제"
-            }
-          ],
-          "quantitative_score": 15.0,
-          "score_components": {
-            "financials": 21.0,
-            "consensus": 0.0,
-            "valuation": 0.0,
-            "flow": 0.0,
-            "momentum": -6.0
-          },
-          "data_dimensions": 2,
-          "metrics": {
-            "current_price": 1764000,
-            "return_20d_pct": -36.18,
+            "current_price": 32450,
+            "return_20d_pct": 1.09,
             "per": null,
             "pbr": null
           }
         }
       ],
-      "sell_candidates": [],
+      "sell_candidates": [
+        {
+          "name": "현대건설",
+          "code": "000720",
+          "sector": "건설",
+          "reason": "정량: 1분기 매출·영업이익 감소(매출 -15.8%, 영업이익 -15.4%) 및 높은 부채비율(157.6%)로 financials 취약, 단기 주가 모멘텀도 크게 약세(return_5d -15% 등). 뉴스: 건설비용(철근 등) 상승(뉴스21)과 시장 불확실성으로 수익성 하방 압력이 존재하며 정책(非아파트 보완조치, 뉴스 a817e1fc2d309ab5)은 수주 측면에 일부 도움이나 비용 측면 악재와 상충. quantitative.score(-25)로 '비중 축소·매도 검토' 타당하나 정책·수주 모멘텀의 반대 시나리오 존재.",
+          "risk": "반대 시나리오: 국토부의 보완조치로 비아파트 공급 확대·지원 강화 시 수주 개선으로 실적 개선 가능 — 급락 종목의 가치함정 가능성 존재.",
+          "evidence": [
+            {
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
+            },
+            {
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
+            },
+            {
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
+            }
+          ],
+          "quantitative_score": -25.0,
+          "score_components": {
+            "financials": -18.0,
+            "consensus": 0.0,
+            "valuation": 0.0,
+            "flow": 0.0,
+            "momentum": -7.0
+          },
+          "data_dimensions": 2,
+          "metrics": {
+            "current_price": 91000,
+            "return_20d_pct": -29.24,
+            "per": null,
+            "pbr": null
+          }
+        }
+      ],
       "risks": [
-        "반도체·빅테크 실적 발표에 따른 단기 과민 반응(급등락) 가능성",
-        "거시(물가·금리) 지표의 엇갈림으로 통화정책 불확실성이 지속될 경우 수급 급변"
+        "대형 업종(반도체·건설) 간 상충 신호: 실적 개선 대비 단기 모멘텀·수급 악화로 변동성 확대",
+        "글로벌 실물수요(빅테크·AI 투자)와 금리·지정학 리스크가 동시에 증폭될 경우 업종 전반의 동반 하락 가능"
       ],
       "checks": [
-        "추천(관심·분할매수) 종목은 분할매수 계획·손절 기준을 사전에 수립할 것",
-        "각 종목의 최신 외국인·기관 순매수 데이터와 컨센서스(가능 시)를 추가 확인",
-        "건설·중공업 등 정책 민감 업종은 국토부·기재부 보도자료의 세부 시행 일정·지원조건을 확인"
+        "외국인·기관의 최근 10거래일 순매수 추이 확인(특히 삼성전자·SK하이닉스)",
+        "반도체 고객사(빅테크) 실적 발표(미국 시간) 및 가이던스 확인 — 업황 피크아웃 신호 여부",
+        "건설·자재 관련 원자재(철근 등) 가격 추이와 PF 대출·보증 집행 상황 점검"
+      ]
+    },
+    "weekly": {
+      "signal": "중립",
+      "title": "실적 개선과 정책 호재가 엇갈리는 가운데 섹터별 차별화 장세 예상",
+      "summary": "주간으로는 반도체·바이오 등 실적 개선 업종의 기초체력이 확인되는 반면 단기 주가·수급은 부진해 변동성 장세가 지속될 전망입니다. 국토부의 정책 시행은 건설·자재에 중장기적 수요 요인으로 작용할 수 있습니다. 투자자는 실적 컨센서스(미공개인 경우 추적) 및 수급 지표를 병행 점검해야 합니다.",
+      "confidence": 0,
+      "drivers": [
+        {
+          "sentiment": "중립",
+          "title": "국토부의 非아파트 공급 보완조치 시행이 건설·자재 업종에 정책 불확실성 완화와 비용 리스크를 동시에 제시",
+          "evidence": [
+            {
+              "id": "a817e1fc2d309ab5",
+              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
+              "source": "국토교통부"
+            },
+            {
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
+            }
+          ]
+        }
+      ],
+      "buy_candidates": [
+        {
+          "name": "LX하우시스",
+          "code": "108670",
+          "sector": "건축자재",
+          "reason": "정량: 1분기 영업이익 대폭 개선(영업이익 성장 약 550%)과 긍정적 단기 모멘텀(return_5d 플러스), quantitative.score(23)로 재무·모멘텀 동시 확보. 뉴스: 국토부의 非아파트 공급 보완조치(뉴스 a817e1fc2d309ab5)는 건자재·비아파트 수요에 우호적(직접 정책 근거)으로 중장기 수요 개선 기대.",
+          "risk": "원자재(철근) 가격 상승(뉴스21)과 금융비용 상승 시 마진 압박 가능 — 정책 호재에도 비용 변수로 이익률 저하될 수 있음.",
+          "evidence": [
+            {
+              "id": "a817e1fc2d309ab5",
+              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
+              "source": "국토교통부"
+            },
+            {
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
+            }
+          ],
+          "quantitative_score": 23.0,
+          "score_components": {
+            "financials": 15.0,
+            "consensus": 0.0,
+            "valuation": 0.0,
+            "flow": 0.0,
+            "momentum": 8.0
+          },
+          "data_dimensions": 2,
+          "metrics": {
+            "current_price": 32450,
+            "return_20d_pct": 1.09,
+            "per": null,
+            "pbr": null
+          }
+        }
+      ],
+      "sell_candidates": [
+        {
+          "name": "현대건설",
+          "code": "000720",
+          "sector": "건설",
+          "reason": "정량: 1분기 매출·영업이익 감소 및 높은 부채비율(157.6%), quantitative.score(-25)으로 재무·모멘텀 약화. 뉴스: 철근 등 건설자재 가격 상승(뉴스21)은 비용·마진 측면에서 부정적이며, 정책(뉴스 a817e1fc2d309ab5)의 수주효과로 상쇄될 수 있으나 현재 실적·재무 지표는 취약.",
+          "risk": "국토부 보완조치로 수주 환경이 개선될 경우 실적 반등 가능성 — 가치함정 리스크 존재.",
+          "evidence": [
+            {
+              "id": "c998c75ead5ff1c8",
+              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
+              "source": "국토교통부"
+            }
+          ],
+          "quantitative_score": -25.0,
+          "score_components": {
+            "financials": -18.0,
+            "consensus": 0.0,
+            "valuation": 0.0,
+            "flow": 0.0,
+            "momentum": -7.0
+          },
+          "data_dimensions": 2,
+          "metrics": {
+            "current_price": 91000,
+            "return_20d_pct": -29.24,
+            "per": null,
+            "pbr": null
+          }
+        }
+      ],
+      "risks": [
+        "주요 대형주(반도체) 실적과 단기 수급·모멘텀이 엇갈려 단기 변동성 확대",
+        "정책 호재(건설·비아파트 등)와 원자재·금융비용 상승의 상충 — 업종 내 희비 교차 가능"
+      ],
+      "checks": [
+        "분할매수 고려 시 외국인·기관의 최근 순매수 데이터 및 거래대금 확인",
+        "반도체·장비 기업의 고객(빅테크) 가이던스 및 설비투자 계획 업데이트 확인",
+        "건설·자재기업의 원가(철근 등) 민감도와 수주잔고·PF 자금조달 상황 점검"
       ]
     },
     "model": "gpt-5-mini",
-    "generated_at": "2026-07-20T19:37:08.640638+09:00",
+    "generated_at": "2026-07-20T20:11:39.278659+09:00",
     "analysis_type": "openai_multifactor",
     "methodology": {
       "description": "OpenDART 재무, FnGuide 공개 컨센서스, KRX 가격·밸류에이션·외국인/기관 수급을 결합한 보조 점수",
@@ -3232,8 +3215,8 @@
     "status": "ok",
     "model": "gpt-5-mini",
     "input_items": 55,
-    "stock_factors": 33,
+    "stock_factors": 31,
     "analysis_type": "openai_multifactor",
-    "generated_at": "2026-07-20T19:37:08.640657+09:00"
+    "generated_at": "2026-07-20T20:11:39.278681+09:00"
   }
 }
