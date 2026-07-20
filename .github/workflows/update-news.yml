@@ -83,6 +83,9 @@ jobs:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
         run: python scripts/collect_news.py
 
+      - name: Exclude non-news pages
+        run: python scripts/filter_news_exclusions.py
+
       - name: Collect fixed recommendation stock factors
         continue-on-error: true
         env:
