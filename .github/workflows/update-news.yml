@@ -50,28 +50,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Verify OpenDART configuration
+      - name: Register secret masks and verify configuration
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
-        run: |
-          python - <<'PY'
-          import os
-          key = os.getenv("OPENDART_API_KEY", "").strip()
-          if not key:
-              raise SystemExit("OPENDART_API_KEY is not configured")
-          print(f"OPENDART_API_KEY configured: yes (length={len(key)})")
-          PY
-
-      - name: Verify KRX configuration
-        env:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
+          for value in "$OPENDART_API_KEY" "$KRX_API_KEY" "$OPENAI_API_KEY"; do
+            if [ -n "$value" ]; then echo "::add-mask::$value"; fi
+          done
           python - <<'PY'
           import os
-          key = os.getenv("KRX_API_KEY", "").strip()
-          if not key:
-              raise SystemExit("KRX_API_KEY is not configured")
-          print(f"KRX_API_KEY configured: yes (length={len(key)})")
+          required = ("OPENDART_API_KEY", "KRX_API_KEY", "OPENAI_API_KEY")
+          missing = [name for name in required if not os.getenv(name, "").strip()]
+          if missing:
+              raise SystemExit("Missing GitHub Secrets: " + ", ".join(missing))
+          print("Required API secrets are configured and masked")
           PY
 
       - name: Preserve previous stock factor cache
@@ -107,11 +101,25 @@ jobs:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
         run: python scripts/collect_krx_official.py
 
+      - name: Sanitize collected data before AI analysis
+        env:
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/sanitize_outputs.py
+
       - name: Generate OpenAI expanded multifactor market briefing
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5-mini
         run: python scripts/generate_expanded_ai_briefing.py
+
+      - name: Final secret sanitization
+        env:
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/sanitize_outputs.py
 
       - name: Commit updated data
         run: |
