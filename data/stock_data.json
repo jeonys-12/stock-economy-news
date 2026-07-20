@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T20:10:38.799330+09:00",
+  "updated_at": "2026-07-20T20:46:44.758121+09:00",
   "source_status": {
     "opendart": {
       "configured": true,
@@ -14,8 +14,8 @@
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-20T19:47:28.940291+09:00",
-      "total_stocks": 31,
+      "updated_at": "2026-07-20T20:41:39.915868+09:00",
+      "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
       ],
@@ -29,7 +29,6 @@
       "status": "ok",
       "fnguide_valid_cache_reused": 0,
       "errors": [
-        "SK하이닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "한미반도체 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "삼성전기 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "LS ELECTRIC market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -41,6 +40,7 @@
         "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "LG이노텍 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "LG디스플레이 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+        "LG씨엔에스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "SK이노베이션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "SK이터닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "포스코퓨처엠 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -60,14 +60,14 @@
         "GS건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "LX하우시스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
       ],
-      "updated_at": "2026-07-20T20:10:37.916899+09:00"
+      "updated_at": "2026-07-20T20:46:44.074660+09:00"
     },
     "krx_open_api": {
       "configured": true,
       "status": "failed",
       "reason": "KRX API 인증 또는 서비스 활용승인 오류(HTTP 401)",
       "fallback": "기존 pykrx 데이터 유지",
-      "updated_at": "2026-07-20T20:10:38.799294+09:00"
+      "updated_at": "2026-07-20T20:46:44.758094+09:00"
     }
   },
   "methodology": {
@@ -101,7 +101,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:05:44.253357+09:00",
+        "fetched_at": "2026-07-20T20:45:04.889570+09:00",
         "assets": 633339604000000.0,
         "assets_growth_pct": 11.71,
         "equity": 486635976000000.0,
@@ -162,7 +162,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:05:55.322366+09:00",
+        "fetched_at": "2026-07-20T20:45:08.350945+09:00",
         "assets": 222828744000000.0,
         "assets_growth_pct": 26.53,
         "equity": 164379799000000.0,
@@ -223,7 +223,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:06:05.237716+09:00",
+        "fetched_at": "2026-07-20T20:45:11.720255+09:00",
         "assets": 742689287334.0,
         "assets_growth_pct": -8.69,
         "equity": 635869571938.0,
@@ -286,7 +286,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:06:15.091052+09:00",
+        "fetched_at": "2026-07-20T20:45:15.116652+09:00",
         "operating_profit": 280572751176.0,
         "operating_profit_growth_pct": 39.9,
         "net_income": 252687583556.0,
@@ -342,7 +342,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:06:28.030604+09:00",
+        "fetched_at": "2026-07-20T20:45:18.305571+09:00",
         "assets": 5361875565139.0,
         "assets_growth_pct": 8.17,
         "equity": 2134169034859.0,
@@ -401,7 +401,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:06:39.195320+09:00",
+        "fetched_at": "2026-07-20T20:45:21.745378+09:00",
         "assets": 383834207000000.0,
         "assets_growth_pct": 4.06,
         "equity": 132226735000000.0,
@@ -462,7 +462,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:06:47.458479+09:00",
+        "fetched_at": "2026-07-20T20:45:24.820664+09:00",
         "assets": 105359955000000.0,
         "assets_growth_pct": 6.45,
         "equity": 61638039000000.0,
@@ -525,7 +525,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:06:56.844975+09:00",
+        "fetched_at": "2026-07-20T20:45:27.844205+09:00",
         "assets": 73917161000000.0,
         "assets_growth_pct": 5.0,
         "equity": 50647933000000.0,
@@ -586,7 +586,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:07:05.775030+09:00",
+        "fetched_at": "2026-07-20T20:45:31.094546+09:00",
         "assets": 56659594923000.0,
         "assets_growth_pct": 5.02,
         "operating_profit": 638892160000.0,
@@ -639,7 +639,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:07:14.377482+09:00",
+        "fetched_at": "2026-07-20T20:45:33.920135+09:00",
         "assets": 27577187358000.0,
         "assets_growth_pct": 5.41,
         "equity": 9713237014000.0,
@@ -700,7 +700,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:07:24.041549+09:00",
+        "fetched_at": "2026-07-20T20:45:37.244298+09:00",
         "assets": 71805610000000.0,
         "assets_growth_pct": 6.94,
         "equity": 29916304000000.0,
@@ -759,7 +759,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:07:31.994868+09:00",
+        "fetched_at": "2026-07-20T20:45:40.493250+09:00",
         "assets": 11822058000000.0,
         "assets_growth_pct": -0.91,
         "equity": 6080881000000.0,
@@ -820,7 +820,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:07:40.611352+09:00",
+        "fetched_at": "2026-07-20T20:45:43.609585+09:00",
         "assets": 27295656000000.0,
         "assets_growth_pct": 1.41,
         "equity": 7773133000000.0,
@@ -858,6 +858,65 @@
       "watchlist_order": 13,
       "business_sector": "디스플레이"
     },
+    "LG씨엔에스": {
+      "name": "LG씨엔에스",
+      "code": "064400",
+      "sector": "IT서비스",
+      "market": {
+        "status": "ok",
+        "as_of": "20260720",
+        "current_price": 61800,
+        "return_5d_pct": -13.08,
+        "return_20d_pct": -27.97,
+        "return_60d_pct": -5.21,
+        "valuation": {},
+        "investor_flow": {},
+        "source": "KRX/pykrx"
+      },
+      "financials": {
+        "status": "ok",
+        "business_year": 2026,
+        "report_code": "11013",
+        "report_name": "1분기",
+        "source": "OpenDART",
+        "fetched_at": "2026-07-20T20:45:47.155439+09:00",
+        "assets": 4784000547000.0,
+        "assets_growth_pct": -9.48,
+        "equity": 2932555794000.0,
+        "equity_growth_pct": -0.3,
+        "liabilities": 1851444753000.0,
+        "liabilities_growth_pct": -21.01,
+        "operating_profit": 94196997000.0,
+        "operating_profit_growth_pct": 19.4,
+        "debt_ratio_pct": 63.13
+      },
+      "consensus": {
+        "status": "unavailable",
+        "reason": "FnGuide 유효 데이터 없음",
+        "source": "FnGuide CompanyGuide"
+      },
+      "quantitative": {
+        "score": 11.0,
+        "components": {
+          "financials": 15.0,
+          "consensus": 0.0,
+          "valuation": 0.0,
+          "flow": 0.0,
+          "momentum": -4.0
+        },
+        "available_dimensions": 2,
+        "dimension_names": [
+          "financials",
+          "momentum"
+        ],
+        "signal": "중립"
+      },
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 14,
+      "business_sector": "IT서비스"
+    },
     "SK이노베이션": {
       "name": "SK이노베이션",
       "code": "096770",
@@ -879,7 +938,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:07:54.678302+09:00",
+        "fetched_at": "2026-07-20T20:45:50.555738+09:00",
         "assets": 110123705338000.0,
         "assets_growth_pct": 4.28,
         "equity": 38110038132000.0,
@@ -916,7 +975,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 14,
+      "watchlist_order": 15,
       "business_sector": "에너지·이차전지"
     },
     "SK이터닉스": {
@@ -940,7 +999,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:08:04.015856+09:00",
+        "fetched_at": "2026-07-20T20:45:53.785983+09:00",
         "assets": 1405235645262.0,
         "assets_growth_pct": 6.69,
         "equity": 270392016423.0,
@@ -979,7 +1038,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 15,
+      "watchlist_order": 16,
       "business_sector": "신재생에너지"
     },
     "포스코퓨처엠": {
@@ -1003,7 +1062,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:08:13.635203+09:00",
+        "fetched_at": "2026-07-20T20:45:56.846399+09:00",
         "assets": 9520080359594.0,
         "assets_growth_pct": 4.11,
         "equity": 4617557017891.0,
@@ -1042,7 +1101,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 16,
+      "watchlist_order": 17,
       "business_sector": "이차전지소재"
     },
     "NAVER": {
@@ -1066,7 +1125,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:08:23.003006+09:00",
+        "fetched_at": "2026-07-20T20:45:59.908535+09:00",
         "assets": 44914004920132.0,
         "assets_growth_pct": 9.32,
         "equity": 30930035783908.0,
@@ -1103,7 +1162,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 17,
+      "watchlist_order": 18,
       "business_sector": "인터넷"
     },
     "카카오": {
@@ -1127,7 +1186,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:08:33.521076+09:00",
+        "fetched_at": "2026-07-20T20:46:02.917058+09:00",
         "assets": 28802759972472.0,
         "assets_growth_pct": 3.67,
         "equity": 15420486660552.0,
@@ -1166,7 +1225,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 18,
+      "watchlist_order": 19,
       "business_sector": "인터넷"
     },
     "현대건설": {
@@ -1190,7 +1249,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:08:43.330386+09:00",
+        "fetched_at": "2026-07-20T20:46:06.494406+09:00",
         "assets": 28405874000000.0,
         "assets_growth_pct": 1.06,
         "equity": 11028599000000.0,
@@ -1227,7 +1286,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 19,
+      "watchlist_order": 20,
       "business_sector": "건설"
     },
     "한화시스템": {
@@ -1251,7 +1310,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:08:52.868202+09:00",
+        "fetched_at": "2026-07-20T20:46:09.365456+09:00",
         "assets": 10820663576719.0,
         "assets_growth_pct": 4.78,
         "equity": 5042789965122.0,
@@ -1290,7 +1349,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 20,
+      "watchlist_order": 21,
       "business_sector": "방산·ICT"
     },
     "한화오션": {
@@ -1314,7 +1373,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:09:00.863227+09:00",
+        "fetched_at": "2026-07-20T20:46:12.251953+09:00",
         "assets": 20796547457384.0,
         "assets_growth_pct": 3.26,
         "equity": 6825972776314.0,
@@ -1351,7 +1410,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 21,
+      "watchlist_order": 22,
       "business_sector": "조선"
     },
     "한화엔진": {
@@ -1375,7 +1434,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:09:08.425954+09:00",
+        "fetched_at": "2026-07-20T20:46:15.458725+09:00",
         "assets": 1910569648022.0,
         "assets_growth_pct": 12.67,
         "equity": 610032817122.0,
@@ -1414,7 +1473,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 22,
+      "watchlist_order": 23,
       "business_sector": "조선기자재"
     },
     "두산에너빌리티": {
@@ -1438,7 +1497,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:09:18.107449+09:00",
+        "fetched_at": "2026-07-20T20:46:18.462641+09:00",
         "assets": 28695055000000.0,
         "assets_growth_pct": 4.3,
         "equity": 12443616000000.0,
@@ -1475,7 +1534,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 23,
+      "watchlist_order": 24,
       "business_sector": "발전·원전"
     },
     "삼성바이오로직스": {
@@ -1499,7 +1558,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:09:25.749235+09:00",
+        "fetched_at": "2026-07-20T20:46:21.481294+09:00",
         "assets": 11994999582438.0,
         "assets_growth_pct": 8.45,
         "equity": 7922835735735.0,
@@ -1538,7 +1597,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 24,
+      "watchlist_order": 25,
       "business_sector": "바이오"
     },
     "셀트리온": {
@@ -1562,7 +1621,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:09:36.202910+09:00",
+        "fetched_at": "2026-07-20T20:46:24.750956+09:00",
         "assets": 23156645428216.0,
         "assets_growth_pct": 3.68,
         "equity": 17814382031809.0,
@@ -1599,7 +1658,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 25,
+      "watchlist_order": 26,
       "business_sector": "바이오"
     },
     "알테오젠": {
@@ -1623,7 +1682,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:09:43.051246+09:00",
+        "fetched_at": "2026-07-20T20:46:28.075956+09:00",
         "assets": 729469655232.0,
         "assets_growth_pct": 4.4,
         "equity": 512858119587.0,
@@ -1662,7 +1721,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 26,
+      "watchlist_order": 27,
       "business_sector": "바이오"
     },
     "에이비엘바이오": {
@@ -1686,7 +1745,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:09:50.607791+09:00",
+        "fetched_at": "2026-07-20T20:46:31.019698+09:00",
         "assets": 298130275703.0,
         "assets_growth_pct": 6.12,
         "equity": 183343287401.0,
@@ -1725,7 +1784,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 27,
+      "watchlist_order": 28,
       "business_sector": "바이오"
     },
     "하나금융지주": {
@@ -1749,7 +1808,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:10:05.075013+09:00",
+        "fetched_at": "2026-07-20T20:46:34.310583+09:00",
         "assets": 685367577000000.0,
         "assets_growth_pct": 1.6,
         "equity": 46442152000000.0,
@@ -1784,7 +1843,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 28,
+      "watchlist_order": 29,
       "business_sector": "금융"
     },
     "우리금융지주": {
@@ -1808,7 +1867,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:10:19.622141+09:00",
+        "fetched_at": "2026-07-20T20:46:37.845866+09:00",
         "assets": 612585300000000.0,
         "assets_growth_pct": 1.85,
         "equity": 39906308000000.0,
@@ -1843,7 +1902,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 29,
+      "watchlist_order": 30,
       "business_sector": "금융"
     },
     "GS건설": {
@@ -1867,7 +1926,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:10:28.486750+09:00",
+        "fetched_at": "2026-07-20T20:46:41.025257+09:00",
         "assets": 18541824000000.0,
         "assets_growth_pct": 0.44,
         "equity": 5597238000000.0,
@@ -1906,7 +1965,7 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 30,
+      "watchlist_order": 31,
       "business_sector": "건설"
     },
     "LX하우시스": {
@@ -1930,7 +1989,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T20:10:37.916657+09:00",
+        "fetched_at": "2026-07-20T20:46:44.074443+09:00",
         "assets": 2371864000000.0,
         "assets_growth_pct": 9.3,
         "equity": 873799000000.0,
@@ -1967,36 +2026,11 @@
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
       ],
-      "watchlist_order": 31,
+      "watchlist_order": 32,
       "business_sector": "건축자재"
     }
   },
   "errors": [
-    "삼성전자 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004634ce0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "SK하이닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004486450>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "한미반도체 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A042700&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0044cb050>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "삼성전기 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009150&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004634cb0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "LS ELECTRIC FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010120&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004487410>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "현대차 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004514e00>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "기아 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0044c9490>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "현대모비스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012330&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0045588f0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "한화에어로스페이스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004487170>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "HD현대중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0044ca3f0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "LG이노텍 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A011070&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004023230>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "SK이노베이션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A096770&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0046cdc70>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "SK이터닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A475150&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0046cd0d0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "포스코퓨처엠 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A003670&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0046cd220>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "NAVER FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035420&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0046cf080>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "카카오 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0046ce1b0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "현대건설 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0046cf920>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "한화시스템 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A272210&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0046cd820>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "한화오션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A042660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe003e739e0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "한화엔진 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A082740&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe0047f85c0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "두산에너빌리티 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A034020&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe00483da60>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "셀트리온 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A068270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004ad64e0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "에이비엘바이오 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A298380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe004f24890>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "우리금융지주 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A316140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe00533a1b0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "GS건설 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006360&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7fe00533bef0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
     "삼성전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "SK하이닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "한미반도체 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -2010,6 +2044,7 @@
     "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "LG이노텍 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "LG디스플레이 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+    "LG씨엔에스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "SK이노베이션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "SK이터닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "포스코퓨처엠 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -2032,8 +2067,8 @@
   "universe": {
     "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
     "mode": "fixed_recommendation_watchlist",
-    "updated_at": "2026-07-20T20:01:39.386762+09:00",
-    "stock_count": 31,
+    "updated_at": "2026-07-20T20:44:51.220383+09:00",
+    "stock_count": 32,
     "stocks": [
       {
         "name": "삼성전자",
@@ -2166,6 +2201,16 @@
         "watchlist_order": 13
       },
       {
+        "name": "LG씨엔에스",
+        "code": "064400",
+        "sector": "IT서비스",
+        "business_sector": "IT서비스",
+        "tags": [
+          "FIXED_RECOMMENDATION_WATCHLIST"
+        ],
+        "watchlist_order": 14
+      },
+      {
         "name": "SK이노베이션",
         "code": "096770",
         "sector": "에너지·이차전지",
@@ -2173,7 +2218,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 14
+        "watchlist_order": 15
       },
       {
         "name": "SK이터닉스",
@@ -2183,7 +2228,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 15
+        "watchlist_order": 16
       },
       {
         "name": "포스코퓨처엠",
@@ -2193,7 +2238,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 16
+        "watchlist_order": 17
       },
       {
         "name": "NAVER",
@@ -2203,7 +2248,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 17
+        "watchlist_order": 18
       },
       {
         "name": "카카오",
@@ -2213,7 +2258,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 18
+        "watchlist_order": 19
       },
       {
         "name": "현대건설",
@@ -2223,7 +2268,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 19
+        "watchlist_order": 20
       },
       {
         "name": "한화시스템",
@@ -2233,7 +2278,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 20
+        "watchlist_order": 21
       },
       {
         "name": "한화오션",
@@ -2243,7 +2288,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 21
+        "watchlist_order": 22
       },
       {
         "name": "한화엔진",
@@ -2253,7 +2298,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 22
+        "watchlist_order": 23
       },
       {
         "name": "두산에너빌리티",
@@ -2263,7 +2308,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 23
+        "watchlist_order": 24
       },
       {
         "name": "삼성바이오로직스",
@@ -2273,7 +2318,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 24
+        "watchlist_order": 25
       },
       {
         "name": "셀트리온",
@@ -2283,7 +2328,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 25
+        "watchlist_order": 26
       },
       {
         "name": "알테오젠",
@@ -2293,7 +2338,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 26
+        "watchlist_order": 27
       },
       {
         "name": "에이비엘바이오",
@@ -2303,7 +2348,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 27
+        "watchlist_order": 28
       },
       {
         "name": "하나금융지주",
@@ -2313,7 +2358,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 28
+        "watchlist_order": 29
       },
       {
         "name": "우리금융지주",
@@ -2323,7 +2368,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 29
+        "watchlist_order": 30
       },
       {
         "name": "GS건설",
@@ -2333,7 +2378,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 30
+        "watchlist_order": 31
       },
       {
         "name": "LX하우시스",
@@ -2343,7 +2388,7 @@
         "tags": [
           "FIXED_RECOMMENDATION_WATCHLIST"
         ],
-        "watchlist_order": 31
+        "watchlist_order": 32
       }
     ]
   }
