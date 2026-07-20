@@ -1,0 +1,47 @@
+.stock-diagnostics-section{margin:56px 0 24px;padding:32px;border:1px solid #dfe5ec;border-radius:20px;background:#fff;box-shadow:0 12px 32px rgba(17,24,39,.06)}
+.stock-diagnostics-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:18px}
+.stock-diagnostics-header .section-heading{margin:0}
+.stock-diagnostics-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:10px;font-size:13px;color:#64748b}
+.stock-diagnostics-refresh{border:1px solid #cbd5e1;border-radius:10px;background:#fff;padding:9px 13px;font:inherit;font-weight:700;cursor:pointer}
+.stock-diagnostics-help{margin:0 0 20px;color:#475569;line-height:1.7}
+.stock-global-status{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:22px}
+.global-diagnostic-card{border:1px solid #e2e8f0;border-radius:14px;padding:14px;background:#f8fafc}
+.global-diagnostic-card>div{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.global-diagnostic-card strong{font-size:14px;color:#0f172a}
+.global-diagnostic-card p{margin:8px 0 0;font-size:12px;line-height:1.55;color:#64748b;word-break:break-word}
+.stock-diagnostics-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.stock-diagnostic-filters{display:flex;flex-wrap:wrap;gap:8px}
+.stock-diagnostic-filters button{border:1px solid #cbd5e1;border-radius:999px;background:#fff;padding:8px 13px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.stock-diagnostic-filters button.active{border-color:#111827;background:#111827;color:#fff}
+#stockDiagnosticSearch{width:min(320px,100%);border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font:inherit}
+.stock-diagnostics-summary{margin:0 0 14px;color:#475569;font-size:13px}
+.stock-diagnostics-list{display:grid;gap:10px}
+.stock-diagnostic-item{border:1px solid #e2e8f0;border-left:4px solid #f59e0b;border-radius:14px;background:#fff;overflow:hidden}
+.stock-diagnostic-item.ok{border-left-color:#16a34a}
+.stock-diagnostic-item.failed{border-left-color:#dc2626}
+.stock-diagnostic-item summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 18px;cursor:pointer;list-style:none}
+.stock-diagnostic-item summary::-webkit-details-marker{display:none}
+.stock-diagnostic-item summary::after{content:'＋';font-size:18px;color:#64748b}
+.stock-diagnostic-item[open] summary::after{content:'−'}
+.diagnostic-stock-name{display:flex;flex-direction:column;gap:4px;min-width:180px}
+.diagnostic-stock-name strong{font-size:16px;color:#0f172a}
+.diagnostic-stock-name span{font-size:12px;color:#64748b}
+.diagnostic-summary-badges{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:7px;margin-left:auto}
+.diagnostic-badge,.score-chip,.dimension-chip{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800;white-space:nowrap}
+.diagnostic-badge.ok{background:#dcfce7;color:#166534}
+.diagnostic-badge.failed{background:#fee2e2;color:#991b1b}
+.diagnostic-badge.unavailable{background:#fef3c7;color:#92400e}
+.score-chip.positive{background:#e0f2fe;color:#075985}
+.score-chip.negative{background:#ffe4e6;color:#9f1239}
+.score-chip.neutral,.dimension-chip{background:#f1f5f9;color:#475569}
+.diagnostic-detail{border-top:1px solid #e2e8f0;padding:18px;background:#f8fafc}
+.diagnostic-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.diagnostic-source-grid>div{display:grid;grid-template-columns:1fr auto;align-items:center;gap:7px;border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff}
+.diagnostic-source-grid>div>span:first-child{font-size:13px;font-weight:800;color:#1e293b}
+.diagnostic-source-grid small{grid-column:1/-1;color:#64748b;font-size:11px;line-height:1.5;word-break:break-word}
+.diagnostic-problems{margin-top:14px;border:1px solid #fed7aa;border-radius:12px;padding:14px;background:#fff7ed}
+.diagnostic-problems>strong{font-size:13px;color:#9a3412}
+.diagnostic-problems ul{margin:9px 0 0;padding-left:19px;color:#7c2d12;font-size:12px;line-height:1.65}
+.diagnostic-success{margin:8px 0 0;color:#166534;font-size:12px}
+@media(max-width:900px){.diagnostic-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stock-diagnostics-controls{align-items:stretch;flex-direction:column}#stockDiagnosticSearch{width:100%}}
+@media(max-width:640px){.stock-diagnostics-section{margin-top:36px;padding:20px 14px;border-radius:14px}.stock-diagnostics-header{flex-direction:column}.stock-diagnostics-meta{justify-content:flex-start}.stock-diagnostic-item summary{align-items:flex-start;flex-direction:column}.diagnostic-summary-badges{justify-content:flex-start;margin-left:0}.diagnostic-source-grid{grid-template-columns:1fr}.stock-diagnostic-item summary::after{position:absolute;right:24px}.stock-diagnostic-item{position:relative}}
