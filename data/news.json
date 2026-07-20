@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-20T18:45:34.920638+09:00",
-  "count": 149,
+  "updated_at": "2026-07-20T19:16:59.791428+09:00",
+  "count": 172,
   "source_status": [
     {
       "name": "금융감독원 DART",
@@ -11,14 +11,9 @@
       "requires_auth": true,
       "alternative": "GitHub Secrets에 OPENDART_API_KEY를 등록하면 공식 API를 사용합니다.",
       "status": "ok",
-      "method": "google_news_rss",
-      "label": "Google News RSS 대체",
-      "attempts": [
-        {
-          "method": "opendart_api",
-          "error": "HTTPSConnectionPool(host='opendart.fss.or.kr', port=443): Max retries exceeded with url: /api/list.json?crtfc_key=3e773d20d9536916a1d61092315aaad66596b191&bgn_de=20260713&end_de=20"
-        }
-      ]
+      "method": "official_api",
+      "label": "OpenDART 공식 API",
+      "attempts": []
     },
     {
       "name": "한국거래소 KIND",
@@ -174,6 +169,22 @@
   ],
   "news": [
     {
+      "id": "1da60a75e4030d5d",
+      "type": "news",
+      "title": "하나30호스팩 · 주권매매거래정지 (상장폐지 사유발생)",
+      "description": "제출인: 코스닥시장본부 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900762",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 96
+    },
+    {
       "id": "26fe5089f4f786a3",
       "type": "youtube",
       "title": "중국 정부가 채권을 미친 듯이 찍고 있습니다 - 박정호 명지대 교수",
@@ -221,6 +232,22 @@
       "category": "금융시장",
       "published_at": "2026-07-20T00:18:51+00:00",
       "importance_score": 77
+    },
+    {
+      "id": "fe914bc4811afeef",
+      "type": "news",
+      "title": "케스피온 · 주권매매거래정지해제 (감자 주권 변경상장)",
+      "description": "제출인: 코스닥시장본부 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900648",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 76
     },
     {
       "id": "84bd3267014de088",
@@ -285,6 +312,182 @@
       "category": "건설·부동산",
       "published_at": "2026-07-19T19:41:58+00:00",
       "importance_score": 75
+    },
+    {
+      "id": "780a0546d8d21628",
+      "type": "news",
+      "title": "졸스 · 주요사항보고서(전환사채권발행결정)",
+      "description": "제출인: 졸스 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000333",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "8bfa6a7135f1b4b2",
+      "type": "news",
+      "title": "졸스 · [기재정정]주요사항보고서(유상증자결정)",
+      "description": "제출인: 졸스 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000347",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "f009b84ba7c740ab",
+      "type": "news",
+      "title": "엔젠바이오 · 권리락 (유상증자)",
+      "description": "제출인: 코스닥시장본부 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900748",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "1c1371478d36fb58",
+      "type": "news",
+      "title": "SG · 권리락 (유상증자)",
+      "description": "제출인: 코스닥시장본부 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900747",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "fc60c938a23aaa63",
+      "type": "news",
+      "title": "에스아이리소스 · 기타주요경영사항 (소액공모 제3자배정 유상증자 결정 철회)",
+      "description": "제출인: 에스아이리소스 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900680",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "8756ca45ae289c6c",
+      "type": "news",
+      "title": "엠투엔 · [기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "description": "제출인: 엠투엔 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900671",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "c8ba5c200d6f641e",
+      "type": "news",
+      "title": "푸드나무 · 증권발행결과(자율공시) (제3자배정 유상증자)",
+      "description": "제출인: 푸드나무 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900593",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "246f2f969bcd4128",
+      "type": "news",
+      "title": "한양디지텍 · 최대주주변경",
+      "description": "제출인: 한양디지텍 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900585",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "2cdc8b382e3f4448",
+      "type": "news",
+      "title": "더코디 · [기재정정]주요사항보고서(전환사채권발행결정)",
+      "description": "제출인: 더코디 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000270",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "4c70b0d90a273846",
+      "type": "news",
+      "title": "신한지주 · 최대주주등소유주식변동신고서",
+      "description": "제출인: 신한지주 / 시장: Y",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720800637",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
+    },
+    {
+      "id": "58ba616927df93fa",
+      "type": "news",
+      "title": "젬백스 · [기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "description": "제출인: 젬백스 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900596",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 71
     },
     {
       "id": "4d24406f77dc7c8e",
@@ -368,10 +571,10 @@
       "importance_score": 70
     },
     {
-      "id": "27cf5ecaacb9f756",
+      "id": "bfb7a2e681b9229d",
       "type": "news",
-      "title": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) - 한국거래소",
-      "description": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) 한국거래소",
+      "title": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) - KRX KIND",
+      "description": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) KRX KIND",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRmdMWks5d1pxa1RHNkxaeTVPMFloeWp3dmlYQTVlRGpFd21adWlVbUNmNVd1Sk1DTVhmVEU3dTJXbHRkUUgtMFA5d2pvR3BrUmRHYnRLcm5WeFBkX0dyUlg2U1lCR2dQd2hHQXBQOUliOVUyajJ6TlhCRlBWbzJlQWlPNXNVM2lv?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -384,10 +587,10 @@
       "importance_score": 70
     },
     {
-      "id": "165b44503c02892c",
+      "id": "8996e6b88529911f",
       "type": "news",
-      "title": "[IBKS제23호스팩] 주권매매거래정지 - 한국거래소",
-      "description": "[IBKS제23호스팩] 주권매매거래정지 한국거래소",
+      "title": "[IBKS제23호스팩] 주권매매거래정지 - KRX KIND",
+      "description": "[IBKS제23호스팩] 주권매매거래정지 KRX KIND",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNenF2SlhiZmw3bzRkbEFwY3Nfem1wekEtQXEwMmlmZk4yTFpFZmZSTnd1cUxWZFhfRjhzbkp3TXRMMG5qV2VPZzZhTEZDT3E0V0V5TDZtWGV1Q1Z2aEJrandCQ2RnaTVkZHFCcTZnNXJITTZVbHZLRl9yZXRSZVBMNWxMdmJ4VHI3WDNwQlhDQVU5RjNUNGZUbjFQRVQtUGRMNVYtMmNnMm9lOF9yRHFva1NDMlRaSkVYTElONDVVUWEtQUFNSU40?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -434,7 +637,7 @@
     {
       "id": "690941eb7b082370",
       "type": "youtube",
-      "title": "시진핑의 AI 외교, 표준 선점을 노립니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
       "description": "#AI #상하이 #인공지능 #시진핑 #중국 #미국 #WAIC #WAICO #개도국 #선진국 #글로벌AI허브 #아마존 #오픈소스 #국가안보 #글로벌사우스 #브릭스 #반도체 #마쭈 #키미K3 #박정호 #박정호교수 [ai를 통해 정리한 내용입니다] 🚀 중국 AI 패권 경쟁 본격화… 세계 AI 질서 선점 선언 중국이 세계 인공지능대회(WAIC)를 통해 AI를 국가 핵심 전략으로 공식 선언했다. 시진핑 주석은 직접 개막식에 참석해 기존의 '중국 제조(Made in China)'를 '중국 지조(중국의 AI·지능 제조)'로 전환하겠다고 밝히며 향후 AI 시대의 주도권 확보 의지를 드러냈다. 또한 AI는 특정 국가가 독점해서는 안 되며 오픈소스와 국제 협력을 강조했지만, 실제로는 미국의 AI·반도체 규제를 견제하고 개발도상국을 중심으로 새로운 AI 생태계를",
       "summary_source": "description",
       "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
@@ -463,6 +666,118 @@
       "category": "건설·부동산",
       "published_at": "2026-07-20T05:40:39+00:00",
       "importance_score": 67
+    },
+    {
+      "id": "ab80a653a566c860",
+      "type": "news",
+      "title": "BNK투자증권 · 증권발행실적보고서",
+      "description": "제출인: BNK투자증권 / 시장: E",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000343",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 66
+    },
+    {
+      "id": "6254486bc84e4559",
+      "type": "news",
+      "title": "한화투자증권 · 증권발행실적보고서",
+      "description": "제출인: 한화투자증권 / 시장: Y",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000342",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 66
+    },
+    {
+      "id": "7d843bde6776ceef",
+      "type": "news",
+      "title": "키움증권 · 증권발행실적보고서",
+      "description": "제출인: 키움증권 / 시장: Y",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000327",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 66
+    },
+    {
+      "id": "6c08fff3b179d9db",
+      "type": "news",
+      "title": "제이비우리캐피탈 · 증권발행실적보고서",
+      "description": "제출인: 제이비우리캐피탈 / 시장: E",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000300",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 66
+    },
+    {
+      "id": "fae088af8bd5a544",
+      "type": "news",
+      "title": "시프트업 · 결산실적공시예고(안내공시)",
+      "description": "제출인: 시프트업 / 시장: Y",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720800628",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 66
+    },
+    {
+      "id": "32333e0f7464cb1a",
+      "type": "news",
+      "title": "대신증권 · 증권발행실적보고서",
+      "description": "제출인: 대신증권 / 시장: Y",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000293",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 66
+    },
+    {
+      "id": "c43a1c4fa28c2bb5",
+      "type": "news",
+      "title": "롯데칠성음료 · 결산실적공시예고(안내공시)",
+      "description": "제출인: 롯데칠성음료 / 시장: Y",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720800623",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 66
     },
     {
       "id": "e9f744d42b26a8af",
@@ -978,6 +1293,22 @@
       "importance_score": 63
     },
     {
+      "id": "4ac9b4a2d058f8ae",
+      "type": "news",
+      "title": "류진 \"규제 프리존 도입으로 산업구조 혁신해야\" - 한국경제",
+      "description": "류진 \"규제 프리존 도입으로 산업구조 혁신해야\" 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5LMXFRTWdCUXFNdlp5TkZmTndlb3RWeTRzMXJDSVhvbUZPZ25LOUczS1QzcUp6WV9yWTlpOFlIcTQ3VTFaQzl5LWFMTkl4NGpxTWdTQm1SSV9xQQ?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:03:53+00:00",
+      "importance_score": 62
+    },
+    {
       "id": "63ce06d13e100350",
       "type": "news",
       "title": "주도주 쏠림이 하락 원인이라고?…강세장의 정상적 패턴! [데이터로 읽는 자산시장]",
@@ -1234,22 +1565,6 @@
       "importance_score": 60
     },
     {
-      "id": "17aebca0328f274a",
-      "type": "news",
-      "title": "부록 - file-cdn.bok.or.kr",
-      "description": "부록 file-cdn.bok.or.kr",
-      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQYi1sSkFpb05LUDB6ZkxZdUo4eFAxSWNZaVlMWkRMSWFaNXV6VGpGTW9YV19hSjljSGQ5UnRndlZ1eXNoRHJyUFYzVURNQWhCcVZDaW91MVZOQ09CekJDYlNVT0I3dzNRSnNHc2FjZ3R3SlYwVHhXeFFwNzMxMXVjOWVWTU1vdFY3MmN4WElkQVV4bXhRbkwxc3pPcGxoYUpYUF9MWDFGQWhQLWtrOHBNdjVBLWtBb3lJbWlhcW9tZjAyS0NCUXJ3em1IZHFvc19FbHRQU0lzX3RhZk1DR0dKRm9MMkZEWFg0VDdiVUc4allHY3ZaYmJTMTFZTDVyZVdBalM2T3V2dmJTVmxRTHRCN1U5cDBDTnl5d3dJSTF6MWZfQjNJcVhlWk9DNzA1SElNVVl6OEVoVXhmUENlTTRxa2ZjNkV2Sk1oQ3hSdUtobko1MzFpdXdreG9aUXFfNEd0bjBnYk53?oc=5",
-      "source": "한국은행",
-      "source_domain": "bok.or.kr",
-      "source_priority": 3,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-19T23:02:00+00:00",
-      "importance_score": 60
-    },
-    {
       "id": "6fb2a778cb71620f",
       "type": "news",
       "title": "\"하나마이크론, 2분기 실적 예상치 웃돌 전망…목표가↑\"-한국 - 한국경제",
@@ -1409,6 +1724,86 @@
       "country": "대한민국",
       "category": "건설·부동산",
       "published_at": "2026-07-19T21:00:00+00:00",
+      "importance_score": 56
+    },
+    {
+      "id": "9c42a1e1a338357c",
+      "type": "news",
+      "title": "테라사이언스 · 기타시장안내 (회생절차 개시신청 관련 시장안내)",
+      "description": "제출인: 코스닥시장본부 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900804",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 56
+    },
+    {
+      "id": "aeac956215b5150e",
+      "type": "news",
+      "title": "대원산업 · 소송등의제기ㆍ신청(경영권분쟁소송) (장부등열람허용가처분신청)",
+      "description": "제출인: 대원산업 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900743",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 56
+    },
+    {
+      "id": "1aac0e8962aa6234",
+      "type": "news",
+      "title": "파라택시스코리아 · 주주총회소집결의 (임시주주총회)",
+      "description": "제출인: 파라택시스코리아 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900802",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 56
+    },
+    {
+      "id": "23cc9686a5db04ac",
+      "type": "news",
+      "title": "캐리 · [기재정정]타인에대한채무보증결정",
+      "description": "제출인: 캐리 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900798",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
+      "importance_score": 56
+    },
+    {
+      "id": "d1027bc282c54e4e",
+      "type": "news",
+      "title": "캐리 · [기재정정]타인에대한담보제공결정",
+      "description": "제출인: 캐리 / 시장: K",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720900785",
+      "source": "금융감독원 DART",
+      "source_domain": "dart.fss.or.kr",
+      "source_priority": 3,
+      "collection_method": "official_api",
+      "collection_label": "OpenDART 공식 API",
+      "country": "대한민국",
+      "category": "기업공시",
+      "published_at": "2026-07-19T15:00:00+00:00",
       "importance_score": 56
     },
     {
@@ -1586,6 +1981,22 @@
       "country": "대한민국",
       "category": "건설·부동산",
       "published_at": "2026-07-19T22:37:47+00:00",
+      "importance_score": 55
+    },
+    {
+      "id": "1a5c778485f20cf6",
+      "type": "news",
+      "title": "여전히 뜨거운 경기 남부…동탄 이어 영통도 급등 - 한국경제",
+      "description": "여전히 뜨거운 경기 남부…동탄 이어 영통도 급등 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1nRmk3NjlLS1dob0E3T1g1LU04X05IcnphbWI5cGdWdWdhVVhqVEl3OU5TWklWcGVpOHBDU1BTaFZWTHEtMXFFUXJuY0VXQTBCN2NEYVBoTnVVdw?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-19T08:15:55+00:00",
       "importance_score": 55
     },
     {
@@ -1865,6 +2276,102 @@
       "importance_score": 51
     },
     {
+      "id": "cb5496af3bfce512",
+      "type": "news",
+      "title": "창원 국가산단 전역에 공유형 5G 특화망 깐다 - 한국경제",
+      "description": "창원 국가산단 전역에 공유형 5G 특화망 깐다 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5DWF9OYVpCVWdnZ0VJOG5KY1Z4RkQyWENLRk1oT1NYTXlmY3JTNy0zcTVwU3V2RVVtaXFJdDlaWFZWSDRrdkg5Vlp2MDFxWE9PNlBENDZ3djNsUQ?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:09:53+00:00",
+      "importance_score": 50
+    },
+    {
+      "id": "41b025859f836d49",
+      "type": "news",
+      "title": "포항, 40㎿급 AI 데이터센터 '첫삽' - 한국경제",
+      "description": "포항, 40㎿급 AI 데이터센터 '첫삽' 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBkOUFOMzlvYk90dGtiWlF0b1NiSjFPMkN5cXNyWUxmS3kzbzJWVzJVZlBGUUtlTFVDendBOGpYejVybWl4cE10dl9SQ1BZUUR6R09mR2NpLUUydw?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:08:07+00:00",
+      "importance_score": 50
+    },
+    {
+      "id": "a4728a13881a20de",
+      "type": "news",
+      "title": "최태원 \"기업, 사회문제 해결에도 나서야\" - 한국경제",
+      "description": "최태원 \"기업, 사회문제 해결에도 나서야\" 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4zbmc3QUwzWDBaTEdsXzk3V2hySktyZnRTMFdXcXFWdENkaTF3eU5XRzJ4WnY1N29qdlVFNWNGMVc2TnVSWE4tS2wzcXVhaXlKODkyemJUbmo0dw?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:03:01+00:00",
+      "importance_score": 50
+    },
+    {
+      "id": "f1ea8f73260ddd5f",
+      "type": "news",
+      "title": "한경닷컴, 골프 리조트 기업 아티타야와 MOU - 한국경제",
+      "description": "한경닷컴, 골프 리조트 기업 아티타야와 MOU 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05TDJ6VElXT1hSa3VOMUxlRWNxTGJBeUV2R0hiRHllTWFyV0RWV3laRU5yancyRXlzZ1AzTC1KZkJLdHU1N2hmVWdvOHNxS2tQSE1LTEdDcnRGZw?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T10:02:14+00:00",
+      "importance_score": 50
+    },
+    {
+      "id": "b6040f5da6379bb2",
+      "type": "news",
+      "title": "한국수입협회, 기보·하나은행과 수입기업 금융 지원한다 - 한국경제",
+      "description": "한국수입협회, 기보·하나은행과 수입기업 금융 지원한다 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBKVXlJNGc1LUpXZDBmVGxlczNzQzdIaV9aQjN0OTlzNU9zSzBINDNEUkVNRE51SmtEbkY0ZUd4OE8xYXo5QWRQOXRKdjJUNFhLN1FRUFk0T2NpUQ?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T09:56:07+00:00",
+      "importance_score": 50
+    },
+    {
+      "id": "86b18bf7de4a30b4",
+      "type": "news",
+      "title": "[기고] 월드컵으로 본 '5극3특 성장엔진' - 한국경제",
+      "description": "[기고] 월드컵으로 본 '5극3특 성장엔진' 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1QQXI0OVBDQUJJbXRKMkI2ZlRud04xRE0xd1cyWTRhX0ZZTXBLZ1hsWGMyVVR0UTNfZXNDZURfc21NY1N4eXljWWlEYlhKcTlrOFJzbE5Ob1NSQQ?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-20T09:54:27+00:00",
+      "importance_score": 50
+    },
+    {
       "id": "51addff60f266df2",
       "type": "news",
       "title": "글로벌 반도체주 변동성, 닷컴버블보다 5배 높다 - 한국경제",
@@ -1894,22 +2401,6 @@
       "country": "대한민국",
       "category": "경제정책",
       "published_at": "2026-07-20T09:27:45+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "fdd25968d21013c7",
-      "type": "news",
-      "title": "TSMC도 증설 가세…5년간 팹 25곳 확대 - 한국경제",
-      "description": "TSMC도 증설 가세…5년간 팹 25곳 확대 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12WUw3TGlOb21QVjVaOWpiaEZkTEVjLU42OGFoTGFUT0hCYWIxNWxFV0tDa2NGVVlMVlZHSjRsemRPVE5DN3h4Q3FWNkpLWXdWM2lYclRqVlpkUQ?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T09:18:13+00:00",
       "importance_score": 50
     },
     {
@@ -2089,70 +2580,6 @@
       "importance_score": 50
     },
     {
-      "id": "17c60980b27c2217",
-      "type": "news",
-      "title": "\"평생 모아 집 산게 죄냐\"…1주택 보유세 강화에 반대 빗발 - 한국경제",
-      "description": "\"평생 모아 집 산게 죄냐\"…1주택 보유세 강화에 반대 빗발 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9sZkF3VE1RSGRuR3lnd3VnNHNWbkhoeGxhN3ZmYmNlM3dkTGJZTW9VajV4eW5PdHo4NHdKaDRkdmp4dnB5NlM0V3JNR2hwQ29WSndiMDA2YkZTdw?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:43:27+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "67b20ce1b6bbe96b",
-      "type": "news",
-      "title": "국영기업 팔고 공무원 줄이고…신흥국, 생존 위해 셀프 개혁 - 한국경제",
-      "description": "국영기업 팔고 공무원 줄이고…신흥국, 생존 위해 셀프 개혁 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9sSjdVMzlFdHJaSDhKX0NybjZuQXhuUEx5azYwUS1xNkxmVWhKaGUyWHZMOFJLUXMyNFVHbWVMaDBncWVTQmN6SzVKQmZhWnZTNklYeHY5ZHpaZw?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:39:48+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "ade85462c4523ee3",
-      "type": "news",
-      "title": "기업·가계 신용위험 더 커진다 - 한국경제",
-      "description": "기업·가계 신용위험 더 커진다 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SSHRBVDk1WVFoYmhfaFJrSFhPYy05YjQ0YXJ2Sko5Z2N4NFd3S1ZJNGNkdzJZbl85MmJMUUpYVGRqVGh1MzJhLUp0RDRfN1BYUVdiTmxCZUNmdw?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:28:41+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "cc8c52f4dcc9524a",
-      "type": "news",
-      "title": "PF 부실 장기화…저축銀 신용등급 줄강등 - 한국경제",
-      "description": "PF 부실 장기화…저축銀 신용등급 줄강등 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwcDJ3d1BXOURvak1ZaFNNT2c2QUxpLTFkQ0JtXzIyVEhQbWlhSEpUa0VsRS1qN0otVXZreTY4STZsV21JcndGcThncXJTSmF6alY2TXUwV0d5Zw?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:26:31+00:00",
-      "importance_score": 50
-    },
-    {
       "id": "83abcb12ebecc5b0",
       "type": "news",
       "title": "원화 약세 틈타 … 외국 큰손들, 韓알짜기업 속속 인수",
@@ -2182,54 +2609,6 @@
       "country": "대한민국",
       "category": "금융시장",
       "published_at": "2026-07-20T08:20:08+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "655199f120fdadc5",
-      "type": "news",
-      "title": "서울, AI·바이오 혁신 생태계 구축…전주기 지원 사격 - 한국경제",
-      "description": "서울, AI·바이오 혁신 생태계 구축…전주기 지원 사격 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1KMmZmZFRLOHhVT0NPUU5kR2p3NTNyU2o5QzJhSVdTVWRqeGVvS1ZJVG1BdU1EZVk2QTBhZFdrY01zTV93cW1tTnRWa2dQM1VHR2JhUVI2Z1RPQQ?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:16:15+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "1a359c4cecae3e49",
-      "type": "news",
-      "title": "대우건설, 동작구 상도15구역 시공 - 한국경제",
-      "description": "대우건설, 동작구 상도15구역 시공 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Ed1diLVR2MkcwbThvMjI1d1RtdFVSY3VDRzJ0U1kteWNzZXpsVFh0cUFGbGIxQkNuMm5qM0pOdU53bjJNNTRCMjhKWUNjR3BLQVlUUFJGcXBldw?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T08:08:31+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "d6e2cc2611f313b6",
-      "type": "news",
-      "title": "호남 반도체 팹 전력망 속도전…'9년 공사' 2030년까지 끝낸다 - 한국경제",
-      "description": "호남 반도체 팹 전력망 속도전…'9년 공사' 2030년까지 끝낸다 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4tY1ZTd0JKV0xzeXJyYVdyaFhBNVI4LW5vTV94ZXR1Z1BrUmlKZ1ZVa292R1Y3cFViY25Dcld2OUhCbzVKVXU4ZTZ6QU9BZ2VRMGFQU3dkRzNzZw?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-20T07:57:45+00:00",
       "importance_score": 50
     },
     {
@@ -2278,22 +2657,6 @@
       "country": "대한민국",
       "category": "금융시장",
       "published_at": "2026-07-16T07:00:00+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "93ccabacaa7e5492",
-      "type": "news",
-      "title": "DART 사업보고서 - 전자공시시스템 - 금융감독원 - 전자공시시스템",
-      "description": "DART 사업보고서 - 전자공시시스템 - 금융감독원 전자공시시스템",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9McTktX0pOcVRid0xrRDN0UTJHMmI2b2pucGxkbkhsZDRrdHJkQ1ZpY2dsVzJYQ2k1Mk44RDRqV1NSa0pwYVJuUXBzV3NTUjNWSWYtc09GdzZtVGhCeG5PVjJkcnAyTU9yc3dj?oc=5",
-      "source": "금융감독원 DART",
-      "source_domain": "dart.fss.or.kr",
-      "source_priority": 3,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "기업공시",
-      "published_at": "2026-07-16T06:04:02+00:00",
       "importance_score": 50
     },
     {
@@ -2425,10 +2788,10 @@
       "importance_score": 50
     },
     {
-      "id": "fa55db70c24a0165",
+      "id": "27873fa5b9d72aaf",
       "type": "news",
-      "title": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) - 한국거래소",
-      "description": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) 한국거래소",
+      "title": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) - KRX KIND",
+      "description": "[기가레인] 조회공시요구(현저한시황변동)에대한답변(미확정) KRX KIND",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNTdWUVk0YnFHaHlHdjlwWjltem15b1M1R0Z3MS1NaUZ0SHQ1Tm8xUHFVOXZPdmV5VTVnVnB2ak1LcUVseXdhR2RHMFFFNWZpSDYzbUg0X1FJLWs1Ny1VMWkyWEdUSXdzVmRYMzFPeG9mTF9JcG1nN3JoTWg2T0tYbm5pSEZrbGlaSnRZU3ZPNlc1bWhhQXpUazUxSm9YMlltUGhqMFE0OGF0Um5VWXpVQ1M2SUJWU1h4RmFMZmNveFNDSldUNmc?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -2575,31 +2938,49 @@
   ],
   "stock_data_status": {
     "status": "ok",
-    "updated_at": "2026-07-20T18:51:11.154971+09:00",
+    "updated_at": "2026-07-20T19:35:59.993778+09:00",
     "stock_count": 33,
     "errors": [
-      "OpenDART corpCode: HTTPSConnectionPool(host='opendart.fss.or.kr', port=443): Max retries exceeded with url: /api/corpCode.xml?crtfc_key=3e773d20d9536916a1d61092315aaad66596b191 (Caused by ConnectTimeoutError(<HTTPSConnection(host='opendart.fss.or.kr', port=443) at 0x7efd1b258ec0>, 'Connection to opendart.fss.or.kr timed out. (connect timeout=45)'))",
-      "한화손해보험 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000370&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1b090410>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "한화솔루션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009830&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1abaf140>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "한화오션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A042660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a9a2ae0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "한화시스템 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A272210&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a7a60c0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "LG헬로비전 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A037560&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a29eba0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "LG씨엔에스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A064400&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1aa55f40>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "SK하이닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd1a874c50>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "기아 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd19f64f20>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-      "삼성중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7efd19d47bf0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))"
+      "한화 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화손해보험 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화투자증권 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화오션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화생명 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화시스템 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "한화갤러리아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
+      "LG market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
     ]
   },
   "ai_briefings": {
     "daily": {
       "signal": "경계",
-      "title": "단기 변동성 확대 속 정책·업종별 엇갈린 신호 — 신중한 접근 권고",
-      "summary": "최근 24시간 동안 코스피 등 한국 증시는 급락·반등이 반복되며 변동성이 높아졌습니다. 반도체 업종의 실적 불확실성이 하방 압력으로 작용하는 한편, 국토교통부의 非아파트 공급 보완조치 전면 시행 등 건설·부동산 업종에는 정책적 완화가 일부 호재로 작용했습니다. 은행주는 금리 환경을 배경으로 상대적 선방세를 보였으나, 정량 데이터(available_dimensions가 대부분 1인 momentum 중심)는 신뢰 가능한 컨센서스·재무 근거를 제공하지 못해 단독 신호로 매매 권고를 내기 어렵습니다. 종목별로는 뉴스와 정량 신호가 충돌하는 경우가 있어 추세 확인과 수급 점검이 필요합니다.",
+      "title": "단기 변동성 확대 속 금융주는 상대적 선방, 반도체·빅테크 중심 불확실성 지속",
+      "summary": "최근 24시간 시장은 거시 지표 불확실성과 섹터별 차별화가 뚜렷했습니다. 은행주는 금리·단기채 수급 회복 기대에 상대적 강세를 보이는 반면, 반도체·빅테크 관련주는 실적 불확실성과 사이클 우려로 높은 변동성을 지속했습니다. 단기 모멘텀은 전반적으로 약세여서 추격매수는 위험합니다. 포지션 조정 시 섹터별(금융 vs 반도체·대형주) 리스크와 최근 실적 데이터를 함께 점검하십시오.",
       "confidence": 0,
       "drivers": [
         {
+          "sentiment": "긍정",
+          "title": "은행주·금융업종의 상대적 선방(금리·실적 기대)",
+          "evidence": [
+            {
+              "id": "c95dbcec38bbda91",
+              "title": "KB금융·신한지주 … 증시 먹구름 뚫는 은행株",
+              "url": "https://www.mk.co.kr/news/stock/12102676",
+              "source": "매일경제"
+            },
+            {
+              "id": "690941eb7b082370",
+              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
+              "source": "손에잡히는경제"
+            }
+          ]
+        },
+        {
           "sentiment": "부정",
-          "title": "시장 변동성·단기 급등락 반복(종목 선택 리스크 증가)",
+          "title": "반도체·빅테크 중심 급락·급등 반복으로 종목 선정 난이도 상승",
           "evidence": [
             {
               "id": "00df3a7c14affe02",
@@ -2612,152 +2993,12 @@
               "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
               "url": "https://www.mk.co.kr/news/business/12102723",
               "source": "매일경제"
-            },
-            {
-              "id": "9ef6b506dc7290a3",
-              "title": "“코스피, 다음주 빅테크 실적 확인후 안정화”…NH증권 “6천이 하방지지선”",
-              "url": "https://www.mk.co.kr/news/stock/12102331",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "긍정",
-          "title": "국토교통부 非아파트 공급 보완조치 전면 시행으로 건설·비주택 관련 정책 부담 완화",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "82f4c961711dc49b",
-              "title": "국토부 보도자료 - oclt.molit.go.kr",
-              "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOaWw5WV9SVlM1QkxhTHl0LWdES19Ec05VNlNkTGxYaHR5YlNYSk1hVGpRdm1KNENKdTRKc054TU9BMGFkS2ozQklNZWo0TnlVYXJ1Z0NwTm5mYkZDdDV0a2ZxUUo1dERodE15VTFGSHhiQmk0RXE3QzV2Q2d5NWV4Q0ZYUGZjbEU?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "c998c75ead5ff1c8",
-              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
-              "source": "국토교통부"
             }
           ]
         },
         {
           "sentiment": "중립",
-          "title": "은행주 선방 — 금리·실적 기대와 변동성 장세에서의 방어력 확인",
-          "evidence": [
-            {
-              "id": "c95dbcec38bbda91",
-              "title": "KB금융·신한지주 … 증시 먹구름 뚫는 은행株",
-              "url": "https://www.mk.co.kr/news/stock/12102676",
-              "source": "매일경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "중립",
-          "title": "금융당국·한국은행 동향(레버리지 상품 보완·단기채 수요 회복 등)이 수급·유동성에 영향",
-          "evidence": [
-            {
-              "id": "0807f159d251df75",
-              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
-              "source": "금융위원회"
-            },
-            {
-              "id": "4f0f278d16a02176",
-              "title": "\"우려 덜었지만 방망이는 짧게\"…단기채로 몰리는 매수세",
-              "url": "https://www.yna.co.kr/view/AKR20260720065800008",
-              "source": "연합뉴스"
-            },
-            {
-              "id": "1a95412e30106553",
-              "title": "금융위원회, 베트남 및 호주와 금융외교 강화 - 한·베 정상회담(’26.4월) 후속조치 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPX2llaDRlbmxpWDh5dk9kWDRxZkc5OWItSUJIeEFaTnE3WGlmeGtpUnFWTV9QYzd4UnhNdTkzT3pwN3ZWRXVQU0VybGR0XzQ4QUlKMTNQcHBaWEhQLTBNU002OU9kMGJiNlVNbE42MDlCTFB6SEctUjBTcTdJMWNHU2t6a1FaYlJmaXB2cGlfemIyOVhlTWhzMW9NNV9CVDhB?oc=5",
-              "source": "금융위원회"
-            }
-          ]
-        }
-      ],
-      "buy_candidates": [],
-      "sell_candidates": [],
-      "risks": [
-        "반도체·빅테크 실적(특히 미국 대형 IT업체 실적)과 글로벌 금리 상승이 추가 급락을 유발할 가능성",
-        "정량 데이터에서 컨센서스·재무 지표가 확보되지 않은 상태에서의 뉴스 기반 매매는 과도한 리스크(데이터 불충분)"
-      ],
-      "checks": [
-        "관심 종목의 OpenDART 재무제표(매출·영업이익·순이익·부채비율) 최신 공시 여부 확인",
-        "FnGuide의 투자의견·목표주가·추정기관 수 확인(정량적 컨센서스 확보 여부)",
-        "외국인·기관 순매수·순매도 흐름(최근 10거래일) 및 거래대금 변화 점검",
-        "다가오는 주요 실적 발표(글로벌 빅테크·반도체 기업 일정)과 한국 관련 업종 영향 모니터링"
-      ]
-    },
-    "weekly": {
-      "signal": "경계",
-      "title": "한주간 실적·금리·정책 이슈 혼재 — 업종별 차별화 심화 가능",
-      "summary": "지난 7일간 국내 시장은 반도체 업황 불확실성과 글로벌 실적 이벤트(미국 대형 IT·반도체 관련)에 따른 하방 우려가 주요 변수였습니다. 동시에 국토교통부의 건설정책 보완과 금융당국의 상품 규제·금융외교 등 정책 이벤트는 일부 업종(건설·금융)에 상이한 영향을 주었습니다. 정량 데이터상 대부분 종목의 available_dimensions가 1로 한정되어 있어 단독 수치로는 투자 판단 근거가 취약합니다. 따라서 섹터·종목별 뉴스와 수급 흐름이 일치하는지 확인한 뒤 단계적 접근이 필요합니다.",
-      "confidence": 0,
-      "drivers": [
-        {
-          "sentiment": "부정",
-          "title": "반도체 사이클 불확실성 확대 — 글로벌 실적(예: 엔비디아 등) 향방이 분수령",
-          "evidence": [
-            {
-              "id": "84bd3267014de088",
-              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
-              "url": "https://www.mk.co.kr/news/business/12102723",
-              "source": "매일경제"
-            },
-            {
-              "id": "241220d0f3f15cc4",
-              "title": "\"삼전닉스 분수령은 8월 엔비디아 실적…추가 하락 제한적일 것\" - 한국경제",
-              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9PNkJSMlJ4M25xeDJiVVhobnB3UWthNC1JSk5uWVhtTER4OENUWjhmcHp4bUtVbmdCdjlaLUFBQU51bFpPWS1tbjlzM0IwT2RNanhZbURwclZLUQ?oc=5",
-              "source": "한국경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "긍정",
-          "title": "국토부의 건설정책(공사비·PF 지원 등) 및 철근가 반영으로 건설업체 부담 완화 가능",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "c998c75ead5ff1c8",
-              "title": "3월 1일 정기 고시 이후의 고강도 철근 가격 변동(약 18.6% 상승) 반영, 기본형건축비 0.77% 상승(222만 원/㎡→223만 7천 원/㎡) - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiYy1aWUg0OFlXSW5STWpHWXpXMFJSZVZKWC12dVpJZGZuSVcydlR1NXZvRGQ5bkt3anlXX1NGSHl1THA2Ukl6WlBud1B5T1B1dlZwZjNSa0FmcmtWa3RmMV9ONkhfWThrVEFoOVI1R1VSREZTT1pV?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "54cee8805b4bcb43",
-              "title": "[도시정비시장 풍향계] 삼성물산, 여의도 목화아파트 재건축 시공권 확보 유력 - 대한경제",
-              "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1fRWtkX3c4bUhMRGFmT1lVa3cyNkRTMlpzX1VGN2ttNi0tbm84akY0LTBLXzg1VXkxQ01HSlJkQzVGV0pIZThudWZHSDNyTXJlSTVtUi1tcUlId0YxUndhY0h2WFgyc1pYaUdhSHBhc1AwbUlG?oc=5",
-              "source": "대한경제"
-            }
-          ]
-        },
-        {
-          "sentiment": "중립",
-          "title": "금융당국의 단일종목 레버리지 상품 보완 등 규제·감시 강화로 단기적 구조조정 가능",
-          "evidence": [
-            {
-              "id": "0807f159d251df75",
-              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
-              "source": "금융위원회"
-            }
-          ]
-        },
-        {
-          "sentiment": "중립",
-          "title": "거시지표(2분기 GDP·7월 CPI) 방향성 엇갈림으로 통화정책 긴장 지속 전망",
+          "title": "거시 지표(2분기 GDP vs 7월 CPI) 방향성 엇갈림으로 통화정책·단기금리 불확실성 존재",
           "evidence": [
             {
               "id": "6d69c3aca735cb94",
@@ -2768,21 +3009,214 @@
           ]
         }
       ],
-      "buy_candidates": [],
+      "buy_candidates": [
+        {
+          "name": "KB금융",
+          "code": "105560",
+          "sector": "금융",
+          "reason": "정량적으로 영업이익 증가(1분기 영업이익 전년비 +18.95%)와 긍정적 단기 모멘텀(return_20d +6.63, quantitative.score 17)을 보유합니다. 최근 언론에서 은행주가 금리 상승·변동성 심화 속에서 상대적 선방했다는 보도가 있어(수급·심리 개선)가시권에 있습니다. (근거: 재무·모멘텀 + 관련 뉴스)",
+          "risk": "금융 전반은 거시(물가·금리)와 신용환경 변화에 민감합니다. CPI·GDP 방향성이 엇갈리면 단기 금리·크레딧 프리미엄 변동으로 주가가 재차 조정될 수 있습니다.",
+          "evidence": [
+            {
+              "id": "c95dbcec38bbda91",
+              "title": "KB금융·신한지주 … 증시 먹구름 뚫는 은행株",
+              "url": "https://www.mk.co.kr/news/stock/12102676",
+              "source": "매일경제"
+            },
+            {
+              "id": "4f0f278d16a02176",
+              "title": "\"우려 덜었지만 방망이는 짧게\"…단기채로 몰리는 매수세",
+              "url": "https://www.yna.co.kr/view/AKR20260720065800008",
+              "source": "연합뉴스"
+            },
+            {
+              "id": "690941eb7b082370",
+              "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+              "url": "https://www.youtube.com/watch?v=QOeYpdNvZdc",
+              "source": "손에잡히는경제"
+            }
+          ],
+          "quantitative_score": 17.0,
+          "score_components": {
+            "financials": 9.0,
+            "consensus": 0.0,
+            "valuation": 0.0,
+            "flow": 0.0,
+            "momentum": 8.0
+          },
+          "data_dimensions": 2,
+          "metrics": {
+            "current_price": 168800,
+            "return_20d_pct": 6.63,
+            "per": null,
+            "pbr": null
+          }
+        }
+      ],
       "sell_candidates": [],
       "risks": [
-        "글로벌 금리 상승과 빅테크·반도체 실적 악화가 동시 발생할 경우 코리아 리스크 확대",
-        "정책(건설·금융) 기대가 과도하게 반영되면 실제 실적 개선까지의 시차로 조정 가능"
+        "단기적으로 시장 변동성(급락·반등 반복) 지속 가능성: 종목별 차별화 심화",
+        "거시 지표(2분기 GDP·CPI) 방향성 엇갈림에 따른 통화정책·금리 불확실성"
       ],
       "checks": [
-        "관심 종목별로 OpenDART 공시(최근 연결재무제표) 업데이트 여부와 실적 추세 확인",
-        "FnGuide의 목표주가·투자의견·추정기관 수 확보 여부 점검(컨센서스 유무에 따른 신뢰도 판단)",
-        "KRX 외국인·기관 최근 매수·매도 흐름과 최근 5·20·60거래일 수익률(모멘텀) 확인",
-        "다가오는 업종별(특히 반도체·금융·건설) 실적 발표 일정과 주요 글로벌 이벤트(미국 실적·금리) 모니터링"
+        "포지션 조정 전 해당 종목의 최신 분기 실적(매출·영업이익) 및 최근 20거래일 수급(외국인·기관 순매수 여부) 확인",
+        "단기 매수 시 분할매수·손절 기준 사전 설정(급등·급락 시 추격매수 위험)"
+      ]
+    },
+    "weekly": {
+      "signal": "중립",
+      "title": "주간 관점에선 실적 개선 기업과 거시 불확실성이 교차—반도체 실적 확인이 분수령",
+      "summary": "이번 주(7일)는 반도체·빅테크 실적 확인이 업황 방향성을 가를 전망입니다. 1분기 호실적을 보고한 일부 대형 IT·반도체 기업은 펀더멘털이 양호하지만 단기 모멘텀은 약세여서 기술적 리스크가 큽니다. 한편 금융주는 금리·단기채 흐름에 힘입어 방어력을 보였으나 거시 불확실성이 남아 있습니다. 섹터별 차별화가 심해 종목별 실적·수급을 병행 점검해야 합니다.",
+      "confidence": 0,
+      "drivers": [
+        {
+          "sentiment": "긍정",
+          "title": "대형 반도체사 실적 개선(펀더멘털 개선 신호)",
+          "evidence": [
+            {
+              "id": "4819a08e03e8d7ed",
+              "title": "[손경제] 중국 키미 K3 | 원화국제화 | 20260720(월)",
+              "url": "https://www.youtube.com/watch?v=k-uYUY1cGWc",
+              "source": "손에잡히는경제"
+            },
+            {
+              "id": "84bd3267014de088",
+              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
+              "url": "https://www.mk.co.kr/news/business/12102723",
+              "source": "매일경제"
+            }
+          ]
+        },
+        {
+          "sentiment": "부정",
+          "title": "단기간 내 급락·반등 반복으로 단기 모멘텀 불안정성 확대",
+          "evidence": [
+            {
+              "id": "00df3a7c14affe02",
+              "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
+              "url": "https://www.mk.co.kr/news/stock/12102104",
+              "source": "매일경제"
+            },
+            {
+              "id": "9ef6b506dc7290a3",
+              "title": "“코스피, 다음주 빅테크 실적 확인후 안정화”…NH증권 “6천이 하방지지선”",
+              "url": "https://www.mk.co.kr/news/stock/12102331",
+              "source": "매일경제"
+            }
+          ]
+        },
+        {
+          "sentiment": "중립",
+          "title": "국토교통부의 非아파트 공급 보완조치 전면 시행(건설업계 정책·수급 영향)",
+          "evidence": [
+            {
+              "id": "a817e1fc2d309ab5",
+              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
+              "source": "국토교통부"
+            }
+          ]
+        }
+      ],
+      "buy_candidates": [
+        {
+          "name": "삼성전자",
+          "code": "005930",
+          "sector": "반도체",
+          "reason": "최근 1분기 연결실적에서 매출·영업이익이 대폭 개선(revenue +69.16%, operating_profit +756.1%)해 펀더멘털이 강한 반면, 단기 모멘텀은 약화(return_5d -14.39, return_20d -31.07)돼 리스크가 상존합니다. 정량적으로는 financials와 momentum 근거를 모두 확보(quantitative.score 20, available_dimensions 2). 이번 주 반도체·빅테크 실적 모멘텀이 향방을 결정하므로 분할매수 관점에서 모니터링할 만합니다.",
+          "risk": "단기적으로는 실적 대비 시장의 피크아웃(사이클 우려)과 급격한 기술적 매도 가능성이 있어 추격매수 위험이 큽니다.",
+          "evidence": [
+            {
+              "id": "4819a08e03e8d7ed",
+              "title": "[손경제] 중국 키미 K3 | 원화국제화 | 20260720(월)",
+              "url": "https://www.youtube.com/watch?v=k-uYUY1cGWc",
+              "source": "손에잡히는경제"
+            },
+            {
+              "id": "84bd3267014de088",
+              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
+              "url": "https://www.mk.co.kr/news/business/12102723",
+              "source": "매일경제"
+            },
+            {
+              "id": "00df3a7c14affe02",
+              "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
+              "url": "https://www.mk.co.kr/news/stock/12102104",
+              "source": "매일경제"
+            }
+          ],
+          "quantitative_score": 20.0,
+          "score_components": {
+            "financials": 21.0,
+            "consensus": 0.0,
+            "valuation": 0.0,
+            "flow": 0.0,
+            "momentum": -1.0
+          },
+          "data_dimensions": 2,
+          "metrics": {
+            "current_price": 244000,
+            "return_20d_pct": -31.07,
+            "per": null,
+            "pbr": null
+          }
+        },
+        {
+          "name": "SK하이닉스",
+          "code": "000660",
+          "sector": "반도체",
+          "reason": "1분기 실적 개선 폭이 큽니다(revenue +198.07%, operating_profit +405.48%)로 펀더멘털이 크게 개선된 반면 단기 주가는 이미 큰 조정(return_20d -36.18) 받았습니다. 정량적으로 financials(강한 실적)와 momentum(단기 조정 후 60일 수익률 플러스) 근거를 확보해 분할매수 검토 요건을 충족합니다(quantitative.score 15, available_dimensions 2). 반도체 업황 확인이 중요합니다.",
+          "risk": "반도체 사이클 피크아웃 우려와 대형주 중심 변동성 재확대로 추가 하락 가능성이 존재해 분할매수·손절 규칙 필요.",
+          "evidence": [
+            {
+              "id": "4819a08e03e8d7ed",
+              "title": "[손경제] 중국 키미 K3 | 원화국제화 | 20260720(월)",
+              "url": "https://www.youtube.com/watch?v=k-uYUY1cGWc",
+              "source": "손에잡히는경제"
+            },
+            {
+              "id": "84bd3267014de088",
+              "title": "반도체 사이클 가르는 분수령…구글 실적따라 주가 출렁일 듯 [동여의도 위클리]",
+              "url": "https://www.mk.co.kr/news/business/12102723",
+              "source": "매일경제"
+            },
+            {
+              "id": "00df3a7c14affe02",
+              "title": "“요즘 코스피 초보가 낄 장 아니다”…동반 급락 후 반등은 제각각",
+              "url": "https://www.mk.co.kr/news/stock/12102104",
+              "source": "매일경제"
+            }
+          ],
+          "quantitative_score": 15.0,
+          "score_components": {
+            "financials": 21.0,
+            "consensus": 0.0,
+            "valuation": 0.0,
+            "flow": 0.0,
+            "momentum": -6.0
+          },
+          "data_dimensions": 2,
+          "metrics": {
+            "current_price": 1764000,
+            "return_20d_pct": -36.18,
+            "per": null,
+            "pbr": null
+          }
+        }
+      ],
+      "sell_candidates": [],
+      "risks": [
+        "반도체·빅테크 실적 발표에 따른 단기 과민 반응(급등락) 가능성",
+        "거시(물가·금리) 지표의 엇갈림으로 통화정책 불확실성이 지속될 경우 수급 급변"
+      ],
+      "checks": [
+        "추천(관심·분할매수) 종목은 분할매수 계획·손절 기준을 사전에 수립할 것",
+        "각 종목의 최신 외국인·기관 순매수 데이터와 컨센서스(가능 시)를 추가 확인",
+        "건설·중공업 등 정책 민감 업종은 국토부·기재부 보도자료의 세부 시행 일정·지원조건을 확인"
       ]
     },
     "model": "gpt-5-mini",
-    "generated_at": "2026-07-20T18:51:47.332315+09:00",
+    "generated_at": "2026-07-20T19:37:08.640638+09:00",
     "analysis_type": "openai_multifactor",
     "methodology": {
       "description": "OpenDART 재무, FnGuide 공개 컨센서스, KRX 가격·밸류에이션·외국인/기관 수급을 결합한 보조 점수",
@@ -2797,9 +3231,9 @@
   "ai_status": {
     "status": "ok",
     "model": "gpt-5-mini",
-    "input_items": 52,
+    "input_items": 55,
     "stock_factors": 33,
     "analysis_type": "openai_multifactor",
-    "generated_at": "2026-07-20T18:51:47.332335+09:00"
+    "generated_at": "2026-07-20T19:37:08.640657+09:00"
   }
 }
