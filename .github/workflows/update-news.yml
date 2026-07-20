@@ -31,6 +31,7 @@ concurrency:
 jobs:
   collect-and-publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 55
 
     steps:
       - name: Checkout repository
@@ -86,12 +87,12 @@ jobs:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
         run: python scripts/collect_news.py
 
-      - name: Collect DART FnGuide KRX stock factors
+      - name: Build universe and collect expanded stock factors
         continue-on-error: true
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
-        run: python scripts/collect_stock_data.py
+        run: python scripts/collect_expanded_stock_data.py
 
       - name: Validate and repair stock factor data
         continue-on-error: true
@@ -106,11 +107,11 @@ jobs:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
         run: python scripts/collect_krx_official.py
 
-      - name: Generate OpenAI multifactor market briefing
+      - name: Generate OpenAI expanded multifactor market briefing
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5-mini
-        run: python scripts/generate_ai_briefing.py
+        run: python scripts/generate_expanded_ai_briefing.py
 
       - name: Commit updated data
         run: |
