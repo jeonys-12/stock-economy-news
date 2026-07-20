@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="multifactor-ui.css">
   <link rel="stylesheet" href="stock-monitoring-ui.css">
   <link rel="stylesheet" href="section-navigation.css">
+  <link rel="stylesheet" href="group-related-sidebar.css">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -108,10 +109,24 @@
         </div>
       </section>
 
-      <p class="result-info" id="resultInfo">데이터 로딩 중</p>
-      <section id="newsGrid" class="news-grid" aria-live="polite"></section>
-      <div id="emptyState" class="empty-state" hidden>조건에 맞는 콘텐츠가 없습니다.</div>
-      <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
+      <div class="news-content-layout">
+        <div class="news-main-column">
+          <p class="result-info" id="resultInfo">데이터 로딩 중</p>
+          <section id="newsGrid" class="news-grid" aria-live="polite"></section>
+          <div id="emptyState" class="empty-state" hidden>조건에 맞는 콘텐츠가 없습니다.</div>
+          <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
+        </div>
+        <aside class="group-related-sidebar" aria-label="한화 GS LG LX 관련 기사 목록">
+          <div class="group-related-sidebar-header">
+            <h3>그룹 관련 모니터링</h3>
+            <p>한화·GS·LG·LX 관련 내용을 카테고리별로 자동 분류합니다.</p>
+          </div>
+          <div class="group-related-list">
+            <p id="groupRelatedSummary" class="group-related-summary">관련 내용을 집계 중입니다.</p>
+            <div id="groupRelatedList"><p class="group-related-empty">그룹 관련 목록을 불러오는 중입니다.</p></div>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <section class="source-section" id="sources">
@@ -173,5 +188,6 @@
   <script src="count-badges.js" defer></script>
   <script src="default-daily.js" defer></script>
   <script src="stock-monitoring-ui.js" defer></script>
+  <script src="group-related-sidebar.js" defer></script>
 </body>
 </html>
