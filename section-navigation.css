@@ -1,0 +1,8 @@
+.section-navigation{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.section-navigation-inner{display:flex;align-items:center;gap:8px;padding:10px 0;overflow-x:auto;scrollbar-width:thin;white-space:nowrap}
+.section-navigation a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:9px 14px;border:1px solid #e3e8ef;border-radius:7px;background:#f0f2f5;color:#263246;font-size:12px;font-weight:800;line-height:1;text-decoration:none;transition:border-color .15s ease,background .15s ease,color .15s ease,transform .15s ease}
+.section-navigation a:hover,.section-navigation a:focus-visible{border-color:#9eabbc;background:#fff;color:var(--blue);outline:0;transform:translateY(-1px)}
+.section-navigation a.primary{border-color:var(--navy);background:var(--navy);color:#fff}
+.section-navigation a.primary:hover,.section-navigation a.primary:focus-visible{background:#203653;color:#fff}
+section[id]{scroll-margin-top:76px}
+@media(max-width:620px){.section-navigation-inner{width:calc(100% - 20px);padding:8px 0}.section-navigation a{min-height:36px;padding:8px 12px;font-size:11px}}
