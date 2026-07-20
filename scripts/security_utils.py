@@ -14,12 +14,14 @@ SENSITIVE_NAMES = {
     "krx_api_key",
     "openai_api_key",
 }
-
-# Query strings, JSON-like text, headers, and common exception representations.
-_ASSIGNMENT_PATTERNS = [
-    re.compile(r"(?i)(crtfc_key|auth_key|authorization|opendart_api_key|krx_api_key|openai_api_key)(\s*[=:]\s*)([^&\s,;}'\"]+)"),
-    re.compile(r"(?i)(['\"]?(?:crtfc_key|auth_key|authorization|opendart_api_key|krx_api_key|openai_api_key)['\"]?\s*:\s*['\"])([^'\"]+)(['\"])")
-]
+PLAIN_ASSIGNMENT = re.compile(
+    r"(?i)(crtfc_key|auth_key|authorization|opendart_api_key|krx_api_key|openai_api_key)"
+    r"(\s*[=:]\s*)([^&\s,;}'\"]+)"
+)
+QUOTED_ASSIGNMENT = re.compile(
+    r"(?i)(['\"]?(?:crtfc_key|auth_key|authorization|opendart_api_key|krx_api_key|openai_api_key)"
+    r"['\"]?\s*:\s*['\"])([^'\"]+)(['\"])"
+)
 
 
 def _known_secret_values() -> list[str]:
@@ -36,9 +38,10 @@ def redact_url(value: str) -> str:
         parts = urlsplit(value)
         if not parts.query:
             return value
-        query = []
-        for key, item in parse_qsl(parts.query, keep_blank_values=True):
-            query.append((key, REDACTED if key.lower() in SENSITIVE_NAMES else item))
+        query = [
+            (key, REDACTED if key.lower() in SENSITIVE_NAMES else item)
+            for key, item in parse_qsl(parts.query, keep_blank_values=True)
+        ]
         return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
     except Exception:
         return value
@@ -49,11 +52,8 @@ def redact_text(value: Any, limit: int | None = None) -> str:
     for secret in _known_secret_values():
         text = text.replace(secret, REDACTED)
     text = re.sub(r"https?://[^\s'\"<>]+", lambda match: redact_url(match.group(0)), text)
-    for pattern in _ASSIGNMENT_PATTERNS:
-        if pattern.groups == 3:
-            text = pattern.sub(lambda m: f"{m.group(1)}{m.group(2)}{REDACTED}", text)
-        else:
-            text = pattern.sub(lambda m: f"{m.group(1)}{REDACTED}{m.group(3)}", text)
+    text = QUOTED_ASSIGNMENT.sub(lambda m: f"{m.group(1)}{REDACTED}{m.group(3)}", text)
+    text = PLAIN_ASSIGNMENT.sub(lambda m: f"{m.group(1)}{m.group(2)}{REDACTED}", text)
     return text[:limit] if limit else text
 
 
