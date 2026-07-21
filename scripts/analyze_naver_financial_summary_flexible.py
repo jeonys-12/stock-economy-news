@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from datetime import datetime
 from typing import Any
@@ -154,6 +155,32 @@ def collect_one(name: str, row: dict[str, Any]) -> tuple[str, dict[str, Any]]:
         }
 
 
+def promote_partial_results() -> None:
+    """2개년 데이터도 제한적이지만 유효한 분석 축으로 표시한다."""
+    payload = json.loads(base.DATA_FILE.read_text(encoding="utf-8"))
+    partial_count = 0
+    for row in payload.get("stocks", {}).values():
+        analysis = row.get("quality_value_analysis", {})
+        metrics = analysis.get("metrics", {})
+        if analysis.get("status") != "partial" or metrics.get("history_years", 0) < 2:
+            continue
+        partial_count += 1
+        quantitative = row.setdefault("quantitative", {})
+        quantitative["available_dimensions"] = 1
+        quantitative["available_dimension_names"] = ["quality_value"]
+
+    source = payload.setdefault("source_status", {}).setdefault("quality_value_analysis", {})
+    source["partial_stocks"] = partial_count
+    source["minimum_history_years"] = 2
+    source["history_policy"] = "일반 종목은 3~5년, 설립·분할·신규상장 종목은 확보 가능한 2개년을 제한적으로 사용"
+    payload.setdefault("methodology", {})["quality_value_policy"] = (
+        "네이버 기업실적분석의 연간 열에서 EPS·영업이익·ROE·부채비율·예상 EPS를 추출합니다. "
+        "일반 종목은 최근 3~5년을 비교하고, 설립·분할·신규상장 종목은 2개년 자료를 제한적으로 인정합니다."
+    )
+    base.DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 if __name__ == "__main__":
     base.collect_one = collect_one
     base.main()
+    promote_partial_results()
