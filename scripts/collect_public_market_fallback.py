@@ -67,27 +67,16 @@ def collect_valuation(session: requests.Session, code: str) -> dict[str, Any]:
     url = f"https://finance.naver.com/item/main.naver?code={code}"
     html = fetch(session, url)
     soup = BeautifulSoup(html, "html.parser")
-
-    selectors = {
-        "per": "#_per",
-        "pbr": "#_pbr",
-        "eps": "#_eps",
-        "bps": "#_bps",
-    }
+    selectors = {"per": "#_per", "pbr": "#_pbr", "eps": "#_eps", "bps": "#_bps"}
     result: dict[str, Any] = {}
     for key, selector in selectors.items():
         node = soup.select_one(selector)
         value = number(node.get_text(" ", strip=True)) if node else None
         if value is not None:
             result[key] = value
-
-    # 페이지 개편에 대비한 텍스트 기반 보조 파싱
     if not result.get("per") or not result.get("pbr"):
         text = soup.get_text(" ", strip=True)
-        patterns = {
-            "per": r"PER(?:lEPS)?\s*([0-9,.\-]+)",
-            "pbr": r"PBR(?:lBPS)?\s*([0-9,.\-]+)",
-        }
+        patterns = {"per": r"PER(?:lEPS)?\s*([0-9,.\-]+)", "pbr": r"PBR(?:lBPS)?\s*([0-9,.\-]+)"}
         for key, pattern in patterns.items():
             if key in result:
                 continue
@@ -95,15 +84,9 @@ def collect_valuation(session: requests.Session, code: str) -> dict[str, Any]:
             value = number(match.group(1)) if match else None
             if value is not None:
                 result[key] = value
-
     if not any(result.get(key) is not None for key in ("per", "pbr", "eps", "bps")):
         raise RuntimeError("공개 시세 페이지에서 PER·PBR 값을 찾지 못했습니다.")
-
-    result.update({
-        "status": "ok",
-        "source": "NAVER Finance 공개 시세 페이지",
-        "fetched_at": datetime.now(KST).isoformat(),
-    })
+    result.update({"status": "ok", "source": "NAVER Finance 공개 시세 페이지", "fetched_at": datetime.now(KST).isoformat()})
     return result
 
 
@@ -116,9 +99,9 @@ def flatten_columns(frame: pd.DataFrame) -> pd.DataFrame:
 
 
 def find_column(columns: list[str], aliases: tuple[str, ...]) -> str | None:
+    normalized_columns = [(column, re.sub(r"\s+", "", column)) for column in columns]
     for alias in aliases:
-        for column in columns:
-            normalized = re.sub(r"\s+", "", column)
+        for column, normalized in normalized_columns:
             if alias in normalized:
                 return column
     return None
@@ -131,7 +114,6 @@ def collect_investor_flow(session: requests.Session, code: str) -> dict[str, Any
         tables = pd.read_html(StringIO(html))
     except ValueError as exc:
         raise RuntimeError("투자자별 거래 표를 찾지 못했습니다.") from exc
-
     selected: pd.DataFrame | None = None
     institution_col: str | None = None
     foreign_col: str | None = None
@@ -139,28 +121,25 @@ def collect_investor_flow(session: requests.Session, code: str) -> dict[str, Any
     for raw in tables:
         frame = flatten_columns(raw.copy())
         columns = list(frame.columns)
-        inst = find_column(columns, ("기관",))
-        foreign = find_column(columns, ("외국인",))
+        inst = find_column(columns, ("기관순매매량", "기관"))
+        foreign = find_column(columns, ("외국인순매매량", "외국인"))
         date = find_column(columns, ("날짜", "일자"))
         if inst and foreign and date:
             selected, institution_col, foreign_col, date_col = frame, inst, foreign, date
             break
-
     if selected is None or not institution_col or not foreign_col or not date_col:
         raise RuntimeError("공개 시세 페이지의 기관·외국인 컬럼 구조를 확인하지 못했습니다.")
-
     selected = selected[selected[date_col].astype(str).str.match(r"\d{4}\.\d{2}\.\d{2}", na=False)].head(10)
     if selected.empty:
         raise RuntimeError("최근 투자자별 거래 데이터가 없습니다.")
-
-    institution = pd.to_numeric(selected[institution_col].astype(str).str.replace(",", "", regex=False), errors="coerce").fillna(0).sum()
-    foreign = pd.to_numeric(selected[foreign_col].astype(str).str.replace(",", "", regex=False), errors="coerce").fillna(0).sum()
-    if institution == 0 and foreign == 0 and selected[[institution_col, foreign_col]].isna().all().all():
+    institution_series = pd.to_numeric(selected[institution_col].astype(str).str.replace(",", "", regex=False), errors="coerce")
+    foreign_series = pd.to_numeric(selected[foreign_col].astype(str).str.replace(",", "", regex=False), errors="coerce")
+    if institution_series.notna().sum() == 0 and foreign_series.notna().sum() == 0:
         raise RuntimeError("기관·외국인 순매매 값을 숫자로 변환하지 못했습니다.")
-
     return {
-        "institution_net_buy_10d_krw": int(institution),
-        "foreign_net_buy_10d_krw": int(foreign),
+        "institution_net_buy_10d_krw": int(institution_series.fillna(0).sum()),
+        "foreign_net_buy_10d_krw": int(foreign_series.fillna(0).sum()),
+        "unit": "shares",
         "trading_days": int(len(selected)),
         "status": "ok",
         "source": "NAVER Finance 공개 투자자별 매매 페이지",
@@ -191,8 +170,7 @@ def cached_value(previous: dict[str, Any], name: str, key: str) -> dict[str, Any
         return None
     cached = dict(value)
     cached.update({
-        "status": "cached",
-        "cached_from": fetched.isoformat(),
+        "status": "cached", "cached_from": fetched.isoformat(),
         "cache_age_hours": round(age.total_seconds() / 3600, 1),
         "source": f"{value.get('source', '공개 시장 데이터')} ({CACHE_DAYS}일 캐시)",
     })
@@ -215,11 +193,9 @@ def main() -> None:
     stocks = payload.get("stocks", {})
     if not isinstance(stocks, dict):
         raise SystemExit("stocks must be an object")
-
     success_valuation = success_flow = cache_valuation = cache_flow = 0
     errors: list[dict[str, str]] = []
     session = requests.Session()
-
     for name, row in stocks.items():
         if not isinstance(row, dict):
             continue
@@ -228,7 +204,6 @@ def main() -> None:
         if len(code) != 6:
             errors.append({"stock": name, "reason": "유효한 6자리 종목코드가 없습니다."})
             continue
-
         if not has_valuation(market.get("valuation")):
             try:
                 market["valuation"] = collect_valuation(session, code)
@@ -241,7 +216,6 @@ def main() -> None:
                 else:
                     market["valuation"] = {"status": "unavailable", "reason": str(exc)[:300], "source": "NAVER Finance 공개 페이지"}
                     errors.append({"stock": name, "field": "valuation", "reason": str(exc)[:240]})
-
         if not has_flow(market.get("investor_flow")):
             try:
                 market["investor_flow"] = collect_investor_flow(session, code)
@@ -254,12 +228,8 @@ def main() -> None:
                 else:
                     market["investor_flow"] = {"status": "unavailable", "reason": str(exc)[:300], "source": "NAVER Finance 공개 페이지"}
                     errors.append({"stock": name, "field": "investor_flow", "reason": str(exc)[:240]})
-
-        row["quantitative"] = repair_stock_factors.score(
-            row.get("financials", {}), market, row.get("consensus", {})
-        )
+        row["quantitative"] = repair_stock_factors.score(row.get("financials", {}), market, row.get("consensus", {}))
         time.sleep(0.15)
-
     payload.setdefault("source_status", {})["public_market_fallback"] = {
         "status": "ok" if success_valuation or success_flow or cache_valuation or cache_flow else "failed",
         "role": "KRX 로그인 없이 PER·PBR 및 외국인·기관 수급 보완",
@@ -274,10 +244,7 @@ def main() -> None:
     }
     payload["updated_at"] = datetime.now(KST).isoformat()
     DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(
-        f"Public market fallback: valuation fresh={success_valuation}, cached={cache_valuation}; "
-        f"flow fresh={success_flow}, cached={cache_flow}; errors={len(errors)}"
-    )
+    print(f"Public market fallback: valuation fresh={success_valuation}, cached={cache_valuation}; flow fresh={success_flow}, cached={cache_flow}; errors={len(errors)}")
 
 
 if __name__ == "__main__":
