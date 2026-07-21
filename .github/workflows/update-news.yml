@@ -34,10 +34,11 @@ concurrency:
 jobs:
   collect-and-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     env:
       STOCK_COLLECT_WORKERS: "6"
       PUBLIC_MARKET_WORKERS: "6"
+      QUALITY_ANALYSIS_WORKERS: "5"
 
     steps:
       - name: Checkout repository
@@ -95,7 +96,7 @@ jobs:
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: python scripts/collect_expanded_stock_data.py
 
-      - name: Enrich price, PER PBR ROE and investor flow
+      - name: Enrich price, PER PBR and investor flow
         continue-on-error: true
         env:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
@@ -103,6 +104,13 @@ jobs:
         run: |
           python scripts/collect_krx_official.py
           python scripts/collect_public_market_fast.py
+
+      - name: Analyze 3 to 5 year quality and valuation
+        continue-on-error: true
+        env:
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+          QUALITY_ANALYSIS_WORKERS: "5"
+        run: python scripts/analyze_quality_value.py
 
       - name: Sanitize collected data
         env:
