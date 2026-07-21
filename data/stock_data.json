@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T17:03:10.857408+09:00",
+  "updated_at": "2026-07-21T19:40:54.006868+09:00",
   "source_status": {
     "opendart": {
       "configured": true,
@@ -9,13 +9,13 @@
     "fnguide": {
       "mode": "optional_html_with_cache",
       "cache_days": 7,
-      "cached_stocks_reused": 0,
+      "cached_stocks_reused": 1,
       "parallel_workers": 6
     },
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-21T17:01:45.216031+09:00",
+      "updated_at": "2026-07-21T19:33:55.674503+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -36,7 +36,7 @@
     "krx_open_api": {
       "configured": true,
       "status": "ok",
-      "as_of": "20260720",
+      "as_of": "20260716",
       "matched_stocks": 32,
       "requested_stocks": 32,
       "endpoints": [
@@ -48,7 +48,7 @@
       "diagnostics": [
         {
           "endpoint": "stk_bydd_trd",
-          "base_date": "20260721",
+          "base_date": "20260719",
           "http_status": 200,
           "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
           "result_code": null,
@@ -58,7 +58,7 @@
         },
         {
           "endpoint": "ksq_bydd_trd",
-          "base_date": "20260721",
+          "base_date": "20260719",
           "http_status": 200,
           "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
           "result_code": null,
@@ -68,17 +68,57 @@
         },
         {
           "endpoint": "stk_bydd_trd",
-          "base_date": "20260720",
+          "base_date": "20260718",
           "http_status": 200,
           "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
           "result_code": null,
           "result_message": null,
-          "row_count": 943,
+          "row_count": 0,
           "market": "KOSPI"
         },
         {
           "endpoint": "ksq_bydd_trd",
-          "base_date": "20260720",
+          "base_date": "20260718",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 0,
+          "market": "KOSDAQ"
+        },
+        {
+          "endpoint": "stk_bydd_trd",
+          "base_date": "20260717",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 0,
+          "market": "KOSPI"
+        },
+        {
+          "endpoint": "ksq_bydd_trd",
+          "base_date": "20260717",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 0,
+          "market": "KOSDAQ"
+        },
+        {
+          "endpoint": "stk_bydd_trd",
+          "base_date": "20260716",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 944,
+          "market": "KOSPI"
+        },
+        {
+          "endpoint": "ksq_bydd_trd",
+          "base_date": "20260716",
           "http_status": 200,
           "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
           "result_code": null,
@@ -87,7 +127,7 @@
           "market": "KOSDAQ"
         }
       ],
-      "updated_at": "2026-07-21T17:03:00.086759+09:00"
+      "updated_at": "2026-07-21T19:40:43.003278+09:00"
     },
     "public_market_fallback": {
       "status": "ok",
@@ -100,7 +140,7 @@
       "requested_stocks": 32,
       "parallel_workers": 6,
       "errors": [],
-      "updated_at": "2026-07-21T17:03:10.857390+09:00"
+      "updated_at": "2026-07-21T19:40:54.006851+09:00"
     }
   },
   "methodology": {
@@ -422,33 +462,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005930",
-          "fetched_at": "2026-07-21T17:03:02.471506+09:00",
+          "fetched_at": "2026-07-21T19:40:45.521893+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -1815801,
-          "foreign_net_buy_10d_krw": -9450127,
+          "institution_net_buy_10d_krw": -6861,
+          "foreign_net_buy_10d_krw": -5487629,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:03.468342+09:00"
+          "fetched_at": "2026-07-21T19:40:46.461982+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 244000,
-        "as_of": "20260720",
+        "current_price": 255000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "삼성전자",
-          "close": 244000,
-          "change": -11000,
-          "change_pct": -4.31,
-          "volume": 26804038,
-          "trading_value_krw": 6614607186368,
-          "market_cap_krw": 1426491980352000,
+          "close": 255000,
+          "change": -24500,
+          "change_pct": -8.77,
+          "volume": 27001478,
+          "trading_value_krw": 6939369046582,
+          "market_cap_krw": 1490801045040000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086556+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003042+09:00"
         }
       },
       "financials": {
@@ -457,7 +497,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:02.120649+09:00",
+        "fetched_at": "2026-07-21T19:37:28.346178+09:00",
         "assets": 633339604000000.0,
         "assets_growth_pct": 11.71,
         "equity": 486635976000000.0,
@@ -478,7 +518,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:04.798287+09:00"
+        "fetched_at": "2026-07-21T19:37:31.186837+09:00"
       },
       "quantitative": {
         "score": -9.0,
@@ -516,33 +556,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000660",
-          "fetched_at": "2026-07-21T17:03:02.331176+09:00",
+          "fetched_at": "2026-07-21T19:40:45.353289+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -1258981,
-          "foreign_net_buy_10d_krw": -1306746,
+          "institution_net_buy_10d_krw": -308404,
+          "foreign_net_buy_10d_krw": -1516467,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:03.486829+09:00"
+          "fetched_at": "2026-07-21T19:40:46.471148+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 1764000,
-        "as_of": "20260720",
+        "current_price": 1842000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "SK하이닉스",
-          "close": 1764000,
-          "change": -78000,
-          "change_pct": -4.23,
-          "volume": 5876444,
-          "trading_value_krw": 10575264659754,
-          "market_cap_krw": 1257206971860000,
+          "close": 1842000,
+          "change": -240000,
+          "change_pct": -11.53,
+          "volume": 5608812,
+          "trading_value_krw": 10416507905142,
+          "market_cap_krw": 1312797756330000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086581+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003070+09:00"
         }
       },
       "financials": {
@@ -551,7 +591,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:02.162310+09:00",
+        "fetched_at": "2026-07-21T19:37:28.936143+09:00",
         "assets": 222828744000000.0,
         "assets_growth_pct": 26.53,
         "equity": 164379799000000.0,
@@ -572,7 +612,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:04.767731+09:00"
+        "fetched_at": "2026-07-21T19:37:31.219776+09:00"
       },
       "quantitative": {
         "score": -10.0,
@@ -610,33 +650,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042700",
-          "fetched_at": "2026-07-21T17:03:02.620543+09:00",
+          "fetched_at": "2026-07-21T19:40:45.340647+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -143273,
-          "foreign_net_buy_10d_krw": 975183,
+          "institution_net_buy_10d_krw": -85480,
+          "foreign_net_buy_10d_krw": 881211,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:03.403741+09:00"
+          "fetched_at": "2026-07-21T19:40:46.451076+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 222000,
-        "as_of": "20260720",
+        "current_price": 242500,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "한미반도체",
-          "close": 222000,
-          "change": -20500,
-          "change_pct": -8.45,
-          "volume": 791151,
-          "trading_value_krw": 178991871250,
-          "market_cap_krw": 21159308400000,
+          "close": 242500,
+          "change": -27000,
+          "change_pct": -10.02,
+          "volume": 1483602,
+          "trading_value_krw": 378523132250,
+          "market_cap_krw": 23113208500000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086589+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003079+09:00"
         }
       },
       "financials": {
@@ -645,7 +685,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:02.097436+09:00",
+        "fetched_at": "2026-07-21T19:37:28.461184+09:00",
         "assets": 742689287334.0,
         "assets_growth_pct": -8.69,
         "equity": 635869571938.0,
@@ -668,7 +708,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:04.800896+09:00"
+        "fetched_at": "2026-07-21T19:37:31.222539+09:00"
       },
       "quantitative": {
         "score": -4.0,
@@ -706,33 +746,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=009150",
-          "fetched_at": "2026-07-21T17:03:02.693389+09:00",
+          "fetched_at": "2026-07-21T19:40:45.313457+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -600656,
-          "foreign_net_buy_10d_krw": 184607,
+          "institution_net_buy_10d_krw": -467806,
+          "foreign_net_buy_10d_krw": 241652,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:03.479442+09:00"
+          "fetched_at": "2026-07-21T19:40:46.458639+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 1275000,
-        "as_of": "20260720",
+        "current_price": 1277000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "삼성전기",
-          "close": 1275000,
-          "change": -2000,
-          "change_pct": -0.16,
-          "volume": 965749,
-          "trading_value_krw": 1241663354000,
-          "market_cap_krw": 95234462400000,
+          "close": 1277000,
+          "change": -136000,
+          "change_pct": -9.62,
+          "volume": 635308,
+          "trading_value_krw": 816924939000,
+          "market_cap_krw": 95383849792000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086595+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003086+09:00"
         }
       },
       "financials": {
@@ -741,7 +781,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:02.072711+09:00",
+        "fetched_at": "2026-07-21T19:37:28.185062+09:00",
         "operating_profit": 280572751176.0,
         "operating_profit_growth_pct": null,
         "net_income": 252687583556.0,
@@ -757,7 +797,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:04.759653+09:00"
+        "fetched_at": "2026-07-21T19:37:31.173941+09:00"
       },
       "quantitative": {
         "score": -7.0,
@@ -795,33 +835,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=010120",
-          "fetched_at": "2026-07-21T17:03:02.469026+09:00",
+          "fetched_at": "2026-07-21T19:40:45.593824+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -485328,
-          "foreign_net_buy_10d_krw": 215951,
+          "institution_net_buy_10d_krw": -286873,
+          "foreign_net_buy_10d_krw": 344023,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:03.462965+09:00"
+          "fetched_at": "2026-07-21T19:40:46.467160+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 179300,
-        "as_of": "20260720",
+        "current_price": 190000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "LS ELECTRIC",
-          "close": 179300,
-          "change": -10700,
-          "change_pct": -5.63,
-          "volume": 652302,
-          "trading_value_krw": 119018668550,
-          "market_cap_krw": 26895000000000,
+          "close": 190000,
+          "change": -11500,
+          "change_pct": -5.71,
+          "volume": 664593,
+          "trading_value_krw": 125505353150,
+          "market_cap_krw": 28500000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086601+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003093+09:00"
         }
       },
       "financials": {
@@ -830,7 +870,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:02.280121+09:00",
+        "fetched_at": "2026-07-21T19:37:31.226812+09:00",
         "assets": 5361875565139.0,
         "assets_growth_pct": 8.17,
         "equity": 2134169034859.0,
@@ -849,7 +889,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:04.809318+09:00"
+        "fetched_at": "2026-07-21T19:37:33.284389+09:00"
       },
       "quantitative": {
         "score": -7.0,
@@ -887,33 +927,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005380",
-          "fetched_at": "2026-07-21T17:03:02.690448+09:00",
+          "fetched_at": "2026-07-21T19:40:45.590888+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 225923,
-          "foreign_net_buy_10d_krw": 360563,
+          "institution_net_buy_10d_krw": 157800,
+          "foreign_net_buy_10d_krw": 334720,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:03.473965+09:00"
+          "fetched_at": "2026-07-21T19:40:46.445182+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 399000,
-        "as_of": "20260720",
+        "current_price": 425000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "현대차",
-          "close": 399000,
-          "change": -26000,
-          "change_pct": -6.12,
-          "volume": 904770,
-          "trading_value_krw": 363118473500,
-          "market_cap_krw": 81698348634000,
+          "close": 425000,
+          "change": -9000,
+          "change_pct": -2.07,
+          "volume": 791287,
+          "trading_value_krw": 332723835750,
+          "market_cap_krw": 87022050550000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086607+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003100+09:00"
         }
       },
       "financials": {
@@ -922,7 +962,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:02.188602+09:00",
+        "fetched_at": "2026-07-21T19:37:29.613425+09:00",
         "assets": 383834207000000.0,
         "assets_growth_pct": 4.06,
         "equity": 132226735000000.0,
@@ -943,7 +983,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:04.739455+09:00"
+        "fetched_at": "2026-07-21T19:37:31.221260+09:00"
       },
       "quantitative": {
         "score": 18.0,
@@ -981,33 +1021,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000270",
-          "fetched_at": "2026-07-21T17:03:04.837108+09:00",
+          "fetched_at": "2026-07-21T19:40:47.821555+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 1020072,
-          "foreign_net_buy_10d_krw": 22012,
+          "institution_net_buy_10d_krw": 730478,
+          "foreign_net_buy_10d_krw": -58577,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:05.245122+09:00"
+          "fetched_at": "2026-07-21T19:40:48.175702+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 140000,
-        "as_of": "20260720",
+        "current_price": 149700,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "기아",
-          "close": 140000,
-          "change": -9700,
-          "change_pct": -6.48,
-          "volume": 876708,
-          "trading_value_krw": 123353725200,
-          "market_cap_krw": 54657819720000,
+          "close": 149700,
+          "change": 4700,
+          "change_pct": 3.24,
+          "volume": 967288,
+          "trading_value_krw": 142462854850,
+          "market_cap_krw": 58444825800600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086617+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003106+09:00"
         }
       },
       "financials": {
@@ -1016,7 +1056,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:07.229495+09:00",
+        "fetched_at": "2026-07-21T19:37:37.674974+09:00",
         "assets": 105359955000000.0,
         "assets_growth_pct": 6.45,
         "equity": 61638039000000.0,
@@ -1039,15 +1079,15 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:09.536741+09:00"
+        "fetched_at": "2026-07-21T19:37:40.475180+09:00"
       },
       "quantitative": {
-        "score": 24.0,
+        "score": 12.0,
         "components": {
           "financials": 3.0,
           "consensus": 0.0,
           "valuation": 9.0,
-          "flow": 12.0,
+          "flow": 0.0,
           "momentum": 0.0
         },
         "available_dimensions": 2,
@@ -1055,7 +1095,7 @@
           "valuation",
           "flow"
         ],
-        "signal": "긍정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -1077,33 +1117,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012330",
-          "fetched_at": "2026-07-21T17:03:04.722537+09:00",
+          "fetched_at": "2026-07-21T19:40:47.967517+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 17370,
-          "foreign_net_buy_10d_krw": 268644,
+          "institution_net_buy_10d_krw": -27566,
+          "foreign_net_buy_10d_krw": 328824,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:05.230666+09:00"
+          "fetched_at": "2026-07-21T19:40:48.375413+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 472500,
-        "as_of": "20260720",
+        "current_price": 482000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "현대모비스",
-          "close": 472500,
-          "change": -9500,
-          "change_pct": -1.97,
-          "volume": 316664,
-          "trading_value_krw": 150995685000,
-          "market_cap_krw": 42871145467500,
+          "close": 482000,
+          "change": -7500,
+          "change_pct": -1.53,
+          "volume": 270493,
+          "trading_value_krw": 130797242000,
+          "market_cap_krw": 43733105006000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086623+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003112+09:00"
         }
       },
       "financials": {
@@ -1112,7 +1152,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:07.300670+09:00",
+        "fetched_at": "2026-07-21T19:37:38.170412+09:00",
         "assets": 73917161000000.0,
         "assets_growth_pct": 5.0,
         "equity": 50647933000000.0,
@@ -1133,15 +1173,15 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:09.695491+09:00"
+        "fetched_at": "2026-07-21T19:37:40.584812+09:00"
       },
       "quantitative": {
-        "score": 21.0,
+        "score": 9.0,
         "components": {
           "financials": 3.0,
           "consensus": 0.0,
           "valuation": 6.0,
-          "flow": 12.0,
+          "flow": 0.0,
           "momentum": 0.0
         },
         "available_dimensions": 2,
@@ -1149,7 +1189,7 @@
           "valuation",
           "flow"
         ],
-        "signal": "긍정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -1171,33 +1211,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012450",
-          "fetched_at": "2026-07-21T17:03:04.683863+09:00",
+          "fetched_at": "2026-07-21T19:40:47.685770+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -22789,
-          "foreign_net_buy_10d_krw": 28218,
+          "institution_net_buy_10d_krw": -28652,
+          "foreign_net_buy_10d_krw": 32272,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:05.070494+09:00"
+          "fetched_at": "2026-07-21T19:40:48.062467+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 875000,
-        "as_of": "20260720",
+        "current_price": 943000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "한화에어로스페이스",
-          "close": 875000,
-          "change": -68000,
-          "change_pct": -7.21,
-          "volume": 415673,
-          "trading_value_krw": 371739098174,
-          "market_cap_krw": 45117975875000,
+          "close": 943000,
+          "change": 14000,
+          "change_pct": 1.51,
+          "volume": 142859,
+          "trading_value_krw": 133891872000,
+          "market_cap_krw": 48624287143000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086629+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003118+09:00"
         }
       },
       "financials": {
@@ -1206,7 +1246,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:07.345265+09:00",
+        "fetched_at": "2026-07-21T19:37:38.034385+09:00",
         "assets": 56659594923000.0,
         "assets_growth_pct": 5.02,
         "operating_profit": 638892160000.0,
@@ -1220,7 +1260,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:09.630159+09:00"
+        "fetched_at": "2026-07-21T19:37:40.610650+09:00"
       },
       "quantitative": {
         "score": 0.0,
@@ -1258,33 +1298,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=329180",
-          "fetched_at": "2026-07-21T17:03:04.234276+09:00",
+          "fetched_at": "2026-07-21T19:40:47.931654+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -129555,
-          "foreign_net_buy_10d_krw": 158324,
+          "institution_net_buy_10d_krw": -137739,
+          "foreign_net_buy_10d_krw": 175185,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:04.859102+09:00"
+          "fetched_at": "2026-07-21T19:40:48.363661+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 448500,
-        "as_of": "20260720",
+        "current_price": 484000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "HD현대중공업",
-          "close": 448500,
-          "change": -35500,
-          "change_pct": -7.33,
-          "volume": 288950,
-          "trading_value_krw": 131235948500,
-          "market_cap_krw": 47075109412500,
+          "close": 484000,
+          "change": 13000,
+          "change_pct": 2.76,
+          "volume": 278722,
+          "trading_value_krw": 133048447500,
+          "market_cap_krw": 50801232900000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086634+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003125+09:00"
         }
       },
       "financials": {
@@ -1293,7 +1333,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:07.395350+09:00",
+        "fetched_at": "2026-07-21T19:37:38.127890+09:00",
         "assets": 27577187358000.0,
         "assets_growth_pct": 5.41,
         "equity": 9713237014000.0,
@@ -1314,7 +1354,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:09.413044+09:00"
+        "fetched_at": "2026-07-21T19:37:40.507931+09:00"
       },
       "quantitative": {
         "score": 0.0,
@@ -1352,33 +1392,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=373220",
-          "fetched_at": "2026-07-21T17:03:04.714744+09:00",
+          "fetched_at": "2026-07-21T19:40:47.699126+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -127778,
-          "foreign_net_buy_10d_krw": -5430,
+          "institution_net_buy_10d_krw": -149827,
+          "foreign_net_buy_10d_krw": -6585,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:05.227065+09:00"
+          "fetched_at": "2026-07-21T19:40:48.049984+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 317500,
-        "as_of": "20260720",
+        "current_price": 334000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "LG에너지솔루션",
-          "close": 317500,
-          "change": -16500,
-          "change_pct": -4.94,
-          "volume": 310401,
-          "trading_value_krw": 100344521500,
-          "market_cap_krw": 74295000000000,
+          "close": 334000,
+          "change": -1000,
+          "change_pct": -0.3,
+          "volume": 314975,
+          "trading_value_krw": 106221678250,
+          "market_cap_krw": 78156000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086639+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003131+09:00"
         }
       },
       "financials": {
@@ -1387,7 +1427,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:07.496912+09:00",
+        "fetched_at": "2026-07-21T19:37:39.059466+09:00",
         "assets": 71805610000000.0,
         "assets_growth_pct": 6.94,
         "equity": 29916304000000.0,
@@ -1406,7 +1446,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:09.626489+09:00"
+        "fetched_at": "2026-07-21T19:37:41.619307+09:00"
       },
       "quantitative": {
         "score": -16.0,
@@ -1444,33 +1484,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=011070",
-          "fetched_at": "2026-07-21T17:03:04.749457+09:00",
+          "fetched_at": "2026-07-21T19:40:47.927845+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -792097,
-          "foreign_net_buy_10d_krw": 917189,
+          "institution_net_buy_10d_krw": -801883,
+          "foreign_net_buy_10d_krw": 955702,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:05.204403+09:00"
+          "fetched_at": "2026-07-21T19:40:48.381331+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 602000,
-        "as_of": "20260720",
+        "current_price": 668000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "LG이노텍",
-          "close": 602000,
-          "change": -66000,
-          "change_pct": -9.88,
-          "volume": 192674,
-          "trading_value_krw": 118907353000,
-          "market_cap_krw": 14247598414000,
+          "close": 668000,
+          "change": -20000,
+          "change_pct": -2.91,
+          "volume": 186849,
+          "trading_value_krw": 125873955000,
+          "market_cap_krw": 15809627476000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086647+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003138+09:00"
         }
       },
       "financials": {
@@ -1479,7 +1519,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:07.480201+09:00",
+        "fetched_at": "2026-07-21T19:37:39.185747+09:00",
         "assets": 11822058000000.0,
         "assets_growth_pct": -0.91,
         "equity": 6080881000000.0,
@@ -1500,7 +1540,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:09.535790+09:00"
+        "fetched_at": "2026-07-21T19:37:41.669939+09:00"
       },
       "quantitative": {
         "score": 3.0,
@@ -1538,33 +1578,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034220",
-          "fetched_at": "2026-07-21T17:03:05.884656+09:00",
+          "fetched_at": "2026-07-21T19:40:48.939620+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 159566,
-          "foreign_net_buy_10d_krw": -3714154,
+          "institution_net_buy_10d_krw": -167453,
+          "foreign_net_buy_10d_krw": -3585944,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:06.597915+09:00"
+          "fetched_at": "2026-07-21T19:40:49.274426+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 9880,
-        "as_of": "20260720",
+        "current_price": 10410,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "LG디스플레이",
-          "close": 9880,
-          "change": -530,
-          "change_pct": -5.09,
-          "volume": 4381971,
-          "trading_value_krw": 43611413745,
-          "market_cap_krw": 4940000000000,
+          "close": 10410,
+          "change": -310,
+          "change_pct": -2.89,
+          "volume": 3515283,
+          "trading_value_krw": 36955333705,
+          "market_cap_krw": 5205000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086652+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003144+09:00"
         }
       },
       "financials": {
@@ -1573,7 +1613,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:11.784125+09:00",
+        "fetched_at": "2026-07-21T19:37:47.040351+09:00",
         "assets": 27295656000000.0,
         "assets_growth_pct": 1.41,
         "equity": 7773133000000.0,
@@ -1592,15 +1632,15 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:13.953685+09:00"
+        "fetched_at": "2026-07-21T19:37:49.178262+09:00"
       },
       "quantitative": {
-        "score": 1.0,
+        "score": -11.0,
         "components": {
           "financials": -3.0,
           "consensus": 0.0,
           "valuation": 4.0,
-          "flow": 0.0,
+          "flow": -12.0,
           "momentum": 0.0
         },
         "available_dimensions": 2,
@@ -1630,33 +1670,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=064400",
-          "fetched_at": "2026-07-21T17:03:05.924329+09:00",
+          "fetched_at": "2026-07-21T19:40:49.163500+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 39834,
-          "foreign_net_buy_10d_krw": 634632,
+          "institution_net_buy_10d_krw": 63900,
+          "foreign_net_buy_10d_krw": 443390,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:06.591066+09:00"
+          "fetched_at": "2026-07-21T19:40:49.677704+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 61800,
-        "as_of": "20260720",
+        "current_price": 65000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "LG씨엔에스",
-          "close": 61800,
-          "change": -3200,
-          "change_pct": -4.92,
-          "volume": 785471,
-          "trading_value_krw": 48705670150,
-          "market_cap_krw": 5987551586400,
+          "close": 65000,
+          "change": -3300,
+          "change_pct": -4.83,
+          "volume": 724614,
+          "trading_value_krw": 47546887600,
+          "market_cap_krw": 6297586620000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086658+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003152+09:00"
         }
       },
       "financials": {
@@ -1665,7 +1705,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:12.034328+09:00",
+        "fetched_at": "2026-07-21T19:37:46.373064+09:00",
         "assets": 4784000547000.0,
         "assets_growth_pct": -9.48,
         "equity": 2932555794000.0,
@@ -1684,7 +1724,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:13.890955+09:00"
+        "fetched_at": "2026-07-21T19:37:48.297191+09:00"
       },
       "quantitative": {
         "score": 17.0,
@@ -1722,33 +1762,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=096770",
-          "fetched_at": "2026-07-21T17:03:06.485987+09:00",
+          "fetched_at": "2026-07-21T19:40:49.089361+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 2369776,
-          "foreign_net_buy_10d_krw": -416368,
+          "institution_net_buy_10d_krw": 2469342,
+          "foreign_net_buy_10d_krw": -430146,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:06.792216+09:00"
+          "fetched_at": "2026-07-21T19:40:49.682548+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 116900,
-        "as_of": "20260720",
+        "current_price": 121400,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "SK이노베이션",
-          "close": 116900,
-          "change": -4500,
-          "change_pct": -3.71,
-          "volume": 808325,
-          "trading_value_krw": 96733749100,
-          "market_cap_krw": 19762270917200,
+          "close": 121400,
+          "change": 4400,
+          "change_pct": 3.76,
+          "volume": 1851929,
+          "trading_value_krw": 227577325300,
+          "market_cap_krw": 20523008463200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086663+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003157+09:00"
         }
       },
       "financials": {
@@ -1757,7 +1797,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:12.193774+09:00",
+        "fetched_at": "2026-07-21T19:37:50.999324+09:00",
         "assets": 110123705338000.0,
         "assets_growth_pct": 4.28,
         "equity": 38110038132000.0,
@@ -1778,7 +1818,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:13.878091+09:00"
+        "fetched_at": "2026-07-21T19:37:52.330290+09:00"
       },
       "quantitative": {
         "score": 0.0,
@@ -1816,33 +1856,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=475150",
-          "fetched_at": "2026-07-21T17:03:06.168766+09:00",
+          "fetched_at": "2026-07-21T19:40:49.238435+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 901936,
-          "foreign_net_buy_10d_krw": -34965,
+          "institution_net_buy_10d_krw": 1179044,
+          "foreign_net_buy_10d_krw": 504662,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:06.581642+09:00"
+          "fetched_at": "2026-07-21T19:40:49.660215+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 55900,
-        "as_of": "20260720",
+        "current_price": 52000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "SK이터닉스",
-          "close": 55900,
-          "change": 3900,
-          "change_pct": 7.5,
-          "volume": 7443092,
-          "trading_value_krw": 418009340700,
-          "market_cap_krw": 1904345523600,
+          "close": 52000,
+          "change": -1300,
+          "change_pct": -2.44,
+          "volume": 4145339,
+          "trading_value_krw": 222089141800,
+          "market_cap_krw": 1771484208000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086668+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003163+09:00"
         }
       },
       "financials": {
@@ -1851,7 +1891,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:12.089054+09:00",
+        "fetched_at": "2026-07-21T19:37:47.428994+09:00",
         "assets": 1405235645262.0,
         "assets_growth_pct": 6.69,
         "equity": 270392016423.0,
@@ -1874,15 +1914,15 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:13.640108+09:00"
+        "fetched_at": "2026-07-21T19:37:49.188305+09:00"
       },
       "quantitative": {
-        "score": -10.0,
+        "score": 2.0,
         "components": {
           "financials": -3.0,
           "consensus": 0.0,
           "valuation": -7.0,
-          "flow": 0.0,
+          "flow": 12.0,
           "momentum": 0.0
         },
         "available_dimensions": 2,
@@ -1912,33 +1952,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=003670",
-          "fetched_at": "2026-07-21T17:03:06.353222+09:00",
+          "fetched_at": "2026-07-21T19:40:49.529779+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -152931,
-          "foreign_net_buy_10d_krw": 154946,
+          "institution_net_buy_10d_krw": -96242,
+          "foreign_net_buy_10d_krw": 142400,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:06.660936+09:00"
+          "fetched_at": "2026-07-21T19:40:49.916770+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 136800,
-        "as_of": "20260720",
+        "current_price": 147600,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "포스코퓨처엠",
-          "close": 136800,
-          "change": -10800,
-          "change_pct": -7.32,
-          "volume": 244081,
-          "trading_value_krw": 33826220650,
-          "market_cap_krw": 12167842896000,
+          "close": 147600,
+          "change": -5600,
+          "change_pct": -3.66,
+          "volume": 304297,
+          "trading_value_krw": 45328955300,
+          "market_cap_krw": 13128462072000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086673+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003168+09:00"
         }
       },
       "financials": {
@@ -1947,7 +1987,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:12.083033+09:00",
+        "fetched_at": "2026-07-21T19:37:48.134971+09:00",
         "assets": 9520080359594.0,
         "assets_growth_pct": 4.11,
         "equity": 4617557017891.0,
@@ -1970,7 +2010,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:13.859839+09:00"
+        "fetched_at": "2026-07-21T19:37:49.703581+09:00"
       },
       "quantitative": {
         "score": -4.0,
@@ -2008,33 +2048,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035420",
-          "fetched_at": "2026-07-21T17:03:06.447785+09:00",
+          "fetched_at": "2026-07-21T19:40:49.567520+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -136562,
-          "foreign_net_buy_10d_krw": 869616,
+          "institution_net_buy_10d_krw": 16119,
+          "foreign_net_buy_10d_krw": 854372,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:06.749856+09:00"
+          "fetched_at": "2026-07-21T19:40:49.936505+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 185900,
-        "as_of": "20260720",
+        "current_price": 190000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "NAVER",
-          "close": 185900,
-          "change": -4100,
-          "change_pct": -2.16,
-          "volume": 630080,
-          "trading_value_krw": 117168113650,
-          "market_cap_krw": 29175934587800,
+          "close": 190000,
+          "change": 400,
+          "change_pct": 0.21,
+          "volume": 737459,
+          "trading_value_krw": 138857897200,
+          "market_cap_krw": 29819405980000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086678+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003174+09:00"
         }
       },
       "financials": {
@@ -2043,7 +2083,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:12.079883+09:00",
+        "fetched_at": "2026-07-21T19:37:48.855658+09:00",
         "assets": 44914004920132.0,
         "assets_growth_pct": 9.32,
         "equity": 30930035783908.0,
@@ -2064,15 +2104,15 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:13.631654+09:00"
+        "fetched_at": "2026-07-21T19:37:50.997559+09:00"
       },
       "quantitative": {
-        "score": 9.0,
+        "score": 21.0,
         "components": {
           "financials": 3.0,
           "consensus": 0.0,
           "valuation": 6.0,
-          "flow": 0.0,
+          "flow": 12.0,
           "momentum": 0.0
         },
         "available_dimensions": 2,
@@ -2080,7 +2120,7 @@
           "valuation",
           "flow"
         ],
-        "signal": "중립"
+        "signal": "긍정"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -2102,33 +2142,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035720",
-          "fetched_at": "2026-07-21T17:03:07.376672+09:00",
+          "fetched_at": "2026-07-21T19:40:50.328836+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 877500,
-          "foreign_net_buy_10d_krw": 1100429,
+          "institution_net_buy_10d_krw": 974087,
+          "foreign_net_buy_10d_krw": 1096412,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:08.045149+09:00"
+          "fetched_at": "2026-07-21T19:40:50.665362+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 35050,
-        "as_of": "20260720",
+        "current_price": 35900,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "카카오",
-          "close": 35050,
-          "change": -850,
-          "change_pct": -2.37,
-          "volume": 1867585,
-          "trading_value_krw": 65665702975,
-          "market_cap_krw": 15526486503500,
+          "close": 35900,
+          "change": 1000,
+          "change_pct": 2.87,
+          "volume": 2680070,
+          "trading_value_krw": 94992659450,
+          "market_cap_krw": 15903020413000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086683+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003181+09:00"
         }
       },
       "financials": {
@@ -2137,7 +2177,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:16.335948+09:00",
+        "fetched_at": "2026-07-21T19:37:55.725498+09:00",
         "assets": 28802759972472.0,
         "assets_growth_pct": 3.67,
         "equity": 15420486660552.0,
@@ -2153,14 +2193,19 @@
         "debt_ratio_pct": 86.78
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:18.781138+09:00"
+        "fetched_at": "2026-07-21T17:02:18.781138+09:00",
+        "cached_from": "2026-07-21T17:02:18.781138+09:00",
+        "cache_age_hours": 2.6,
+        "cache_expires_at": "2026-07-28T17:02:18.781138+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": 16.0,
@@ -2198,33 +2243,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000720",
-          "fetched_at": "2026-07-21T17:03:07.803200+09:00",
+          "fetched_at": "2026-07-21T19:40:50.551654+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 21735,
-          "foreign_net_buy_10d_krw": 533808,
+          "institution_net_buy_10d_krw": 1600,
+          "foreign_net_buy_10d_krw": 611043,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:08.216396+09:00"
+          "fetched_at": "2026-07-21T19:40:51.104351+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 91000,
-        "as_of": "20260720",
+        "current_price": 99000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "현대건설",
-          "close": 91000,
-          "change": -8000,
-          "change_pct": -8.08,
-          "volume": 590535,
-          "trading_value_krw": 54452722900,
-          "market_cap_krw": 10133374615000,
+          "close": 99000,
+          "change": -2400,
+          "change_pct": -2.37,
+          "volume": 380664,
+          "trading_value_krw": 37415865800,
+          "market_cap_krw": 11024220735000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086688+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003188+09:00"
         }
       },
       "financials": {
@@ -2233,7 +2278,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:16.324403+09:00",
+        "fetched_at": "2026-07-21T19:37:56.081462+09:00",
         "assets": 28405874000000.0,
         "assets_growth_pct": 1.06,
         "equity": 11028599000000.0,
@@ -2254,7 +2299,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:18.619829+09:00"
+        "fetched_at": "2026-07-21T19:37:58.632254+09:00"
       },
       "quantitative": {
         "score": 13.0,
@@ -2292,33 +2337,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=272210",
-          "fetched_at": "2026-07-21T17:03:07.851973+09:00",
+          "fetched_at": "2026-07-21T19:40:50.830516+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -42741,
-          "foreign_net_buy_10d_krw": 32895,
+          "institution_net_buy_10d_krw": -159425,
+          "foreign_net_buy_10d_krw": 256134,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:08.228020+09:00"
+          "fetched_at": "2026-07-21T19:40:51.195508+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 61100,
-        "as_of": "20260720",
+        "current_price": 65500,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "한화시스템",
-          "close": 61100,
-          "change": -4400,
-          "change_pct": -6.72,
-          "volume": 692069,
-          "trading_value_krw": 43127110900,
-          "market_cap_krw": 11542974667900,
+          "close": 65500,
+          "change": -300,
+          "change_pct": -0.46,
+          "volume": 451856,
+          "trading_value_krw": 29727864750,
+          "market_cap_krw": 12374219979500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086693+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003193+09:00"
         }
       },
       "financials": {
@@ -2327,7 +2372,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:16.685562+09:00",
+        "fetched_at": "2026-07-21T19:37:56.215821+09:00",
         "assets": 10820663576719.0,
         "assets_growth_pct": 4.78,
         "equity": 5042789965122.0,
@@ -2350,7 +2395,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:18.783557+09:00"
+        "fetched_at": "2026-07-21T19:37:58.579493+09:00"
       },
       "quantitative": {
         "score": -4.0,
@@ -2388,33 +2433,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042660",
-          "fetched_at": "2026-07-21T17:03:07.503554+09:00",
+          "fetched_at": "2026-07-21T19:40:50.796397+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 143331,
-          "foreign_net_buy_10d_krw": -3073787,
+          "institution_net_buy_10d_krw": 400129,
+          "foreign_net_buy_10d_krw": -2940033,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:08.053180+09:00"
+          "fetched_at": "2026-07-21T19:40:51.176091+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 83200,
-        "as_of": "20260720",
+        "current_price": 86700,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "한화오션",
-          "close": 83200,
-          "change": -3500,
-          "change_pct": -4.04,
-          "volume": 2135147,
-          "trading_value_krw": 180604667200,
-          "market_cap_krw": 25493594380800,
+          "close": 86700,
+          "change": 4700,
+          "change_pct": 5.73,
+          "volume": 2769110,
+          "trading_value_krw": 234335979250,
+          "market_cap_krw": 26566041259800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086698+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003199+09:00"
         }
       },
       "financials": {
@@ -2423,7 +2468,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:16.312964+09:00",
+        "fetched_at": "2026-07-21T19:37:55.488090+09:00",
         "assets": 20796547457384.0,
         "assets_growth_pct": 3.26,
         "equity": 6825972776314.0,
@@ -2444,7 +2489,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:18.783432+09:00"
+        "fetched_at": "2026-07-21T19:37:56.971685+09:00"
       },
       "quantitative": {
         "score": -1.0,
@@ -2482,33 +2527,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=082740",
-          "fetched_at": "2026-07-21T17:03:07.806381+09:00",
+          "fetched_at": "2026-07-21T19:40:50.974804+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 817288,
-          "foreign_net_buy_10d_krw": -1276738,
+          "institution_net_buy_10d_krw": 879852,
+          "foreign_net_buy_10d_krw": -1262043,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:08.200071+09:00"
+          "fetched_at": "2026-07-21T19:40:51.348854+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 42400,
-        "as_of": "20260720",
+        "current_price": 46900,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "한화엔진",
-          "close": 42400,
-          "change": -4500,
-          "change_pct": -9.59,
-          "volume": 637220,
-          "trading_value_krw": 27722992325,
-          "market_cap_krw": 3538158820800,
+          "close": 46900,
+          "change": -350,
+          "change_pct": -0.74,
+          "volume": 600432,
+          "trading_value_krw": 28064073300,
+          "market_cap_krw": 3913670959800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086703+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003205+09:00"
         }
       },
       "financials": {
@@ -2517,7 +2562,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:16.185242+09:00",
+        "fetched_at": "2026-07-21T19:37:56.168980+09:00",
         "assets": 1910569648022.0,
         "assets_growth_pct": 12.67,
         "equity": 610032817122.0,
@@ -2540,7 +2585,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:18.797909+09:00"
+        "fetched_at": "2026-07-21T19:37:58.578881+09:00"
       },
       "quantitative": {
         "score": -4.0,
@@ -2578,33 +2623,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034020",
-          "fetched_at": "2026-07-21T17:03:07.985985+09:00",
+          "fetched_at": "2026-07-21T19:40:51.083135+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 500998,
-          "foreign_net_buy_10d_krw": -1131357,
+          "institution_net_buy_10d_krw": 382445,
+          "foreign_net_buy_10d_krw": -330123,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:08.302824+09:00"
+          "fetched_at": "2026-07-21T19:40:51.406396+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 64800,
-        "as_of": "20260720",
+        "current_price": 69700,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "두산에너빌리티",
-          "close": 64800,
-          "change": -4900,
-          "change_pct": -7.03,
-          "volume": 2835943,
-          "trading_value_krw": 184830797500,
-          "market_cap_krw": 41508362260800,
+          "close": 69700,
+          "change": -3300,
+          "change_pct": -4.52,
+          "volume": 2541779,
+          "trading_value_krw": 177388799900,
+          "market_cap_krw": 44647111876200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086708+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003210+09:00"
         }
       },
       "financials": {
@@ -2613,7 +2658,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:16.379590+09:00",
+        "fetched_at": "2026-07-21T19:37:56.660544+09:00",
         "assets": 28695055000000.0,
         "assets_growth_pct": 4.3,
         "equity": 12443616000000.0,
@@ -2634,7 +2679,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:18.752629+09:00"
+        "fetched_at": "2026-07-21T19:37:58.787657+09:00"
       },
       "quantitative": {
         "score": -7.0,
@@ -2672,33 +2717,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=207940",
-          "fetched_at": "2026-07-21T17:03:09.106506+09:00",
+          "fetched_at": "2026-07-21T19:40:51.588617+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 29898,
-          "foreign_net_buy_10d_krw": 7756,
+          "institution_net_buy_10d_krw": 40123,
+          "foreign_net_buy_10d_krw": 7404,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:09.698677+09:00"
+          "fetched_at": "2026-07-21T19:40:51.914822+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 1345000,
-        "as_of": "20260720",
+        "current_price": 1396000,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "삼성바이오로직스",
-          "close": 1345000,
-          "change": -51000,
-          "change_pct": -3.65,
-          "volume": 40527,
-          "trading_value_krw": 55207582500,
-          "market_cap_krw": 62261329095000,
+          "close": 1396000,
+          "change": 13000,
+          "change_pct": 0.94,
+          "volume": 29974,
+          "trading_value_krw": 41561948500,
+          "market_cap_krw": 64622167596000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086715+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003224+09:00"
         }
       },
       "financials": {
@@ -2707,7 +2752,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:20.912405+09:00",
+        "fetched_at": "2026-07-21T19:38:02.585733+09:00",
         "assets": 11994999582438.0,
         "assets_growth_pct": 8.45,
         "equity": 7922835735735.0,
@@ -2730,7 +2775,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:22.534251+09:00"
+        "fetched_at": "2026-07-21T19:38:03.747763+09:00"
       },
       "quantitative": {
         "score": 8.0,
@@ -2768,33 +2813,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=068270",
-          "fetched_at": "2026-07-21T17:03:09.016242+09:00",
+          "fetched_at": "2026-07-21T19:40:52.329092+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 557580,
-          "foreign_net_buy_10d_krw": 249778,
+          "institution_net_buy_10d_krw": 621426,
+          "foreign_net_buy_10d_krw": 285186,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:09.706971+09:00"
+          "fetched_at": "2026-07-21T19:40:52.685960+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 172600,
-        "as_of": "20260720",
+        "current_price": 175800,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "셀트리온",
-          "close": 172600,
-          "change": -3200,
-          "change_pct": -1.82,
-          "volume": 473598,
-          "trading_value_krw": 81697537050,
-          "market_cap_krw": 40138769655600,
+          "close": 175800,
+          "change": 100,
+          "change_pct": 0.06,
+          "volume": 498638,
+          "trading_value_krw": 87043726550,
+          "market_cap_krw": 40882941514800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086720+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003231+09:00"
         }
       },
       "financials": {
@@ -2803,7 +2848,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:21.191809+09:00",
+        "fetched_at": "2026-07-21T19:38:06.035781+09:00",
         "assets": 23156645428216.0,
         "assets_growth_pct": 3.68,
         "equity": 17814382031809.0,
@@ -2824,7 +2869,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:22.727166+09:00"
+        "fetched_at": "2026-07-21T19:38:07.422071+09:00"
       },
       "quantitative": {
         "score": 15.0,
@@ -2862,33 +2907,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=196170",
-          "fetched_at": "2026-07-21T17:03:09.157243+09:00",
+          "fetched_at": "2026-07-21T19:40:52.179598+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -253845,
-          "foreign_net_buy_10d_krw": 42124,
+          "institution_net_buy_10d_krw": -228089,
+          "foreign_net_buy_10d_krw": 120617,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:09.673987+09:00"
+          "fetched_at": "2026-07-21T19:40:52.599191+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 269500,
-        "as_of": "20260720",
+        "current_price": 276500,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
           "name": "알테오젠",
-          "close": 269500,
-          "change": -7000,
-          "change_pct": -2.53,
-          "volume": 393316,
-          "trading_value_krw": 108082192000,
-          "market_cap_krw": 14441519438500,
+          "close": 276500,
+          "change": -12000,
+          "change_pct": -4.16,
+          "volume": 312416,
+          "trading_value_krw": 87079085750,
+          "market_cap_krw": 14816623839500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086726+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003239+09:00"
         }
       },
       "financials": {
@@ -2897,7 +2942,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:20.969722+09:00",
+        "fetched_at": "2026-07-21T19:38:03.531987+09:00",
         "assets": 729469655232.0,
         "assets_growth_pct": 4.4,
         "equity": 512858119587.0,
@@ -2920,7 +2965,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:22.723361+09:00"
+        "fetched_at": "2026-07-21T19:38:05.027280+09:00"
       },
       "quantitative": {
         "score": -4.0,
@@ -2958,33 +3003,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=298380",
-          "fetched_at": "2026-07-21T17:03:09.520347+09:00",
+          "fetched_at": "2026-07-21T19:40:52.304514+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -160650,
-          "foreign_net_buy_10d_krw": 452509,
+          "institution_net_buy_10d_krw": -236362,
+          "foreign_net_buy_10d_krw": 569766,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:09.860607+09:00"
+          "fetched_at": "2026-07-21T19:40:52.641690+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 70200,
-        "as_of": "20260720",
+        "current_price": 75600,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
           "name": "에이비엘바이오",
-          "close": 70200,
-          "change": -5400,
-          "change_pct": -7.14,
-          "volume": 205852,
-          "trading_value_krw": 14668479150,
-          "market_cap_krw": 3930319902600,
+          "close": 75600,
+          "change": -3700,
+          "change_pct": -4.67,
+          "volume": 203800,
+          "trading_value_krw": 15506662750,
+          "market_cap_krw": 4232652202800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086730+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003245+09:00"
         }
       },
       "financials": {
@@ -2993,7 +3038,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:21.256544+09:00",
+        "fetched_at": "2026-07-21T19:38:03.560270+09:00",
         "assets": 298130275703.0,
         "assets_growth_pct": 6.12,
         "equity": 183343287401.0,
@@ -3016,7 +3061,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:23.453618+09:00"
+        "fetched_at": "2026-07-21T19:38:04.864292+09:00"
       },
       "quantitative": {
         "score": 0.0,
@@ -3054,33 +3099,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=086790",
-          "fetched_at": "2026-07-21T17:03:09.490472+09:00",
+          "fetched_at": "2026-07-21T19:40:52.556446+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 968883,
-          "foreign_net_buy_10d_krw": -245251,
+          "institution_net_buy_10d_krw": 984530,
+          "foreign_net_buy_10d_krw": -279220,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:09.774120+09:00"
+          "fetched_at": "2026-07-21T19:40:52.892547+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 133400,
-        "as_of": "20260720",
+        "current_price": 136800,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "하나금융지주",
-          "close": 133400,
-          "change": -3400,
-          "change_pct": -2.49,
-          "volume": 1233252,
-          "trading_value_krw": 166092956750,
-          "market_cap_krw": 36600657583200,
+          "close": 136800,
+          "change": 0,
+          "change_pct": 0.0,
+          "volume": 1109404,
+          "trading_value_krw": 151760485050,
+          "market_cap_krw": 37533507926400,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086736+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003252+09:00"
         }
       },
       "financials": {
@@ -3089,7 +3134,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:21.352779+09:00",
+        "fetched_at": "2026-07-21T19:38:09.976434+09:00",
         "assets": 685367577000000.0,
         "assets_growth_pct": 1.6,
         "equity": 46442152000000.0,
@@ -3108,7 +3153,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:23.481562+09:00"
+        "fetched_at": "2026-07-21T19:38:11.322990+09:00"
       },
       "quantitative": {
         "score": 6.0,
@@ -3146,33 +3191,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=316140",
-          "fetched_at": "2026-07-21T17:03:09.548975+09:00",
+          "fetched_at": "2026-07-21T19:40:52.475890+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 1217275,
-          "foreign_net_buy_10d_krw": -12491,
+          "institution_net_buy_10d_krw": 1147283,
+          "foreign_net_buy_10d_krw": -156539,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:09.873189+09:00"
+          "fetched_at": "2026-07-21T19:40:52.816945+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 30550,
-        "as_of": "20260720",
+        "current_price": 31500,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "우리금융지주",
-          "close": 30550,
-          "change": -950,
-          "change_pct": -3.02,
-          "volume": 2100523,
-          "trading_value_krw": 64548249975,
-          "market_cap_krw": 22243139785100,
+          "close": 31500,
+          "change": 200,
+          "change_pct": 0.64,
+          "volume": 2042896,
+          "trading_value_krw": 64069578650,
+          "market_cap_krw": 22934824983000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086741+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003259+09:00"
         }
       },
       "financials": {
@@ -3181,7 +3226,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:21.528705+09:00",
+        "fetched_at": "2026-07-21T19:38:15.550446+09:00",
         "assets": 612585300000000.0,
         "assets_growth_pct": 1.85,
         "equity": 39906308000000.0,
@@ -3200,7 +3245,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:23.367743+09:00"
+        "fetched_at": "2026-07-21T19:38:16.857631+09:00"
       },
       "quantitative": {
         "score": 6.0,
@@ -3238,33 +3283,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=006360",
-          "fetched_at": "2026-07-21T17:03:10.445641+09:00",
+          "fetched_at": "2026-07-21T19:40:53.047316+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 1335341,
-          "foreign_net_buy_10d_krw": 691749,
+          "institution_net_buy_10d_krw": 1094082,
+          "foreign_net_buy_10d_krw": 569400,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:10.732633+09:00"
+          "fetched_at": "2026-07-21T19:40:53.383647+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 26050,
-        "as_of": "20260720",
+        "current_price": 27300,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "GS건설",
-          "close": 26050,
-          "change": -1250,
-          "change_pct": -4.58,
-          "volume": 1061251,
-          "trading_value_krw": 27837075625,
-          "market_cap_krw": 2229397814500,
+          "close": 27300,
+          "change": -1450,
+          "change_pct": -5.04,
+          "volume": 1026430,
+          "trading_value_krw": 28304271625,
+          "market_cap_krw": 2336374677000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086746+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003265+09:00"
         }
       },
       "financials": {
@@ -3273,7 +3318,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:24.912541+09:00",
+        "fetched_at": "2026-07-21T19:38:11.195678+09:00",
         "assets": 18541824000000.0,
         "assets_growth_pct": 0.44,
         "equity": 5597238000000.0,
@@ -3296,7 +3341,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:26.328623+09:00"
+        "fetched_at": "2026-07-21T19:38:12.689363+09:00"
       },
       "quantitative": {
         "score": 13.0,
@@ -3334,33 +3379,33 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=108670",
-          "fetched_at": "2026-07-21T17:03:10.546014+09:00",
+          "fetched_at": "2026-07-21T19:40:53.660362+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -1236,
-          "foreign_net_buy_10d_krw": -12365,
+          "institution_net_buy_10d_krw": -3198,
+          "foreign_net_buy_10d_krw": -14945,
           "unit": "shares",
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T17:03:10.856484+09:00"
+          "fetched_at": "2026-07-21T19:40:54.005960+09:00"
         },
         "source": "KRX OPEN API",
-        "current_price": 32450,
-        "as_of": "20260720",
+        "current_price": 31550,
+        "as_of": "20260716",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
           "name": "LX하우시스",
-          "close": 32450,
-          "change": 900,
-          "change_pct": 2.85,
-          "volume": 26416,
-          "trading_value_krw": 848238050,
-          "market_cap_krw": 291000891500,
+          "close": 31550,
+          "change": 0,
+          "change_pct": 0.0,
+          "volume": 25693,
+          "trading_value_krw": 811744200,
+          "market_cap_krw": 282929988500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T17:03:00.086753+09:00"
+          "fetched_at": "2026-07-21T19:40:43.003272+09:00"
         }
       },
       "financials": {
@@ -3369,7 +3414,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T17:02:25.019769+09:00",
+        "fetched_at": "2026-07-21T19:38:11.366975+09:00",
         "assets": 2371864000000.0,
         "assets_growth_pct": 9.3,
         "equity": 873799000000.0,
@@ -3390,7 +3435,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:26.391503+09:00"
+        "fetched_at": "2026-07-21T19:38:12.738191+09:00"
       },
       "quantitative": {
         "score": -3.0,
@@ -3415,5 +3460,7 @@
       "business_sector": "건축자재"
     }
   },
-  "errors": []
+  "errors": [
+    "카카오 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f010e1f49b0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))"
+  ]
 }
