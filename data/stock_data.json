@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T23:27:22.020353+09:00",
+  "updated_at": "2026-07-21T10:05:19.584841+09:00",
   "source_status": {
     "opendart": {
       "configured": true,
@@ -14,7 +14,7 @@
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-20T23:05:26.838449+09:00",
+      "updated_at": "2026-07-21T09:43:22.185426+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -60,14 +60,63 @@
         "GS건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
         "LX하우시스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
       ],
-      "updated_at": "2026-07-20T23:27:20.967954+09:00"
+      "updated_at": "2026-07-21T10:04:07.180840+09:00"
     },
     "krx_open_api": {
       "configured": true,
-      "status": "failed",
-      "reason": "KRX API 인증 또는 서비스 활용승인 오류(HTTP 401)",
-      "fallback": "기존 pykrx 데이터 유지",
-      "updated_at": "2026-07-20T23:27:22.020317+09:00"
+      "status": "ok",
+      "as_of": "20260720",
+      "matched_stocks": 32,
+      "requested_stocks": 32,
+      "endpoints": [
+        "stk_bydd_trd",
+        "ksq_bydd_trd"
+      ],
+      "role": "공식 일별 시세·거래대금·시가총액 우선 수집",
+      "fallback": "PER·PBR·외국인·기관 수급은 pykrx 보조 수집",
+      "diagnostics": [
+        {
+          "endpoint": "stk_bydd_trd",
+          "base_date": "20260721",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 0,
+          "market": "KOSPI"
+        },
+        {
+          "endpoint": "ksq_bydd_trd",
+          "base_date": "20260721",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 0,
+          "market": "KOSDAQ"
+        },
+        {
+          "endpoint": "stk_bydd_trd",
+          "base_date": "20260720",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 943,
+          "market": "KOSPI"
+        },
+        {
+          "endpoint": "ksq_bydd_trd",
+          "base_date": "20260720",
+          "http_status": 200,
+          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
+          "result_code": null,
+          "result_message": null,
+          "row_count": 1821,
+          "market": "KOSDAQ"
+        }
+      ],
+      "updated_at": "2026-07-21T10:05:19.584825+09:00"
     }
   },
   "methodology": {
@@ -88,12 +137,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 244000,
-        "return_5d_pct": -14.39,
-        "return_20d_pct": -31.07,
-        "return_60d_pct": 13.75,
+        "return_5d_pct": -1.38,
+        "return_20d_pct": -29.0,
+        "return_60d_pct": 14.61,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "삼성전자",
+          "close": 244000,
+          "change": -11000,
+          "change_pct": -4.31,
+          "volume": 26804038,
+          "trading_value_krw": 6614607186368,
+          "market_cap_krw": 1426491980352000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584627+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -101,7 +163,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:22:12.827247+09:00",
+        "fetched_at": "2026-07-21T09:58:51.446475+09:00",
         "assets": 633339604000000.0,
         "assets_growth_pct": 11.71,
         "equity": 486635976000000.0,
@@ -149,12 +211,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 1764000,
-        "return_5d_pct": -19.08,
-        "return_20d_pct": -36.18,
-        "return_60d_pct": 51.29,
+        "return_5d_pct": -2.55,
+        "return_20d_pct": -38.4,
+        "return_60d_pct": 46.9,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "SK하이닉스",
+          "close": 1764000,
+          "change": -78000,
+          "change_pct": -4.23,
+          "volume": 5876444,
+          "trading_value_krw": 10575264659754,
+          "market_cap_krw": 1257206971860000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584653+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -162,7 +237,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:22:23.643160+09:00",
+        "fetched_at": "2026-07-21T09:59:03.472008+09:00",
         "assets": 222828744000000.0,
         "assets_growth_pct": 26.53,
         "equity": 164379799000000.0,
@@ -210,12 +285,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 222000,
-        "return_5d_pct": 0.0,
-        "return_20d_pct": -24.75,
-        "return_60d_pct": -22.65,
+        "return_5d_pct": 8.39,
+        "return_20d_pct": -26.12,
+        "return_60d_pct": -24.49,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "한미반도체",
+          "close": 222000,
+          "change": -20500,
+          "change_pct": -8.45,
+          "volume": 791151,
+          "trading_value_krw": 178991871250,
+          "market_cap_krw": 21159308400000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584662+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -223,7 +311,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:22:33.940700+09:00",
+        "fetched_at": "2026-07-21T09:59:13.399346+09:00",
         "assets": 742689287334.0,
         "assets_growth_pct": -8.69,
         "equity": 635869571938.0,
@@ -273,12 +361,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 1275000,
-        "return_5d_pct": -19.51,
-        "return_20d_pct": -43.83,
-        "return_60d_pct": 87.5,
+        "return_5d_pct": -1.16,
+        "return_20d_pct": -42.82,
+        "return_60d_pct": 65.03,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "삼성전기",
+          "close": 1275000,
+          "change": -2000,
+          "change_pct": -0.16,
+          "volume": 965749,
+          "trading_value_krw": 1241663354000,
+          "market_cap_krw": 95234462400000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584668+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -286,7 +387,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:22:44.300625+09:00",
+        "fetched_at": "2026-07-21T09:59:23.724009+09:00",
         "operating_profit": 280572751176.0,
         "operating_profit_growth_pct": 39.9,
         "net_income": 252687583556.0,
@@ -329,12 +430,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 179300,
-        "return_5d_pct": -11.46,
-        "return_20d_pct": -30.77,
-        "return_60d_pct": -2.66,
+        "return_5d_pct": -2.33,
+        "return_20d_pct": -26.45,
+        "return_60d_pct": -2.44,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "LS ELECTRIC",
+          "close": 179300,
+          "change": -10700,
+          "change_pct": -5.63,
+          "volume": 652302,
+          "trading_value_krw": 119018668550,
+          "market_cap_krw": 26895000000000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584674+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -342,7 +456,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:22:56.871410+09:00",
+        "fetched_at": "2026-07-21T09:59:36.875690+09:00",
         "assets": 5361875565139.0,
         "assets_growth_pct": 8.17,
         "equity": 2134169034859.0,
@@ -388,12 +502,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 399000,
-        "return_5d_pct": -12.79,
-        "return_20d_pct": -34.91,
-        "return_60d_pct": -24.29,
+        "return_5d_pct": -12.61,
+        "return_20d_pct": -33.22,
+        "return_60d_pct": -28.94,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "현대차",
+          "close": 399000,
+          "change": -26000,
+          "change_pct": -6.12,
+          "volume": 904770,
+          "trading_value_krw": 363118473500,
+          "market_cap_krw": 81698348634000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584680+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -401,7 +528,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:23:08.827398+09:00",
+        "fetched_at": "2026-07-21T09:59:48.617070+09:00",
         "assets": 383834207000000.0,
         "assets_growth_pct": 4.06,
         "equity": 132226735000000.0,
@@ -449,12 +576,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 140000,
-        "return_5d_pct": -5.08,
-        "return_20d_pct": -9.62,
-        "return_60d_pct": -11.05,
+        "return_5d_pct": -3.0,
+        "return_20d_pct": -8.06,
+        "return_60d_pct": -13.0,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "기아",
+          "close": 140000,
+          "change": -9700,
+          "change_pct": -6.48,
+          "volume": 876708,
+          "trading_value_krw": 123353725200,
+          "market_cap_krw": 54657819720000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584685+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -462,7 +602,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:23:17.146307+09:00",
+        "fetched_at": "2026-07-21T09:59:57.257980+09:00",
         "assets": 105359955000000.0,
         "assets_growth_pct": 6.45,
         "equity": 61638039000000.0,
@@ -512,12 +652,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 472500,
-        "return_5d_pct": -3.18,
-        "return_20d_pct": -22.79,
-        "return_60d_pct": 12.5,
+        "return_5d_pct": -4.0,
+        "return_20d_pct": -17.75,
+        "return_60d_pct": 4.7,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "현대모비스",
+          "close": 472500,
+          "change": -9500,
+          "change_pct": -1.97,
+          "volume": 316664,
+          "trading_value_krw": 150995685000,
+          "market_cap_krw": 42871145467500,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584690+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -525,7 +678,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:23:26.699997+09:00",
+        "fetched_at": "2026-07-21T10:00:06.991894+09:00",
         "assets": 73917161000000.0,
         "assets_growth_pct": 5.0,
         "equity": 50647933000000.0,
@@ -573,12 +726,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 875000,
-        "return_5d_pct": -9.51,
-        "return_20d_pct": -22.01,
-        "return_60d_pct": -38.6,
+        "return_5d_pct": -4.49,
+        "return_20d_pct": -20.53,
+        "return_60d_pct": -35.73,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "한화에어로스페이스",
+          "close": 875000,
+          "change": -68000,
+          "change_pct": -7.21,
+          "volume": 415673,
+          "trading_value_krw": 371739098174,
+          "market_cap_krw": 45117975875000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584696+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -586,7 +752,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:23:36.520970+09:00",
+        "fetched_at": "2026-07-21T10:00:16.862321+09:00",
         "assets": 56659594923000.0,
         "assets_growth_pct": 5.02,
         "operating_profit": 638892160000.0,
@@ -626,12 +792,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 448500,
-        "return_5d_pct": -11.01,
-        "return_20d_pct": -32.76,
-        "return_60d_pct": -14.41,
+        "return_5d_pct": -9.54,
+        "return_20d_pct": -30.66,
+        "return_60d_pct": -23.44,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "HD현대중공업",
+          "close": 448500,
+          "change": -35500,
+          "change_pct": -7.33,
+          "volume": 288950,
+          "trading_value_krw": 131235948500,
+          "market_cap_krw": 47075109412500,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584701+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -639,7 +818,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:23:45.211354+09:00",
+        "fetched_at": "2026-07-21T10:00:25.470821+09:00",
         "assets": 27577187358000.0,
         "assets_growth_pct": 5.41,
         "equity": 9713237014000.0,
@@ -658,13 +837,13 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 14.0,
+        "score": 11.0,
         "components": {
           "financials": 18.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": -4.0
+          "momentum": -7.0
         },
         "available_dimensions": 2,
         "dimension_names": [
@@ -687,12 +866,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 317500,
-        "return_5d_pct": -2.61,
-        "return_20d_pct": -21.51,
-        "return_60d_pct": -25.99,
+        "return_5d_pct": -3.65,
+        "return_20d_pct": -17.9,
+        "return_60d_pct": -33.79,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "LG에너지솔루션",
+          "close": 317500,
+          "change": -16500,
+          "change_pct": -4.94,
+          "volume": 310401,
+          "trading_value_krw": 100344521500,
+          "market_cap_krw": 74295000000000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584706+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -700,7 +892,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:23:54.896069+09:00",
+        "fetched_at": "2026-07-21T10:00:35.707837+09:00",
         "assets": 71805610000000.0,
         "assets_growth_pct": 6.94,
         "equity": 29916304000000.0,
@@ -746,12 +938,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 602000,
-        "return_5d_pct": -18.87,
-        "return_20d_pct": -47.42,
-        "return_60d_pct": 47.01,
+        "return_5d_pct": -8.62,
+        "return_20d_pct": -46.55,
+        "return_60d_pct": 42.12,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "LG이노텍",
+          "close": 602000,
+          "change": -66000,
+          "change_pct": -9.88,
+          "volume": 192674,
+          "trading_value_krw": 118907353000,
+          "market_cap_krw": 14247598414000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584712+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -759,7 +964,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:24:03.040738+09:00",
+        "fetched_at": "2026-07-21T10:00:43.996086+09:00",
         "assets": 11822058000000.0,
         "assets_growth_pct": -0.91,
         "equity": 6080881000000.0,
@@ -807,12 +1012,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 9880,
-        "return_5d_pct": -10.26,
-        "return_20d_pct": -27.19,
-        "return_60d_pct": -31.72,
+        "return_5d_pct": -6.56,
+        "return_20d_pct": -25.14,
+        "return_60d_pct": -34.46,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "LG디스플레이",
+          "close": 9880,
+          "change": -530,
+          "change_pct": -5.09,
+          "volume": 4381971,
+          "trading_value_krw": 43611413745,
+          "market_cap_krw": 4940000000000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584717+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -820,7 +1038,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:24:11.906841+09:00",
+        "fetched_at": "2026-07-21T10:00:52.824387+09:00",
         "assets": 27295656000000.0,
         "assets_growth_pct": 1.41,
         "equity": 7773133000000.0,
@@ -866,12 +1084,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 61800,
-        "return_5d_pct": -13.08,
-        "return_20d_pct": -27.97,
-        "return_60d_pct": -5.21,
+        "return_5d_pct": -9.38,
+        "return_20d_pct": -30.95,
+        "return_60d_pct": -7.76,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "LG씨엔에스",
+          "close": 61800,
+          "change": -3200,
+          "change_pct": -4.92,
+          "volume": 785471,
+          "trading_value_krw": 48705670150,
+          "market_cap_krw": 5987551586400,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584723+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -879,7 +1110,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:24:20.891495+09:00",
+        "fetched_at": "2026-07-21T10:01:03.371976+09:00",
         "assets": 4784000547000.0,
         "assets_growth_pct": -9.48,
         "equity": 2932555794000.0,
@@ -925,12 +1156,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 116900,
-        "return_5d_pct": 13.61,
-        "return_20d_pct": 14.16,
-        "return_60d_pct": -9.24,
+        "return_5d_pct": 4.72,
+        "return_20d_pct": 15.17,
+        "return_60d_pct": -13.56,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "SK이노베이션",
+          "close": 116900,
+          "change": -4500,
+          "change_pct": -3.71,
+          "volume": 808325,
+          "trading_value_krw": 96733749100,
+          "market_cap_krw": 19762270917200,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584728+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -938,7 +1182,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:24:34.814016+09:00",
+        "fetched_at": "2026-07-21T10:01:20.726647+09:00",
         "assets": 110123705338000.0,
         "assets_growth_pct": 4.28,
         "equity": 38110038132000.0,
@@ -957,13 +1201,13 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 23.0,
+        "score": 18.0,
         "components": {
           "financials": 18.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": 5.0
+          "momentum": 0.0
         },
         "available_dimensions": 2,
         "dimension_names": [
@@ -986,12 +1230,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 55900,
-        "return_5d_pct": 30.46,
-        "return_20d_pct": 29.4,
-        "return_60d_pct": 2.95,
+        "return_5d_pct": 20.5,
+        "return_20d_pct": 44.39,
+        "return_60d_pct": 8.83,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "SK이터닉스",
+          "close": 55900,
+          "change": 3900,
+          "change_pct": 7.5,
+          "volume": 7443092,
+          "trading_value_krw": 418009340700,
+          "market_cap_krw": 1904345523600,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584733+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -999,7 +1256,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:24:44.686061+09:00",
+        "fetched_at": "2026-07-21T10:01:29.993157+09:00",
         "assets": 1405235645262.0,
         "assets_growth_pct": 6.69,
         "equity": 270392016423.0,
@@ -1049,12 +1306,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 136800,
-        "return_5d_pct": -9.88,
-        "return_20d_pct": -31.43,
-        "return_60d_pct": -42.16,
+        "return_5d_pct": -10.22,
+        "return_20d_pct": -29.53,
+        "return_60d_pct": -47.25,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "포스코퓨처엠",
+          "close": 136800,
+          "change": -10800,
+          "change_pct": -7.32,
+          "volume": 244081,
+          "trading_value_krw": 33826220650,
+          "market_cap_krw": 12167842896000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584739+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1062,7 +1332,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:24:53.352724+09:00",
+        "fetched_at": "2026-07-21T10:01:38.762203+09:00",
         "assets": 9520080359594.0,
         "assets_growth_pct": 4.11,
         "equity": 4617557017891.0,
@@ -1112,12 +1382,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 185900,
-        "return_5d_pct": -2.82,
-        "return_20d_pct": -19.0,
-        "return_60d_pct": -12.93,
+        "return_5d_pct": 0.43,
+        "return_20d_pct": -14.95,
+        "return_60d_pct": -11.78,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "NAVER",
+          "close": 185900,
+          "change": -4100,
+          "change_pct": -2.16,
+          "volume": 630080,
+          "trading_value_krw": 117168113650,
+          "market_cap_krw": 29175934587800,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584744+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1125,7 +1408,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:25:02.627058+09:00",
+        "fetched_at": "2026-07-21T10:01:48.073723+09:00",
         "assets": 44914004920132.0,
         "assets_growth_pct": 9.32,
         "equity": 30930035783908.0,
@@ -1173,12 +1456,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 35050,
-        "return_5d_pct": -0.85,
-        "return_20d_pct": -7.15,
-        "return_60d_pct": -28.25,
+        "return_5d_pct": -0.29,
+        "return_20d_pct": -5.84,
+        "return_60d_pct": -29.21,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "카카오",
+          "close": 35050,
+          "change": -850,
+          "change_pct": -2.37,
+          "volume": 1867585,
+          "trading_value_krw": 65665702975,
+          "market_cap_krw": 15526486503500,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584749+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1186,7 +1482,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:25:12.870109+09:00",
+        "fetched_at": "2026-07-21T10:01:58.448487+09:00",
         "assets": 28802759972472.0,
         "assets_growth_pct": 3.67,
         "equity": 15420486660552.0,
@@ -1236,12 +1532,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 91000,
-        "return_5d_pct": -15.11,
-        "return_20d_pct": -29.24,
-        "return_60d_pct": -47.79,
+        "return_5d_pct": -9.66,
+        "return_20d_pct": -28.25,
+        "return_60d_pct": -47.57,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "현대건설",
+          "close": 91000,
+          "change": -8000,
+          "change_pct": -8.08,
+          "volume": 590535,
+          "trading_value_krw": 54452722900,
+          "market_cap_krw": 10133374615000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584754+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1249,7 +1558,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:25:22.610744+09:00",
+        "fetched_at": "2026-07-21T10:02:07.868701+09:00",
         "assets": 28405874000000.0,
         "assets_growth_pct": 1.06,
         "equity": 11028599000000.0,
@@ -1297,12 +1606,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 61100,
-        "return_5d_pct": -14.78,
-        "return_20d_pct": -32.93,
-        "return_60d_pct": -53.18,
+        "return_5d_pct": -9.32,
+        "return_20d_pct": -32.63,
+        "return_60d_pct": -54.11,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "한화시스템",
+          "close": 61100,
+          "change": -4400,
+          "change_pct": -6.72,
+          "volume": 692069,
+          "trading_value_krw": 43127110900,
+          "market_cap_krw": 11542974667900,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584759+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1310,7 +1632,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:25:32.469985+09:00",
+        "fetched_at": "2026-07-21T10:02:17.158310+09:00",
         "assets": 10820663576719.0,
         "assets_growth_pct": 4.78,
         "equity": 5042789965122.0,
@@ -1360,12 +1682,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 83200,
-        "return_5d_pct": 2.34,
-        "return_20d_pct": -35.2,
-        "return_60d_pct": -35.35,
+        "return_5d_pct": 2.54,
+        "return_20d_pct": -30.64,
+        "return_60d_pct": -38.41,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "한화오션",
+          "close": 83200,
+          "change": -3500,
+          "change_pct": -4.04,
+          "volume": 2135147,
+          "trading_value_krw": 180604667200,
+          "market_cap_krw": 25493594380800,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584765+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1373,7 +1708,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:25:40.827002+09:00",
+        "fetched_at": "2026-07-21T10:02:25.360702+09:00",
         "assets": 20796547457384.0,
         "assets_growth_pct": 3.26,
         "equity": 6825972776314.0,
@@ -1421,12 +1756,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 42400,
-        "return_5d_pct": -9.01,
-        "return_20d_pct": -30.49,
-        "return_60d_pct": -21.92,
+        "return_5d_pct": -8.01,
+        "return_20d_pct": -24.24,
+        "return_60d_pct": -29.87,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "한화엔진",
+          "close": 42400,
+          "change": -4500,
+          "change_pct": -9.59,
+          "volume": 637220,
+          "trading_value_krw": 27722992325,
+          "market_cap_krw": 3538158820800,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584774+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1434,7 +1782,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:25:48.410454+09:00",
+        "fetched_at": "2026-07-21T10:02:32.879035+09:00",
         "assets": 1910569648022.0,
         "assets_growth_pct": 12.67,
         "equity": 610032817122.0,
@@ -1484,12 +1832,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 64800,
-        "return_5d_pct": -17.03,
-        "return_20d_pct": -33.81,
-        "return_60d_pct": -41.62,
+        "return_5d_pct": -12.3,
+        "return_20d_pct": -31.85,
+        "return_60d_pct": -44.51,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "두산에너빌리티",
+          "close": 64800,
+          "change": -4900,
+          "change_pct": -7.03,
+          "volume": 2835943,
+          "trading_value_krw": 184830797500,
+          "market_cap_krw": 41508362260800,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584779+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1497,7 +1858,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:25:58.553701+09:00",
+        "fetched_at": "2026-07-21T10:02:42.773211+09:00",
         "assets": 28695055000000.0,
         "assets_growth_pct": 4.3,
         "equity": 12443616000000.0,
@@ -1545,12 +1906,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 1345000,
-        "return_5d_pct": -3.58,
-        "return_20d_pct": -2.11,
-        "return_60d_pct": -16.2,
+        "return_5d_pct": -2.21,
+        "return_20d_pct": 5.71,
+        "return_60d_pct": -13.79,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "삼성바이오로직스",
+          "close": 1345000,
+          "change": -51000,
+          "change_pct": -3.65,
+          "volume": 40527,
+          "trading_value_krw": 55207582500,
+          "market_cap_krw": 62261329095000,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584784+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1558,7 +1932,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:26:06.656330+09:00",
+        "fetched_at": "2026-07-21T10:02:51.539675+09:00",
         "assets": 11994999582438.0,
         "assets_growth_pct": 8.45,
         "equity": 7922835735735.0,
@@ -1579,13 +1953,13 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 18.0,
+        "score": 26.0,
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": -3.0
+          "momentum": 5.0
         },
         "available_dimensions": 2,
         "dimension_names": [
@@ -1608,12 +1982,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 172600,
-        "return_5d_pct": -1.48,
-        "return_20d_pct": 1.35,
-        "return_60d_pct": -11.88,
+        "return_5d_pct": -1.66,
+        "return_20d_pct": 2.2,
+        "return_60d_pct": -11.0,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "셀트리온",
+          "close": 172600,
+          "change": -3200,
+          "change_pct": -1.82,
+          "volume": 473598,
+          "trading_value_krw": 81697537050,
+          "market_cap_krw": 40138769655600,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584789+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1621,7 +2008,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:26:17.735444+09:00",
+        "fetched_at": "2026-07-21T10:03:02.797958+09:00",
         "assets": 23156645428216.0,
         "assets_growth_pct": 3.68,
         "equity": 17814382031809.0,
@@ -1669,12 +2056,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 269500,
-        "return_5d_pct": -16.82,
-        "return_20d_pct": -23.76,
-        "return_60d_pct": -27.46,
+        "return_5d_pct": -16.43,
+        "return_20d_pct": -24.54,
+        "return_60d_pct": -28.32,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSDAQ",
+          "name": "알테오젠",
+          "close": 269500,
+          "change": -7000,
+          "change_pct": -2.53,
+          "volume": 393316,
+          "trading_value_krw": 108082192000,
+          "market_cap_krw": 14441519438500,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584794+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1682,7 +2082,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:26:25.096343+09:00",
+        "fetched_at": "2026-07-21T10:03:10.253527+09:00",
         "assets": 729469655232.0,
         "assets_growth_pct": 4.4,
         "equity": 512858119587.0,
@@ -1732,12 +2132,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 70200,
-        "return_5d_pct": -14.18,
-        "return_20d_pct": -29.16,
-        "return_60d_pct": -56.18,
+        "return_5d_pct": -12.77,
+        "return_20d_pct": -29.38,
+        "return_60d_pct": -55.74,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSDAQ",
+          "name": "에이비엘바이오",
+          "close": 70200,
+          "change": -5400,
+          "change_pct": -7.14,
+          "volume": 205852,
+          "trading_value_krw": 14668479150,
+          "market_cap_krw": 3930319902600,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584799+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1745,7 +2158,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:26:32.623111+09:00",
+        "fetched_at": "2026-07-21T10:03:18.428184+09:00",
         "assets": 298130275703.0,
         "assets_growth_pct": 6.12,
         "equity": 183343287401.0,
@@ -1795,12 +2208,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 133400,
-        "return_5d_pct": 3.81,
-        "return_20d_pct": 8.02,
-        "return_60d_pct": 8.72,
+        "return_5d_pct": -2.34,
+        "return_20d_pct": 8.19,
+        "return_60d_pct": 5.28,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "하나금융지주",
+          "close": 133400,
+          "change": -3400,
+          "change_pct": -2.49,
+          "volume": 1233252,
+          "trading_value_krw": 166092956750,
+          "market_cap_krw": 36600657583200,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584804+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1808,7 +2234,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:26:47.243867+09:00",
+        "fetched_at": "2026-07-21T10:03:33.000906+09:00",
         "assets": 685367577000000.0,
         "assets_growth_pct": 1.6,
         "equity": 46442152000000.0,
@@ -1854,12 +2280,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 30550,
-        "return_5d_pct": -2.86,
-        "return_20d_pct": -1.61,
-        "return_60d_pct": -14.55,
+        "return_5d_pct": -2.72,
+        "return_20d_pct": 1.68,
+        "return_60d_pct": -15.22,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "우리금융지주",
+          "close": 30550,
+          "change": -950,
+          "change_pct": -3.02,
+          "volume": 2100523,
+          "trading_value_krw": 64548249975,
+          "market_cap_krw": 22243139785100,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584809+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1867,7 +2306,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:27:02.638962+09:00",
+        "fetched_at": "2026-07-21T10:03:48.473990+09:00",
         "assets": 612585300000000.0,
         "assets_growth_pct": 1.85,
         "equity": 39906308000000.0,
@@ -1884,13 +2323,13 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -9.0,
+        "score": -7.0,
         "components": {
           "financials": -9.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": 0.0
+          "momentum": 2.0
         },
         "available_dimensions": 2,
         "dimension_names": [
@@ -1913,12 +2352,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 26050,
-        "return_5d_pct": -18.21,
-        "return_20d_pct": -1.88,
-        "return_60d_pct": -31.54,
+        "return_5d_pct": -13.58,
+        "return_20d_pct": -6.26,
+        "return_60d_pct": -40.95,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "GS건설",
+          "close": 26050,
+          "change": -1250,
+          "change_pct": -4.58,
+          "volume": 1061251,
+          "trading_value_krw": 27837075625,
+          "market_cap_krw": 2229397814500,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584815+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1926,7 +2378,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:27:12.161051+09:00",
+        "fetched_at": "2026-07-21T10:03:58.150048+09:00",
         "assets": 18541824000000.0,
         "assets_growth_pct": 0.44,
         "equity": 5597238000000.0,
@@ -1976,12 +2428,25 @@
         "status": "ok",
         "as_of": "20260720",
         "current_price": 32450,
-        "return_5d_pct": 1.72,
-        "return_20d_pct": 1.09,
-        "return_60d_pct": 4.01,
+        "return_5d_pct": 0.94,
+        "return_20d_pct": 2.56,
+        "return_60d_pct": 1.9,
         "valuation": {},
         "investor_flow": {},
-        "source": "KRX/pykrx"
+        "source": "KRX OPEN API + pykrx",
+        "official_krx": {
+          "status": "ok",
+          "market": "KOSPI",
+          "name": "LX하우시스",
+          "close": 32450,
+          "change": 900,
+          "change_pct": 2.85,
+          "volume": 26416,
+          "trading_value_krw": 848238050,
+          "market_cap_krw": 291000891500,
+          "source": "KRX Data Marketplace OPEN API",
+          "fetched_at": "2026-07-21T10:05:19.584820+09:00"
+        }
       },
       "financials": {
         "status": "ok",
@@ -1989,7 +2454,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-20T23:27:20.967710+09:00",
+        "fetched_at": "2026-07-21T10:04:07.180597+09:00",
         "assets": 2371864000000.0,
         "assets_growth_pct": 9.3,
         "equity": 873799000000.0,
@@ -2031,17 +2496,6 @@
     }
   },
   "errors": [
-    "한미반도체 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A042700&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ffdecb30>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "삼성전기 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009150&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ff52ade0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "LS ELECTRIC FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010120&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ffdeca10>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "현대차 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ff529910>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "기아 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ffd1f230>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "현대모비스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012330&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ffd1e420>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "한화에어로스페이스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ff528560>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "HD현대중공업 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ffded910>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "LG에너지솔루션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ffdaa930>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "LG이노텍 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A011070&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ffdec890>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
-    "LG디스플레이 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A034220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f88ff528c20>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
     "삼성전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "SK하이닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
     "한미반도체 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
@@ -2078,7 +2532,7 @@
   "universe": {
     "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
     "mode": "fixed_recommendation_watchlist",
-    "updated_at": "2026-07-20T23:18:05.983482+09:00",
+    "updated_at": "2026-07-21T09:54:44.219079+09:00",
     "stock_count": 32,
     "stocks": [
       {
