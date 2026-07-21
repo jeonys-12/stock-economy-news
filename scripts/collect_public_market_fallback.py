@@ -72,6 +72,23 @@ def text_metric(text: str, labels: tuple[str, ...]) -> float | None:
     return None
 
 
+def target_price_from_soup(soup: BeautifulSoup) -> float | None:
+    for row in soup.select("tr"):
+        text = row.get_text(" ", strip=True)
+        if "목표주가" not in text:
+            continue
+        candidates: list[float] = []
+        for raw in re.findall(r"\d[\d,]*(?:\.\d+)?", text):
+            value = number(raw)
+            if value is not None and value >= 1000:
+                candidates.append(value)
+        if candidates:
+            return max(candidates)
+    text = soup.get_text(" ", strip=True)
+    match = re.search(r"목표주가.{0,80}?([0-9]{1,3}(?:,[0-9]{3})+)", text)
+    return number(match.group(1)) if match else None
+
+
 def collect_valuation(session: requests.Session, code: str, current_price: int | float | None = None) -> dict[str, Any]:
     url = f"https://finance.naver.com/item/main.naver?code={code}"
     html = fetch(session, url)
@@ -97,18 +114,20 @@ def collect_valuation(session: requests.Session, code: str, current_price: int |
         "pbr": ("PBR",),
         "eps": ("EPS",),
         "bps": ("BPS",),
-        "target_price": ("목표주가",),
     }
     for key, labels in fallback_labels.items():
         if result.get(key) is None:
             value = text_metric(text, labels)
             if value is not None:
-                result[key] = int(value) if key in {"current_price", "target_price"} else value
+                result[key] = int(value) if key == "current_price" else value
+
+    target = target_price_from_soup(soup)
+    if target is not None:
+        result["target_price"] = int(target)
 
     price = number(result.get("current_price")) or number(current_price)
     eps = number(result.get("eps"))
     bps = number(result.get("bps"))
-    target = number(result.get("target_price"))
     if result.get("per") is None and price is not None and eps not in (None, 0):
         result["per"] = round(price / eps, 2)
     if result.get("pbr") is None and price is not None and bps not in (None, 0):
@@ -218,8 +237,11 @@ def cached_value(previous: dict[str, Any], name: str, key: str) -> dict[str, Any
 
 
 def has_valuation(value: Any) -> bool:
-    return isinstance(value, dict) and any(number(value.get(key)) is not None for key in ("current_price", "per", "pbr", "eps", "bps"))
+    return isinstance(value, dict) and any(value.get(key) is not None for key in ("current_price", "per", "pbr", "eps", "bps"))
 
 
 def has_flow(value: Any) -> bool:
-    return isinstance(value, dict) and any(number(value.get(key)) is not None for key in ("foreign_net_buy_10d_shares", "institution_net_buy_10d_shares"))
+    return isinstance(value, dict) and any(
+        value.get(key) is not None
+        for key in ("foreign_net_buy_10d_shares", "institution_net_buy_10d_shares")
+    )
