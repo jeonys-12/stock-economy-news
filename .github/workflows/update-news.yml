@@ -42,6 +42,7 @@ jobs:
       STOCK_COLLECT_WORKERS: "6"
       PUBLIC_MARKET_WORKERS: "6"
       QUALITY_ANALYSIS_WORKERS: "5"
+      SKIP_DART_DAILY: "1"
 
     steps:
       - name: Checkout repository
@@ -92,10 +93,9 @@ jobs:
           python scripts/collect_news.py
           python scripts/filter_news_exclusions.py
 
-      - name: Collect stock fundamentals and consensus in parallel
+      - name: Collect stock screening data in parallel
         continue-on-error: true
         env:
-          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: python scripts/collect_expanded_stock_data.py
 
