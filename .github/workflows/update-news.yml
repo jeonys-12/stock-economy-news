@@ -89,21 +89,21 @@ jobs:
       - name: Exclude non-news pages
         run: python scripts/filter_news_exclusions.py
 
-      - name: Collect fixed recommendation stock factors
+      - name: Collect fixed recommendation stock factors without KRX login
         continue-on-error: true
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
         run: python scripts/collect_expanded_stock_data.py
 
-      - name: Validate and repair fixed stock factor data
+      - name: Validate and repair factors without KRX login
         continue-on-error: true
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
-        run: python scripts/repair_stock_factors.py
+        run: python scripts/repair_stock_factors_no_krx_login.py
 
-      - name: Enrich with KRX official market data
+      - name: Enrich with KRX official Open API
         continue-on-error: true
         env:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
