@@ -111,6 +111,8 @@ def enrich_stock(row: dict[str, Any], official: dict[str, Any], base_date: str) 
     market_cap = number(official.get("MKTCAP"))
     if close is not None:
         market["current_price"] = int(close)
+    market["status"] = "ok"
+    market.pop("reason", None)
     market["as_of"] = base_date
     market["official_krx"] = {
         "status": "ok", "market": official.get("_market"), "name": official.get("ISU_NM"),
@@ -122,7 +124,7 @@ def enrich_stock(row: dict[str, Any], official: dict[str, Any], base_date: str) 
         "market_cap_krw": int(market_cap) if market_cap is not None else None,
         "source": "KRX Data Marketplace OPEN API", "fetched_at": datetime.now(KST).isoformat(),
     }
-    market["source"] = "KRX OPEN API + pykrx" if market.get("source") else "KRX OPEN API"
+    market["source"] = "KRX OPEN API"
 
 
 def main() -> None:
@@ -154,16 +156,17 @@ def main() -> None:
             "matched_stocks": matched, "requested_stocks": len(stocks),
             "endpoints": list(MARKET_ENDPOINTS.values()),
             "role": "공식 일별 시세·거래대금·시가총액 우선 수집",
-            "fallback": "PER·PBR·외국인·기관 수급은 pykrx 보조 수집",
+            "fallback": "PER·PBR·외국인·기관 수급은 로그인 없는 공개 시장 페이지로 보완",
             "diagnostics": diagnostics[-8:], "updated_at": datetime.now(KST).isoformat(),
         }
         print(f"KRX OPEN API recognized: {matched}/{len(stocks)} stocks matched for {base_date}")
     except Exception as exc:
         source_status["krx_open_api"] = {
             "configured": True, "status": "failed", "reason": str(exc)[:1200],
-            "fallback": "기존 pykrx 데이터 유지", "updated_at": datetime.now(KST).isoformat(),
+            "fallback": "가격은 기존 값 유지, PER·PBR·수급은 공개 시장 페이지로 보완",
+            "updated_at": datetime.now(KST).isoformat(),
         }
-        print(f"KRX OPEN API failed; pykrx data retained: {exc}")
+        print(f"KRX OPEN API failed; existing price data retained: {exc}")
 
     payload["updated_at"] = datetime.now(KST).isoformat()
     DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

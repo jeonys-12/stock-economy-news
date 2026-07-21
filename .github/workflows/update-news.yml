@@ -109,6 +109,12 @@ jobs:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
         run: python scripts/collect_krx_official.py
 
+      - name: Fill PER PBR and investor flow without KRX login
+        continue-on-error: true
+        env:
+          PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
+        run: python scripts/collect_public_market_fallback.py
+
       - name: Sanitize collected data before AI analysis
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
