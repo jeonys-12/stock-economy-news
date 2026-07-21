@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="한국·미국·글로벌 공식기관의 경제정책, 기업공시, 금융시장, 건설·부동산 뉴스를 확인하는 대시보드">
+  <meta name="description" content="한국·미국·글로벌 경제뉴스와 EPS 성장률, 영업현금흐름, ROE, 재무안전성, 추정 PER을 함께 분석하는 대시보드">
   <title>주식 / 경제 뉴스 몰아보기</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
       <div>
         <p class="eyebrow">GLOBAL MARKET MONITOR</p>
         <h1>주식 / 경제 뉴스 몰아보기</h1>
-        <p class="header-copy">한국·미국·글로벌 공식기관의 통화정책, 기업공시, 경제지표와 주요 경제 뉴스를 빠르게 확인합니다.</p>
+        <p class="header-copy">공식기관 뉴스와 최근 3~5년 재무 추세를 함께 비교해 투자 후보를 선별합니다.</p>
       </div>
       <div class="update-box">
         <span>최근 업데이트</span>
@@ -34,11 +34,44 @@
       </div>
       <p id="briefText" class="brief-text">데이터를 불러오는 중입니다.</p>
       <div class="summary-grid">
-        <article><span>전체</span><strong id="totalCount">0</strong></article>
+        <article><span>전체 뉴스</span><strong id="totalCount">0</strong></article>
         <article><span>24시간</span><strong id="dailyCount">0</strong></article>
         <article><span>공식기관</span><strong id="officialCount">0</strong></article>
-        <article><span>YouTube</span><strong id="youtubeCount">0</strong></article>
+        <article><span>분석 종목</span><strong id="stockCount">0</strong></article>
       </div>
+    </section>
+
+    <section class="stock-section" id="stocks">
+      <div class="section-heading">
+        <div><p class="section-kicker">FUNDAMENTAL SCREEN</p><h2>재무 우량주 선별</h2></div>
+      </div>
+      <div id="stockNotice" class="data-notice">종목 분석 데이터를 불러오는 중입니다.</div>
+      <section class="stock-method" aria-label="종목 분석 기준">
+        <div><strong>25%</strong><span>EPS 성장률</span></div>
+        <div><strong>20%</strong><span>영업현금흐름</span></div>
+        <div><strong>20%</strong><span>ROE</span></div>
+        <div><strong>20%</strong><span>재무안전성</span></div>
+        <div><strong>15%</strong><span>추정 PER·경쟁사</span></div>
+      </section>
+      <div class="stock-controls">
+        <input id="stockSearchInput" type="search" placeholder="종목명, 종목코드, 업종 검색">
+        <select id="stockGradeFilter" aria-label="종목 등급">
+          <option value="all">전체 등급</option>
+          <option value="A">A등급</option>
+          <option value="B">B등급</option>
+          <option value="C">C등급</option>
+          <option value="D">D등급</option>
+        </select>
+        <select id="stockSortSelect" aria-label="종목 정렬">
+          <option value="score">종합점수순</option>
+          <option value="eps">EPS 성장률순</option>
+          <option value="roe">ROE순</option>
+          <option value="per">추정 PER 낮은순</option>
+        </select>
+      </div>
+      <p id="stockResultInfo" class="result-info">분석 데이터 로딩 중</p>
+      <section id="stockGrid" class="stock-grid" aria-live="polite"></section>
+      <div id="stockEmptyState" class="empty-state" hidden>조건에 맞는 종목이 없습니다.</div>
     </section>
 
     <section class="data-section" id="data">
@@ -46,87 +79,35 @@
         <div><p class="section-kicker">MONITORING</p><h2>기사·공시·영상 목록</h2></div>
         <button id="resetButton" class="reset-button" type="button">필터 초기화</button>
       </div>
-
       <section class="control-panel" aria-label="콘텐츠 필터">
-        <div class="filter-line">
-          <span class="filter-label">콘텐츠</span>
-          <div class="button-group" id="typeFilters">
-            <button class="filter-button active" data-type="all">전체</button>
-            <button class="filter-button" data-type="news">뉴스·공시</button>
-            <button class="filter-button" data-type="youtube">YouTube</button>
-          </div>
-        </div>
-        <div class="filter-line">
-          <span class="filter-label">기간</span>
-          <div class="button-group" id="periodFilters">
-            <button class="filter-button" data-period="1">일간 베스트</button>
-            <button class="filter-button active" data-period="7">주간 베스트</button>
-          </div>
-        </div>
-        <div class="filter-line wide">
-          <span class="filter-label">국가·지역</span>
-          <div class="button-group" id="countryFilters">
-            <button class="filter-button active" data-country="all">전체</button>
-            <button class="filter-button" data-country="대한민국">대한민국</button>
-            <button class="filter-button" data-country="미국">미국</button>
-            <button class="filter-button" data-country="글로벌">글로벌</button>
-          </div>
-        </div>
-        <div class="filter-line wide">
-          <span class="filter-label">분야</span>
-          <div class="button-group" id="categoryFilters">
-            <button class="filter-button active" data-category="all">전체</button>
-            <button class="filter-button" data-category="통화정책·금리">통화정책·금리</button>
-            <button class="filter-button" data-category="기업공시">기업공시</button>
-            <button class="filter-button" data-category="증권시장">증권시장</button>
-            <button class="filter-button" data-category="금융정책·규제">금융정책·규제</button>
-            <button class="filter-button" data-category="물가·고용·경기">물가·고용·경기</button>
-            <button class="filter-button" data-category="정부 재정·세제">정부 재정·세제</button>
-            <button class="filter-button" data-category="산업·수출">산업·수출</button>
-            <button class="filter-button" data-category="건설·부동산">건설·부동산</button>
-            <button class="filter-button" data-category="에너지·원자재">에너지·원자재</button>
-            <button class="filter-button" data-category="글로벌 경제">글로벌 경제</button>
-            <button class="filter-button" data-category="경제 유튜브">경제 유튜브</button>
-          </div>
-        </div>
-        <div class="search-row">
-          <input id="searchInput" type="search" placeholder="기관명, 기업명, 정책, 종목, 공시 검색">
-          <select id="sortSelect" aria-label="정렬 기준">
-            <option value="importance">공식·중요도순</option>
-            <option value="latest">최신순</option>
-          </select>
-        </div>
+        <div class="filter-line"><span class="filter-label">콘텐츠</span><div class="button-group" id="typeFilters"><button class="filter-button active" data-type="all">전체</button><button class="filter-button" data-type="news">뉴스·공시</button><button class="filter-button" data-type="youtube">YouTube</button></div></div>
+        <div class="filter-line"><span class="filter-label">기간</span><div class="button-group" id="periodFilters"><button class="filter-button" data-period="1">일간 베스트</button><button class="filter-button active" data-period="7">주간 베스트</button></div></div>
+        <div class="filter-line wide"><span class="filter-label">국가·지역</span><div class="button-group" id="countryFilters"><button class="filter-button active" data-country="all">전체</button><button class="filter-button" data-country="대한민국">대한민국</button><button class="filter-button" data-country="미국">미국</button><button class="filter-button" data-country="글로벌">글로벌</button></div></div>
+        <div class="filter-line wide"><span class="filter-label">분야</span><div class="button-group" id="categoryFilters"><button class="filter-button active" data-category="all">전체</button><button class="filter-button" data-category="통화정책·금리">통화정책·금리</button><button class="filter-button" data-category="기업공시">기업공시</button><button class="filter-button" data-category="증권시장">증권시장</button><button class="filter-button" data-category="금융정책·규제">금융정책·규제</button><button class="filter-button" data-category="물가·고용·경기">물가·고용·경기</button><button class="filter-button" data-category="정부 재정·세제">정부 재정·세제</button><button class="filter-button" data-category="산업·수출">산업·수출</button><button class="filter-button" data-category="건설·부동산">건설·부동산</button><button class="filter-button" data-category="에너지·원자재">에너지·원자재</button><button class="filter-button" data-category="글로벌 경제">글로벌 경제</button><button class="filter-button" data-category="경제 유튜브">경제 유튜브</button></div></div>
+        <div class="search-row"><input id="searchInput" type="search" placeholder="기관명, 기업명, 정책, 종목, 공시 검색"><select id="sortSelect" aria-label="정렬 기준"><option value="importance">공식·중요도순</option><option value="latest">최신순</option></select></div>
       </section>
-
       <p class="result-info" id="resultInfo">데이터 로딩 중</p>
       <section id="newsGrid" class="news-grid" aria-live="polite"></section>
       <div id="emptyState" class="empty-state" hidden>조건에 맞는 콘텐츠가 없습니다.</div>
       <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
     </section>
 
-    <section class="channel-section" id="youtube">
-      <div class="section-heading"><div><p class="section-kicker">YOUTUBE</p><h2>모니터링 채널</h2></div></div>
-      <div class="channel-list">
-        <a href="https://www.youtube.com/channel/UCiYbaVEODktcsh09454Grow" target="_blank" rel="noopener">손에잡히는경제</a>
-        <a href="https://www.youtube.com/channel/UCIUni4ScRp4mqPXsxy62L5w" target="_blank" rel="noopener">언더스탠딩</a>
-        <a href="https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg" target="_blank" rel="noopener">슈카월드</a>
-      </div>
-    </section>
+    <section class="channel-section" id="youtube"><div class="section-heading"><div><p class="section-kicker">YOUTUBE</p><h2>모니터링 채널</h2></div></div><div class="channel-list"><a href="https://www.youtube.com/channel/UCiYbaVEODktcsh09454Grow" target="_blank" rel="noopener">손에잡히는경제</a><a href="https://www.youtube.com/channel/UCIUni4ScRp4mqPXsxy62L5w" target="_blank" rel="noopener">언더스탠딩</a><a href="https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg" target="_blank" rel="noopener">슈카월드</a></div></section>
   </main>
 
-  <footer><div class="container"><p>공개 RSS 기반 모니터링 · 자동 분류 결과는 투자 판단 전 공식 원문에서 확인하십시오.</p></div></footer>
+  <footer><div class="container"><p>정량점수는 종목 선별 보조도구입니다. 실제 투자 전 DART 공시, KRX 시세와 원문을 확인하십시오.</p></div></footer>
 
-  <template id="newsCardTemplate">
-    <article class="news-card">
-      <a class="thumbnail-link" target="_blank" rel="noopener noreferrer"><img class="news-thumbnail" alt="" loading="lazy"></a>
-      <div class="card-body">
-        <div class="card-meta"><span class="type-badge"></span><span class="country-badge"></span><span class="category-badge"></span><span class="importance-badge"></span></div>
-        <h3><a class="news-link" target="_blank" rel="noopener noreferrer"></a></h3>
-        <p class="news-description"></p>
-        <div class="card-footer"><span class="news-source"></span><time class="news-date"></time></div>
-      </div>
+  <template id="stockCardTemplate">
+    <article class="stock-card">
+      <div class="stock-card-head"><div><span class="stock-market"></span><h3><span class="stock-name"></span><small class="stock-ticker"></small></h3><p class="stock-sector"></p></div><div class="stock-score"><strong></strong><span></span></div></div>
+      <div class="metric-grid"><div><span>EPS CAGR</span><strong data-metric="eps"></strong></div><div><span>현금흐름 CAGR</span><strong data-metric="cash"></strong></div><div><span>최근 ROE</span><strong data-metric="roe"></strong></div><div><span>부채비율</span><strong data-metric="debt"></strong></div><div><span>이자보상배율</span><strong data-metric="coverage"></strong></div><div><span>추정 PER</span><strong data-metric="per"></strong></div></div>
+      <div class="peer-line"><span>경쟁사 추정 PER 대비</span><strong class="peer-comparison"></strong></div>
+      <div class="stock-analysis"><div><span>강점</span><ul class="strength-list"></ul></div><div><span>주의</span><ul class="warning-list"></ul></div></div>
+      <details><summary>최근 3~5년 추세 보기</summary><div class="history-table-wrap"><table><thead><tr><th>연도</th><th>EPS</th><th>영업현금흐름</th><th>ROE</th><th>부채비율</th><th>이자보상</th></tr></thead><tbody class="history-body"></tbody></table></div></details>
     </article>
   </template>
+
+  <template id="newsCardTemplate"><article class="news-card"><a class="thumbnail-link" target="_blank" rel="noopener noreferrer"><img class="news-thumbnail" alt="" loading="lazy"></a><div class="card-body"><div class="card-meta"><span class="type-badge"></span><span class="country-badge"></span><span class="category-badge"></span><span class="importance-badge"></span></div><h3><a class="news-link" target="_blank" rel="noopener noreferrer"></a></h3><p class="news-description"></p><div class="card-footer"><span class="news-source"></span><time class="news-date"></time></div></div></article></template>
   <script src="app.js" defer></script>
 </body>
 </html>
