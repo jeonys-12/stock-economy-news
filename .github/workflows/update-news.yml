@@ -25,6 +25,7 @@ on:
       - "scripts/**"
       - "requirements.txt"
       - ".github/workflows/update-news.yml"
+      - ".github/workflows/verify-financials-weekly.yml"
 
 permissions:
   contents: write
@@ -36,7 +37,7 @@ concurrency:
 jobs:
   collect-and-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 25
     env:
       STOCK_COLLECT_WORKERS: "6"
       PUBLIC_MARKET_WORKERS: "6"
@@ -107,10 +108,10 @@ jobs:
           python scripts/collect_krx_official.py
           python scripts/collect_public_market_fast.py
 
-      - name: Analyze 3 to 5 year quality and valuation
+      - name: Daily quality and value screening from NAVER
         continue-on-error: true
         env:
-          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+          QUALITY_ANALYSIS_MODE: daily
           QUALITY_ANALYSIS_WORKERS: "5"
         run: python scripts/analyze_quality_value.py
 
@@ -142,7 +143,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/news.json data/stock_data.json
-            git commit -m "chore: update news and stock factor data"
+            git commit -m "chore: update news and daily stock screening"
             git push origin main
           fi
 
