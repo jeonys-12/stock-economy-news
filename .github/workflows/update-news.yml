@@ -74,16 +74,17 @@ jobs:
         run: python scripts/collect_expanded_stock_data.py
 
       - name: Collect NAVER price valuation target and investor flow
-        continue-on-error: true
         env:
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: python scripts/collect_public_market_fast.py
 
-      - name: Analyze NAVER Financial Summary
-        continue-on-error: true
+      - name: Analyze NAVER main page Financial Summary
         env:
           QUALITY_ANALYSIS_WORKERS: "5"
         run: python scripts/analyze_naver_financial_summary.py
+
+      - name: Validate Kia required Financial Summary metrics
+        run: python scripts/validate_naver_financial_summary.py
 
       - name: Normalize investor flow fields
         run: python scripts/normalize_investor_flow_fields.py
