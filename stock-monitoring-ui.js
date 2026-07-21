@@ -86,7 +86,9 @@ function renderStockDiagnostics(){
   const summary=document.querySelector('#stockDiagnosticsSummary');
   if(!list||!summary)return;
   const stocks=stockMonitoringState.payload?.stocks&&typeof stockMonitoringState.payload.stocks==='object'?stockMonitoringState.payload.stocks:{};
-  const diagnostics=Object.entries(stocks).map(([name,row])=>stockDiagnosticRow(name,row));
+  const diagnostics=Object.entries(stocks)
+    .map(([name,row])=>stockDiagnosticRow(name,row))
+    .sort((a,b)=>b.score-a.score||b.dimensions-a.dimensions||a.name.localeCompare(b.name,'ko'));
   const query=stockMonitoringState.query.trim().toLowerCase();
   const filtered=diagnostics.filter(item=>{
     const text=`${item.name} ${item.row.code||''} ${item.row.sector||''}`.toLowerCase();
@@ -96,7 +98,7 @@ function renderStockDiagnostics(){
   const normal=diagnostics.filter(item=>item.overall==='ok').length;
   const warning=diagnostics.filter(item=>item.overall==='warning').length;
   const failed=diagnostics.filter(item=>item.overall==='failed').length;
-  summary.innerHTML=`전체 <b>${diagnostics.length}</b>개 · 정상 <b>${normal}</b> · 일부 누락 <b>${warning}</b> · 실패 <b>${failed}</b> · 현재 표시 <b>${filtered.length}</b>`;
+  summary.innerHTML=`전체 <b>${diagnostics.length}</b>개 · 정상 <b>${normal}</b> · 일부 누락 <b>${warning}</b> · 실패 <b>${failed}</b> · 현재 표시 <b>${filtered.length}</b> · 점수 높은 순`;
   if(!filtered.length){list.innerHTML='<p class="result-info">조건에 맞는 종목 진단 결과가 없습니다.</p>';return;}
   list.innerHTML=filtered.map(item=>{
     const code=diagnosticEscape(item.row.code||'');
