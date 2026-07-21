@@ -95,7 +95,7 @@ jobs:
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: python scripts/collect_expanded_stock_data.py
 
-      - name: Enrich market data and ROE
+      - name: Enrich price, PER PBR ROE and investor flow
         continue-on-error: true
         env:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
@@ -103,7 +103,6 @@ jobs:
         run: |
           python scripts/collect_krx_official.py
           python scripts/collect_public_market_fast.py
-          python scripts/enrich_roe.py
 
       - name: Sanitize collected data
         env:
