@@ -1,0 +1,55 @@
+{
+  "updated_at": "2026-07-21T00:00:00+09:00",
+  "data_status": "demo",
+  "notice": "현재 값은 분석 구조 확인용 예시 데이터입니다. 실제 투자 판단에 사용하지 마십시오.",
+  "stocks": [
+    {
+      "ticker": "DEMO01",
+      "name": "샘플전자",
+      "market": "KOSPI",
+      "sector": "반도체",
+      "price": 72000,
+      "forward_eps": 7200,
+      "peer_forward_per": 13.5,
+      "years": [
+        {"year": 2022, "eps": 3500, "operating_cash_flow": 4200, "roe": 8.1, "debt_ratio": 78, "interest_coverage": 8.2},
+        {"year": 2023, "eps": 4100, "operating_cash_flow": 5100, "roe": 9.0, "debt_ratio": 75, "interest_coverage": 9.1},
+        {"year": 2024, "eps": 5000, "operating_cash_flow": 6200, "roe": 10.4, "debt_ratio": 70, "interest_coverage": 10.8},
+        {"year": 2025, "eps": 5900, "operating_cash_flow": 7600, "roe": 11.8, "debt_ratio": 66, "interest_coverage": 12.3},
+        {"year": 2026, "eps": 6500, "operating_cash_flow": 8300, "roe": 12.5, "debt_ratio": 62, "interest_coverage": 13.4}
+      ]
+    },
+    {
+      "ticker": "DEMO02",
+      "name": "샘플산업",
+      "market": "KOSPI",
+      "sector": "산업재",
+      "price": 48000,
+      "forward_eps": 4000,
+      "peer_forward_per": 10.0,
+      "years": [
+        {"year": 2022, "eps": 5200, "operating_cash_flow": 6000, "roe": 14.0, "debt_ratio": 115, "interest_coverage": 4.8},
+        {"year": 2023, "eps": 4900, "operating_cash_flow": 5600, "roe": 12.7, "debt_ratio": 122, "interest_coverage": 4.1},
+        {"year": 2024, "eps": 4500, "operating_cash_flow": 4900, "roe": 11.2, "debt_ratio": 130, "interest_coverage": 3.5},
+        {"year": 2025, "eps": 4200, "operating_cash_flow": 4300, "roe": 9.8, "debt_ratio": 138, "interest_coverage": 2.9},
+        {"year": 2026, "eps": 3900, "operating_cash_flow": 3600, "roe": 8.5, "debt_ratio": 145, "interest_coverage": 2.3}
+      ]
+    },
+    {
+      "ticker": "DEMO03",
+      "name": "샘플소프트",
+      "market": "KOSDAQ",
+      "sector": "소프트웨어",
+      "price": 96000,
+      "forward_eps": 3200,
+      "peer_forward_per": 24.0,
+      "years": [
+        {"year": 2022, "eps": 900, "operating_cash_flow": 1100, "roe": 6.0, "debt_ratio": 35, "interest_coverage": 18.0},
+        {"year": 2023, "eps": 1300, "operating_cash_flow": 1500, "roe": 7.9, "debt_ratio": 32, "interest_coverage": 20.0},
+        {"year": 2024, "eps": 1800, "operating_cash_flow": 2100, "roe": 10.0, "debt_ratio": 30, "interest_coverage": 22.0},
+        {"year": 2025, "eps": 2400, "operating_cash_flow": 2700, "roe": 12.5, "debt_ratio": 28, "interest_coverage": 24.0},
+        {"year": 2026, "eps": 2800, "operating_cash_flow": 3100, "roe": 14.0, "debt_ratio": 26, "interest_coverage": 26.0}
+      ]
+    }
+  ]
+}
