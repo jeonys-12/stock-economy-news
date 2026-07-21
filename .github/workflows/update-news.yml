@@ -16,6 +16,8 @@ on:
       - "multifactor-ui.css"
       - "stock-monitoring-ui.js"
       - "stock-monitoring-ui.css"
+      - "quality-value-ui.js"
+      - "quality-value-ui.css"
       - "priority-sort.js"
       - "count-badges.js"
       - "count-badges.css"
@@ -148,7 +150,7 @@ jobs:
         run: |
           rm -rf public
           mkdir -p public/data
-          cp index.html style.css section-navigation.css app.js multifactor-ui.js multifactor-ui.css stock-monitoring-ui.js stock-monitoring-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
+          cp index.html style.css section-navigation.css app.js multifactor-ui.js multifactor-ui.css stock-monitoring-ui.js stock-monitoring-ui.css quality-value-ui.js quality-value-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
           cp data/news.json data/stock_data.json public/data/
 
       - name: Publish to gh-pages branch
