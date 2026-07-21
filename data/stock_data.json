@@ -1,21 +1,10 @@
 {
-  "updated_at": "2026-07-21T19:40:54.006868+09:00",
+  "updated_at": "2026-07-21T20:28:56.118994+09:00",
   "source_status": {
-    "opendart": {
-      "configured": true,
-      "status": "ok",
-      "corp_code_count": 3977
-    },
-    "fnguide": {
-      "mode": "optional_html_with_cache",
-      "cache_days": 7,
-      "cached_stocks_reused": 1,
-      "parallel_workers": 6
-    },
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-21T19:33:55.674503+09:00",
+      "updated_at": "2026-07-21T20:28:27.428328+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -25,114 +14,13 @@
       },
       "dynamic_kospi_top50": false,
       "dynamic_group_scan": false,
-      "collection_mode": "bounded_parallel",
-      "parallel_workers": 6
+      "collection_mode": "naver_only",
+      "external_calls": 0
     },
-    "krx_login_collection": {
-      "status": "disabled",
-      "reason": "KRX_ID·KRX_PW 로그인 수집을 사용하지 않습니다.",
-      "replacement": "KRX_API_KEY 기반 collect_krx_official.py"
-    },
-    "krx_open_api": {
-      "configured": true,
+    "naver_finance": {
       "status": "ok",
-      "as_of": "20260716",
-      "matched_stocks": 32,
-      "requested_stocks": 32,
-      "endpoints": [
-        "stk_bydd_trd",
-        "ksq_bydd_trd"
-      ],
-      "role": "공식 일별 시세·거래대금·시가총액 우선 수집",
-      "fallback": "PER·PBR·외국인·기관 수급은 로그인 없는 공개 시장 페이지로 보완",
-      "diagnostics": [
-        {
-          "endpoint": "stk_bydd_trd",
-          "base_date": "20260719",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 0,
-          "market": "KOSPI"
-        },
-        {
-          "endpoint": "ksq_bydd_trd",
-          "base_date": "20260719",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 0,
-          "market": "KOSDAQ"
-        },
-        {
-          "endpoint": "stk_bydd_trd",
-          "base_date": "20260718",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 0,
-          "market": "KOSPI"
-        },
-        {
-          "endpoint": "ksq_bydd_trd",
-          "base_date": "20260718",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 0,
-          "market": "KOSDAQ"
-        },
-        {
-          "endpoint": "stk_bydd_trd",
-          "base_date": "20260717",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 0,
-          "market": "KOSPI"
-        },
-        {
-          "endpoint": "ksq_bydd_trd",
-          "base_date": "20260717",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 0,
-          "market": "KOSDAQ"
-        },
-        {
-          "endpoint": "stk_bydd_trd",
-          "base_date": "20260716",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/stk_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 944,
-          "market": "KOSPI"
-        },
-        {
-          "endpoint": "ksq_bydd_trd",
-          "base_date": "20260716",
-          "http_status": 200,
-          "url": "https://data-dbg.krx.co.kr/svc/apis/sto/ksq_bydd_trd",
-          "result_code": null,
-          "result_message": null,
-          "row_count": 1821,
-          "market": "KOSDAQ"
-        }
-      ],
-      "updated_at": "2026-07-21T19:40:43.003278+09:00"
-    },
-    "public_market_fallback": {
-      "status": "ok",
-      "role": "PER·PBR·EPS·BPS 및 외국인·기관 수급 보완",
-      "source": "NAVER Finance 공개 페이지",
+      "role": "현재가·PER·PBR·EPS·BPS·목표주가·최근 10거래일 수급 수집",
+      "source": "NAVER Finance",
       "valuation_fresh": 32,
       "valuation_cached": 0,
       "investor_flow_fresh": 32,
@@ -140,17 +28,33 @@
       "requested_stocks": 32,
       "parallel_workers": 6,
       "errors": [],
-      "updated_at": "2026-07-21T19:40:54.006851+09:00"
+      "updated_at": "2026-07-21T20:28:38.286823+09:00"
+    },
+    "quality_value_analysis": {
+      "status": "partial",
+      "completed_stocks": 0,
+      "cached_stocks": 0,
+      "requested_stocks": 32,
+      "source": "NAVER Finance Financial Summary",
+      "excluded_sources": [
+        "OpenDART",
+        "KRX OPEN API",
+        "FnGuide"
+      ],
+      "updated_at": "2026-07-21T20:28:56.118985+09:00"
     }
   },
   "methodology": {
-    "description": "OpenDART 재무, FnGuide 컨센서스, KRX 시장정보를 결합한 보조 점수",
-    "buy_review_threshold": 8,
-    "sell_review_threshold": -8,
-    "minimum_dimensions": 2,
-    "fnguide_policy": "실패 시 이전 정상 데이터를 최대 7일간 재사용",
-    "collection_efficiency": "종목별 네트워크 요청을 최대 6개로 제한 병렬 처리",
-    "fundamental_metric_policy": "PER·PBR은 공개 종목 메인 페이지에서 수집하고 누락 시 현재가/EPS·BPS로 파생 계산합니다."
+    "description": "네이버페이 증권 Financial Summary를 최우선으로 사용하는 경량 종목 분석",
+    "primary_source": "NAVER Finance Financial Summary",
+    "excluded_sources": [
+      "OpenDART",
+      "KRX OPEN API",
+      "FnGuide"
+    ],
+    "minimum_dimensions": 3,
+    "quality_value_policy": "네이버 Financial Summary의 EPS·영업이익·ROE·부채비율·예상 EPS를 최근 3~5년 추세와 업종 중앙값으로 비교합니다.",
+    "investor_flow_policy": "외국인·기관 수급은 NAVER Finance 투자자별 매매 페이지의 최근 10거래일 순매매량 합계이며 단위는 주입니다."
   },
   "universe": {
     "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
@@ -452,31 +356,41 @@
       "name": "삼성전자",
       "code": "005930",
       "sector": "반도체",
+      "business_sector": "반도체",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 1,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 20.93,
           "pbr": 3.6,
           "eps": 12372.0,
+          "current_price": 259000,
           "bps": 52002.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005930",
-          "fetched_at": "2026-07-21T19:40:45.521893+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:29.335131+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -6861,
-          "foreign_net_buy_10d_krw": -5487629,
+          "institution_net_buy_10d_shares": -6861,
+          "foreign_net_buy_10d_shares": -5487629,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:46.461982+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=005930&page=1",
+          "fetched_at": "2026-07-21T20:28:30.508788+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 255000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 259000,
+        "as_of": "2026-07-21T20:28:29.335131+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -491,86 +405,75 @@
           "fetched_at": "2026-07-21T19:40:43.003042+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:28.346178+09:00",
-        "assets": 633339604000000.0,
-        "assets_growth_pct": 11.71,
-        "equity": 486635976000000.0,
-        "equity_growth_pct": 11.53,
-        "liabilities": 146703628000000.0,
-        "liabilities_growth_pct": 12.31,
-        "operating_profit": 57232797000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 133873444000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 30.15
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:31.186837+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:41.651609+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "반도체",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -9.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": -12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 1,
-      "business_sector": "반도체"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "SK하이닉스": {
       "name": "SK하이닉스",
       "code": "000660",
       "sector": "반도체",
+      "business_sector": "반도체",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 2,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 17.74,
           "pbr": 7.92,
           "eps": 103521.0,
+          "current_price": 1836000,
           "bps": 77752.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000660",
-          "fetched_at": "2026-07-21T19:40:45.353289+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:29.568021+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -308404,
-          "foreign_net_buy_10d_krw": -1516467,
+          "institution_net_buy_10d_shares": -308404,
+          "foreign_net_buy_10d_shares": -1516467,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:46.471148+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=000660&page=1",
+          "fetched_at": "2026-07-21T20:28:30.529990+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 1842000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 1836000,
+        "as_of": "2026-07-21T20:28:29.568021+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -585,86 +488,75 @@
           "fetched_at": "2026-07-21T19:40:43.003070+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:28.936143+09:00",
-        "assets": 222828744000000.0,
-        "assets_growth_pct": 26.53,
-        "equity": 164379799000000.0,
-        "equity_growth_pct": 36.23,
-        "liabilities": 58448945000000.0,
-        "liabilities_growth_pct": 5.43,
-        "operating_profit": 37610283000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 52576287000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 35.56
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:31.219776+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:41.660920+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "반도체",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -10.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": -1.0,
-          "flow": -12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 2,
-      "business_sector": "반도체"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "한미반도체": {
       "name": "한미반도체",
       "code": "042700",
       "sector": "반도체장비",
+      "business_sector": "반도체장비",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 3,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 119.98,
           "pbr": 33.41,
           "eps": 1867.0,
+          "current_price": 224000,
           "bps": 5907.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042700",
-          "fetched_at": "2026-07-21T19:40:45.340647+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:29.556576+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -85480,
-          "foreign_net_buy_10d_krw": 881211,
+          "institution_net_buy_10d_shares": -85480,
+          "foreign_net_buy_10d_shares": 881211,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:46.451076+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=042700&page=1",
+          "fetched_at": "2026-07-21T20:28:30.514043+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 242500,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 224000,
+        "as_of": "2026-07-21T20:28:29.556576+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -679,88 +571,75 @@
           "fetched_at": "2026-07-21T19:40:43.003079+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:28.461184+09:00",
-        "assets": 742689287334.0,
-        "assets_growth_pct": -8.69,
-        "equity": 635869571938.0,
-        "equity_growth_pct": -7.89,
-        "liabilities": 106819715396.0,
-        "liabilities_growth_pct": -13.16,
-        "operating_profit": 8456257107.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 19031751252.0,
-        "net_income_growth_pct": null,
-        "revenue": 50902076570.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 16.8
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:31.222539+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:41.608056+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "반도체장비",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -4.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": -7.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 3,
-      "business_sector": "반도체장비"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "삼성전기": {
       "name": "삼성전기",
       "code": "009150",
       "sector": "전자부품",
+      "business_sector": "전자부품",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 4,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 123.74,
           "pbr": 10.08,
           "eps": 10587.0,
+          "current_price": 1310000,
           "bps": 103878.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=009150",
-          "fetched_at": "2026-07-21T19:40:45.313457+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:30.107089+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -467806,
-          "foreign_net_buy_10d_krw": 241652,
+          "institution_net_buy_10d_shares": -467806,
+          "foreign_net_buy_10d_shares": 241652,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:46.458639+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=009150&page=1",
+          "fetched_at": "2026-07-21T20:28:30.544002+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 1277000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 1310000,
+        "as_of": "2026-07-21T20:28:30.107089+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -775,81 +654,75 @@
           "fetched_at": "2026-07-21T19:40:43.003086+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:28.185062+09:00",
-        "operating_profit": 280572751176.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 252687583556.0,
-        "net_income_growth_pct": null,
-        "revenue": 3209113412582.0,
-        "revenue_growth_pct": null
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:31.173941+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:41.665668+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "전자부품",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -7.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": -7.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 4,
-      "business_sector": "전자부품"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "LS ELECTRIC": {
       "name": "LS ELECTRIC",
       "code": "010120",
       "sector": "전력기기",
+      "business_sector": "전력기기",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 5,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 84.12,
           "pbr": 13.6,
           "eps": 2248.0,
+          "current_price": 189100,
           "bps": 11669.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=010120",
-          "fetched_at": "2026-07-21T19:40:45.593824+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:29.520148+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -286873,
-          "foreign_net_buy_10d_krw": 344023,
+          "institution_net_buy_10d_shares": -286873,
+          "foreign_net_buy_10d_shares": 344023,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:46.467160+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=010120&page=1",
+          "fetched_at": "2026-07-21T20:28:30.518610+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 190000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 189100,
+        "as_of": "2026-07-21T20:28:29.520148+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -864,84 +737,75 @@
           "fetched_at": "2026-07-21T19:40:43.003093+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:31.226812+09:00",
-        "assets": 5361875565139.0,
-        "assets_growth_pct": 8.17,
-        "equity": 2134169034859.0,
-        "equity_growth_pct": -0.33,
-        "liabilities": 3227706530280.0,
-        "liabilities_growth_pct": 14.65,
-        "operating_profit": 126567079934.0,
-        "operating_profit_growth_pct": null,
-        "debt_ratio_pct": 151.24
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:33.284389+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:41.635346+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "전력기기",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -7.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": -7.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 5,
-      "business_sector": "전력기기"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "현대차": {
       "name": "현대차",
       "code": "005380",
       "sector": "자동차",
+      "business_sector": "자동차",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 6,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 12.3,
           "pbr": 0.87,
           "eps": 32437.0,
+          "current_price": 399000,
           "bps": 351861.0,
+          "target_price": 3,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005380",
-          "fetched_at": "2026-07-21T19:40:45.590888+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:29.635270+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 157800,
-          "foreign_net_buy_10d_krw": 334720,
+          "institution_net_buy_10d_shares": 157800,
+          "foreign_net_buy_10d_shares": 334720,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:46.445182+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=005380&page=1",
+          "fetched_at": "2026-07-21T20:28:30.525221+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 425000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 399000,
+        "as_of": "2026-07-21T20:28:29.635270+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -956,86 +820,75 @@
           "fetched_at": "2026-07-21T19:40:43.003100+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:29.613425+09:00",
-        "assets": 383834207000000.0,
-        "assets_growth_pct": 4.06,
-        "equity": 132226735000000.0,
-        "equity_growth_pct": 3.59,
-        "liabilities": 251607472000000.0,
-        "liabilities_growth_pct": 4.32,
-        "operating_profit": 2514686000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 45938886000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 190.28
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:31.221260+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:44.131217+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "자동차",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 18.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": 6.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "긍정"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 6,
-      "business_sector": "자동차"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "기아": {
       "name": "기아",
       "code": "000270",
       "sector": "자동차",
+      "business_sector": "자동차",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 7,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 8.14,
           "pbr": 0.91,
           "eps": 17772.0,
+          "current_price": 144600,
           "bps": 117495.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000270",
-          "fetched_at": "2026-07-21T19:40:47.821555+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:32.053609+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 730478,
-          "foreign_net_buy_10d_krw": -58577,
+          "institution_net_buy_10d_shares": 730478,
+          "foreign_net_buy_10d_shares": -58577,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:48.175702+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=000270&page=1",
+          "fetched_at": "2026-07-21T20:28:32.452794+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 149700,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 144600,
+        "as_of": "2026-07-21T20:28:32.053609+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1050,88 +903,75 @@
           "fetched_at": "2026-07-21T19:40:43.003106+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:37.674974+09:00",
-        "assets": 105359955000000.0,
-        "assets_growth_pct": 6.45,
-        "equity": 61638039000000.0,
-        "equity_growth_pct": 0.73,
-        "liabilities": 43721916000000.0,
-        "liabilities_growth_pct": 15.7,
-        "operating_profit": 2205091000000.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 1830207000000.0,
-        "net_income_growth_pct": null,
-        "revenue": 29501881000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 70.93
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:40.475180+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:44.145427+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "자동차",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 12.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 9.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 7,
-      "business_sector": "자동차"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "현대모비스": {
       "name": "현대모비스",
       "code": "012330",
       "sector": "자동차부품",
+      "business_sector": "자동차부품",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 8,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 12.52,
           "pbr": 0.85,
           "eps": 38292.0,
+          "current_price": 479500,
           "bps": 448144.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012330",
-          "fetched_at": "2026-07-21T19:40:47.967517+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:32.058861+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -27566,
-          "foreign_net_buy_10d_krw": 328824,
+          "institution_net_buy_10d_shares": -27566,
+          "foreign_net_buy_10d_shares": 328824,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:48.375413+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=012330&page=1",
+          "fetched_at": "2026-07-21T20:28:32.458921+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 482000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 479500,
+        "as_of": "2026-07-21T20:28:32.058861+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1146,86 +986,75 @@
           "fetched_at": "2026-07-21T19:40:43.003112+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:38.170412+09:00",
-        "assets": 73917161000000.0,
-        "assets_growth_pct": 5.0,
-        "equity": 50647933000000.0,
-        "equity_growth_pct": 2.92,
-        "liabilities": 23269228000000.0,
-        "liabilities_growth_pct": 9.82,
-        "operating_profit": 802648000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 15560513000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 45.94
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:40.584812+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:44.136066+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "자동차부품",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 9.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 6.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 8,
-      "business_sector": "자동차부품"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "한화에어로스페이스": {
       "name": "한화에어로스페이스",
       "code": "012450",
       "sector": "방산",
+      "business_sector": "방산",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 9,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 28.24,
           "pbr": 4.64,
           "eps": 31839.0,
+          "current_price": 899000,
           "bps": 68644.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012450",
-          "fetched_at": "2026-07-21T19:40:47.685770+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:31.618262+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -28652,
-          "foreign_net_buy_10d_krw": 32272,
+          "institution_net_buy_10d_shares": -28652,
+          "foreign_net_buy_10d_shares": 32272,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:48.062467+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=012450&page=1",
+          "fetched_at": "2026-07-21T20:28:32.097147+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 943000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 899000,
+        "as_of": "2026-07-21T20:28:31.618262+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1240,79 +1069,75 @@
           "fetched_at": "2026-07-21T19:40:43.003118+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:38.034385+09:00",
-        "assets": 56659594923000.0,
-        "assets_growth_pct": 5.02,
-        "operating_profit": 638892160000.0,
-        "operating_profit_growth_pct": null
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:40.610650+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:44.140798+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "방산",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 0.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 9,
-      "business_sector": "방산"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "HD현대중공업": {
       "name": "HD현대중공업",
       "code": "329180",
       "sector": "조선",
+      "business_sector": "조선",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 10,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 22.31,
           "pbr": 4.88,
           "eps": 20237.0,
+          "current_price": 451500,
           "bps": 58660.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=329180",
-          "fetched_at": "2026-07-21T19:40:47.931654+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:31.994908+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -137739,
-          "foreign_net_buy_10d_krw": 175185,
+          "institution_net_buy_10d_shares": -137739,
+          "foreign_net_buy_10d_shares": 175185,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:48.363661+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=329180&page=1",
+          "fetched_at": "2026-07-21T20:28:32.351348+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 484000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 451500,
+        "as_of": "2026-07-21T20:28:31.994908+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1327,86 +1152,75 @@
           "fetched_at": "2026-07-21T19:40:43.003125+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:38.127890+09:00",
-        "assets": 27577187358000.0,
-        "assets_growth_pct": 5.41,
-        "equity": 9713237014000.0,
-        "equity_growth_pct": 3.98,
-        "liabilities": 17863950344000.0,
-        "liabilities_growth_pct": 6.2,
-        "operating_profit": 905385908000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 5916331790000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 183.91
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:40.507931+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:44.124147+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "조선",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 0.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 10,
-      "business_sector": "조선"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "LG에너지솔루션": {
       "name": "LG에너지솔루션",
       "code": "373220",
       "sector": "이차전지",
+      "business_sector": "이차전지",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 11,
       "market": {
         "status": "ok",
         "valuation": {
           "pbr": 3.35,
           "eps": -6851.0,
+          "current_price": 317000,
           "per": 80.86,
           "bps": 86328.0,
+          "target_price": 3,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=373220",
-          "fetched_at": "2026-07-21T19:40:47.699126+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:31.920204+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -149827,
-          "foreign_net_buy_10d_krw": -6585,
+          "institution_net_buy_10d_shares": -149827,
+          "foreign_net_buy_10d_shares": -6585,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:48.049984+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=373220&page=1",
+          "fetched_at": "2026-07-21T20:28:32.253611+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 334000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 317000,
+        "as_of": "2026-07-21T20:28:31.920204+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1421,84 +1235,75 @@
           "fetched_at": "2026-07-21T19:40:43.003131+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:39.059466+09:00",
-        "assets": 71805610000000.0,
-        "assets_growth_pct": 6.94,
-        "equity": 29916304000000.0,
-        "equity_growth_pct": 2.03,
-        "liabilities": 41889306000000.0,
-        "liabilities_growth_pct": 10.74,
-        "operating_profit": -207755000000.0,
-        "operating_profit_growth_pct": null,
-        "debt_ratio_pct": 140.02
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:41.619307+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:47.052716+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "이차전지",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -16.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": -4.0,
-          "flow": -12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
         "signal": "부정"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 11,
-      "business_sector": "이차전지"
+      }
     },
     "LG이노텍": {
       "name": "LG이노텍",
       "code": "011070",
       "sector": "전자부품",
+      "business_sector": "전자부품",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 12,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 30.71,
           "pbr": 2.45,
           "eps": 20484.0,
+          "current_price": 629000,
           "bps": 199226.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=011070",
-          "fetched_at": "2026-07-21T19:40:47.927845+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:31.854602+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -801883,
-          "foreign_net_buy_10d_krw": 955702,
+          "institution_net_buy_10d_shares": -801883,
+          "foreign_net_buy_10d_shares": 955702,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:48.381331+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=011070&page=1",
+          "fetched_at": "2026-07-21T20:28:32.234552+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 668000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 629000,
+        "as_of": "2026-07-21T20:28:31.854602+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1513,86 +1318,75 @@
           "fetched_at": "2026-07-21T19:40:43.003138+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:39.185747+09:00",
-        "assets": 11822058000000.0,
-        "assets_growth_pct": -0.91,
-        "equity": 6080881000000.0,
-        "equity_growth_pct": 5.51,
-        "liabilities": 5741177000000.0,
-        "liabilities_growth_pct": -6.92,
-        "operating_profit": 295320000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 5534835000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 94.41
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:41.669939+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:46.894412+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "전자부품",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 3.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 12,
-      "business_sector": "전자부품"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "LG디스플레이": {
       "name": "LG디스플레이",
       "code": "034220",
       "sector": "디스플레이",
+      "business_sector": "디스플레이",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 13,
       "market": {
         "status": "ok",
         "valuation": {
           "pbr": 0.75,
           "eps": -163.0,
+          "current_price": 9750,
           "per": -1.71,
           "bps": 18267.0,
+          "target_price": 4,
+          "target_upside_pct": -99.96,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034220",
-          "fetched_at": "2026-07-21T19:40:48.939620+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:33.317904+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -167453,
-          "foreign_net_buy_10d_krw": -3585944,
+          "institution_net_buy_10d_shares": -167453,
+          "foreign_net_buy_10d_shares": -3585944,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:49.274426+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=034220&page=1",
+          "fetched_at": "2026-07-21T20:28:33.860035+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 10410,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 9750,
+        "as_of": "2026-07-21T20:28:33.317904+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1607,84 +1401,75 @@
           "fetched_at": "2026-07-21T19:40:43.003144+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:47.040351+09:00",
-        "assets": 27295656000000.0,
-        "assets_growth_pct": 1.41,
-        "equity": 7773133000000.0,
-        "equity_growth_pct": -0.84,
-        "liabilities": 19522523000000.0,
-        "liabilities_growth_pct": 2.33,
-        "operating_profit": 146719000000.0,
-        "operating_profit_growth_pct": null,
-        "debt_ratio_pct": 251.15
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:49.178262+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:46.730524+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "디스플레이",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -11.0,
+        "score": -30.0,
         "components": {
-          "financials": -3.0,
-          "consensus": 0.0,
-          "valuation": 4.0,
-          "flow": -12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 13,
-      "business_sector": "디스플레이"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "LG씨엔에스": {
       "name": "LG씨엔에스",
       "code": "064400",
       "sector": "IT서비스",
+      "business_sector": "IT서비스",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 14,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 13.12,
           "pbr": 2.07,
           "eps": 4764.0,
+          "current_price": 62500,
           "bps": 21369.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=064400",
-          "fetched_at": "2026-07-21T19:40:49.163500+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:33.152882+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 63900,
-          "foreign_net_buy_10d_krw": 443390,
+          "institution_net_buy_10d_shares": 63900,
+          "foreign_net_buy_10d_shares": 443390,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:49.677704+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=064400&page=1",
+          "fetched_at": "2026-07-21T20:28:33.684143+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 65000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 62500,
+        "as_of": "2026-07-21T20:28:33.152882+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1699,84 +1484,75 @@
           "fetched_at": "2026-07-21T19:40:43.003152+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:46.373064+09:00",
-        "assets": 4784000547000.0,
-        "assets_growth_pct": -9.48,
-        "equity": 2932555794000.0,
-        "equity_growth_pct": -0.3,
-        "liabilities": 1851444753000.0,
-        "liabilities_growth_pct": -21.01,
-        "operating_profit": 94196997000.0,
-        "operating_profit_growth_pct": null,
-        "debt_ratio_pct": 63.13
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:48.297191+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:46.737502+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "IT서비스",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 17.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 2.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "긍정"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 14,
-      "business_sector": "IT서비스"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "SK이노베이션": {
       "name": "SK이노베이션",
       "code": "096770",
       "sector": "에너지·이차전지",
+      "business_sector": "에너지·이차전지",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 15,
       "market": {
         "status": "ok",
         "valuation": {
           "pbr": 0.83,
           "eps": -13182.0,
+          "current_price": 116300,
           "per": 53.47,
           "bps": 230169.0,
+          "target_price": 3,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=096770",
-          "fetched_at": "2026-07-21T19:40:49.089361+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:33.299339+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 2469342,
-          "foreign_net_buy_10d_krw": -430146,
+          "institution_net_buy_10d_shares": 2469342,
+          "foreign_net_buy_10d_shares": -430146,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:49.682548+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=096770&page=1",
+          "fetched_at": "2026-07-21T20:28:33.698077+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 121400,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 116300,
+        "as_of": "2026-07-21T20:28:33.299339+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1791,86 +1567,75 @@
           "fetched_at": "2026-07-21T19:40:43.003157+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:50.999324+09:00",
-        "assets": 110123705338000.0,
-        "assets_growth_pct": 4.28,
-        "equity": 38110038132000.0,
-        "equity_growth_pct": 4.72,
-        "liabilities": 72013667206000.0,
-        "liabilities_growth_pct": 4.04,
-        "operating_profit": 2162165204000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 24212058919000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 188.96
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:52.330290+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:46.901779+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "에너지·이차전지",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 0.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 15,
-      "business_sector": "에너지·이차전지"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "SK이터닉스": {
       "name": "SK이터닉스",
       "code": "475150",
       "sector": "신재생에너지",
+      "business_sector": "신재생에너지",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 16,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 76.68,
           "pbr": 7.04,
           "eps": 729.0,
+          "current_price": 55900,
           "bps": 7187.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=475150",
-          "fetched_at": "2026-07-21T19:40:49.238435+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:33.490300+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 1179044,
-          "foreign_net_buy_10d_krw": 504662,
+          "institution_net_buy_10d_shares": 1179044,
+          "foreign_net_buy_10d_shares": 504662,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:49.660215+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=475150&page=1",
+          "fetched_at": "2026-07-21T20:28:33.801645+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 52000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 55900,
+        "as_of": "2026-07-21T20:28:33.490300+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1885,88 +1650,75 @@
           "fetched_at": "2026-07-21T19:40:43.003163+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:47.428994+09:00",
-        "assets": 1405235645262.0,
-        "assets_growth_pct": 6.69,
-        "equity": 270392016423.0,
-        "equity_growth_pct": -0.97,
-        "liabilities": 1134843628839.0,
-        "liabilities_growth_pct": 8.7,
-        "operating_profit": 4909470482.0,
-        "operating_profit_growth_pct": null,
-        "net_income": -5112268969.0,
-        "net_income_growth_pct": null,
-        "revenue": 27523079701.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 419.7
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:49.188305+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:49.602025+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "신재생에너지",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 2.0,
+        "score": -30.0,
         "components": {
-          "financials": -3.0,
-          "consensus": 0.0,
-          "valuation": -7.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 16,
-      "business_sector": "신재생에너지"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "포스코퓨처엠": {
       "name": "포스코퓨처엠",
       "code": "003670",
       "sector": "이차전지소재",
+      "business_sector": "이차전지소재",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 17,
       "market": {
         "status": "ok",
         "valuation": {
           "pbr": 2.98,
           "eps": -165.0,
+          "current_price": 138600,
           "per": 968.71,
           "bps": 29410.0,
+          "target_price": 3,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=003670",
-          "fetched_at": "2026-07-21T19:40:49.529779+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:33.636608+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -96242,
-          "foreign_net_buy_10d_krw": 142400,
+          "institution_net_buy_10d_shares": -96242,
+          "foreign_net_buy_10d_shares": 142400,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:49.916770+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=003670&page=1",
+          "fetched_at": "2026-07-21T20:28:34.001370+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 147600,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 138600,
+        "as_of": "2026-07-21T20:28:33.636608+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1981,88 +1733,75 @@
           "fetched_at": "2026-07-21T19:40:43.003168+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:48.134971+09:00",
-        "assets": 9520080359594.0,
-        "assets_growth_pct": 4.11,
-        "equity": 4617557017891.0,
-        "equity_growth_pct": 2.34,
-        "liabilities": 4902523341703.0,
-        "liabilities_growth_pct": 5.84,
-        "operating_profit": 17699640745.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 6283039998.0,
-        "net_income_growth_pct": null,
-        "revenue": 757515005832.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 106.17
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:49.703581+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:49.508401+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "이차전지소재",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -4.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": -4.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 17,
-      "business_sector": "이차전지소재"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "NAVER": {
       "name": "NAVER",
       "code": "035420",
       "sector": "인터넷",
+      "business_sector": "인터넷",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 18,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 16.75,
           "pbr": 0.98,
           "eps": 11521.0,
+          "current_price": 193000,
           "bps": 154077.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035420",
-          "fetched_at": "2026-07-21T19:40:49.567520+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:33.589667+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 16119,
-          "foreign_net_buy_10d_krw": 854372,
+          "institution_net_buy_10d_shares": 16119,
+          "foreign_net_buy_10d_shares": 854372,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:49.936505+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=035420&page=1",
+          "fetched_at": "2026-07-21T20:28:33.983084+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 190000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 193000,
+        "as_of": "2026-07-21T20:28:33.589667+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2077,86 +1816,75 @@
           "fetched_at": "2026-07-21T19:40:43.003174+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:48.855658+09:00",
-        "assets": 44914004920132.0,
-        "assets_growth_pct": 9.32,
-        "equity": 30930035783908.0,
-        "equity_growth_pct": 6.83,
-        "liabilities": 13983969136224.0,
-        "liabilities_growth_pct": 15.27,
-        "operating_profit": 541757341691.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 3241061102900.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 45.21
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:50.997559+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:49.499873+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "인터넷",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 21.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 6.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "긍정"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 18,
-      "business_sector": "인터넷"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "카카오": {
       "name": "카카오",
       "code": "035720",
       "sector": "인터넷",
+      "business_sector": "인터넷",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 19,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 31.77,
           "pbr": 1.35,
           "eps": 1111.0,
+          "current_price": 35300,
           "bps": 22281.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035720",
-          "fetched_at": "2026-07-21T19:40:50.328836+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:34.922232+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 974087,
-          "foreign_net_buy_10d_krw": 1096412,
+          "institution_net_buy_10d_shares": 974087,
+          "foreign_net_buy_10d_shares": 1096412,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:50.665362+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=035720&page=1",
+          "fetched_at": "2026-07-21T20:28:35.359747+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 35900,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 35300,
+        "as_of": "2026-07-21T20:28:34.922232+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2171,93 +1899,75 @@
           "fetched_at": "2026-07-21T19:40:43.003181+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:55.725498+09:00",
-        "assets": 28802759972472.0,
-        "assets_growth_pct": 3.67,
-        "equity": 15420486660552.0,
-        "equity_growth_pct": 1.28,
-        "liabilities": 13382273311920.0,
-        "liabilities_growth_pct": 6.56,
-        "operating_profit": 211397661586.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 226836078738.0,
-        "net_income_growth_pct": null,
-        "revenue": 1942077123047.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 86.78
-      },
-      "consensus": {
-        "status": "cached",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide (7일 캐시)",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T17:02:18.781138+09:00",
-        "cached_from": "2026-07-21T17:02:18.781138+09:00",
-        "cache_age_hours": 2.6,
-        "cache_expires_at": "2026-07-28T17:02:18.781138+09:00",
-        "live_collection_status": "failed",
-        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:49.481214+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "인터넷",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 16.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 1.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "긍정"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 19,
-      "business_sector": "인터넷"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "현대건설": {
       "name": "현대건설",
       "code": "000720",
       "sector": "건설",
+      "business_sector": "건설",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 20,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 24.74,
           "pbr": 1.15,
           "eps": 3792.0,
+          "current_price": 93800,
           "bps": 72383.0,
+          "target_price": 3,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000720",
-          "fetched_at": "2026-07-21T19:40:50.551654+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:34.757289+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 1600,
-          "foreign_net_buy_10d_krw": 611043,
+          "institution_net_buy_10d_shares": 1600,
+          "foreign_net_buy_10d_shares": 611043,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:51.104351+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=000720&page=1",
+          "fetched_at": "2026-07-21T20:28:35.321091+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 99000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 93800,
+        "as_of": "2026-07-21T20:28:34.757289+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2272,86 +1982,75 @@
           "fetched_at": "2026-07-21T19:40:43.003188+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:56.081462+09:00",
-        "assets": 28405874000000.0,
-        "assets_growth_pct": 1.06,
-        "equity": 11028599000000.0,
-        "equity_growth_pct": 5.68,
-        "liabilities": 17377275000000.0,
-        "liabilities_growth_pct": -1.67,
-        "operating_profit": 180890000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 6281265000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 157.57
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:58.632254+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:49.606784+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "건설",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 13.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": 1.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 20,
-      "business_sector": "건설"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "한화시스템": {
       "name": "한화시스템",
       "code": "272210",
       "sector": "방산·ICT",
+      "business_sector": "방산·ICT",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 21,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 71.8,
           "pbr": 2.29,
           "eps": 844.0,
+          "current_price": 60600,
           "bps": 11443.0,
+          "target_price": 3,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=272210",
-          "fetched_at": "2026-07-21T19:40:50.830516+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:34.865884+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -159425,
-          "foreign_net_buy_10d_krw": 256134,
+          "institution_net_buy_10d_shares": -159425,
+          "foreign_net_buy_10d_shares": 256134,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:51.195508+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=272210&page=1",
+          "fetched_at": "2026-07-21T20:28:35.354235+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 65500,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 60600,
+        "as_of": "2026-07-21T20:28:34.865884+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2366,88 +2065,75 @@
           "fetched_at": "2026-07-21T19:40:43.003193+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:56.215821+09:00",
-        "assets": 10820663576719.0,
-        "assets_growth_pct": 4.78,
-        "equity": 5042789965122.0,
-        "equity_growth_pct": 0.84,
-        "liabilities": 5777873611597.0,
-        "liabilities_growth_pct": 8.48,
-        "operating_profit": 34284490078.0,
-        "operating_profit_growth_pct": null,
-        "net_income": -95751914040.0,
-        "net_income_growth_pct": null,
-        "revenue": 807099186689.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 114.58
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:58.579493+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:51.378067+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "방산·ICT",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -4.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": -4.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 21,
-      "business_sector": "방산·ICT"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "한화오션": {
       "name": "한화오션",
       "code": "042660",
       "sector": "조선",
+      "business_sector": "조선",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 22,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 16.4,
           "pbr": 3.68,
           "eps": 4994.0,
+          "current_price": 81900,
           "bps": 14061.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042660",
-          "fetched_at": "2026-07-21T19:40:50.796397+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:35.108847+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 400129,
-          "foreign_net_buy_10d_krw": -2940033,
+          "institution_net_buy_10d_shares": 400129,
+          "foreign_net_buy_10d_shares": -2940033,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:51.176091+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=042660&page=1",
+          "fetched_at": "2026-07-21T20:28:35.466433+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 86700,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 81900,
+        "as_of": "2026-07-21T20:28:35.108847+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2462,86 +2148,75 @@
           "fetched_at": "2026-07-21T19:40:43.003199+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:55.488090+09:00",
-        "assets": 20796547457384.0,
-        "assets_growth_pct": 3.26,
-        "equity": 6825972776314.0,
-        "equity_growth_pct": 10.54,
-        "liabilities": 13970574681070.0,
-        "liabilities_growth_pct": 0.03,
-        "operating_profit": 441065118733.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 3209940245892.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 204.67
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:56.971685+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:52.426245+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "조선",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -1.0,
+        "score": -30.0,
         "components": {
-          "financials": -3.0,
-          "consensus": 0.0,
-          "valuation": 2.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 22,
-      "business_sector": "조선"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "한화엔진": {
       "name": "한화엔진",
       "code": "082740",
       "sector": "조선기자재",
+      "business_sector": "조선기자재",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 23,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 17.88,
           "pbr": 6.07,
           "eps": 2483.0,
+          "current_price": 44400,
           "bps": 3134.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=082740",
-          "fetched_at": "2026-07-21T19:40:50.974804+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:35.197900+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 879852,
-          "foreign_net_buy_10d_krw": -1262043,
+          "institution_net_buy_10d_shares": 879852,
+          "foreign_net_buy_10d_shares": -1262043,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:51.348854+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=082740&page=1",
+          "fetched_at": "2026-07-21T20:28:35.585527+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 46900,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 44400,
+        "as_of": "2026-07-21T20:28:35.197900+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2556,88 +2231,75 @@
           "fetched_at": "2026-07-21T19:40:43.003205+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:56.168980+09:00",
-        "assets": 1910569648022.0,
-        "assets_growth_pct": 12.67,
-        "equity": 610032817122.0,
-        "equity_growth_pct": 9.7,
-        "liabilities": 1300536830900.0,
-        "liabilities_growth_pct": 14.12,
-        "operating_profit": 51378938345.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 52853335685.0,
-        "net_income_growth_pct": null,
-        "revenue": 345239424400.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 213.19
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:58.578881+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:52.430823+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "조선기자재",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -4.0,
+        "score": -30.0,
         "components": {
-          "financials": -3.0,
-          "consensus": 0.0,
-          "valuation": -1.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 23,
-      "business_sector": "조선기자재"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "두산에너빌리티": {
       "name": "두산에너빌리티",
       "code": "034020",
       "sector": "발전·원전",
+      "business_sector": "발전·원전",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 24,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 277.18,
           "pbr": 5.33,
           "eps": 241.0,
+          "current_price": 66800,
           "bps": 11113.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034020",
-          "fetched_at": "2026-07-21T19:40:51.083135+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:35.224334+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 382445,
-          "foreign_net_buy_10d_krw": -330123,
+          "institution_net_buy_10d_shares": 382445,
+          "foreign_net_buy_10d_shares": -330123,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:51.406396+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=034020&page=1",
+          "fetched_at": "2026-07-21T20:28:35.593434+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 69700,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 66800,
+        "as_of": "2026-07-21T20:28:35.224334+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2652,86 +2314,75 @@
           "fetched_at": "2026-07-21T19:40:43.003210+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:37:56.660544+09:00",
-        "assets": 28695055000000.0,
-        "assets_growth_pct": 4.3,
-        "equity": 12443616000000.0,
-        "equity_growth_pct": 3.62,
-        "liabilities": 16251439000000.0,
-        "liabilities_growth_pct": 4.82,
-        "operating_profit": 233514000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 4261130000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 130.6
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:37:58.787657+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:52.419773+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "발전·원전",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -7.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": -7.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 24,
-      "business_sector": "발전·원전"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "삼성바이오로직스": {
       "name": "삼성바이오로직스",
       "code": "207940",
       "sector": "바이오",
+      "business_sector": "바이오",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 25,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 45.32,
           "pbr": 8.14,
           "eps": 30779.0,
+          "current_price": 1395000,
           "bps": 138119.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=207940",
-          "fetched_at": "2026-07-21T19:40:51.588617+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:36.388888+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 40123,
-          "foreign_net_buy_10d_krw": 7404,
+          "institution_net_buy_10d_shares": 40123,
+          "foreign_net_buy_10d_shares": 7404,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:51.914822+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=207940&page=1",
+          "fetched_at": "2026-07-21T20:28:36.921346+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 1396000,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 1395000,
+        "as_of": "2026-07-21T20:28:36.388888+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2746,88 +2397,75 @@
           "fetched_at": "2026-07-21T19:40:43.003224+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:02.585733+09:00",
-        "assets": 11994999582438.0,
-        "assets_growth_pct": 8.45,
-        "equity": 7922835735735.0,
-        "equity_growth_pct": 6.33,
-        "liabilities": 4072163846703.0,
-        "liabilities_growth_pct": 12.81,
-        "operating_profit": 580752580824.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 469245424673.0,
-        "net_income_growth_pct": null,
-        "revenue": 1257119188891.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 51.4
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:03.747763+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:52.435813+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "바이오",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 8.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": -7.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 25,
-      "business_sector": "바이오"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "셀트리온": {
       "name": "셀트리온",
       "code": "068270",
       "sector": "바이오",
+      "business_sector": "바이오",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 26,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 32.84,
           "pbr": 2.23,
           "eps": 5226.0,
+          "current_price": 171600,
           "bps": 70023.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=068270",
-          "fetched_at": "2026-07-21T19:40:52.329092+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:36.785244+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 621426,
-          "foreign_net_buy_10d_krw": 285186,
+          "institution_net_buy_10d_shares": 621426,
+          "foreign_net_buy_10d_shares": 285186,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:52.685960+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=068270&page=1",
+          "fetched_at": "2026-07-21T20:28:37.161779+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 175800,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 171600,
+        "as_of": "2026-07-21T20:28:36.785244+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2842,86 +2480,75 @@
           "fetched_at": "2026-07-21T19:40:43.003231+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:06.035781+09:00",
-        "assets": 23156645428216.0,
-        "assets_growth_pct": 3.68,
-        "equity": 17814382031809.0,
-        "equity_growth_pct": 2.66,
-        "liabilities": 5342263396407.0,
-        "liabilities_growth_pct": 7.22,
-        "operating_profit": 321869634415.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 1144985917949.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 29.99
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:07.422071+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:53.823255+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "바이오",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 15.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "긍정"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 26,
-      "business_sector": "바이오"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "알테오젠": {
       "name": "알테오젠",
       "code": "196170",
       "sector": "바이오",
+      "business_sector": "바이오",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 27,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 113.04,
           "pbr": 29.22,
           "eps": 2415.0,
+          "current_price": 273000,
           "bps": 2795.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=196170",
-          "fetched_at": "2026-07-21T19:40:52.179598+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:36.641625+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -228089,
-          "foreign_net_buy_10d_krw": 120617,
+          "institution_net_buy_10d_shares": -228089,
+          "foreign_net_buy_10d_shares": 120617,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:52.599191+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=196170&page=1",
+          "fetched_at": "2026-07-21T20:28:36.996615+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 276500,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 273000,
+        "as_of": "2026-07-21T20:28:36.641625+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
@@ -2936,88 +2563,75 @@
           "fetched_at": "2026-07-21T19:40:43.003239+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:03.531987+09:00",
-        "assets": 729469655232.0,
-        "assets_growth_pct": 4.4,
-        "equity": 512858119587.0,
-        "equity_growth_pct": 12.85,
-        "liabilities": 216611535645.0,
-        "liabilities_growth_pct": -11.33,
-        "operating_profit": 39300649498.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 71344275231.0,
-        "net_income_growth_pct": null,
-        "revenue": 71598550624.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 42.24
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:05.027280+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:54.375548+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "바이오",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -4.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": -7.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 27,
-      "business_sector": "바이오"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "에이비엘바이오": {
       "name": "에이비엘바이오",
       "code": "298380",
       "sector": "바이오",
+      "business_sector": "바이오",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 28,
       "market": {
         "status": "ok",
         "valuation": {
           "pbr": 21.48,
           "eps": -439.0,
+          "current_price": 69300,
           "per": -444.71,
           "bps": 1547.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=298380",
-          "fetched_at": "2026-07-21T19:40:52.304514+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:36.707343+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -236362,
-          "foreign_net_buy_10d_krw": 569766,
+          "institution_net_buy_10d_shares": -236362,
+          "foreign_net_buy_10d_shares": 569766,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:52.641690+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=298380&page=1",
+          "fetched_at": "2026-07-21T20:28:37.140737+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 75600,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 69300,
+        "as_of": "2026-07-21T20:28:36.707343+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
@@ -3032,88 +2646,75 @@
           "fetched_at": "2026-07-21T19:40:43.003245+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:03.560270+09:00",
-        "assets": 298130275703.0,
-        "assets_growth_pct": 6.12,
-        "equity": 183343287401.0,
-        "equity_growth_pct": 17.0,
-        "liabilities": 114786988302.0,
-        "liabilities_growth_pct": -7.61,
-        "operating_profit": -17225118856.0,
-        "operating_profit_growth_pct": null,
-        "net_income": -14661465146.0,
-        "net_income_growth_pct": null,
-        "revenue": 13136000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 62.61
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:04.864292+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:54.216539+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "바이오",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 0.0,
+        "score": -30.0,
         "components": {
-          "financials": 3.0,
-          "consensus": 0.0,
-          "valuation": -3.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 28,
-      "business_sector": "바이오"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "하나금융지주": {
       "name": "하나금융지주",
       "code": "086790",
       "sector": "금융",
+      "business_sector": "금융",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 29,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 9.14,
           "pbr": 0.79,
           "eps": 14513.0,
+          "current_price": 132600,
           "bps": 136601.0,
+          "target_price": 4,
+          "target_upside_pct": -100.0,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=086790",
-          "fetched_at": "2026-07-21T19:40:52.556446+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:36.784044+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 984530,
-          "foreign_net_buy_10d_krw": -279220,
+          "institution_net_buy_10d_shares": 984530,
+          "foreign_net_buy_10d_shares": -279220,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:52.892547+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=086790&page=1",
+          "fetched_at": "2026-07-21T20:28:37.154999+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 136800,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 132600,
+        "as_of": "2026-07-21T20:28:36.784044+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3128,84 +2729,75 @@
           "fetched_at": "2026-07-21T19:40:43.003252+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:09.976434+09:00",
-        "assets": 685367577000000.0,
-        "assets_growth_pct": 1.6,
-        "equity": 46442152000000.0,
-        "equity_growth_pct": 1.75,
-        "liabilities": 638925425000000.0,
-        "liabilities_growth_pct": 1.59,
-        "operating_profit": 1653600000000.0,
-        "operating_profit_growth_pct": null,
-        "debt_ratio_pct": 1375.74
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:11.322990+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:54.668778+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "금융",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 6.0,
+        "score": -30.0,
         "components": {
-          "financials": -3.0,
-          "consensus": 0.0,
-          "valuation": 9.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 29,
-      "business_sector": "금융"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "우리금융지주": {
       "name": "우리금융지주",
       "code": "316140",
       "sector": "금융",
+      "business_sector": "금융",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 30,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 7.23,
           "pbr": 0.59,
           "eps": 4216.0,
+          "current_price": 30500,
           "bps": 42116.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=316140",
-          "fetched_at": "2026-07-21T19:40:52.475890+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:36.901482+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 1147283,
-          "foreign_net_buy_10d_krw": -156539,
+          "institution_net_buy_10d_shares": 1147283,
+          "foreign_net_buy_10d_shares": -156539,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:52.816945+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=316140&page=1",
+          "fetched_at": "2026-07-21T20:28:37.224703+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 31500,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 30500,
+        "as_of": "2026-07-21T20:28:36.901482+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3220,84 +2812,75 @@
           "fetched_at": "2026-07-21T19:40:43.003259+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:15.550446+09:00",
-        "assets": 612585300000000.0,
-        "assets_growth_pct": 1.85,
-        "equity": 39906308000000.0,
-        "equity_growth_pct": 5.41,
-        "liabilities": 572678992000000.0,
-        "liabilities_growth_pct": 1.61,
-        "operating_profit": 808155000000.0,
-        "operating_profit_growth_pct": null,
-        "debt_ratio_pct": 1435.06
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:16.857631+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:54.672809+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "금융",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 6.0,
+        "score": -30.0,
         "components": {
-          "financials": -3.0,
-          "consensus": 0.0,
-          "valuation": 9.0,
-          "flow": 0.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 30,
-      "business_sector": "금융"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "GS건설": {
       "name": "GS건설",
       "code": "006360",
       "sector": "건설",
+      "business_sector": "건설",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 31,
       "market": {
         "status": "ok",
         "valuation": {
           "per": 33.6,
           "pbr": 0.45,
           "eps": 762.0,
+          "current_price": 25600,
           "bps": 50825.0,
+          "target_price": 3,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=006360",
-          "fetched_at": "2026-07-21T19:40:53.047316+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:37.838566+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": 1094082,
-          "foreign_net_buy_10d_krw": 569400,
+          "institution_net_buy_10d_shares": 1094082,
+          "foreign_net_buy_10d_shares": 569400,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:53.383647+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=006360&page=1",
+          "fetched_at": "2026-07-21T20:28:38.168853+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 27300,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 25600,
+        "as_of": "2026-07-21T20:28:37.838566+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3312,88 +2895,75 @@
           "fetched_at": "2026-07-21T19:40:43.003265+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:11.195678+09:00",
-        "assets": 18541824000000.0,
-        "assets_growth_pct": 0.44,
-        "equity": 5597238000000.0,
-        "equity_growth_pct": 1.33,
-        "liabilities": 12944586000000.0,
-        "liabilities_growth_pct": 0.06,
-        "operating_profit": 73468000000.0,
-        "operating_profit_growth_pct": null,
-        "net_income": 10707000000.0,
-        "net_income_growth_pct": null,
-        "revenue": 2400539000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 231.27
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:12.689363+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:55.667599+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "건설",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": 13.0,
+        "score": -30.0,
         "components": {
-          "financials": -3.0,
-          "consensus": 0.0,
-          "valuation": 4.0,
-          "flow": 12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 31,
-      "business_sector": "건설"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     },
     "LX하우시스": {
       "name": "LX하우시스",
       "code": "108670",
       "sector": "건축자재",
+      "business_sector": "건축자재",
+      "universe_tags": [
+        "FIXED_RECOMMENDATION_WATCHLIST"
+      ],
+      "watchlist_order": 32,
       "market": {
         "status": "ok",
         "valuation": {
           "pbr": 0.36,
           "eps": -1098.0,
+          "current_price": 31450,
           "per": 7.06,
           "bps": 83467.0,
+          "target_price": 4,
+          "target_upside_pct": -99.99,
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=108670",
-          "fetched_at": "2026-07-21T19:40:53.660362+09:00",
-          "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS 수집"
+          "fetched_at": "2026-07-21T20:28:37.926632+09:00"
         },
         "investor_flow": {
-          "institution_net_buy_10d_krw": -3198,
-          "foreign_net_buy_10d_krw": -14945,
+          "institution_net_buy_10d_shares": -3198,
+          "foreign_net_buy_10d_shares": -14945,
           "unit": "shares",
           "trading_days": 10,
+          "definition": "최근 10거래일 순매매량 합계",
           "status": "ok",
-          "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T19:40:54.005960+09:00"
+          "source": "NAVER Finance 투자자별 매매 페이지",
+          "source_url": "https://finance.naver.com/item/frgn.naver?code=108670&page=1",
+          "fetched_at": "2026-07-21T20:28:38.286012+09:00",
+          "period_description": "최근 10거래일 순매매량 합계"
         },
-        "source": "KRX OPEN API",
-        "current_price": 31550,
-        "as_of": "20260716",
+        "source": "NAVER Finance",
+        "current_price": 31450,
+        "as_of": "2026-07-21T20:28:37.926632+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3408,59 +2978,36 @@
           "fetched_at": "2026-07-21T19:40:43.003272+09:00"
         }
       },
-      "financials": {
-        "status": "ok",
-        "business_year": 2026,
-        "report_code": "11013",
-        "report_name": "1분기",
-        "source": "OpenDART",
-        "fetched_at": "2026-07-21T19:38:11.366975+09:00",
-        "assets": 2371864000000.0,
-        "assets_growth_pct": 9.3,
-        "equity": 873799000000.0,
-        "equity_growth_pct": 4.75,
-        "liabilities": 1498065000000.0,
-        "liabilities_growth_pct": 12.15,
-        "operating_profit": 45884000000.0,
-        "operating_profit_growth_pct": null,
-        "revenue": 814714000000.0,
-        "revenue_growth_pct": null,
-        "debt_ratio_pct": 171.44
-      },
-      "consensus": {
-        "status": "ok",
-        "target_price": null,
-        "target_upside_pct": null,
-        "opinion": "목표주가",
-        "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
-        "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T19:38:12.738191+09:00"
+      "quality_value_analysis": {
+        "status": "failed",
+        "reason": "Financial Summary 기간 헤더를 찾지 못했습니다.",
+        "history": [],
+        "metrics": {},
+        "updated_at": "2026-07-21T20:28:56.118173+09:00",
+        "score": 0,
+        "grade": "D",
+        "components": {
+          "eps_growth": 0,
+          "operating_profit": 0,
+          "roe": 0,
+          "financial_safety": 0,
+          "valuation": 0
+        },
+        "peer_sector": "건축자재",
+        "peer_medians": {},
+        "reasons": []
       },
       "quantitative": {
-        "score": -3.0,
+        "score": -30.0,
         "components": {
-          "financials": 0.0,
-          "consensus": 0.0,
-          "valuation": 9.0,
-          "flow": -12.0,
-          "momentum": 0.0
+          "quality_value": -30.0
         },
-        "available_dimensions": 2,
-        "dimension_names": [
-          "valuation",
-          "flow"
-        ],
-        "signal": "중립"
-      },
-      "universe_tags": [
-        "FIXED_RECOMMENDATION_WATCHLIST"
-      ],
-      "watchlist_order": 32,
-      "business_sector": "건축자재"
+        "quality_value_score": 0,
+        "available_dimensions": 0,
+        "available_dimension_names": [],
+        "signal": "부정"
+      }
     }
   },
-  "errors": [
-    "카카오 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f010e1f49b0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))"
-  ]
+  "errors": []
 }
