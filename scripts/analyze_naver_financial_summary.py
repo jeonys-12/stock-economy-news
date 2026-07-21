@@ -42,10 +42,6 @@ def num(value: Any) -> float | None:
         return None
 
 
-def round_or_none(value: float | None, digits: int = 2) -> float | None:
-    return round(value, digits) if value is not None and math.isfinite(value) else None
-
-
 def normalize(value: str) -> str:
     return re.sub(r"[\s·()]", "", value).upper()
 
@@ -72,8 +68,6 @@ def fetch_summary_html(code: str) -> tuple[str, str]:
     response.encoding = response.apparent_encoding or "euc-kr"
     html = response.text
     source_url = response.url
-
-    # coinfo.naver는 Financial Summary 본문을 iframe으로 연결하는 경우가 있다.
     soup = BeautifulSoup(html, "lxml")
     iframe = soup.select_one("iframe#coinfo_cp, iframe[src*='wisereport'], iframe[src*='company']")
     if iframe and iframe.get("src"):
@@ -89,20 +83,17 @@ def fetch_summary_html(code: str) -> tuple[str, str]:
 
 def table_score(table: Any) -> int:
     text = normalize(table.get_text(" ", strip=True))
-    score = 0
-    for token in ("EPS", "ROE", "부채비율", "PER"):
-        score += 3 if token in text else 0
-    score += min(8, len(re.findall(r"20\d{2}", text)))
-    return score
+    score = sum(3 for token in ("EPS", "ROE", "부채비율", "PER", "영업이익") if token in text)
+    return score + min(8, len(re.findall(r"20\d{2}", text)))
 
 
-def select_financial_summary_table(soup: BeautifulSoup) -> Any:
+def select_table(soup: BeautifulSoup) -> Any:
     tables = soup.select("table")
     if not tables:
         raise RuntimeError("Financial Summary 표를 찾지 못했습니다.")
     selected = max(tables, key=table_score)
-    if table_score(selected) < 8:
-        raise RuntimeError("EPS·ROE·부채비율이 포함된 Financial Summary 표를 확인하지 못했습니다.")
+    if table_score(selected) < 10:
+        raise RuntimeError("Financial Summary 핵심 지표 표를 확인하지 못했습니다.")
     return selected
 
 
@@ -136,20 +127,6 @@ def align(periods: list[str], values: list[float | None]) -> list[tuple[str, flo
     return list(zip(periods, values))
 
 
-def previous_ocf_history(row: dict[str, Any]) -> dict[int, float]:
-    analysis = row.get("quality_value_analysis", {}) if isinstance(row.get("quality_value_analysis"), dict) else {}
-    history = analysis.get("history", []) if isinstance(analysis.get("history"), list) else []
-    result: dict[int, float] = {}
-    for item in history:
-        if not isinstance(item, dict):
-            continue
-        year = item.get("year")
-        value = num(item.get("operating_cash_flow"))
-        if isinstance(year, int) and value is not None:
-            result[year] = value
-    return result
-
-
 def cagr(values: list[tuple[int, float | None]]) -> float | None:
     usable = [(year, value) for year, value in values if value is not None and value > 0]
     if len(usable) < 2:
@@ -162,25 +139,32 @@ def cagr(values: list[tuple[int, float | None]]) -> float | None:
     return round(((last / first) ** (1 / periods) - 1) * 100, 2)
 
 
+def pct_change(latest: float | None, previous: float | None) -> float | None:
+    if latest is None or previous in (None, 0):
+        return None
+    return round((latest - previous) / abs(previous) * 100, 2)
+
+
 def build_metrics(history: list[dict[str, Any]], current_price: float | None, forward_eps: float | None) -> dict[str, Any]:
     history = sorted(history, key=lambda item: item["year"])
-    eps_cagr = cagr([(item["year"], num(item.get("eps"))) for item in history])
-    ocf_values = [num(item.get("operating_cash_flow")) for item in history]
-    ocf_present = [value for value in ocf_values if value is not None]
+    eps_values = [(item["year"], num(item.get("eps"))) for item in history]
+    op_values = [(item["year"], num(item.get("operating_profit"))) for item in history]
     roe_values = [num(item.get("roe_pct")) for item in history if num(item.get("roe_pct")) is not None]
     debt_values = [num(item.get("debt_ratio_pct")) for item in history if num(item.get("debt_ratio_pct")) is not None]
+    latest_op = op_values[-1][1] if op_values else None
+    previous_op = op_values[-2][1] if len(op_values) >= 2 else None
     forward_per = current_price / forward_eps if current_price and forward_eps and forward_eps > 0 else None
     return {
         "history_years": len(history),
-        "eps_growth_cagr_pct": eps_cagr,
-        "operating_cash_flow_positive_ratio_pct": round(sum(value > 0 for value in ocf_present) / len(ocf_present) * 100, 1) if ocf_present else None,
-        "operating_cash_flow_cagr_pct": cagr([(item["year"], num(item.get("operating_cash_flow"))) for item in history]),
+        "eps_growth_cagr_pct": cagr(eps_values),
+        "operating_profit_growth_cagr_pct": cagr(op_values),
+        "latest_operating_profit_growth_pct": pct_change(latest_op, previous_op),
         "average_roe_pct": round(sum(roe_values) / len(roe_values), 2) if roe_values else None,
-        "latest_roe_pct": round_or_none(roe_values[-1] if roe_values else None),
-        "latest_debt_ratio_pct": round_or_none(debt_values[-1] if debt_values else None),
-        "debt_ratio_change_pp": round_or_none(debt_values[-1] - debt_values[0] if len(debt_values) >= 2 else None),
+        "latest_roe_pct": round(roe_values[-1], 2) if roe_values else None,
+        "latest_debt_ratio_pct": round(debt_values[-1], 2) if debt_values else None,
+        "debt_ratio_change_pp": round(debt_values[-1] - debt_values[0], 2) if len(debt_values) >= 2 else None,
         "forward_eps": forward_eps,
-        "forward_per": round_or_none(forward_per),
+        "forward_per": round(forward_per, 2) if forward_per is not None else None,
     }
 
 
@@ -188,16 +172,16 @@ def collect_one(name: str, row: dict[str, Any]) -> tuple[str, dict[str, Any]]:
     code = str(row.get("code", "")).strip()
     if len(code) != 6:
         return name, {"status": "failed", "reason": "유효한 6자리 종목코드가 없습니다.", "history": [], "metrics": {}}
-
     try:
         html, source_url = fetch_summary_html(code)
-        soup = BeautifulSoup(html, "lxml")
-        table = select_financial_summary_table(soup)
+        table = select_table(BeautifulSoup(html, "lxml"))
         periods = extract_headers(table)
         if not periods:
             raise RuntimeError("Financial Summary 기간 헤더를 찾지 못했습니다.")
-
         rows = {
+            "revenue": find_row(table, ("매출액", "영업수익")),
+            "operating_profit": find_row(table, ("영업이익",)),
+            "net_income": find_row(table, ("당기순이익", "지배주주순이익")),
             "eps": find_row(table, ("EPS(원)", "EPS", "주당순이익")),
             "roe_pct": find_row(table, ("ROE(%)", "ROE")),
             "debt_ratio_pct": find_row(table, ("부채비율(%)", "부채비율")),
@@ -205,7 +189,6 @@ def collect_one(name: str, row: dict[str, Any]) -> tuple[str, dict[str, Any]]:
         }
         history_by_year: dict[int, dict[str, Any]] = {}
         forward_candidates: list[tuple[int, float, str]] = []
-
         for key, values in rows.items():
             for period, value in align(periods, values):
                 year = parse_year(period)
@@ -217,32 +200,24 @@ def collect_one(name: str, row: dict[str, Any]) -> tuple[str, dict[str, Any]]:
                 if is_estimate(period):
                     continue
                 history_by_year.setdefault(year, {"year": year})[key] = value
-
-        ocf_cache = previous_ocf_history(row)
-        for year, value in ocf_cache.items():
-            history_by_year.setdefault(year, {"year": year})["operating_cash_flow"] = value
-
         history = sorted(history_by_year.values(), key=lambda item: item["year"])[-HISTORY_YEARS:]
-        forward_eps = max(forward_candidates, key=lambda item: item[0])[1] if forward_candidates else None
-        forward_period = max(forward_candidates, key=lambda item: item[0])[2] if forward_candidates else None
+        forward = max(forward_candidates, key=lambda item: item[0]) if forward_candidates else None
         market = row.get("market", {}) if isinstance(row.get("market"), dict) else {}
-        metrics = build_metrics(history, num(market.get("current_price")), forward_eps)
-        metrics["forward_eps_period"] = forward_period
-
+        metrics = build_metrics(history, num(market.get("current_price")), forward[1] if forward else None)
+        metrics["forward_eps_period"] = forward[2] if forward else None
         return name, {
             "status": "ok" if len(history) >= 3 else "partial",
-            "source": "NAVER Finance Financial Summary + OpenDART 주간 영업현금흐름 캐시",
+            "source": "NAVER Finance Financial Summary",
             "source_url": source_url,
-            "collection_mode": "single_financial_summary",
+            "collection_mode": "financial_summary_primary",
             "history": history,
             "metrics": metrics,
             "forecast_status": {
-                "status": "ok" if forward_eps else "unavailable",
-                "forward_eps": forward_eps,
-                "period": forward_period,
+                "status": "ok" if forward else "unavailable",
+                "forward_eps": forward[1] if forward else None,
+                "period": forward[2] if forward else None,
                 "source": "NAVER Finance Financial Summary",
             },
-            "cash_flow_source": "직전 OpenDART 주간 검증 캐시" if ocf_cache else "자료 없음",
             "updated_at": datetime.now(KST).isoformat(),
         }
     except Exception as exc:
@@ -253,14 +228,14 @@ def collect_one(name: str, row: dict[str, Any]) -> tuple[str, dict[str, Any]]:
                 "status": "cached",
                 "live_collection_status": "failed",
                 "live_collection_reason": str(exc)[:220],
-                "source": f"{previous.get('source', '품질가치 분석')} (이전 정상 캐시)",
+                "source": f"{previous.get('source', 'NAVER Financial Summary')} (이전 정상 캐시)",
             })
             return name, cached
         return name, {"status": "failed", "reason": str(exc)[:220], "history": [], "metrics": {}, "updated_at": datetime.now(KST).isoformat()}
 
 
 def peer_medians(stocks: dict[str, dict[str, Any]]) -> dict[str, dict[str, float]]:
-    keys = ("eps_growth_cagr_pct", "operating_cash_flow_positive_ratio_pct", "average_roe_pct", "latest_debt_ratio_pct", "forward_per")
+    keys = ("eps_growth_cagr_pct", "operating_profit_growth_cagr_pct", "average_roe_pct", "latest_debt_ratio_pct", "forward_per")
     sectors: dict[str, dict[str, list[float]]] = {}
     for row in stocks.values():
         sector = str(row.get("business_sector") or row.get("sector") or "기타")
@@ -274,16 +249,16 @@ def peer_medians(stocks: dict[str, dict[str, Any]]) -> dict[str, dict[str, float
 
 
 def score_analysis(metrics: dict[str, Any], peers: dict[str, float]) -> tuple[int, dict[str, int], list[str]]:
-    components = {"eps_growth": 0, "cash_flow": 0, "roe": 0, "financial_safety": 0, "valuation": 0}
+    components = {"eps_growth": 0, "operating_profit": 0, "roe": 0, "financial_safety": 0, "valuation": 0}
     reasons: list[str] = []
     eps = num(metrics.get("eps_growth_cagr_pct")); peer_eps = num(peers.get("eps_growth_cagr_pct"))
     if eps is not None:
         components["eps_growth"] = 25 if eps >= 15 and (peer_eps is None or eps >= peer_eps) else 19 if eps > 5 else 11 if eps > 0 else 2
         reasons.append(f"EPS 3~5년 성장률 {eps:.1f}%")
-    ocf_ratio = num(metrics.get("operating_cash_flow_positive_ratio_pct")); ocf_cagr = num(metrics.get("operating_cash_flow_cagr_pct"))
-    if ocf_ratio is not None:
-        components["cash_flow"] = 20 if ocf_ratio == 100 and (ocf_cagr is None or ocf_cagr >= 0) else 14 if ocf_ratio >= 75 else 7 if ocf_ratio >= 50 else 0
-        reasons.append(f"영업현금흐름 양수 비율 {ocf_ratio:.0f}%")
+    op = num(metrics.get("operating_profit_growth_cagr_pct")); peer_op = num(peers.get("operating_profit_growth_cagr_pct"))
+    if op is not None:
+        components["operating_profit"] = 20 if op >= 12 and (peer_op is None or op >= peer_op) else 15 if op > 5 else 8 if op > 0 else 1
+        reasons.append(f"영업이익 3~5년 성장률 {op:.1f}%")
     roe = num(metrics.get("average_roe_pct")); peer_roe = num(peers.get("average_roe_pct"))
     if roe is not None:
         components["roe"] = 20 if roe >= 15 and (peer_roe is None or roe >= peer_roe) else 15 if roe >= 10 else 9 if roe >= 5 else 0
@@ -291,8 +266,10 @@ def score_analysis(metrics: dict[str, Any], peers: dict[str, float]) -> tuple[in
     debt = num(metrics.get("latest_debt_ratio_pct")); change = num(metrics.get("debt_ratio_change_pp")); peer_debt = num(peers.get("latest_debt_ratio_pct"))
     if debt is not None:
         base = 20 if debt < 100 else 14 if debt < 150 else 7 if debt < 250 else 0
-        if peer_debt is not None and debt > peer_debt * 1.5: base = max(0, base - 4)
-        if change is not None and change > 30: base = max(0, base - 4)
+        if peer_debt is not None and debt > peer_debt * 1.5:
+            base = max(0, base - 4)
+        if change is not None and change > 30:
+            base = max(0, base - 4)
         components["financial_safety"] = base
         reasons.append(f"부채비율 {debt:.1f}%")
     fper = num(metrics.get("forward_per")); peer_per = num(peers.get("forward_per"))
@@ -307,7 +284,6 @@ def main() -> None:
     stocks = payload.get("stocks", {})
     if not isinstance(stocks, dict) or not stocks:
         raise SystemExit("stock_data.json에 종목 데이터가 없습니다.")
-
     results: dict[str, dict[str, Any]] = {}
     with ThreadPoolExecutor(max_workers=MAX_WORKERS, thread_name_prefix="finsum") as executor:
         futures = {executor.submit(collect_one, name, row): name for name, row in stocks.items() if isinstance(row, dict)}
@@ -318,57 +294,48 @@ def main() -> None:
             except Exception as exc:
                 analysis = {"status": "failed", "reason": str(exc)[:220], "history": [], "metrics": {}}
             results[name] = analysis
-
     for name, analysis in results.items():
         stocks[name]["quality_value_analysis"] = analysis
     medians = peer_medians(stocks)
-    completed = 0
-    cached = 0
-    for name, row in stocks.items():
+    completed = cached = 0
+    for row in stocks.values():
         analysis = row.get("quality_value_analysis", {})
         metrics = analysis.get("metrics", {})
         sector = str(row.get("business_sector") or row.get("sector") or "기타")
-        peer = medians.get(sector, {})
-        score, components, reasons = score_analysis(metrics, peer)
+        score, components, reasons = score_analysis(metrics, medians.get(sector, {}))
         analysis.update({
             "score": score,
             "grade": "A" if score >= 80 else "B" if score >= 65 else "C" if score >= 50 else "D",
             "components": components,
             "peer_sector": sector,
-            "peer_medians": peer,
+            "peer_medians": medians.get(sector, {}),
             "reasons": reasons,
         })
         completed += int(analysis.get("status") in {"ok", "partial"})
         cached += int(analysis.get("status") == "cached")
-        quantitative = row.setdefault("quantitative", {})
-        q_components = quantitative.setdefault("components", {})
-        q_components["quality_value"] = max(-15, min(15, round((score - 50) * 0.3, 1)))
-        quantitative["quality_value_score"] = score
-        quantitative["score"] = round(sum(num(value) or 0 for value in q_components.values()), 1)
-        dimensions = set(quantitative.get("available_dimension_names", quantitative.get("dimension_names", [])) or [])
-        if metrics.get("history_years", 0) >= 3:
-            dimensions.add("quality_value")
-        quantitative["available_dimension_names"] = sorted(dimensions)
-        quantitative["available_dimensions"] = max(int(quantitative.get("available_dimensions", 0)), len(dimensions))
-        total = quantitative["score"]
-        quantitative["signal"] = "긍정" if total >= 15 else "부정" if total <= -15 else "중립"
-
+        row["quantitative"] = {
+            "score": round((score - 50) * 0.6, 1),
+            "components": {"quality_value": round((score - 50) * 0.6, 1)},
+            "quality_value_score": score,
+            "available_dimensions": 1 if metrics.get("history_years", 0) >= 3 else 0,
+            "available_dimension_names": ["quality_value"] if metrics.get("history_years", 0) >= 3 else [],
+            "signal": "긍정" if score >= 65 else "부정" if score < 40 else "중립",
+        }
     payload.setdefault("source_status", {})["quality_value_analysis"] = {
         "status": "ok" if completed else "partial",
         "completed_stocks": completed,
         "cached_stocks": cached,
         "requested_stocks": len(stocks),
-        "source": "NAVER Finance Financial Summary + OpenDART 주간 영업현금흐름 캐시",
-        "daily_http_policy": "종목별 Financial Summary 논리 페이지 1개만 수집",
+        "source": "NAVER Finance Financial Summary",
+        "excluded_sources": ["OpenDART", "KRX OPEN API", "FnGuide"],
         "updated_at": datetime.now(KST).isoformat(),
     }
     payload.setdefault("methodology", {})["quality_value_policy"] = (
-        "일일 EPS·ROE·부채비율·예상 EPS는 네이버 Financial Summary 한 화면에서 수집하고, "
-        "영업활동현금흐름은 직전 OpenDART 주간 검증값을 재사용합니다."
+        "네이버 Financial Summary의 EPS·영업이익·ROE·부채비율·예상 EPS를 최근 3~5년 추세와 업종 중앙값으로 비교합니다."
     )
     payload["updated_at"] = datetime.now(KST).isoformat()
     DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Financial Summary screening complete: live={completed}, cached={cached}, total={len(stocks)}")
+    print(f"NAVER Financial Summary analysis complete: live={completed}, cached={cached}, total={len(stocks)}")
 
 
 if __name__ == "__main__":
