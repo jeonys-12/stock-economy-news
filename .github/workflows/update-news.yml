@@ -100,7 +100,7 @@ jobs:
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: python scripts/repair_stock_factors_no_krx_login.py
 
-      - name: Enrich official and public market data
+      - name: Enrich official market, public market and ROE data
         continue-on-error: true
         env:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
@@ -108,6 +108,7 @@ jobs:
         run: |
           python scripts/collect_krx_official.py
           python scripts/collect_public_market_fallback.py
+          python scripts/enrich_roe.py
 
       - name: Sanitize collected data
         env:

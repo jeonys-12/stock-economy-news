@@ -13,7 +13,7 @@ MIN_DIMENSIONS = 2
 MAX_CANDIDATES = 5
 
 COMPONENT_LABELS = {
-    "financials": "재무",
+    "financials": "재무·ROE",
     "consensus": "컨센서스",
     "valuation": "밸류에이션",
     "flow": "수급",
@@ -62,19 +62,22 @@ def component_summary(quantitative: dict[str, Any], positive: bool) -> str:
 def candidate_payload(name: str, row: dict[str, Any], items: list[dict[str, Any]], positive: bool) -> dict[str, Any]:
     quantitative = row.get("quantitative", {}) if isinstance(row.get("quantitative"), dict) else {}
     market = row.get("market", {}) if isinstance(row.get("market"), dict) else {}
+    financials = row.get("financials", {}) if isinstance(row.get("financials"), dict) else {}
     evidence = direct_evidence(name, items)
     score = numeric(quantitative.get("score"))
     dimensions = int(numeric(quantitative.get("available_dimensions")))
     basis = "뉴스+정량" if evidence else "정량 중심"
     direction = "긍정" if positive else "부정"
+    roe = financials.get("roe_pct")
+    roe_text = f", 연환산 ROE {numeric(roe):g}%" if roe is not None else ""
     reason = (
-        f"{basis} 후보입니다. 종합점수 {score:+g}점, 유효 데이터 {dimensions}개 축이며 "
+        f"{basis} 후보입니다. 종합점수 {score:+g}점, 유효 데이터 {dimensions}개 축{roe_text}이며 "
         f"주요 {direction} 근거는 {component_summary(quantitative, positive)}입니다."
     )
     risk = (
-        "직접 연결 뉴스가 부족하므로 최신 공시와 업종 이슈를 추가 확인해야 합니다."
+        "직접 연결 뉴스가 부족하므로 최신 공시와 업종 이슈를 추가 확인해야 합니다. ROE는 최근 보고기간 순이익을 연환산한 값이므로 일회성 손익 여부도 확인해야 합니다."
         if not evidence
-        else "뉴스와 정량 신호가 단기간에 바뀔 수 있으므로 최신 수급과 공시를 재확인해야 합니다."
+        else "뉴스와 정량 신호가 단기간에 바뀔 수 있으며 ROE는 연환산 추정치이므로 최신 수급·공시와 일회성 손익을 재확인해야 합니다."
     )
     valuation = market.get("valuation", {}) if isinstance(market.get("valuation"), dict) else {}
     return {
@@ -93,6 +96,7 @@ def candidate_payload(name: str, row: dict[str, Any], items: list[dict[str, Any]
             "return_20d_pct": market.get("return_20d_pct"),
             "per": valuation.get("per"),
             "pbr": valuation.get("pbr"),
+            "roe_pct": financials.get("roe_pct"),
         },
     }
 
@@ -154,6 +158,7 @@ def add_flexible_candidates(
         "minimum_dimensions": MIN_DIMENSIONS,
         "news_requirement": "직접 뉴스 우선, 직접 뉴스가 없어도 2개 이상 데이터 축과 점수 기준 충족 시 정량 중심 후보 허용",
         "candidate_limit": MAX_CANDIDATES,
+        "roe_policy": "OpenDART 최근 보고서 당기순이익을 연환산해 자본총계로 나눈 ROE를 재무점수와 후보 근거에 반영",
     })
     return normalized
 
@@ -167,12 +172,25 @@ def main() -> None:
             generate_ai_briefing.MAX_INPUT_ITEMS = 80
             print(f"Flexible AI watchlist loaded: {len(stocks)} stocks")
 
+    original_compact = generate_ai_briefing.compact_stock_data
     original_normalize = generate_ai_briefing.normalize_briefing
+
+    def compact_with_roe(stock_payload: dict[str, Any]) -> dict[str, Any]:
+        compact = original_compact(stock_payload)
+        source_stocks = stock_payload.get("stocks", {}) if isinstance(stock_payload.get("stocks"), dict) else {}
+        for name, data in compact.items():
+            source = source_stocks.get(name, {}) if isinstance(source_stocks.get(name), dict) else {}
+            financials = source.get("financials", {}) if isinstance(source.get("financials"), dict) else {}
+            data.setdefault("financials", {})["roe_pct"] = financials.get("roe_pct")
+            data["financials"]["roe_status"] = financials.get("roe_status")
+            data["financials"]["roe_formula"] = financials.get("roe_formula")
+        return compact
 
     def flexible_normalize(raw: dict[str, Any], items: list[dict[str, Any]], stock_data: dict[str, Any]) -> dict[str, Any]:
         normalized = original_normalize(raw, items, stock_data)
         return add_flexible_candidates(normalized, items, stock_data)
 
+    generate_ai_briefing.compact_stock_data = compact_with_roe
     generate_ai_briefing.normalize_briefing = flexible_normalize
     generate_ai_briefing.main()
 
