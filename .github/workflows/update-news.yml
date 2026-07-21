@@ -108,12 +108,11 @@ jobs:
           python scripts/collect_krx_official.py
           python scripts/collect_public_market_fast.py
 
-      - name: Daily quality and value screening from NAVER
+      - name: Daily quality and value screening from NAVER Financial Summary
         continue-on-error: true
         env:
-          QUALITY_ANALYSIS_MODE: daily
           QUALITY_ANALYSIS_WORKERS: "5"
-        run: python scripts/analyze_quality_value.py
+        run: python scripts/analyze_naver_financial_summary.py
 
       - name: Sanitize collected data
         env:
