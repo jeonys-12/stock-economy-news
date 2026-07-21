@@ -128,6 +128,9 @@ jobs:
           OPENAI_MODEL: gpt-5-mini
         run: python scripts/generate_expanded_ai_briefing.py
 
+      - name: Normalize investor flow fields
+        run: python scripts/normalize_investor_flow_fields.py
+
       - name: Final secret sanitization
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
