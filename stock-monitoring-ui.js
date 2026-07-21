@@ -38,8 +38,8 @@ function stockDiagnosticRow(name,row){
   if(marketStatus.key!=='ok')problems.push(`가격: ${diagnosticReason(market,'가격 데이터를 수집하지 못했습니다.')}`);
   if(dartStatus.key!=='ok')problems.push(`OpenDART: ${diagnosticReason(financials,'재무 데이터를 수집하지 못했습니다.')}`);
   if(consensusStatus.key!=='ok')problems.push(`FnGuide: ${diagnosticReason(consensus,'컨센서스 데이터를 수집하지 못했습니다.')}`);
-  if(!valuationOk)problems.push('밸류에이션: PER·PBR 등 유효 값이 없습니다.');
-  if(!flowOk)problems.push('수급: 외국인·기관 순매수 유효 값이 없습니다.');
+  if(!valuationOk)problems.push(`밸류에이션: ${diagnosticReason(valuation,'PER·PBR 등 유효 값이 없습니다.')}`);
+  if(!flowOk)problems.push(`수급: ${diagnosticReason(flow,'외국인·기관 순매수 유효 값이 없습니다.')}`);
   if(dimensions<2)problems.push(`추천조건: 유효 데이터 축이 ${dimensions}개로 최소 2개에 미달합니다.`);
   const overall=problems.length===0?'ok':marketStatus.key==='failed'||dartStatus.key==='failed'||consensusStatus.key==='failed'?'failed':'warning';
   return {name,row,market,financials,consensus,quantitative,valuation,flow,marketStatus,dartStatus,consensusStatus,valuationOk,flowOk,dimensions,score,problems,overall};
@@ -63,6 +63,7 @@ function renderGlobalDiagnostics(payload){
     ['OpenDART',status.opendart],
     ['FnGuide',status.fnguide],
     ['KRX 공식 API',status.krx_open_api],
+    ['PER·PBR·수급 보완',status.public_market_fallback],
     ['데이터 보정',status.data_quality_repair],
     ['종목 목록',status.stock_universe],
   ];
@@ -73,7 +74,9 @@ function renderGlobalDiagnostics(payload){
     if(info.status==='ok'||(name==='FnGuide'&&info.mode)){state='ok';label='정상';}
     else if(info.status==='failed'){state='failed';label='실패';}
     else if(name==='종목 목록'&&Number(info.total_stocks)>0){state='ok';label=`${info.total_stocks}개`;}
-    const reason=diagnosticReason(info,name==='FnGuide'?`정상 캐시 재사용 ${Number(info.cached_stocks_reused||0)}개`:'세부 상태 없음');
+    let fallback=name==='FnGuide'?`정상 캐시 재사용 ${Number(info.cached_stocks_reused||0)}개`:'세부 상태 없음';
+    if(name==='PER·PBR·수급 보완')fallback=`PER·PBR ${Number(info.valuation_fresh||0)}개, 수급 ${Number(info.investor_flow_fresh||0)}개 신규 수집`;
+    const reason=diagnosticReason(info,fallback);
     return `<article class="global-diagnostic-card"><div><strong>${diagnosticEscape(name)}</strong>${diagnosticBadge(state,label)}</div><p>${diagnosticEscape(reason)}</p></article>`;
   }).join('');
 }
@@ -102,6 +105,9 @@ function renderStockDiagnostics(){
     const overallLabel=item.overall==='ok'?'정상':item.overall==='failed'?'수집 실패':'일부 누락';
     const overallClass=item.overall==='warning'?'unavailable':item.overall;
     const problemMarkup=item.problems.length?`<ul>${item.problems.map(reason=>`<li>${diagnosticEscape(reason)}</li>`).join('')}</ul>`:'<p class="diagnostic-success">모든 필수 데이터 항목이 정상적으로 확보됐습니다.</p>';
+    const valuationSource=item.valuation.source?` · ${diagnosticEscape(item.valuation.source)}`:'';
+    const flowSource=item.flow.source?` · ${diagnosticEscape(item.flow.source)}`:'';
+    const flowUnit=item.flow.unit==='shares'?'주':'원';
     return `<details class="stock-diagnostic-item ${item.overall}" ${item.overall==='failed'?'open':''}>
       <summary>
         <div class="diagnostic-stock-name"><strong>${diagnosticEscape(item.name)}</strong><span>${code} · ${sector}</span></div>
@@ -116,8 +122,8 @@ function renderStockDiagnostics(){
           <div><span>가격</span>${diagnosticBadge(item.marketStatus.key,item.marketStatus.label)}<small>${item.marketStatus.key==='ok'?`현재가 ${compactNumber(item.market.current_price,'원')} · 기준 ${diagnosticEscape(item.market.as_of||'-')}`:diagnosticEscape(diagnosticReason(item.market,'가격 수집 실패'))}</small></div>
           <div><span>OpenDART 재무</span>${diagnosticBadge(item.dartStatus.key,item.dartStatus.label)}<small>${item.dartStatus.key==='ok'?`${diagnosticEscape(item.financials.business_year||'')} ${diagnosticEscape(item.financials.report_name||'')} · 영업이익 증감 ${compactNumber(item.financials.operating_profit_growth_pct,'%')}`:diagnosticEscape(diagnosticReason(item.financials,'재무 수집 실패'))}</small></div>
           <div><span>FnGuide 컨센서스</span>${diagnosticBadge(item.consensusStatus.key,item.consensusStatus.label)}<small>${item.consensusStatus.key==='ok'?`목표주가 ${compactNumber(item.consensus.target_price,'원')} · 의견 ${diagnosticEscape(item.consensus.opinion||'-')}`:diagnosticEscape(diagnosticReason(item.consensus,'컨센서스 수집 실패'))}</small></div>
-          <div><span>PER·PBR</span>${diagnosticBadge(item.valuationOk?'ok':'unavailable',item.valuationOk?'정상':'자료 없음')}<small>PER ${compactNumber(item.valuation.per,'배')} · PBR ${compactNumber(item.valuation.pbr,'배')}</small></div>
-          <div><span>외국인·기관 수급</span>${diagnosticBadge(item.flowOk?'ok':'unavailable',item.flowOk?'정상':'자료 없음')}<small>외국인 ${compactNumber(item.flow.foreign_net_buy_10d_krw,'원')} · 기관 ${compactNumber(item.flow.institution_net_buy_10d_krw,'원')}</small></div>
+          <div><span>PER·PBR</span>${diagnosticBadge(item.valuationOk?'ok':'unavailable',item.valuationOk?'정상':'자료 없음')}<small>PER ${compactNumber(item.valuation.per,'배')} · PBR ${compactNumber(item.valuation.pbr,'배')}${valuationSource}</small></div>
+          <div><span>외국인·기관 수급</span>${diagnosticBadge(item.flowOk?'ok':'unavailable',item.flowOk?'정상':'자료 없음')}<small>외국인 ${compactNumber(item.flow.foreign_net_buy_10d_krw,flowUnit)} · 기관 ${compactNumber(item.flow.institution_net_buy_10d_krw,flowUnit)}${flowSource}</small></div>
           <div><span>정량 추천 조건</span>${diagnosticBadge(item.dimensions>=2?'ok':'unavailable',item.dimensions>=2?'충족':'미충족')}<small>종합점수 ${compactNumber(item.score)} · 유효 축 ${item.dimensions}개</small></div>
         </div>
         <div class="diagnostic-problems"><strong>문제점 및 수정 단서</strong>${problemMarkup}</div>
