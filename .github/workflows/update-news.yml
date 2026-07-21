@@ -11,9 +11,7 @@ on:
       - "index.html"
       - "style.css"
       - "section-navigation.css"
-      - "group-related-sidebar.css"
       - "app.js"
-      - "group-related-sidebar.js"
       - "multifactor-ui.js"
       - "multifactor-ui.css"
       - "stock-monitoring-ui.js"
@@ -81,48 +79,44 @@ jobs:
             echo '{}' > /tmp/stock_data_previous.json
           fi
 
-      - name: Collect news
+      - name: Collect and filter news
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
-        run: python scripts/collect_news.py
+        run: |
+          python scripts/collect_news.py
+          python scripts/filter_news_exclusions.py
 
-      - name: Exclude non-news pages
-        run: python scripts/filter_news_exclusions.py
-
-      - name: Collect fixed recommendation stock factors without KRX login
+      - name: Collect fixed recommendation stock factors
         continue-on-error: true
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
         run: python scripts/collect_expanded_stock_data.py
 
-      - name: Validate and repair factors without KRX login
+      - name: Repair factors without KRX login
         continue-on-error: true
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: python scripts/repair_stock_factors_no_krx_login.py
 
-      - name: Enrich with KRX official Open API
+      - name: Enrich official and public market data
         continue-on-error: true
         env:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
-        run: python scripts/collect_krx_official.py
-
-      - name: Fill PER PBR and investor flow without KRX login
-        continue-on-error: true
-        env:
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
-        run: python scripts/collect_public_market_fallback.py
+        run: |
+          python scripts/collect_krx_official.py
+          python scripts/collect_public_market_fallback.py
 
-      - name: Sanitize collected data before AI analysis
+      - name: Sanitize collected data
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/sanitize_outputs.py
 
-      - name: Generate OpenAI fixed-watchlist market briefing
+      - name: Generate OpenAI market briefing
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5-mini
@@ -152,7 +146,7 @@ jobs:
         run: |
           rm -rf public
           mkdir -p public/data
-          cp index.html style.css section-navigation.css group-related-sidebar.css app.js group-related-sidebar.js multifactor-ui.js multifactor-ui.css stock-monitoring-ui.js stock-monitoring-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
+          cp index.html style.css section-navigation.css app.js multifactor-ui.js multifactor-ui.css stock-monitoring-ui.js stock-monitoring-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
           cp data/news.json public/data/news.json
           if [ -f data/stock_data.json ]; then cp data/stock_data.json public/data/stock_data.json; fi
 
