@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T10:28:20.469659+09:00",
+  "updated_at": "2026-07-21T10:39:42.235610+09:00",
   "source_status": {
     "opendart": {
       "configured": true,
@@ -14,7 +14,7 @@
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-21T10:23:39.602488+09:00",
+      "updated_at": "2026-07-21T10:34:31.380655+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -29,13 +29,13 @@
       "status": "disabled",
       "reason": "KRX_ID·KRX_PW를 사용하는 로그인 기반 수집을 사용하지 않습니다.",
       "replacement": "KRX_API_KEY 기반 collect_krx_official.py",
-      "updated_at": "2026-07-21T10:26:06.604164+09:00"
+      "updated_at": "2026-07-21T10:37:12.745303+09:00"
     },
     "data_quality_repair": {
       "status": "ok",
       "fnguide_valid_cache_reused": 0,
       "errors": [],
-      "updated_at": "2026-07-21T10:27:33.538130+09:00"
+      "updated_at": "2026-07-21T10:38:51.393870+09:00"
     },
     "krx_open_api": {
       "configured": true,
@@ -91,7 +91,7 @@
           "market": "KOSDAQ"
         }
       ],
-      "updated_at": "2026-07-21T10:27:51.096344+09:00"
+      "updated_at": "2026-07-21T10:39:10.649375+09:00"
     },
     "public_market_fallback": {
       "status": "ok",
@@ -103,7 +103,7 @@
       "investor_flow_cached": 0,
       "requested_stocks": 32,
       "errors": [],
-      "updated_at": "2026-07-21T10:28:20.469619+09:00"
+      "updated_at": "2026-07-21T10:39:42.235577+09:00"
     }
   },
   "methodology": {
@@ -123,12 +123,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 20.61,
-          "pbr": 3.55,
+          "per": 20.89,
+          "pbr": 3.59,
           "eps": 12372.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:53.072339+09:00"
+          "fetched_at": "2026-07-21T10:39:13.006959+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -1815801,
@@ -137,7 +137,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:53.956137+09:00"
+          "fetched_at": "2026-07-21T10:39:13.944382+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -154,7 +154,7 @@
           "trading_value_krw": 6614607186368,
           "market_cap_krw": 1426491980352000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096155+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649145+09:00"
         }
       },
       "financials": {
@@ -163,7 +163,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:18.097103+09:00",
+        "fetched_at": "2026-07-21T10:37:25.634098+09:00",
         "assets": 633339604000000.0,
         "assets_growth_pct": 11.71,
         "equity": 486635976000000.0,
@@ -211,12 +211,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 17.49,
-          "pbr": 7.81,
+          "per": 17.75,
+          "pbr": 7.92,
           "eps": 103521.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:54.432992+09:00"
+          "fetched_at": "2026-07-21T10:39:14.446143+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -1258981,
@@ -225,7 +225,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:54.678760+09:00"
+          "fetched_at": "2026-07-21T10:39:14.761818+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -242,7 +242,7 @@
           "trading_value_krw": 10575264659754,
           "market_cap_krw": 1257206971860000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096178+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649174+09:00"
         }
       },
       "financials": {
@@ -251,7 +251,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:20.531782+09:00",
+        "fetched_at": "2026-07-21T10:37:28.874340+09:00",
         "assets": 222828744000000.0,
         "assets_growth_pct": 26.53,
         "equity": 164379799000000.0,
@@ -299,12 +299,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 120.51,
-          "pbr": 33.56,
+          "per": 121.59,
+          "pbr": 33.86,
           "eps": 1867.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:55.214408+09:00"
+          "fetched_at": "2026-07-21T10:39:15.325496+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -143273,
@@ -313,7 +313,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:55.516745+09:00"
+          "fetched_at": "2026-07-21T10:39:15.635283+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -330,7 +330,7 @@
           "trading_value_krw": 178991871250,
           "market_cap_krw": 21159308400000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096186+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649183+09:00"
         }
       },
       "financials": {
@@ -339,7 +339,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:22.864282+09:00",
+        "fetched_at": "2026-07-21T10:37:31.540469+09:00",
         "assets": 742689287334.0,
         "assets_growth_pct": -8.69,
         "equity": 635869571938.0,
@@ -389,12 +389,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 120.62,
-          "pbr": 9.83,
+          "per": 121.38,
+          "pbr": 9.89,
           "eps": 10587.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:56.063357+09:00"
+          "fetched_at": "2026-07-21T10:39:16.215898+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -600656,
@@ -403,7 +403,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:56.382419+09:00"
+          "fetched_at": "2026-07-21T10:39:16.539031+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -420,7 +420,7 @@
           "trading_value_krw": 1241663354000,
           "market_cap_krw": 95234462400000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096192+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649190+09:00"
         }
       },
       "financials": {
@@ -429,7 +429,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:25.556238+09:00",
+        "fetched_at": "2026-07-21T10:37:34.041125+09:00",
         "operating_profit": 280572751176.0,
         "operating_profit_growth_pct": 39.9,
         "net_income": 252687583556.0,
@@ -472,12 +472,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 81.98,
-          "pbr": 13.25,
+          "per": 82.34,
+          "pbr": 13.31,
           "eps": 2248.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:56.967923+09:00"
+          "fetched_at": "2026-07-21T10:39:17.160709+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -485328,
@@ -486,7 +486,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:57.314446+09:00"
+          "fetched_at": "2026-07-21T10:39:17.524408+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -503,7 +503,7 @@
           "trading_value_krw": 119018668550,
           "market_cap_krw": 26895000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096198+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649196+09:00"
         }
       },
       "financials": {
@@ -512,7 +512,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:27.993455+09:00",
+        "fetched_at": "2026-07-21T10:37:36.696238+09:00",
         "assets": 5361875565139.0,
         "assets_growth_pct": 8.17,
         "equity": 2134169034859.0,
@@ -558,12 +558,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 12.08,
+          "per": 12.13,
           "pbr": 0.86,
           "eps": 32437.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:57.862161+09:00"
+          "fetched_at": "2026-07-21T10:39:18.081143+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 225923,
@@ -572,7 +572,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:58.158978+09:00"
+          "fetched_at": "2026-07-21T10:39:18.413311+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -589,7 +589,7 @@
           "trading_value_krw": 363118473500,
           "market_cap_krw": 81698348634000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096203+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649202+09:00"
         }
       },
       "financials": {
@@ -598,7 +598,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:30.456261+09:00",
+        "fetched_at": "2026-07-21T10:37:39.375023+09:00",
         "assets": 383834207000000.0,
         "assets_growth_pct": 4.06,
         "equity": 132226735000000.0,
@@ -646,12 +646,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 7.92,
+          "per": 7.96,
           "pbr": 0.89,
           "eps": 17772.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:58.716495+09:00"
+          "fetched_at": "2026-07-21T10:39:18.966517+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 1020072,
@@ -660,7 +660,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:59.040903+09:00"
+          "fetched_at": "2026-07-21T10:39:19.296547+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -677,7 +677,7 @@
           "trading_value_krw": 123353725200,
           "market_cap_krw": 54657819720000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096208+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649209+09:00"
         }
       },
       "financials": {
@@ -686,7 +686,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:32.654259+09:00",
+        "fetched_at": "2026-07-21T10:37:41.919602+09:00",
         "assets": 105359955000000.0,
         "assets_growth_pct": 6.45,
         "equity": 61638039000000.0,
@@ -736,12 +736,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 12.33,
-          "pbr": 0.83,
+          "per": 12.4,
+          "pbr": 0.84,
           "eps": 38292.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:27:59.570501+09:00"
+          "fetched_at": "2026-07-21T10:39:19.857740+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 17370,
@@ -750,7 +750,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:27:59.879544+09:00"
+          "fetched_at": "2026-07-21T10:39:20.181562+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -767,7 +767,7 @@
           "trading_value_krw": 150995685000,
           "market_cap_krw": 42871145467500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096214+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649215+09:00"
         }
       },
       "financials": {
@@ -776,7 +776,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:35.028026+09:00",
+        "fetched_at": "2026-07-21T10:37:44.435299+09:00",
         "assets": 73917161000000.0,
         "assets_growth_pct": 5.0,
         "equity": 50647933000000.0,
@@ -824,12 +824,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 28.36,
-          "pbr": 4.67,
+          "per": 28.52,
+          "pbr": 4.69,
           "eps": 31839.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:00.425312+09:00"
+          "fetched_at": "2026-07-21T10:39:21.112020+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -22789,
@@ -838,7 +838,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:00.732024+09:00"
+          "fetched_at": "2026-07-21T10:39:21.428692+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -855,7 +855,7 @@
           "trading_value_krw": 371739098174,
           "market_cap_krw": 45117975875000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096219+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649221+09:00"
         }
       },
       "financials": {
@@ -864,7 +864,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:37.395555+09:00",
+        "fetched_at": "2026-07-21T10:37:47.215730+09:00",
         "assets": 56659594923000.0,
         "assets_growth_pct": 5.02,
         "operating_profit": 638892160000.0,
@@ -909,7 +909,7 @@
           "eps": 20237.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:01.295826+09:00"
+          "fetched_at": "2026-07-21T10:39:21.992874+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -129555,
@@ -918,7 +918,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:01.599016+09:00"
+          "fetched_at": "2026-07-21T10:39:22.314257+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -935,7 +935,7 @@
           "trading_value_krw": 131235948500,
           "market_cap_krw": 47075109412500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096223+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649227+09:00"
         }
       },
       "financials": {
@@ -944,7 +944,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:39.655343+09:00",
+        "fetched_at": "2026-07-21T10:37:50.035013+09:00",
         "assets": 27577187358000.0,
         "assets_growth_pct": 5.41,
         "equity": 9713237014000.0,
@@ -992,11 +992,11 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "pbr": 3.32,
+          "pbr": 3.33,
           "eps": -6851.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:02.195073+09:00"
+          "fetched_at": "2026-07-21T10:39:22.869742+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -127778,
@@ -1005,7 +1005,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:02.494831+09:00"
+          "fetched_at": "2026-07-21T10:39:23.313936+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1022,7 +1022,7 @@
           "trading_value_krw": 100344521500,
           "market_cap_krw": 74295000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096228+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649233+09:00"
         }
       },
       "financials": {
@@ -1031,7 +1031,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:41.984245+09:00",
+        "fetched_at": "2026-07-21T10:37:52.694124+09:00",
         "assets": 71805610000000.0,
         "assets_growth_pct": 6.94,
         "equity": 29916304000000.0,
@@ -1077,12 +1077,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 29.83,
-          "pbr": 2.38,
+          "per": 29.97,
+          "pbr": 2.39,
           "eps": 20484.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:03.038470+09:00"
+          "fetched_at": "2026-07-21T10:39:23.872779+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -792097,
@@ -1091,7 +1091,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:03.520732+09:00"
+          "fetched_at": "2026-07-21T10:39:24.190417+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1108,7 +1108,7 @@
           "trading_value_krw": 118907353000,
           "market_cap_krw": 14247598414000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096233+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649240+09:00"
         }
       },
       "financials": {
@@ -1117,7 +1117,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:44.185650+09:00",
+        "fetched_at": "2026-07-21T10:37:55.386583+09:00",
         "assets": 11822058000000.0,
         "assets_growth_pct": -0.91,
         "equity": 6080881000000.0,
@@ -1169,7 +1169,7 @@
           "eps": -163.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:04.057501+09:00"
+          "fetched_at": "2026-07-21T10:39:24.758568+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 159566,
@@ -1178,7 +1178,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:04.345189+09:00"
+          "fetched_at": "2026-07-21T10:39:25.069943+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1195,7 +1195,7 @@
           "trading_value_krw": 43611413745,
           "market_cap_krw": 4940000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096239+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649246+09:00"
         }
       },
       "financials": {
@@ -1204,7 +1204,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:46.494425+09:00",
+        "fetched_at": "2026-07-21T10:37:58.020190+09:00",
         "assets": 27295656000000.0,
         "assets_growth_pct": 1.41,
         "equity": 7773133000000.0,
@@ -1250,12 +1250,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 13.04,
-          "pbr": 2.06,
+          "per": 13.16,
+          "pbr": 2.08,
           "eps": 4764.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:04.881548+09:00"
+          "fetched_at": "2026-07-21T10:39:25.616511+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 39834,
@@ -1264,7 +1264,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:05.170208+09:00"
+          "fetched_at": "2026-07-21T10:39:25.923196+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1281,7 +1281,7 @@
           "trading_value_krw": 48705670150,
           "market_cap_krw": 5987551586400,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096244+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649252+09:00"
         }
       },
       "financials": {
@@ -1290,7 +1290,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:48.962545+09:00",
+        "fetched_at": "2026-07-21T10:38:00.832847+09:00",
         "assets": 4784000547000.0,
         "assets_growth_pct": -9.48,
         "equity": 2932555794000.0,
@@ -1336,11 +1336,11 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "pbr": 0.82,
+          "pbr": 0.81,
           "eps": -13182.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:05.948368+09:00"
+          "fetched_at": "2026-07-21T10:39:26.489287+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 2369776,
@@ -1349,7 +1349,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:06.256924+09:00"
+          "fetched_at": "2026-07-21T10:39:26.804939+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1366,7 +1366,7 @@
           "trading_value_krw": 96733749100,
           "market_cap_krw": 19762270917200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096249+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649258+09:00"
         }
       },
       "financials": {
@@ -1375,7 +1375,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:51.873260+09:00",
+        "fetched_at": "2026-07-21T10:38:03.582336+09:00",
         "assets": 110123705338000.0,
         "assets_growth_pct": 4.28,
         "equity": 38110038132000.0,
@@ -1423,12 +1423,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 81.89,
-          "pbr": 7.52,
+          "per": 82.3,
+          "pbr": 7.55,
           "eps": 729.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:06.715543+09:00"
+          "fetched_at": "2026-07-21T10:39:27.344832+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 901936,
@@ -1437,7 +1437,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:06.985986+09:00"
+          "fetched_at": "2026-07-21T10:39:27.654318+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1454,7 +1454,7 @@
           "trading_value_krw": 418009340700,
           "market_cap_krw": 1904345523600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096254+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649265+09:00"
         }
       },
       "financials": {
@@ -1463,7 +1463,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:54.932588+09:00",
+        "fetched_at": "2026-07-21T10:38:06.225245+09:00",
         "assets": 1405235645262.0,
         "assets_growth_pct": 6.69,
         "equity": 270392016423.0,
@@ -1513,11 +1513,11 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "pbr": 2.93,
+          "pbr": 2.92,
           "eps": -165.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:07.583279+09:00"
+          "fetched_at": "2026-07-21T10:39:28.251663+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -152931,
@@ -1526,7 +1526,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:07.888927+09:00"
+          "fetched_at": "2026-07-21T10:39:28.572648+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1543,7 +1543,7 @@
           "trading_value_krw": 33826220650,
           "market_cap_krw": 12167842896000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096259+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649271+09:00"
         }
       },
       "financials": {
@@ -1552,7 +1552,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:26:57.430793+09:00",
+        "fetched_at": "2026-07-21T10:38:08.784057+09:00",
         "assets": 9520080359594.0,
         "assets_growth_pct": 4.11,
         "equity": 4617557017891.0,
@@ -1602,12 +1602,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 16.55,
+          "per": 16.56,
           "pbr": 0.97,
           "eps": 11521.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:08.359453+09:00"
+          "fetched_at": "2026-07-21T10:39:29.049486+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -136562,
@@ -1616,7 +1616,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:08.675572+09:00"
+          "fetched_at": "2026-07-21T10:39:29.359896+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1633,7 +1633,7 @@
           "trading_value_krw": 117168113650,
           "market_cap_krw": 29175934587800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096264+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649276+09:00"
         }
       },
       "financials": {
@@ -1642,7 +1642,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:00.038332+09:00",
+        "fetched_at": "2026-07-21T10:38:11.310625+09:00",
         "assets": 44914004920132.0,
         "assets_growth_pct": 9.32,
         "equity": 30930035783908.0,
@@ -1690,12 +1690,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 31.59,
+          "per": 31.64,
           "pbr": 1.35,
           "eps": 1111.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:09.223262+09:00"
+          "fetched_at": "2026-07-21T10:39:29.924994+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 877500,
@@ -1704,7 +1704,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:09.519373+09:00"
+          "fetched_at": "2026-07-21T10:39:30.542117+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1721,7 +1721,7 @@
           "trading_value_krw": 65665702975,
           "market_cap_krw": 15526486503500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096269+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649282+09:00"
         }
       },
       "financials": {
@@ -1730,7 +1730,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:02.416700+09:00",
+        "fetched_at": "2026-07-21T10:38:14.014760+09:00",
         "assets": 28802759972472.0,
         "assets_growth_pct": 3.67,
         "equity": 15420486660552.0,
@@ -1780,12 +1780,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 24.18,
+          "per": 24.31,
           "pbr": 1.13,
           "eps": 3792.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:10.056876+09:00"
+          "fetched_at": "2026-07-21T10:39:31.108609+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 21735,
@@ -1794,7 +1794,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:10.350248+09:00"
+          "fetched_at": "2026-07-21T10:39:31.436982+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1811,7 +1811,7 @@
           "trading_value_krw": 54452722900,
           "market_cap_krw": 10133374615000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096279+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649296+09:00"
         }
       },
       "financials": {
@@ -1820,7 +1820,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:04.892719+09:00",
+        "fetched_at": "2026-07-21T10:38:17.189638+09:00",
         "assets": 28405874000000.0,
         "assets_growth_pct": 1.06,
         "equity": 11028599000000.0,
@@ -1868,12 +1868,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 72.63,
-          "pbr": 2.32,
+          "per": 72.39,
+          "pbr": 2.31,
           "eps": 844.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:10.896339+09:00"
+          "fetched_at": "2026-07-21T10:39:31.996653+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -42741,
@@ -1882,7 +1882,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:11.198083+09:00"
+          "fetched_at": "2026-07-21T10:39:32.318724+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1899,7 +1899,7 @@
           "trading_value_krw": 43127110900,
           "market_cap_krw": 11542974667900,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096284+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649302+09:00"
         }
       },
       "financials": {
@@ -1908,7 +1908,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:07.251681+09:00",
+        "fetched_at": "2026-07-21T10:38:20.454378+09:00",
         "assets": 10820663576719.0,
         "assets_growth_pct": 4.78,
         "equity": 5042789965122.0,
@@ -1958,12 +1958,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 16.36,
+          "per": 16.38,
           "pbr": 3.67,
           "eps": 4994.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:11.656111+09:00"
+          "fetched_at": "2026-07-21T10:39:32.801805+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 143331,
@@ -1972,7 +1972,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:11.962512+09:00"
+          "fetched_at": "2026-07-21T10:39:33.142796+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -1989,7 +1989,7 @@
           "trading_value_krw": 180604667200,
           "market_cap_krw": 25493594380800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096289+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649308+09:00"
         }
       },
       "financials": {
@@ -1998,7 +1998,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:09.541463+09:00",
+        "fetched_at": "2026-07-21T10:38:23.137008+09:00",
         "assets": 20796547457384.0,
         "assets_growth_pct": 3.26,
         "equity": 6825972776314.0,
@@ -2046,12 +2046,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 17.5,
-          "pbr": 5.94,
+          "per": 17.54,
+          "pbr": 5.96,
           "eps": 2483.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:12.521866+09:00"
+          "fetched_at": "2026-07-21T10:39:33.780352+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 817288,
@@ -2060,7 +2060,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:12.887818+09:00"
+          "fetched_at": "2026-07-21T10:39:34.090711+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2077,7 +2077,7 @@
           "trading_value_krw": 27722992325,
           "market_cap_krw": 3538158820800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096294+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649314+09:00"
         }
       },
       "financials": {
@@ -2086,7 +2086,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:11.853188+09:00",
+        "fetched_at": "2026-07-21T10:38:25.683785+09:00",
         "assets": 1910569648022.0,
         "assets_growth_pct": 12.67,
         "equity": 610032817122.0,
@@ -2136,12 +2136,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 270.12,
-          "pbr": 5.19,
+          "per": 270.54,
+          "pbr": 5.2,
           "eps": 241.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:13.401139+09:00"
+          "fetched_at": "2026-07-21T10:39:34.632092+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 500998,
@@ -2150,7 +2150,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:13.682741+09:00"
+          "fetched_at": "2026-07-21T10:39:34.953839+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2167,7 +2167,7 @@
           "trading_value_krw": 184830797500,
           "market_cap_krw": 41508362260800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096299+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649320+09:00"
         }
       },
       "financials": {
@@ -2176,7 +2176,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:14.496814+09:00",
+        "fetched_at": "2026-07-21T10:38:28.449706+09:00",
         "assets": 28695055000000.0,
         "assets_growth_pct": 4.3,
         "equity": 12443616000000.0,
@@ -2224,12 +2224,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 44.71,
-          "pbr": 8.03,
+          "per": 45.13,
+          "pbr": 8.11,
           "eps": 30779.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:14.232223+09:00"
+          "fetched_at": "2026-07-21T10:39:35.510571+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 29898,
@@ -2238,7 +2238,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:14.545678+09:00"
+          "fetched_at": "2026-07-21T10:39:35.843584+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2255,7 +2255,7 @@
           "trading_value_krw": 55207582500,
           "market_cap_krw": 62261329095000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096304+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649326+09:00"
         }
       },
       "financials": {
@@ -2264,7 +2264,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:16.670373+09:00",
+        "fetched_at": "2026-07-21T10:38:31.265966+09:00",
         "assets": 11994999582438.0,
         "assets_growth_pct": 8.45,
         "equity": 7922835735735.0,
@@ -2314,12 +2314,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 33.18,
+          "per": 33.26,
           "pbr": 2.26,
           "eps": 5226.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:15.016421+09:00"
+          "fetched_at": "2026-07-21T10:39:36.386988+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 557580,
@@ -2328,7 +2328,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:15.335614+09:00"
+          "fetched_at": "2026-07-21T10:39:36.691073+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2345,7 +2345,7 @@
           "trading_value_krw": 81697537050,
           "market_cap_krw": 40138769655600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096309+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649332+09:00"
         }
       },
       "financials": {
@@ -2354,7 +2354,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:19.039519+09:00",
+        "fetched_at": "2026-07-21T10:38:33.960771+09:00",
         "assets": 23156645428216.0,
         "assets_growth_pct": 3.68,
         "equity": 17814382031809.0,
@@ -2402,12 +2402,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 110.77,
-          "pbr": 28.63,
+          "per": 111.59,
+          "pbr": 28.84,
           "eps": 2415.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:15.866564+09:00"
+          "fetched_at": "2026-07-21T10:39:37.254001+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -253845,
@@ -2416,7 +2416,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:16.170585+09:00"
+          "fetched_at": "2026-07-21T10:39:37.584554+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2433,7 +2433,7 @@
           "trading_value_krw": 108082192000,
           "market_cap_krw": 14441519438500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096314+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649338+09:00"
         }
       },
       "financials": {
@@ -2442,7 +2442,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:21.384447+09:00",
+        "fetched_at": "2026-07-21T10:38:36.361406+09:00",
         "assets": 729469655232.0,
         "assets_growth_pct": 4.4,
         "equity": 512858119587.0,
@@ -2492,11 +2492,11 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "pbr": 21.48,
+          "pbr": 21.51,
           "eps": -439.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:16.714091+09:00"
+          "fetched_at": "2026-07-21T10:39:38.061248+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -160650,
@@ -2505,7 +2505,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:16.999813+09:00"
+          "fetched_at": "2026-07-21T10:39:38.378289+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2522,7 +2522,7 @@
           "trading_value_krw": 14668479150,
           "market_cap_krw": 3930319902600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096319+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649344+09:00"
         }
       },
       "financials": {
@@ -2531,7 +2531,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:23.702450+09:00",
+        "fetched_at": "2026-07-21T10:38:38.906187+09:00",
         "assets": 298130275703.0,
         "assets_growth_pct": 6.12,
         "equity": 183343287401.0,
@@ -2581,12 +2581,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 9.12,
+          "per": 9.14,
           "pbr": 0.79,
           "eps": 14513.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:17.522578+09:00"
+          "fetched_at": "2026-07-21T10:39:38.991132+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 968883,
@@ -2595,7 +2595,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:17.834300+09:00"
+          "fetched_at": "2026-07-21T10:39:39.304592+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2612,7 +2612,7 @@
           "trading_value_krw": 166092956750,
           "market_cap_krw": 36600657583200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096324+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649350+09:00"
         }
       },
       "financials": {
@@ -2621,7 +2621,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:26.222325+09:00",
+        "fetched_at": "2026-07-21T10:38:41.856860+09:00",
         "assets": 685367577000000.0,
         "assets_growth_pct": 1.6,
         "equity": 46442152000000.0,
@@ -2667,12 +2667,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 7.25,
+          "per": 7.29,
           "pbr": 0.59,
           "eps": 4216.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:18.372902+09:00"
+          "fetched_at": "2026-07-21T10:39:39.846668+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 1217275,
@@ -2681,7 +2681,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:18.684798+09:00"
+          "fetched_at": "2026-07-21T10:39:40.278346+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2698,7 +2698,7 @@
           "trading_value_krw": 64548249975,
           "market_cap_krw": 22243139785100,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096329+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649356+09:00"
         }
       },
       "financials": {
@@ -2707,7 +2707,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:28.821697+09:00",
+        "fetched_at": "2026-07-21T10:38:46.125750+09:00",
         "assets": 612585300000000.0,
         "assets_growth_pct": 1.85,
         "equity": 39906308000000.0,
@@ -2753,12 +2753,12 @@
       "market": {
         "status": "ok",
         "valuation": {
-          "per": 33.53,
+          "per": 33.6,
           "pbr": 0.45,
           "eps": 762.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:19.198868+09:00"
+          "fetched_at": "2026-07-21T10:39:40.844668+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": 1335341,
@@ -2767,7 +2767,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:19.489441+09:00"
+          "fetched_at": "2026-07-21T10:39:41.149848+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2784,7 +2784,7 @@
           "trading_value_krw": 27837075625,
           "market_cap_krw": 2229397814500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096334+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649362+09:00"
         }
       },
       "financials": {
@@ -2793,7 +2793,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:31.157368+09:00",
+        "fetched_at": "2026-07-21T10:38:48.830498+09:00",
         "assets": 18541824000000.0,
         "assets_growth_pct": 0.44,
         "equity": 5597238000000.0,
@@ -2847,7 +2847,7 @@
           "eps": -1098.0,
           "status": "ok",
           "source": "NAVER Finance 공개 시세 페이지",
-          "fetched_at": "2026-07-21T10:28:20.017889+09:00"
+          "fetched_at": "2026-07-21T10:39:41.760986+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_krw": -1236,
@@ -2856,7 +2856,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T10:28:20.319429+09:00"
+          "fetched_at": "2026-07-21T10:39:42.085370+09:00"
         },
         "source": "KRX OPEN API",
         "login_based_collection_disabled": true,
@@ -2873,7 +2873,7 @@
           "trading_value_krw": 848238050,
           "market_cap_krw": 291000891500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:27:51.096339+09:00"
+          "fetched_at": "2026-07-21T10:39:10.649368+09:00"
         }
       },
       "financials": {
@@ -2882,7 +2882,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:27:33.537894+09:00",
+        "fetched_at": "2026-07-21T10:38:51.393626+09:00",
         "assets": 2371864000000.0,
         "assets_growth_pct": 9.3,
         "equity": 873799000000.0,
@@ -2928,7 +2928,7 @@
   "universe": {
     "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
     "mode": "fixed_recommendation_watchlist",
-    "updated_at": "2026-07-21T10:26:06.604178+09:00",
+    "updated_at": "2026-07-21T10:37:12.745313+09:00",
     "stock_count": 32,
     "stocks": [
       {
