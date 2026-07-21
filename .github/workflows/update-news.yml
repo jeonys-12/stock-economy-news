@@ -81,7 +81,7 @@ jobs:
       - name: Analyze NAVER main page Financial Summary
         env:
           QUALITY_ANALYSIS_WORKERS: "5"
-        run: python scripts/analyze_naver_financial_summary.py
+        run: python scripts/analyze_naver_financial_summary_flexible.py
 
       - name: Validate Kia required Financial Summary metrics
         run: python scripts/validate_naver_financial_summary.py
