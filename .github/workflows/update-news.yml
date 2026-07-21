@@ -25,7 +25,6 @@ on:
       - "scripts/**"
       - "requirements.txt"
       - ".github/workflows/update-news.yml"
-      - ".github/workflows/verify-financials-weekly.yml"
 
 permissions:
   contents: write
@@ -37,12 +36,10 @@ concurrency:
 jobs:
   collect-and-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     env:
-      STOCK_COLLECT_WORKERS: "6"
       PUBLIC_MARKET_WORKERS: "6"
       QUALITY_ANALYSIS_WORKERS: "5"
-      SKIP_DART_DAILY: "1"
 
     steps:
       - name: Checkout repository
@@ -60,25 +57,7 @@ jobs:
       - name: Install dependencies
         run: pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Register secret masks and verify configuration
-        env:
-          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
-          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          for value in "$OPENDART_API_KEY" "$KRX_API_KEY" "$OPENAI_API_KEY"; do
-            if [ -n "$value" ]; then echo "::add-mask::$value"; fi
-          done
-          python - <<'PY'
-          import os
-          required = ("OPENDART_API_KEY", "KRX_API_KEY", "OPENAI_API_KEY")
-          missing = [name for name in required if not os.getenv(name, "").strip()]
-          if missing:
-              raise SystemExit("Missing GitHub Secrets: " + ", ".join(missing))
-          print("Required API secrets are configured and masked")
-          PY
-
-      - name: Preserve previous stock factor cache
+      - name: Preserve previous stock cache
         run: |
           if [ -f data/stock_data.json ]; then
             cp data/stock_data.json /tmp/stock_data_previous.json
@@ -87,53 +66,37 @@ jobs:
           fi
 
       - name: Collect and filter news
-        env:
-          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
         run: |
           python scripts/collect_news.py
           python scripts/filter_news_exclusions.py
 
-      - name: Collect stock screening data in parallel
-        continue-on-error: true
-        env:
-          PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
+      - name: Prepare stock universe
         run: python scripts/collect_expanded_stock_data.py
 
-      - name: Enrich price, PER PBR and investor flow
+      - name: Collect NAVER price valuation target and investor flow
         continue-on-error: true
         env:
-          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
-        run: |
-          python scripts/collect_krx_official.py
-          python scripts/collect_public_market_fast.py
+        run: python scripts/collect_public_market_fast.py
 
-      - name: Daily quality and value screening from NAVER Financial Summary
+      - name: Analyze NAVER Financial Summary
         continue-on-error: true
         env:
           QUALITY_ANALYSIS_WORKERS: "5"
         run: python scripts/analyze_naver_financial_summary.py
 
-      - name: Sanitize collected data
-        env:
-          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
-          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python scripts/sanitize_outputs.py
+      - name: Normalize investor flow fields
+        run: python scripts/normalize_investor_flow_fields.py
 
       - name: Generate OpenAI market briefing
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5-mini
         run: python scripts/generate_expanded_ai_briefing.py
 
-      - name: Normalize investor flow fields
-        run: python scripts/normalize_investor_flow_fields.py
-
-      - name: Final secret sanitization
+      - name: Sanitize outputs
         env:
-          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
-          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/sanitize_outputs.py
 
@@ -145,7 +108,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/news.json data/stock_data.json
-            git commit -m "chore: update news and daily stock screening"
+            git commit -m "chore: update NAVER stock screening and news"
             git push origin main
           fi
 
