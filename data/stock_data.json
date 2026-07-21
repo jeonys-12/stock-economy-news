@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T15:39:18.121874+09:00",
+  "updated_at": "2026-07-21T15:50:54.196282+09:00",
   "source_status": {
     "opendart": {
       "configured": true,
@@ -9,13 +9,13 @@
     "fnguide": {
       "mode": "optional_html_with_cache",
       "cache_days": 7,
-      "cached_stocks_reused": 0,
+      "cached_stocks_reused": 9,
       "parallel_workers": 6
     },
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-21T15:37:58.030461+09:00",
+      "updated_at": "2026-07-21T15:44:54.922489+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -87,7 +87,7 @@
           "market": "KOSDAQ"
         }
       ],
-      "updated_at": "2026-07-21T15:39:08.724395+09:00"
+      "updated_at": "2026-07-21T15:50:40.528913+09:00"
     },
     "public_market_fallback": {
       "status": "ok",
@@ -103,7 +103,7 @@
       "requested_stocks": 32,
       "parallel_workers": 6,
       "errors": [],
-      "updated_at": "2026-07-21T15:39:18.121857+09:00"
+      "updated_at": "2026-07-21T15:50:54.196255+09:00"
     },
     "roe_analysis": {
       "status": "ok",
@@ -113,7 +113,7 @@
       "requested_stocks": 32,
       "method": "OpenDART 연환산 ROE 우선, 공개 종목 페이지 ROE 보조",
       "scoring": "ROE 20% 이상 +6, 12% 이상 +4, 8% 이상 +2, 음수 -6",
-      "updated_at": "2026-07-21T15:39:18.121868+09:00"
+      "updated_at": "2026-07-21T15:50:54.196273+09:00"
     }
   },
   "methodology": {
@@ -437,7 +437,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005930",
-          "fetched_at": "2026-07-21T15:39:10.633840+09:00",
+          "fetched_at": "2026-07-21T15:50:43.529839+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -447,7 +447,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:11.583141+09:00"
+          "fetched_at": "2026-07-21T15:50:44.542968+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 244000,
@@ -463,7 +463,7 @@
           "trading_value_krw": 6614607186368,
           "market_cap_krw": 1426491980352000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724217+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528703+09:00"
         }
       },
       "financials": {
@@ -472,7 +472,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:30.891206+09:00",
+        "fetched_at": "2026-07-21T15:49:04.959377+09:00",
         "assets": 633339604000000.0,
         "assets_growth_pct": 11.71,
         "equity": 486635976000000.0,
@@ -498,7 +498,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:33.463931+09:00"
+        "fetched_at": "2026-07-21T15:49:08.397443+09:00"
       },
       "quantitative": {
         "score": -9.0,
@@ -540,7 +540,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000660",
-          "fetched_at": "2026-07-21T15:39:10.648170+09:00",
+          "fetched_at": "2026-07-21T15:50:43.292544+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -550,7 +550,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:11.570315+09:00"
+          "fetched_at": "2026-07-21T15:50:44.559748+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 1764000,
@@ -566,7 +566,7 @@
           "trading_value_krw": 10575264659754,
           "market_cap_krw": 1257206971860000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724239+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528729+09:00"
         }
       },
       "financials": {
@@ -575,7 +575,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:30.931542+09:00",
+        "fetched_at": "2026-07-21T15:49:05.377785+09:00",
         "assets": 222828744000000.0,
         "assets_growth_pct": 26.53,
         "equity": 164379799000000.0,
@@ -601,7 +601,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:33.423482+09:00"
+        "fetched_at": "2026-07-21T15:49:08.290963+09:00"
       },
       "quantitative": {
         "score": -16.0,
@@ -643,7 +643,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042700",
-          "fetched_at": "2026-07-21T15:39:10.891149+09:00",
+          "fetched_at": "2026-07-21T15:50:43.649188+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -653,7 +653,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:11.589975+09:00"
+          "fetched_at": "2026-07-21T15:50:44.534587+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 222000,
@@ -669,7 +669,7 @@
           "trading_value_krw": 178991871250,
           "market_cap_krw": 21159308400000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724246+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528738+09:00"
         }
       },
       "financials": {
@@ -678,7 +678,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:30.911521+09:00",
+        "fetched_at": "2026-07-21T15:49:05.333588+09:00",
         "assets": 742689287334.0,
         "assets_growth_pct": -8.69,
         "equity": 635869571938.0,
@@ -706,7 +706,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:33.459647+09:00"
+        "fetched_at": "2026-07-21T15:49:08.417684+09:00"
       },
       "quantitative": {
         "score": -2.0,
@@ -747,7 +747,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=009150",
-          "fetched_at": "2026-07-21T15:39:10.852607+09:00",
+          "fetched_at": "2026-07-21T15:50:43.592072+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -757,7 +757,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:11.586571+09:00"
+          "fetched_at": "2026-07-21T15:50:44.523870+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 1275000,
@@ -773,7 +773,7 @@
           "trading_value_krw": 1241663354000,
           "market_cap_krw": 95234462400000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724251+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528744+09:00"
         }
       },
       "financials": {
@@ -782,7 +782,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:30.943643+09:00",
+        "fetched_at": "2026-07-21T15:49:04.804483+09:00",
         "operating_profit": 280572751176.0,
         "operating_profit_growth_pct": null,
         "net_income": 252687583556.0,
@@ -803,7 +803,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:33.434890+09:00"
+        "fetched_at": "2026-07-21T15:49:08.389076+09:00"
       },
       "quantitative": {
         "score": -7.0,
@@ -845,7 +845,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=010120",
-          "fetched_at": "2026-07-21T15:39:10.748892+09:00",
+          "fetched_at": "2026-07-21T15:50:43.538110+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -855,7 +855,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:11.578517+09:00"
+          "fetched_at": "2026-07-21T15:50:44.567176+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 179300,
@@ -871,7 +871,7 @@
           "trading_value_krw": 119018668550,
           "market_cap_krw": 26895000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724255+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528751+09:00"
         }
       },
       "financials": {
@@ -880,7 +880,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:31.199115+09:00",
+        "fetched_at": "2026-07-21T15:49:08.191665+09:00",
         "assets": 5361875565139.0,
         "assets_growth_pct": 8.17,
         "equity": 2134169034859.0,
@@ -904,7 +904,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:33.413824+09:00"
+        "fetched_at": "2026-07-21T15:49:11.457176+09:00"
       },
       "quantitative": {
         "score": -3.0,
@@ -946,7 +946,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005380",
-          "fetched_at": "2026-07-21T15:39:10.574107+09:00",
+          "fetched_at": "2026-07-21T15:50:43.662731+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -956,7 +956,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:11.574813+09:00"
+          "fetched_at": "2026-07-21T15:50:44.553135+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 399000,
@@ -972,7 +972,7 @@
           "trading_value_krw": 363118473500,
           "market_cap_krw": 81698348634000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724260+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528757+09:00"
         }
       },
       "financials": {
@@ -981,7 +981,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:31.170003+09:00",
+        "fetched_at": "2026-07-21T15:49:06.071483+09:00",
         "assets": 383834207000000.0,
         "assets_growth_pct": 4.06,
         "equity": 132226735000000.0,
@@ -1007,7 +1007,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:33.450344+09:00"
+        "fetched_at": "2026-07-21T15:49:09.216852+09:00"
       },
       "quantitative": {
         "score": 22.0,
@@ -1049,7 +1049,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000270",
-          "fetched_at": "2026-07-21T15:39:12.348036+09:00",
+          "fetched_at": "2026-07-21T15:50:45.591380+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1059,7 +1059,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:12.899436+09:00"
+          "fetched_at": "2026-07-21T15:50:46.562794+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 140000,
@@ -1075,7 +1075,7 @@
           "trading_value_krw": 123353725200,
           "market_cap_krw": 54657819720000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724268+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528763+09:00"
         }
       },
       "financials": {
@@ -1084,7 +1084,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:36.342779+09:00",
+        "fetched_at": "2026-07-21T15:49:15.800273+09:00",
         "assets": 105359955000000.0,
         "assets_growth_pct": 6.45,
         "equity": 61638039000000.0,
@@ -1112,7 +1112,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:38.783864+09:00"
+        "fetched_at": "2026-07-21T15:49:18.012086+09:00"
       },
       "quantitative": {
         "score": 26.0,
@@ -1153,7 +1153,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012330",
-          "fetched_at": "2026-07-21T15:39:12.437405+09:00",
+          "fetched_at": "2026-07-21T15:50:46.343254+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1163,7 +1163,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:12.883910+09:00"
+          "fetched_at": "2026-07-21T15:50:46.734479+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 472500,
@@ -1179,7 +1179,7 @@
           "trading_value_krw": 150995685000,
           "market_cap_krw": 42871145467500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724273+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528768+09:00"
         }
       },
       "financials": {
@@ -1188,7 +1188,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:36.421120+09:00",
+        "fetched_at": "2026-07-21T15:49:16.959726+09:00",
         "assets": 73917161000000.0,
         "assets_growth_pct": 5.0,
         "equity": 50647933000000.0,
@@ -1207,14 +1207,19 @@
         "roe_formula": "공개 페이지 제공 ROE"
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:38.722788+09:00"
+        "fetched_at": "2026-07-21T15:38:38.722788+09:00",
+        "cached_from": "2026-07-21T15:38:38.722788+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:38.722788+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012330&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": 23.0,
@@ -1256,7 +1261,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012450",
-          "fetched_at": "2026-07-21T15:39:12.582118+09:00",
+          "fetched_at": "2026-07-21T15:50:46.222275+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1266,7 +1271,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:12.904416+09:00"
+          "fetched_at": "2026-07-21T15:50:46.635620+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 875000,
@@ -1282,7 +1287,7 @@
           "trading_value_krw": 371739098174,
           "market_cap_krw": 45117975875000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724277+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528774+09:00"
         }
       },
       "financials": {
@@ -1291,7 +1296,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:36.623836+09:00",
+        "fetched_at": "2026-07-21T15:49:16.468507+09:00",
         "assets": 56659594923000.0,
         "assets_growth_pct": 5.02,
         "operating_profit": 638892160000.0,
@@ -1310,7 +1315,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:38.690153+09:00"
+        "fetched_at": "2026-07-21T15:49:23.980750+09:00"
       },
       "quantitative": {
         "score": 6.0,
@@ -1352,7 +1357,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=329180",
-          "fetched_at": "2026-07-21T15:39:12.761977+09:00",
+          "fetched_at": "2026-07-21T15:50:46.012030+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1362,7 +1367,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:13.080432+09:00"
+          "fetched_at": "2026-07-21T15:50:46.602372+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 448500,
@@ -1378,7 +1383,7 @@
           "trading_value_krw": 131235948500,
           "market_cap_krw": 47075109412500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724281+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528779+09:00"
         }
       },
       "financials": {
@@ -1387,7 +1392,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:36.372523+09:00",
+        "fetched_at": "2026-07-21T15:49:18.929092+09:00",
         "assets": 27577187358000.0,
         "assets_growth_pct": 5.41,
         "equity": 9713237014000.0,
@@ -1413,7 +1418,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:38.540799+09:00"
+        "fetched_at": "2026-07-21T15:49:23.909153+09:00"
       },
       "quantitative": {
         "score": 0.0,
@@ -1455,7 +1460,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=373220",
-          "fetched_at": "2026-07-21T15:39:12.553852+09:00",
+          "fetched_at": "2026-07-21T15:50:46.428237+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1465,7 +1470,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:12.915250+09:00"
+          "fetched_at": "2026-07-21T15:50:46.822529+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 317500,
@@ -1481,7 +1486,7 @@
           "trading_value_krw": 100344521500,
           "market_cap_krw": 74295000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724285+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528785+09:00"
         }
       },
       "financials": {
@@ -1490,7 +1495,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:36.322087+09:00",
+        "fetched_at": "2026-07-21T15:49:18.014638+09:00",
         "assets": 71805610000000.0,
         "assets_growth_pct": 6.94,
         "equity": 29916304000000.0,
@@ -1507,14 +1512,19 @@
         "roe_formula": "공개 페이지 제공 ROE"
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:38.793247+09:00"
+        "fetched_at": "2026-07-21T15:38:38.793247+09:00",
+        "cached_from": "2026-07-21T15:38:38.793247+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:38.793247+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": -16.0,
@@ -1556,7 +1566,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=011070",
-          "fetched_at": "2026-07-21T15:39:12.723488+09:00",
+          "fetched_at": "2026-07-21T15:50:45.871672+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1566,7 +1576,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:13.051261+09:00"
+          "fetched_at": "2026-07-21T15:50:46.613210+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 602000,
@@ -1582,7 +1592,7 @@
           "trading_value_krw": 118907353000,
           "market_cap_krw": 14247598414000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724292+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528791+09:00"
         }
       },
       "financials": {
@@ -1591,7 +1601,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:36.288608+09:00",
+        "fetched_at": "2026-07-21T15:49:18.483273+09:00",
         "assets": 11822058000000.0,
         "assets_growth_pct": -0.91,
         "equity": 6080881000000.0,
@@ -1617,7 +1627,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:38.722643+09:00"
+        "fetched_at": "2026-07-21T15:49:23.912611+09:00"
       },
       "quantitative": {
         "score": 7.0,
@@ -1659,7 +1669,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034220",
-          "fetched_at": "2026-07-21T15:39:13.940164+09:00",
+          "fetched_at": "2026-07-21T15:50:48.361563+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1669,7 +1679,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:14.248210+09:00"
+          "fetched_at": "2026-07-21T15:50:48.942451+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 9880,
@@ -1685,7 +1695,7 @@
           "trading_value_krw": 43611413745,
           "market_cap_krw": 4940000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724296+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528797+09:00"
         }
       },
       "financials": {
@@ -1694,7 +1704,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:40.990722+09:00",
+        "fetched_at": "2026-07-21T15:49:25.627597+09:00",
         "assets": 27295656000000.0,
         "assets_growth_pct": 1.41,
         "equity": 7773133000000.0,
@@ -1718,7 +1728,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:43.048143+09:00"
+        "fetched_at": "2026-07-21T15:49:28.759732+09:00"
       },
       "quantitative": {
         "score": -5.0,
@@ -1760,7 +1770,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=064400",
-          "fetched_at": "2026-07-21T15:39:14.006401+09:00",
+          "fetched_at": "2026-07-21T15:50:48.395600+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1770,7 +1780,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:14.311454+09:00"
+          "fetched_at": "2026-07-21T15:50:48.955955+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 61800,
@@ -1786,7 +1796,7 @@
           "trading_value_krw": 48705670150,
           "market_cap_krw": 5987551586400,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724301+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528802+09:00"
         }
       },
       "financials": {
@@ -1795,7 +1805,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:41.381995+09:00",
+        "fetched_at": "2026-07-21T15:49:31.728631+09:00",
         "assets": 4784000547000.0,
         "assets_growth_pct": -9.48,
         "equity": 2932555794000.0,
@@ -1819,7 +1829,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:43.033296+09:00"
+        "fetched_at": "2026-07-21T15:49:34.873142+09:00"
       },
       "quantitative": {
         "score": 21.0,
@@ -1861,7 +1871,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=096770",
-          "fetched_at": "2026-07-21T15:39:13.969735+09:00",
+          "fetched_at": "2026-07-21T15:50:48.297808+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1871,7 +1881,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:14.284254+09:00"
+          "fetched_at": "2026-07-21T15:50:48.920746+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 116900,
@@ -1887,7 +1897,7 @@
           "trading_value_krw": 96733749100,
           "market_cap_krw": 19762270917200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724304+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528807+09:00"
         }
       },
       "financials": {
@@ -1896,7 +1906,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:44.715234+09:00",
+        "fetched_at": "2026-07-21T15:49:36.209980+09:00",
         "assets": 110123705338000.0,
         "assets_growth_pct": 4.28,
         "equity": 38110038132000.0,
@@ -1922,7 +1932,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:47.016665+09:00"
+        "fetched_at": "2026-07-21T15:49:39.089396+09:00"
       },
       "quantitative": {
         "score": 0.0,
@@ -1964,7 +1974,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=475150",
-          "fetched_at": "2026-07-21T15:39:13.808069+09:00",
+          "fetched_at": "2026-07-21T15:50:48.415486+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -1974,7 +1984,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:14.213023+09:00"
+          "fetched_at": "2026-07-21T15:50:48.949042+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 55900,
@@ -1990,7 +2000,7 @@
           "trading_value_krw": 418009340700,
           "market_cap_krw": 1904345523600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724309+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528813+09:00"
         }
       },
       "financials": {
@@ -1999,7 +2009,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:41.213079+09:00",
+        "fetched_at": "2026-07-21T15:49:32.435571+09:00",
         "assets": 1405235645262.0,
         "assets_growth_pct": 6.69,
         "equity": 270392016423.0,
@@ -2020,14 +2030,19 @@
         "roe_annualization_factor": 4.0
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:42.926438+09:00"
+        "fetched_at": "2026-07-21T15:38:42.926438+09:00",
+        "cached_from": "2026-07-21T15:38:42.926438+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:42.926438+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A475150&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": -16.0,
@@ -2068,7 +2083,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=003670",
-          "fetched_at": "2026-07-21T15:39:14.189719+09:00",
+          "fetched_at": "2026-07-21T15:50:48.382438+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2078,7 +2093,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:14.532714+09:00"
+          "fetched_at": "2026-07-21T15:50:48.962067+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 136800,
@@ -2094,7 +2109,7 @@
           "trading_value_krw": 33826220650,
           "market_cap_krw": 12167842896000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724313+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528818+09:00"
         }
       },
       "financials": {
@@ -2103,7 +2118,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:44.126994+09:00",
+        "fetched_at": "2026-07-21T15:49:36.165988+09:00",
         "assets": 9520080359594.0,
         "assets_growth_pct": 4.11,
         "equity": 4617557017891.0,
@@ -2131,7 +2146,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:46.178882+09:00"
+        "fetched_at": "2026-07-21T15:49:39.154391+09:00"
       },
       "quantitative": {
         "score": -4.0,
@@ -2172,7 +2187,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035420",
-          "fetched_at": "2026-07-21T15:39:14.175651+09:00",
+          "fetched_at": "2026-07-21T15:50:48.301481+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2182,7 +2197,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:14.522786+09:00"
+          "fetched_at": "2026-07-21T15:50:48.760942+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 185900,
@@ -2198,7 +2213,7 @@
           "trading_value_krw": 117168113650,
           "market_cap_krw": 29175934587800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724316+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528823+09:00"
         }
       },
       "financials": {
@@ -2207,7 +2222,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:41.340448+09:00",
+        "fetched_at": "2026-07-21T15:49:39.883364+09:00",
         "assets": 44914004920132.0,
         "assets_growth_pct": 9.32,
         "equity": 30930035783908.0,
@@ -2233,7 +2248,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:43.009017+09:00"
+        "fetched_at": "2026-07-21T15:49:42.278172+09:00"
       },
       "quantitative": {
         "score": 9.0,
@@ -2275,7 +2290,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035720",
-          "fetched_at": "2026-07-21T15:39:14.999563+09:00",
+          "fetched_at": "2026-07-21T15:50:49.737640+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2285,7 +2300,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:15.300537+09:00"
+          "fetched_at": "2026-07-21T15:50:50.731112+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 35050,
@@ -2301,7 +2316,7 @@
           "trading_value_krw": 65665702975,
           "market_cap_krw": 15526486503500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724320+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528829+09:00"
         }
       },
       "financials": {
@@ -2310,7 +2325,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:45.402717+09:00",
+        "fetched_at": "2026-07-21T15:49:40.682456+09:00",
         "assets": 28802759972472.0,
         "assets_growth_pct": 3.67,
         "equity": 15420486660552.0,
@@ -2338,7 +2353,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:46.974084+09:00"
+        "fetched_at": "2026-07-21T15:49:42.212071+09:00"
       },
       "quantitative": {
         "score": 16.0,
@@ -2379,7 +2394,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000720",
-          "fetched_at": "2026-07-21T15:39:15.266582+09:00",
+          "fetched_at": "2026-07-21T15:50:50.483751+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2389,7 +2404,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:15.712488+09:00"
+          "fetched_at": "2026-07-21T15:50:50.888927+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 91000,
@@ -2405,7 +2420,7 @@
           "trading_value_krw": 54452722900,
           "market_cap_krw": 10133374615000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724324+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528835+09:00"
         }
       },
       "financials": {
@@ -2414,7 +2429,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:45.756355+09:00",
+        "fetched_at": "2026-07-21T15:49:43.278492+09:00",
         "assets": 28405874000000.0,
         "assets_growth_pct": 1.06,
         "equity": 11028599000000.0,
@@ -2440,7 +2455,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:46.891022+09:00"
+        "fetched_at": "2026-07-21T15:49:45.489192+09:00"
       },
       "quantitative": {
         "score": 13.0,
@@ -2482,7 +2497,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=272210",
-          "fetched_at": "2026-07-21T15:39:15.230494+09:00",
+          "fetched_at": "2026-07-21T15:50:50.647823+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2492,7 +2507,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:15.707215+09:00"
+          "fetched_at": "2026-07-21T15:50:51.117508+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 61100,
@@ -2508,7 +2523,7 @@
           "trading_value_krw": 43127110900,
           "market_cap_krw": 11542974667900,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724328+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528846+09:00"
         }
       },
       "financials": {
@@ -2517,7 +2532,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:45.762734+09:00",
+        "fetched_at": "2026-07-21T15:49:48.080484+09:00",
         "assets": 10820663576719.0,
         "assets_growth_pct": 4.78,
         "equity": 5042789965122.0,
@@ -2538,14 +2553,19 @@
         "roe_annualization_factor": 4.0
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:47.055122+09:00"
+        "fetched_at": "2026-07-21T15:38:47.055122+09:00",
+        "cached_from": "2026-07-21T15:38:47.055122+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:47.055122+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A272210&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": -10.0,
@@ -2586,7 +2606,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042660",
-          "fetched_at": "2026-07-21T15:39:15.133084+09:00",
+          "fetched_at": "2026-07-21T15:50:50.205845+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2596,7 +2616,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:15.693711+09:00"
+          "fetched_at": "2026-07-21T15:50:50.746264+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 83200,
@@ -2612,7 +2632,7 @@
           "trading_value_krw": 180604667200,
           "market_cap_krw": 25493594380800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724332+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528852+09:00"
         }
       },
       "financials": {
@@ -2621,7 +2641,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:45.593579+09:00",
+        "fetched_at": "2026-07-21T15:49:46.534716+09:00",
         "assets": 20796547457384.0,
         "assets_growth_pct": 3.26,
         "equity": 6825972776314.0,
@@ -2647,7 +2667,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:47.029036+09:00"
+        "fetched_at": "2026-07-21T15:49:48.787437+09:00"
       },
       "quantitative": {
         "score": -1.0,
@@ -2689,7 +2709,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=082740",
-          "fetched_at": "2026-07-21T15:39:15.610372+09:00",
+          "fetched_at": "2026-07-21T15:50:50.584338+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2699,7 +2719,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:15.939428+09:00"
+          "fetched_at": "2026-07-21T15:50:51.060573+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 42400,
@@ -2715,7 +2735,7 @@
           "trading_value_krw": 27722992325,
           "market_cap_krw": 3538158820800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724352+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528857+09:00"
         }
       },
       "financials": {
@@ -2724,7 +2744,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:48.514589+09:00",
+        "fetched_at": "2026-07-21T15:49:48.783471+09:00",
         "assets": 1910569648022.0,
         "assets_growth_pct": 12.67,
         "equity": 610032817122.0,
@@ -2745,14 +2765,19 @@
         "roe_annualization_factor": 4.0
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:49.662852+09:00"
+        "fetched_at": "2026-07-21T15:38:49.662852+09:00",
+        "cached_from": "2026-07-21T15:38:49.662852+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:49.662852+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A082740&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": 2.0,
@@ -2793,7 +2818,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034020",
-          "fetched_at": "2026-07-21T15:39:15.533774+09:00",
+          "fetched_at": "2026-07-21T15:50:50.672400+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2803,7 +2828,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:15.826033+09:00"
+          "fetched_at": "2026-07-21T15:50:51.111392+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 64800,
@@ -2819,7 +2844,7 @@
           "trading_value_krw": 184830797500,
           "market_cap_krw": 41508362260800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724356+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528864+09:00"
         }
       },
       "financials": {
@@ -2828,7 +2853,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:51.468815+09:00",
+        "fetched_at": "2026-07-21T15:49:51.017525+09:00",
         "assets": 28695055000000.0,
         "assets_growth_pct": 4.3,
         "equity": 12443616000000.0,
@@ -2847,14 +2872,19 @@
         "roe_formula": "공개 페이지 제공 ROE"
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:52.813836+09:00"
+        "fetched_at": "2026-07-21T15:38:52.813836+09:00",
+        "cached_from": "2026-07-21T15:38:52.813836+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:52.813836+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A034020&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": -7.0,
@@ -2896,7 +2926,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=207940",
-          "fetched_at": "2026-07-21T15:39:16.170279+09:00",
+          "fetched_at": "2026-07-21T15:50:51.736585+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -2906,7 +2936,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:16.501215+09:00"
+          "fetched_at": "2026-07-21T15:50:52.181260+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 1345000,
@@ -2922,7 +2952,7 @@
           "trading_value_krw": 55207582500,
           "market_cap_krw": 62261329095000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724361+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528869+09:00"
         }
       },
       "financials": {
@@ -2931,7 +2961,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:49.351777+09:00",
+        "fetched_at": "2026-07-21T15:49:49.220817+09:00",
         "assets": 11994999582438.0,
         "assets_growth_pct": 8.45,
         "equity": 7922835735735.0,
@@ -2959,7 +2989,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:50.683399+09:00"
+        "fetched_at": "2026-07-21T15:49:50.985509+09:00"
       },
       "quantitative": {
         "score": 14.0,
@@ -3000,7 +3030,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=068270",
-          "fetched_at": "2026-07-21T15:39:16.447691+09:00",
+          "fetched_at": "2026-07-21T15:50:52.019542+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -3010,7 +3040,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:16.888689+09:00"
+          "fetched_at": "2026-07-21T15:50:52.735477+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 172600,
@@ -3026,7 +3056,7 @@
           "trading_value_krw": 81697537050,
           "market_cap_krw": 40138769655600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724366+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528875+09:00"
         }
       },
       "financials": {
@@ -3035,7 +3065,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:51.510594+09:00",
+        "fetched_at": "2026-07-21T15:49:55.217099+09:00",
         "assets": 23156645428216.0,
         "assets_growth_pct": 3.68,
         "equity": 17814382031809.0,
@@ -3061,7 +3091,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:53.223797+09:00"
+        "fetched_at": "2026-07-21T15:49:57.260741+09:00"
       },
       "quantitative": {
         "score": 15.0,
@@ -3103,7 +3133,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=196170",
-          "fetched_at": "2026-07-21T15:39:16.579127+09:00",
+          "fetched_at": "2026-07-21T15:50:51.907942+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -3113,7 +3143,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:16.904239+09:00"
+          "fetched_at": "2026-07-21T15:50:52.753702+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 269500,
@@ -3129,7 +3159,7 @@
           "trading_value_krw": 108082192000,
           "market_cap_krw": 14441519438500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724369+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528880+09:00"
         }
       },
       "financials": {
@@ -3138,7 +3168,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:49.343126+09:00",
+        "fetched_at": "2026-07-21T15:49:54.938200+09:00",
         "assets": 729469655232.0,
         "assets_growth_pct": 4.4,
         "equity": 512858119587.0,
@@ -3166,7 +3196,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:50.380123+09:00"
+        "fetched_at": "2026-07-21T15:49:57.223716+09:00"
       },
       "quantitative": {
         "score": 2.0,
@@ -3207,7 +3237,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=298380",
-          "fetched_at": "2026-07-21T15:39:16.648544+09:00",
+          "fetched_at": "2026-07-21T15:50:52.138108+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -3217,7 +3247,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:16.949474+09:00"
+          "fetched_at": "2026-07-21T15:50:52.758249+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 70200,
@@ -3233,7 +3263,7 @@
           "trading_value_krw": 14668479150,
           "market_cap_krw": 3930319902600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724373+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528885+09:00"
         }
       },
       "financials": {
@@ -3242,7 +3272,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:50.688742+09:00",
+        "fetched_at": "2026-07-21T15:49:57.426692+09:00",
         "assets": 298130275703.0,
         "assets_growth_pct": 6.12,
         "equity": 183343287401.0,
@@ -3270,7 +3300,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:51.681334+09:00"
+        "fetched_at": "2026-07-21T15:49:59.685395+09:00"
       },
       "quantitative": {
         "score": -6.0,
@@ -3311,7 +3341,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=086790",
-          "fetched_at": "2026-07-21T15:39:16.766444+09:00",
+          "fetched_at": "2026-07-21T15:50:52.480015+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -3321,7 +3351,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:17.080633+09:00"
+          "fetched_at": "2026-07-21T15:50:52.872895+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 133400,
@@ -3337,7 +3367,7 @@
           "trading_value_krw": 166092956750,
           "market_cap_krw": 36600657583200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724377+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528891+09:00"
         }
       },
       "financials": {
@@ -3346,7 +3376,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:52.328748+09:00",
+        "fetched_at": "2026-07-21T15:50:10.379105+09:00",
         "assets": 685367577000000.0,
         "assets_growth_pct": 1.6,
         "equity": 46442152000000.0,
@@ -3363,14 +3393,19 @@
         "roe_formula": "공개 페이지 제공 ROE"
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:53.383810+09:00"
+        "fetched_at": "2026-07-21T15:38:53.383810+09:00",
+        "cached_from": "2026-07-21T15:38:53.383810+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:53.383810+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A086790&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": 8.0,
@@ -3412,7 +3447,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=316140",
-          "fetched_at": "2026-07-21T15:39:16.856211+09:00",
+          "fetched_at": "2026-07-21T15:50:52.654448+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -3422,7 +3457,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:17.174779+09:00"
+          "fetched_at": "2026-07-21T15:50:53.045890+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 30550,
@@ -3438,7 +3473,7 @@
           "trading_value_krw": 64548249975,
           "market_cap_krw": 22243139785100,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724381+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528896+09:00"
         }
       },
       "financials": {
@@ -3447,7 +3482,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:59.088253+09:00",
+        "fetched_at": "2026-07-21T15:50:10.500575+09:00",
         "assets": 612585300000000.0,
         "assets_growth_pct": 1.85,
         "equity": 39906308000000.0,
@@ -3464,14 +3499,19 @@
         "roe_formula": "공개 페이지 제공 ROE"
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:39:00.225095+09:00"
+        "fetched_at": "2026-07-21T15:39:00.225095+09:00",
+        "cached_from": "2026-07-21T15:39:00.225095+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:39:00.225095+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A316140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": 8.0,
@@ -3513,7 +3553,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=006360",
-          "fetched_at": "2026-07-21T15:39:17.313160+09:00",
+          "fetched_at": "2026-07-21T15:50:53.450359+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -3523,7 +3563,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:17.629818+09:00"
+          "fetched_at": "2026-07-21T15:50:53.837543+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 26050,
@@ -3539,7 +3579,7 @@
           "trading_value_krw": 27837075625,
           "market_cap_krw": 2229397814500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724385+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528901+09:00"
         }
       },
       "financials": {
@@ -3548,7 +3588,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:53.148639+09:00",
+        "fetched_at": "2026-07-21T15:50:06.128476+09:00",
         "assets": 18541824000000.0,
         "assets_growth_pct": 0.44,
         "equity": 5597238000000.0,
@@ -3576,7 +3616,7 @@
         "analyst_count": null,
         "source": "FnGuide CompanyGuide",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:54.318996+09:00"
+        "fetched_at": "2026-07-21T15:50:07.697451+09:00"
       },
       "quantitative": {
         "score": 13.0,
@@ -3617,7 +3657,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=108670",
-          "fetched_at": "2026-07-21T15:39:17.825690+09:00",
+          "fetched_at": "2026-07-21T15:50:53.806528+09:00",
           "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집"
         },
         "investor_flow": {
@@ -3627,7 +3667,7 @@
           "trading_days": 10,
           "status": "ok",
           "source": "NAVER Finance 공개 투자자별 매매 페이지",
-          "fetched_at": "2026-07-21T15:39:18.120996+09:00"
+          "fetched_at": "2026-07-21T15:50:54.195214+09:00"
         },
         "source": "KRX OPEN API",
         "current_price": 32450,
@@ -3643,7 +3683,7 @@
           "trading_value_krw": 848238050,
           "market_cap_krw": 291000891500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T15:39:08.724391+09:00"
+          "fetched_at": "2026-07-21T15:50:40.528907+09:00"
         }
       },
       "financials": {
@@ -3652,7 +3692,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T15:38:57.436449+09:00",
+        "fetched_at": "2026-07-21T15:50:06.727737+09:00",
         "assets": 2371864000000.0,
         "assets_growth_pct": 9.3,
         "equity": 873799000000.0,
@@ -3671,14 +3711,19 @@
         "roe_formula": "공개 페이지 제공 ROE"
       },
       "consensus": {
-        "status": "ok",
+        "status": "cached",
         "target_price": null,
         "target_upside_pct": null,
         "opinion": "목표주가",
         "analyst_count": null,
-        "source": "FnGuide CompanyGuide",
+        "source": "FnGuide CompanyGuide (7일 캐시)",
         "source_url": "https://wcomp.fnguide.com",
-        "fetched_at": "2026-07-21T15:38:58.460123+09:00"
+        "fetched_at": "2026-07-21T15:38:58.460123+09:00",
+        "cached_from": "2026-07-21T15:38:58.460123+09:00",
+        "cache_age_hours": 0.2,
+        "cache_expires_at": "2026-07-28T15:38:58.460123+09:00",
+        "live_collection_status": "failed",
+        "live_collection_reason": "HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A108670&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 ("
       },
       "quantitative": {
         "score": -3.0,
@@ -3706,5 +3751,15 @@
       "business_sector": "건축자재"
     }
   },
-  "errors": []
+  "errors": [
+    "LG에너지솔루션 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a7f7e360>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "현대모비스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012330&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a7f7d8e0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "SK이터닉스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A475150&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a74cf410>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "한화시스템 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A272210&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a8deb620>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "한화엔진 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A082740&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a8a788c0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "두산에너빌리티 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A034020&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a862d9a0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "LX하우시스 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A108670&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a73ef7a0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "하나금융지주 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A086790&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a73ef8c0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))",
+    "우리금융지주 FnGuide: HTTPSConnectionPool(host='comp.fnguide.com', port=443): Max retries exceeded with url: /SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A316140&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701 (Caused by ConnectTimeoutError(<HTTPSConnection(host='comp.fnguide.com', port=443) at 0x7f70a77f5dc0>, 'Connection to comp.fnguide.com timed out. (connect timeout=10)'))"
+  ]
 }
