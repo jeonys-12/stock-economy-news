@@ -4,19 +4,19 @@ import json
 import math
 import os
 import re
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from statistics import median
 from typing import Any
-from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
 
 KST = timezone(timedelta(hours=9))
 DATA_FILE = Path("data/stock_data.json")
-SUMMARY_URL = "https://finance.naver.com/item/coinfo.naver"
+MAIN_URL = "https://finance.naver.com/item/main.naver"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
     "Referer": "https://finance.naver.com/",
@@ -43,7 +43,7 @@ def num(value: Any) -> float | None:
 
 
 def normalize(value: str) -> str:
-    return re.sub(r"[\s·()]", "", value).upper()
+    return re.sub(r"[\s·()\[\]]", "", value).upper()
 
 
 def parse_year(period: str) -> int | None:
@@ -52,62 +52,79 @@ def parse_year(period: str) -> int | None:
 
 
 def is_estimate(period: str) -> bool:
-    upper = period.upper()
+    upper = period.upper().replace(" ", "")
     return "(E)" in upper or upper.endswith("E") or "E)" in upper
 
 
-def fetch_summary_html(code: str) -> tuple[str, str]:
-    session = requests.Session()
-    response = session.get(
-        SUMMARY_URL,
-        params={"code": code, "target": "finsum_more"},
-        headers=HEADERS,
-        timeout=(8, 25),
-    )
-    response.raise_for_status()
-    response.encoding = response.apparent_encoding or "euc-kr"
-    html = response.text
-    source_url = response.url
-    soup = BeautifulSoup(html, "lxml")
-    iframe = soup.select_one("iframe#coinfo_cp, iframe[src*='wisereport'], iframe[src*='company']")
-    if iframe and iframe.get("src"):
-        iframe_url = urljoin(response.url, iframe["src"])
-        child = session.get(iframe_url, headers=HEADERS, timeout=(8, 25))
-        child.raise_for_status()
-        child.encoding = child.apparent_encoding or "utf-8"
-        html = child.text
-        source_url = child.url
-    session.close()
-    return html, source_url
+def fetch_main_html(code: str) -> tuple[str, str]:
+    last_error: Exception | None = None
+    with requests.Session() as session:
+        for attempt in range(2):
+            try:
+                response = session.get(
+                    MAIN_URL,
+                    params={"code": code},
+                    headers=HEADERS,
+                    timeout=(8, 25),
+                )
+                response.raise_for_status()
+                response.encoding = response.apparent_encoding or "euc-kr"
+                return response.text, response.url
+            except Exception as exc:
+                last_error = exc
+                if attempt == 0:
+                    time.sleep(0.8)
+    raise RuntimeError(f"네이버 종목 메인 페이지 요청 실패: {last_error}")
 
 
 def table_score(table: Any) -> int:
     text = normalize(table.get_text(" ", strip=True))
-    score = sum(3 for token in ("EPS", "ROE", "부채비율", "PER", "영업이익") if token in text)
-    return score + min(8, len(re.findall(r"20\d{2}", text)))
+    score = sum(4 for token in ("매출액", "영업이익", "EPS", "ROE", "부채비율", "PER") if token in text)
+    score += min(10, len(re.findall(r"20\d{2}\.\d{2}", text)))
+    if "최근연간실적" in text:
+        score += 8
+    if "최근분기실적" in text:
+        score += 4
+    return score
 
 
-def select_table(soup: BeautifulSoup) -> Any:
-    tables = soup.select("table")
-    if not tables:
-        raise RuntimeError("Financial Summary 표를 찾지 못했습니다.")
-    selected = max(tables, key=table_score)
-    if table_score(selected) < 10:
-        raise RuntimeError("Financial Summary 핵심 지표 표를 확인하지 못했습니다.")
-    return selected
+def select_financial_table(soup: BeautifulSoup) -> Any:
+    candidates = soup.select("table")
+    if not candidates:
+        raise RuntimeError("종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다.")
+    table = max(candidates, key=table_score)
+    if table_score(table) < 30:
+        raise RuntimeError("매출액·영업이익·EPS·ROE가 포함된 기업실적분석 표를 확인하지 못했습니다.")
+    return table
 
 
-def extract_headers(table: Any) -> list[str]:
+def extract_periods(table: Any) -> list[str]:
     best: list[str] = []
     for row in table.select("tr"):
         cells = [cell.get_text(" ", strip=True) for cell in row.select("th,td")]
-        periods = [cell for cell in cells if re.search(r"20\d{2}", cell)]
+        periods = [cell for cell in cells if re.search(r"20\d{2}\.\d{2}", cell)]
         if len(periods) > len(best):
             best = periods
     return best
 
 
-def find_row(table: Any, aliases: tuple[str, ...]) -> list[float | None]:
+def annual_column_count(table: Any, total_periods: int) -> int:
+    for cell in table.select("th,td"):
+        text = normalize(cell.get_text(" ", strip=True))
+        if "최근연간실적" not in text:
+            continue
+        raw = cell.get("colspan")
+        try:
+            count = int(raw)
+        except (TypeError, ValueError):
+            count = 0
+        if 2 <= count <= total_periods:
+            return count
+    # 네이버 표는 통상 연간 4열 + 분기 6열이다. 구조가 달라져도 첫 중복 연월 전까지를 연간으로 본다.
+    return min(4, total_periods)
+
+
+def find_row_values(table: Any, aliases: tuple[str, ...]) -> list[float | None]:
     normalized_aliases = tuple(normalize(alias) for alias in aliases)
     for row in table.select("tr"):
         cells = [cell.get_text(" ", strip=True) for cell in row.select("th,td")]
@@ -119,12 +136,12 @@ def find_row(table: Any, aliases: tuple[str, ...]) -> list[float | None]:
     return []
 
 
-def align(periods: list[str], values: list[float | None]) -> list[tuple[str, float | None]]:
-    if len(values) > len(periods):
-        values = values[-len(periods):]
-    elif len(periods) > len(values):
-        periods = periods[-len(values):]
-    return list(zip(periods, values))
+def align(values: list[float | None], total_periods: int) -> list[float | None]:
+    if len(values) > total_periods:
+        return values[-total_periods:]
+    if len(values) < total_periods:
+        return [None] * (total_periods - len(values)) + values
+    return values
 
 
 def cagr(values: list[tuple[int, float | None]]) -> float | None:
@@ -145,7 +162,7 @@ def pct_change(latest: float | None, previous: float | None) -> float | None:
     return round((latest - previous) / abs(previous) * 100, 2)
 
 
-def build_metrics(history: list[dict[str, Any]], current_price: float | None, forward_eps: float | None) -> dict[str, Any]:
+def build_metrics(history: list[dict[str, Any]], current_price: float | None, forward_eps: float | None, displayed_forward_per: float | None) -> dict[str, Any]:
     history = sorted(history, key=lambda item: item["year"])
     eps_values = [(item["year"], num(item.get("eps"))) for item in history]
     op_values = [(item["year"], num(item.get("operating_profit"))) for item in history]
@@ -153,7 +170,8 @@ def build_metrics(history: list[dict[str, Any]], current_price: float | None, fo
     debt_values = [num(item.get("debt_ratio_pct")) for item in history if num(item.get("debt_ratio_pct")) is not None]
     latest_op = op_values[-1][1] if op_values else None
     previous_op = op_values[-2][1] if len(op_values) >= 2 else None
-    forward_per = current_price / forward_eps if current_price and forward_eps and forward_eps > 0 else None
+    calculated_forward_per = current_price / forward_eps if current_price and forward_eps and forward_eps > 0 else None
+    forward_per = displayed_forward_per if displayed_forward_per and displayed_forward_per > 0 else calculated_forward_per
     return {
         "history_years": len(history),
         "eps_growth_cagr_pct": cagr(eps_values),
@@ -173,50 +191,65 @@ def collect_one(name: str, row: dict[str, Any]) -> tuple[str, dict[str, Any]]:
     if len(code) != 6:
         return name, {"status": "failed", "reason": "유효한 6자리 종목코드가 없습니다.", "history": [], "metrics": {}}
     try:
-        html, source_url = fetch_summary_html(code)
-        table = select_table(BeautifulSoup(html, "lxml"))
-        periods = extract_headers(table)
+        html, source_url = fetch_main_html(code)
+        table = select_financial_table(BeautifulSoup(html, "html.parser"))
+        periods = extract_periods(table)
         if not periods:
-            raise RuntimeError("Financial Summary 기간 헤더를 찾지 못했습니다.")
+            raise RuntimeError("기업실적분석 기간 헤더를 찾지 못했습니다.")
+        annual_count = annual_column_count(table, len(periods))
+        annual_periods = periods[:annual_count]
         rows = {
-            "revenue": find_row(table, ("매출액", "영업수익")),
-            "operating_profit": find_row(table, ("영업이익",)),
-            "net_income": find_row(table, ("당기순이익", "지배주주순이익")),
-            "eps": find_row(table, ("EPS(원)", "EPS", "주당순이익")),
-            "roe_pct": find_row(table, ("ROE(%)", "ROE")),
-            "debt_ratio_pct": find_row(table, ("부채비율(%)", "부채비율")),
-            "per": find_row(table, ("PER(배)", "PER")),
+            "revenue": find_row_values(table, ("매출액", "영업수익")),
+            "operating_profit": find_row_values(table, ("영업이익",)),
+            "net_income": find_row_values(table, ("당기순이익", "지배주주순이익")),
+            "eps": find_row_values(table, ("EPS(원)", "EPS", "주당순이익")),
+            "roe_pct": find_row_values(table, ("ROE(지배주주)", "ROE(%)", "ROE")),
+            "debt_ratio_pct": find_row_values(table, ("부채비율(%)", "부채비율")),
+            "per": find_row_values(table, ("PER(배)", "PER")),
         }
+        annual_rows = {key: align(values, len(periods))[:annual_count] for key, values in rows.items()}
         history_by_year: dict[int, dict[str, Any]] = {}
         forward_candidates: list[tuple[int, float, str]] = []
-        for key, values in rows.items():
-            for period, value in align(periods, values):
+        forward_per_candidates: list[tuple[int, float, str]] = []
+        for key, values in annual_rows.items():
+            for period, value in zip(annual_periods, values):
                 year = parse_year(period)
                 if year is None or value is None:
                     continue
-                if key == "eps" and is_estimate(period) and value > 0:
-                    forward_candidates.append((year, value, period))
-                    continue
                 if is_estimate(period):
+                    if key == "eps" and value > 0:
+                        forward_candidates.append((year, value, period))
+                    if key == "per" and value > 0:
+                        forward_per_candidates.append((year, value, period))
                     continue
                 history_by_year.setdefault(year, {"year": year})[key] = value
         history = sorted(history_by_year.values(), key=lambda item: item["year"])[-HISTORY_YEARS:]
         forward = max(forward_candidates, key=lambda item: item[0]) if forward_candidates else None
+        forward_per_row = max(forward_per_candidates, key=lambda item: item[0]) if forward_per_candidates else None
         market = row.get("market", {}) if isinstance(row.get("market"), dict) else {}
-        metrics = build_metrics(history, num(market.get("current_price")), forward[1] if forward else None)
+        metrics = build_metrics(
+            history,
+            num(market.get("current_price")),
+            forward[1] if forward else None,
+            forward_per_row[1] if forward_per_row else None,
+        )
         metrics["forward_eps_period"] = forward[2] if forward else None
+        if len(history) < 3:
+            raise RuntimeError(f"연간 확정 실적이 {len(history)}개년만 인식됐습니다: {annual_periods}")
         return name, {
-            "status": "ok" if len(history) >= 3 else "partial",
-            "source": "NAVER Finance Financial Summary",
+            "status": "ok",
+            "source": "NAVER Finance 종목 메인 기업실적분석",
             "source_url": source_url,
-            "collection_mode": "financial_summary_primary",
+            "collection_mode": "main_page_financial_summary",
+            "annual_column_count": annual_count,
+            "annual_periods": annual_periods,
             "history": history,
             "metrics": metrics,
             "forecast_status": {
                 "status": "ok" if forward else "unavailable",
                 "forward_eps": forward[1] if forward else None,
                 "period": forward[2] if forward else None,
-                "source": "NAVER Finance Financial Summary",
+                "source": "NAVER Finance 기업실적분석 컨센서스(E)",
             },
             "updated_at": datetime.now(KST).isoformat(),
         }
@@ -227,11 +260,18 @@ def collect_one(name: str, row: dict[str, Any]) -> tuple[str, dict[str, Any]]:
             cached.update({
                 "status": "cached",
                 "live_collection_status": "failed",
-                "live_collection_reason": str(exc)[:220],
-                "source": f"{previous.get('source', 'NAVER Financial Summary')} (이전 정상 캐시)",
+                "live_collection_reason": str(exc)[:300],
+                "source": f"{previous.get('source', 'NAVER Finance 기업실적분석')} (이전 정상 캐시)",
             })
             return name, cached
-        return name, {"status": "failed", "reason": str(exc)[:220], "history": [], "metrics": {}, "updated_at": datetime.now(KST).isoformat()}
+        return name, {
+            "status": "failed",
+            "reason": str(exc)[:300],
+            "history": [],
+            "metrics": {},
+            "source": "NAVER Finance 종목 메인 기업실적분석",
+            "updated_at": datetime.now(KST).isoformat(),
+        }
 
 
 def peer_medians(stocks: dict[str, dict[str, Any]]) -> dict[str, dict[str, float]]:
@@ -285,20 +325,21 @@ def main() -> None:
     if not isinstance(stocks, dict) or not stocks:
         raise SystemExit("stock_data.json에 종목 데이터가 없습니다.")
     results: dict[str, dict[str, Any]] = {}
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS, thread_name_prefix="finsum") as executor:
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS, thread_name_prefix="naver-main") as executor:
         futures = {executor.submit(collect_one, name, row): name for name, row in stocks.items() if isinstance(row, dict)}
         for future in as_completed(futures):
             name = futures[future]
             try:
                 _, analysis = future.result()
             except Exception as exc:
-                analysis = {"status": "failed", "reason": str(exc)[:220], "history": [], "metrics": {}}
+                analysis = {"status": "failed", "reason": str(exc)[:300], "history": [], "metrics": {}}
             results[name] = analysis
     for name, analysis in results.items():
         stocks[name]["quality_value_analysis"] = analysis
     medians = peer_medians(stocks)
-    completed = cached = 0
-    for row in stocks.values():
+    completed = cached = failed = 0
+    failure_samples: list[str] = []
+    for name, row in stocks.items():
         analysis = row.get("quality_value_analysis", {})
         metrics = analysis.get("metrics", {})
         sector = str(row.get("business_sector") or row.get("sector") or "기타")
@@ -311,8 +352,11 @@ def main() -> None:
             "peer_medians": medians.get(sector, {}),
             "reasons": reasons,
         })
-        completed += int(analysis.get("status") in {"ok", "partial"})
+        completed += int(analysis.get("status") == "ok")
         cached += int(analysis.get("status") == "cached")
+        failed += int(analysis.get("status") == "failed")
+        if analysis.get("status") == "failed" and len(failure_samples) < 10:
+            failure_samples.append(f"{name}: {analysis.get('reason', '원인 없음')}")
         row["quantitative"] = {
             "score": round((score - 50) * 0.6, 1),
             "components": {"quality_value": round((score - 50) * 0.6, 1)},
@@ -325,17 +369,19 @@ def main() -> None:
         "status": "ok" if completed else "partial",
         "completed_stocks": completed,
         "cached_stocks": cached,
+        "failed_stocks": failed,
         "requested_stocks": len(stocks),
-        "source": "NAVER Finance Financial Summary",
-        "excluded_sources": ["OpenDART", "KRX OPEN API", "FnGuide"],
+        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "failure_samples": failure_samples,
+        "excluded_sources": ["OpenDART", "KRX OPEN API", "FnGuide 별도 호출"],
         "updated_at": datetime.now(KST).isoformat(),
     }
     payload.setdefault("methodology", {})["quality_value_policy"] = (
-        "네이버 Financial Summary의 EPS·영업이익·ROE·부채비율·예상 EPS를 최근 3~5년 추세와 업종 중앙값으로 비교합니다."
+        "네이버 종목 메인 페이지 기업실적분석의 연간 열에서 EPS·영업이익·ROE·부채비율·예상 EPS를 추출해 최근 3~5년 추세와 업종 중앙값을 비교합니다."
     )
     payload["updated_at"] = datetime.now(KST).isoformat()
     DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"NAVER Financial Summary analysis complete: live={completed}, cached={cached}, total={len(stocks)}")
+    print(f"NAVER main financial analysis complete: live={completed}, cached={cached}, failed={failed}, total={len(stocks)}")
 
 
 if __name__ == "__main__":
