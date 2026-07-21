@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T10:05:19.584841+09:00",
+  "updated_at": "2026-07-21T10:28:20.469659+09:00",
   "source_status": {
     "opendart": {
       "configured": true,
@@ -14,7 +14,7 @@
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-21T09:43:22.185426+09:00",
+      "updated_at": "2026-07-21T10:23:39.602488+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -25,42 +25,17 @@
       "dynamic_kospi_top50": false,
       "dynamic_group_scan": false
     },
+    "krx_login_collection": {
+      "status": "disabled",
+      "reason": "KRX_ID·KRX_PW를 사용하는 로그인 기반 수집을 사용하지 않습니다.",
+      "replacement": "KRX_API_KEY 기반 collect_krx_official.py",
+      "updated_at": "2026-07-21T10:26:06.604164+09:00"
+    },
     "data_quality_repair": {
       "status": "ok",
       "fnguide_valid_cache_reused": 0,
-      "errors": [
-        "한미반도체 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "삼성전기 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "LS ELECTRIC market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "현대차 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "기아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "현대모비스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "HD현대중공업 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "LG이노텍 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "LG디스플레이 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "LG씨엔에스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "SK이노베이션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "SK이터닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "포스코퓨처엠 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "NAVER market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "카카오 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "현대건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "한화시스템 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "한화오션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "한화엔진 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "두산에너빌리티 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "삼성바이오로직스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "셀트리온 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "알테오젠 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "에이비엘바이오 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "하나금융지주 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "우리금융지주 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "GS건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-        "LX하우시스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
-      ],
-      "updated_at": "2026-07-21T10:04:07.180840+09:00"
+      "errors": [],
+      "updated_at": "2026-07-21T10:27:33.538130+09:00"
     },
     "krx_open_api": {
       "configured": true,
@@ -73,7 +48,7 @@
         "ksq_bydd_trd"
       ],
       "role": "공식 일별 시세·거래대금·시가총액 우선 수집",
-      "fallback": "PER·PBR·외국인·기관 수급은 pykrx 보조 수집",
+      "fallback": "PER·PBR·외국인·기관 수급은 로그인 없는 공개 시장 페이지로 보완",
       "diagnostics": [
         {
           "endpoint": "stk_bydd_trd",
@@ -116,7 +91,19 @@
           "market": "KOSDAQ"
         }
       ],
-      "updated_at": "2026-07-21T10:05:19.584825+09:00"
+      "updated_at": "2026-07-21T10:27:51.096344+09:00"
+    },
+    "public_market_fallback": {
+      "status": "ok",
+      "role": "KRX 로그인 없이 PER·PBR 및 외국인·기관 수급 보완",
+      "source": "NAVER Finance 공개 페이지",
+      "valuation_fresh": 32,
+      "valuation_cached": 0,
+      "investor_flow_fresh": 32,
+      "investor_flow_cached": 0,
+      "requested_stocks": 32,
+      "errors": [],
+      "updated_at": "2026-07-21T10:28:20.469619+09:00"
     }
   },
   "methodology": {
@@ -135,14 +122,27 @@
       "sector": "반도체",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 20.61,
+          "pbr": 3.55,
+          "eps": 12372.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:53.072339+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -1815801,
+          "foreign_net_buy_10d_krw": -9450127,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:53.956137+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 244000,
-        "return_5d_pct": -1.38,
-        "return_20d_pct": -29.0,
-        "return_60d_pct": 14.61,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -154,7 +154,7 @@
           "trading_value_krw": 6614607186368,
           "market_cap_krw": 1426491980352000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584627+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096155+09:00"
         }
       },
       "financials": {
@@ -163,7 +163,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T09:58:51.446475+09:00",
+        "fetched_at": "2026-07-21T10:26:18.097103+09:00",
         "assets": 633339604000000.0,
         "assets_growth_pct": 11.71,
         "equity": 486635976000000.0,
@@ -182,20 +182,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 20.0,
+        "score": 9.0,
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
           "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -1.0
+          "flow": -12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "긍정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -209,14 +210,27 @@
       "sector": "반도체",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 17.49,
+          "pbr": 7.81,
+          "eps": 103521.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:54.432992+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -1258981,
+          "foreign_net_buy_10d_krw": -1306746,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:54.678760+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 1764000,
-        "return_5d_pct": -2.55,
-        "return_20d_pct": -38.4,
-        "return_60d_pct": 46.9,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -228,7 +242,7 @@
           "trading_value_krw": 10575264659754,
           "market_cap_krw": 1257206971860000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584653+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096178+09:00"
         }
       },
       "financials": {
@@ -237,7 +251,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T09:59:03.472008+09:00",
+        "fetched_at": "2026-07-21T10:26:20.531782+09:00",
         "assets": 222828744000000.0,
         "assets_growth_pct": 26.53,
         "equity": 164379799000000.0,
@@ -256,20 +270,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 15.0,
+        "score": 8.0,
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -6.0
+          "valuation": -1.0,
+          "flow": -12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "긍정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -283,14 +298,27 @@
       "sector": "반도체장비",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 120.51,
+          "pbr": 33.56,
+          "eps": 1867.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:55.214408+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -143273,
+          "foreign_net_buy_10d_krw": 975183,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:55.516745+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 222000,
-        "return_5d_pct": 8.39,
-        "return_20d_pct": -26.12,
-        "return_60d_pct": -24.49,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -302,7 +330,7 @@
           "trading_value_krw": 178991871250,
           "market_cap_krw": 21159308400000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584662+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096186+09:00"
         }
       },
       "financials": {
@@ -311,7 +339,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T09:59:13.399346+09:00",
+        "fetched_at": "2026-07-21T10:26:22.864282+09:00",
         "assets": 742689287334.0,
         "assets_growth_pct": -8.69,
         "equity": 635869571938.0,
@@ -336,14 +364,15 @@
         "components": {
           "financials": -15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -7.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "부정"
       },
@@ -359,14 +388,27 @@
       "sector": "전자부품",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 120.62,
+          "pbr": 9.83,
+          "eps": 10587.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:56.063357+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -600656,
+          "foreign_net_buy_10d_krw": 184607,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:56.382419+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 1275000,
-        "return_5d_pct": -1.16,
-        "return_20d_pct": -42.82,
-        "return_60d_pct": 65.03,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -378,7 +420,7 @@
           "trading_value_krw": 1241663354000,
           "market_cap_krw": 95234462400000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584668+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096192+09:00"
         }
       },
       "financials": {
@@ -387,7 +429,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T09:59:23.724009+09:00",
+        "fetched_at": "2026-07-21T10:26:25.556238+09:00",
         "operating_profit": 280572751176.0,
         "operating_profit_growth_pct": 39.9,
         "net_income": 252687583556.0,
@@ -401,18 +443,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 12.0,
+        "score": 11.0,
         "components": {
           "financials": 18.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -7.0,
           "flow": 0.0,
-          "momentum": -6.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -428,14 +471,27 @@
       "sector": "전력기기",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 81.98,
+          "pbr": 13.25,
+          "eps": 2248.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:56.967923+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -485328,
+          "foreign_net_buy_10d_krw": 215951,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:57.314446+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 179300,
-        "return_5d_pct": -2.33,
-        "return_20d_pct": -26.45,
-        "return_60d_pct": -2.44,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -447,7 +503,7 @@
           "trading_value_krw": 119018668550,
           "market_cap_krw": 26895000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584674+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096198+09:00"
         }
       },
       "financials": {
@@ -456,7 +512,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T09:59:36.875690+09:00",
+        "fetched_at": "2026-07-21T10:26:27.993455+09:00",
         "assets": 5361875565139.0,
         "assets_growth_pct": 8.17,
         "equity": 2134169034859.0,
@@ -473,18 +529,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 8.0,
+        "score": 5.0,
         "components": {
           "financials": 12.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -7.0,
           "flow": 0.0,
-          "momentum": -4.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -500,14 +557,27 @@
       "sector": "자동차",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 12.08,
+          "pbr": 0.86,
+          "eps": 32437.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:57.862161+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 225923,
+          "foreign_net_buy_10d_krw": 360563,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:58.158978+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 399000,
-        "return_5d_pct": -12.61,
-        "return_20d_pct": -33.22,
-        "return_60d_pct": -28.94,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -519,7 +589,7 @@
           "trading_value_krw": 363118473500,
           "market_cap_krw": 81698348634000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584680+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096203+09:00"
         }
       },
       "financials": {
@@ -528,7 +598,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T09:59:48.617070+09:00",
+        "fetched_at": "2026-07-21T10:26:30.456261+09:00",
         "assets": 383834207000000.0,
         "assets_growth_pct": 4.06,
         "equity": 132226735000000.0,
@@ -547,20 +617,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -16.0,
+        "score": 9.0,
         "components": {
           "financials": -9.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -7.0
+          "valuation": 6.0,
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "부정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -574,14 +645,27 @@
       "sector": "자동차",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 7.92,
+          "pbr": 0.89,
+          "eps": 17772.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:58.716495+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 1020072,
+          "foreign_net_buy_10d_krw": 22012,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:59.040903+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 140000,
-        "return_5d_pct": -3.0,
-        "return_20d_pct": -8.06,
-        "return_60d_pct": -13.0,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -593,7 +677,7 @@
           "trading_value_krw": 123353725200,
           "market_cap_krw": 54657819720000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584685+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096208+09:00"
         }
       },
       "financials": {
@@ -602,7 +686,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T09:59:57.257980+09:00",
+        "fetched_at": "2026-07-21T10:26:32.654259+09:00",
         "assets": 105359955000000.0,
         "assets_growth_pct": 6.45,
         "equity": 61638039000000.0,
@@ -623,20 +707,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -3.0,
+        "score": 18.0,
         "components": {
           "financials": -3.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
+          "valuation": 9.0,
+          "flow": 12.0,
           "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "중립"
+        "signal": "긍정"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -650,14 +735,27 @@
       "sector": "자동차부품",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 12.33,
+          "pbr": 0.83,
+          "eps": 38292.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:27:59.570501+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 17370,
+          "foreign_net_buy_10d_krw": 268644,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:27:59.879544+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 472500,
-        "return_5d_pct": -4.0,
-        "return_20d_pct": -17.75,
-        "return_60d_pct": 4.7,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -669,7 +767,7 @@
           "trading_value_krw": 150995685000,
           "market_cap_krw": 42871145467500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584690+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096214+09:00"
         }
       },
       "financials": {
@@ -678,7 +776,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:00:06.991894+09:00",
+        "fetched_at": "2026-07-21T10:26:35.028026+09:00",
         "assets": 73917161000000.0,
         "assets_growth_pct": 5.0,
         "equity": 50647933000000.0,
@@ -697,20 +795,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 14.0,
+        "score": 33.0,
         "components": {
           "financials": 15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -1.0
+          "valuation": 6.0,
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "중립"
+        "signal": "긍정"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -724,14 +823,27 @@
       "sector": "방산",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 28.36,
+          "pbr": 4.67,
+          "eps": 31839.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:00.425312+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -22789,
+          "foreign_net_buy_10d_krw": 28218,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:00.732024+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 875000,
-        "return_5d_pct": -4.49,
-        "return_20d_pct": -20.53,
-        "return_60d_pct": -35.73,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -743,7 +855,7 @@
           "trading_value_krw": 371739098174,
           "market_cap_krw": 45117975875000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584696+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096219+09:00"
         }
       },
       "financials": {
@@ -752,7 +864,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:00:16.862321+09:00",
+        "fetched_at": "2026-07-21T10:26:37.395555+09:00",
         "assets": 56659594923000.0,
         "assets_growth_pct": 5.02,
         "operating_profit": 638892160000.0,
@@ -764,17 +876,18 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 5.0,
+        "score": 12.0,
         "components": {
           "financials": 12.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 1,
+        "available_dimensions": 2,
         "dimension_names": [
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -790,14 +903,27 @@
       "sector": "조선",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 22.04,
+          "pbr": 4.82,
+          "eps": 20237.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:01.295826+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -129555,
+          "foreign_net_buy_10d_krw": 158324,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:01.599016+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 448500,
-        "return_5d_pct": -9.54,
-        "return_20d_pct": -30.66,
-        "return_60d_pct": -23.44,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -809,7 +935,7 @@
           "trading_value_krw": 131235948500,
           "market_cap_krw": 47075109412500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584701+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096223+09:00"
         }
       },
       "financials": {
@@ -818,7 +944,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:00:25.470821+09:00",
+        "fetched_at": "2026-07-21T10:26:39.655343+09:00",
         "assets": 27577187358000.0,
         "assets_growth_pct": 5.41,
         "equity": 9713237014000.0,
@@ -837,20 +963,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 11.0,
+        "score": 18.0,
         "components": {
           "financials": 18.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "중립"
+        "signal": "긍정"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -864,14 +991,26 @@
       "sector": "이차전지",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "pbr": 3.32,
+          "eps": -6851.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:02.195073+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -127778,
+          "foreign_net_buy_10d_krw": -5430,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:02.494831+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 317500,
-        "return_5d_pct": -3.65,
-        "return_20d_pct": -17.9,
-        "return_60d_pct": -33.79,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -883,7 +1022,7 @@
           "trading_value_krw": 100344521500,
           "market_cap_krw": 74295000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584706+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096228+09:00"
         }
       },
       "financials": {
@@ -892,7 +1031,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:00:35.707837+09:00",
+        "fetched_at": "2026-07-21T10:26:41.984245+09:00",
         "assets": 71805610000000.0,
         "assets_growth_pct": 6.94,
         "equity": 29916304000000.0,
@@ -909,18 +1048,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -19.0,
+        "score": -24.0,
         "components": {
           "financials": -12.0,
           "consensus": 0.0,
           "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -7.0
+          "flow": -12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "부정"
       },
@@ -936,14 +1076,27 @@
       "sector": "전자부품",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 29.83,
+          "pbr": 2.38,
+          "eps": 20484.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:03.038470+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -792097,
+          "foreign_net_buy_10d_krw": 917189,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:03.520732+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 602000,
-        "return_5d_pct": -8.62,
-        "return_20d_pct": -46.55,
-        "return_60d_pct": 42.12,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -955,7 +1108,7 @@
           "trading_value_krw": 118907353000,
           "market_cap_krw": 14247598414000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584712+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096233+09:00"
         }
       },
       "financials": {
@@ -964,7 +1117,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:00:43.996086+09:00",
+        "fetched_at": "2026-07-21T10:26:44.185650+09:00",
         "assets": 11822058000000.0,
         "assets_growth_pct": -0.91,
         "equity": 6080881000000.0,
@@ -983,18 +1136,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 15.0,
+        "score": 21.0,
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": -6.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "긍정"
       },
@@ -1010,14 +1164,26 @@
       "sector": "디스플레이",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "pbr": 0.76,
+          "eps": -163.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:04.057501+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 159566,
+          "foreign_net_buy_10d_krw": -3714154,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:04.345189+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 9880,
-        "return_5d_pct": -6.56,
-        "return_20d_pct": -25.14,
-        "return_60d_pct": -34.46,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1029,7 +1195,7 @@
           "trading_value_krw": 43611413745,
           "market_cap_krw": 4940000000000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584717+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096239+09:00"
         }
       },
       "financials": {
@@ -1038,7 +1204,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:00:52.824387+09:00",
+        "fetched_at": "2026-07-21T10:26:46.494425+09:00",
         "assets": 27295656000000.0,
         "assets_growth_pct": 1.41,
         "equity": 7773133000000.0,
@@ -1055,18 +1221,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 2.0,
+        "score": 13.0,
         "components": {
           "financials": 9.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": 4.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -1082,14 +1249,27 @@
       "sector": "IT서비스",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 13.04,
+          "pbr": 2.06,
+          "eps": 4764.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:04.881548+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 39834,
+          "foreign_net_buy_10d_krw": 634632,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:05.170208+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 61800,
-        "return_5d_pct": -9.38,
-        "return_20d_pct": -30.95,
-        "return_60d_pct": -7.76,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1101,7 +1281,7 @@
           "trading_value_krw": 48705670150,
           "market_cap_krw": 5987551586400,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584723+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096244+09:00"
         }
       },
       "financials": {
@@ -1110,7 +1290,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:01:03.371976+09:00",
+        "fetched_at": "2026-07-21T10:26:48.962545+09:00",
         "assets": 4784000547000.0,
         "assets_growth_pct": -9.48,
         "equity": 2932555794000.0,
@@ -1127,20 +1307,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 11.0,
+        "score": 29.0,
         "components": {
           "financials": 15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -4.0
+          "valuation": 2.0,
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "중립"
+        "signal": "긍정"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -1154,14 +1335,26 @@
       "sector": "에너지·이차전지",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "pbr": 0.82,
+          "eps": -13182.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:05.948368+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 2369776,
+          "foreign_net_buy_10d_krw": -416368,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:06.256924+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 116900,
-        "return_5d_pct": 4.72,
-        "return_20d_pct": 15.17,
-        "return_60d_pct": -13.56,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1173,7 +1366,7 @@
           "trading_value_krw": 96733749100,
           "market_cap_krw": 19762270917200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584728+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096249+09:00"
         }
       },
       "financials": {
@@ -1182,7 +1375,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:01:20.726647+09:00",
+        "fetched_at": "2026-07-21T10:26:51.873260+09:00",
         "assets": 110123705338000.0,
         "assets_growth_pct": 4.28,
         "equity": 38110038132000.0,
@@ -1201,18 +1394,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 18.0,
+        "score": 22.0,
         "components": {
           "financials": 18.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": 4.0,
           "flow": 0.0,
           "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "긍정"
       },
@@ -1228,14 +1422,27 @@
       "sector": "신재생에너지",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 81.89,
+          "pbr": 7.52,
+          "eps": 729.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:06.715543+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 901936,
+          "foreign_net_buy_10d_krw": -34965,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:06.985986+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 55900,
-        "return_5d_pct": 20.5,
-        "return_20d_pct": 44.39,
-        "return_60d_pct": 8.83,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1247,7 +1454,7 @@
           "trading_value_krw": 418009340700,
           "market_cap_krw": 1904345523600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584733+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096254+09:00"
         }
       },
       "financials": {
@@ -1256,7 +1463,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:01:29.993157+09:00",
+        "fetched_at": "2026-07-21T10:26:54.932588+09:00",
         "assets": 1405235645262.0,
         "assets_growth_pct": 6.69,
         "equity": 270392016423.0,
@@ -1277,20 +1484,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 15.0,
+        "score": 8.0,
         "components": {
           "financials": 15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -7.0,
           "flow": 0.0,
           "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "긍정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -1304,14 +1512,26 @@
       "sector": "이차전지소재",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "pbr": 2.93,
+          "eps": -165.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:07.583279+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -152931,
+          "foreign_net_buy_10d_krw": 154946,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:07.888927+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 136800,
-        "return_5d_pct": -10.22,
-        "return_20d_pct": -29.53,
-        "return_60d_pct": -47.25,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1323,7 +1543,7 @@
           "trading_value_krw": 33826220650,
           "market_cap_krw": 12167842896000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584739+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096259+09:00"
         }
       },
       "financials": {
@@ -1332,7 +1552,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:01:38.762203+09:00",
+        "fetched_at": "2026-07-21T10:26:57.430793+09:00",
         "assets": 9520080359594.0,
         "assets_growth_pct": 4.11,
         "equity": 4617557017891.0,
@@ -1353,18 +1573,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -7.0,
+        "score": 0.0,
         "components": {
           "financials": 0.0,
           "consensus": 0.0,
           "valuation": 0.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -1380,14 +1601,27 @@
       "sector": "인터넷",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 16.55,
+          "pbr": 0.97,
+          "eps": 11521.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:08.359453+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -136562,
+          "foreign_net_buy_10d_krw": 869616,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:08.675572+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 185900,
-        "return_5d_pct": 0.43,
-        "return_20d_pct": -14.95,
-        "return_60d_pct": -11.78,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1399,7 +1633,7 @@
           "trading_value_krw": 117168113650,
           "market_cap_krw": 29175934587800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584744+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096264+09:00"
         }
       },
       "financials": {
@@ -1408,7 +1642,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:01:48.073723+09:00",
+        "fetched_at": "2026-07-21T10:27:00.038332+09:00",
         "assets": 44914004920132.0,
         "assets_growth_pct": 9.32,
         "equity": 30930035783908.0,
@@ -1427,20 +1661,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 11.0,
+        "score": 21.0,
         "components": {
           "financials": 15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": 6.0,
           "flow": 0.0,
-          "momentum": -4.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "중립"
+        "signal": "긍정"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -1454,14 +1689,27 @@
       "sector": "인터넷",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 31.59,
+          "pbr": 1.35,
+          "eps": 1111.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:09.223262+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 877500,
+          "foreign_net_buy_10d_krw": 1100429,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:09.519373+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 35050,
-        "return_5d_pct": -0.29,
-        "return_20d_pct": -5.84,
-        "return_60d_pct": -29.21,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1473,7 +1721,7 @@
           "trading_value_krw": 65665702975,
           "market_cap_krw": 15526486503500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584749+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096269+09:00"
         }
       },
       "financials": {
@@ -1482,7 +1730,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:01:58.448487+09:00",
+        "fetched_at": "2026-07-21T10:27:02.416700+09:00",
         "assets": 28802759972472.0,
         "assets_growth_pct": 3.67,
         "equity": 15420486660552.0,
@@ -1503,18 +1751,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 18.0,
+        "score": 34.0,
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -3.0
+          "valuation": 1.0,
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "긍정"
       },
@@ -1530,14 +1779,27 @@
       "sector": "건설",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 24.18,
+          "pbr": 1.13,
+          "eps": 3792.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:10.056876+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 21735,
+          "foreign_net_buy_10d_krw": 533808,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:10.350248+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 91000,
-        "return_5d_pct": -9.66,
-        "return_20d_pct": -28.25,
-        "return_60d_pct": -47.57,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1549,7 +1811,7 @@
           "trading_value_krw": 54452722900,
           "market_cap_krw": 10133374615000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584754+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096279+09:00"
         }
       },
       "financials": {
@@ -1558,7 +1820,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:02:07.868701+09:00",
+        "fetched_at": "2026-07-21T10:27:04.892719+09:00",
         "assets": 28405874000000.0,
         "assets_growth_pct": 1.06,
         "equity": 11028599000000.0,
@@ -1577,20 +1839,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -25.0,
+        "score": -5.0,
         "components": {
           "financials": -18.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -7.0
+          "valuation": 1.0,
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "부정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -1604,14 +1867,27 @@
       "sector": "방산·ICT",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 72.63,
+          "pbr": 2.32,
+          "eps": 844.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:10.896339+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -42741,
+          "foreign_net_buy_10d_krw": 32895,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:11.198083+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 61100,
-        "return_5d_pct": -9.32,
-        "return_20d_pct": -32.63,
-        "return_60d_pct": -54.11,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1623,7 +1899,7 @@
           "trading_value_krw": 43127110900,
           "market_cap_krw": 11542974667900,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584759+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096284+09:00"
         }
       },
       "financials": {
@@ -1632,7 +1908,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:02:17.158310+09:00",
+        "fetched_at": "2026-07-21T10:27:07.251681+09:00",
         "assets": 10820663576719.0,
         "assets_growth_pct": 4.78,
         "equity": 5042789965122.0,
@@ -1653,18 +1929,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 5.0,
+        "score": 8.0,
         "components": {
           "financials": 12.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -4.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -1680,14 +1957,27 @@
       "sector": "조선",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 16.36,
+          "pbr": 3.67,
+          "eps": 4994.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:11.656111+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 143331,
+          "foreign_net_buy_10d_krw": -3073787,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:11.962512+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 83200,
-        "return_5d_pct": 2.54,
-        "return_20d_pct": -30.64,
-        "return_60d_pct": -38.41,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1699,7 +1989,7 @@
           "trading_value_krw": 180604667200,
           "market_cap_krw": 25493594380800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584765+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096289+09:00"
         }
       },
       "financials": {
@@ -1708,7 +1998,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:02:25.360702+09:00",
+        "fetched_at": "2026-07-21T10:27:09.541463+09:00",
         "assets": 20796547457384.0,
         "assets_growth_pct": 3.26,
         "equity": 6825972776314.0,
@@ -1727,18 +2017,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 5.0,
+        "score": 14.0,
         "components": {
           "financials": 12.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": 2.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -1754,14 +2045,27 @@
       "sector": "조선기자재",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 17.5,
+          "pbr": 5.94,
+          "eps": 2483.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:12.521866+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 817288,
+          "foreign_net_buy_10d_krw": -1276738,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:12.887818+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 42400,
-        "return_5d_pct": -8.01,
-        "return_20d_pct": -24.24,
-        "return_60d_pct": -29.87,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1773,7 +2077,7 @@
           "trading_value_krw": 27722992325,
           "market_cap_krw": 3538158820800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584774+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096294+09:00"
         }
       },
       "financials": {
@@ -1782,7 +2086,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:02:32.879035+09:00",
+        "fetched_at": "2026-07-21T10:27:11.853188+09:00",
         "assets": 1910569648022.0,
         "assets_growth_pct": 12.67,
         "equity": 610032817122.0,
@@ -1803,18 +2107,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 8.0,
+        "score": 14.0,
         "components": {
           "financials": 15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -1.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -1830,14 +2135,27 @@
       "sector": "발전·원전",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 270.12,
+          "pbr": 5.19,
+          "eps": 241.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:13.401139+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 500998,
+          "foreign_net_buy_10d_krw": -1131357,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:13.682741+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 64800,
-        "return_5d_pct": -12.3,
-        "return_20d_pct": -31.85,
-        "return_60d_pct": -44.51,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1849,7 +2167,7 @@
           "trading_value_krw": 184830797500,
           "market_cap_krw": 41508362260800,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584779+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096299+09:00"
         }
       },
       "financials": {
@@ -1858,7 +2176,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:02:42.773211+09:00",
+        "fetched_at": "2026-07-21T10:27:14.496814+09:00",
         "assets": 28695055000000.0,
         "assets_growth_pct": 4.3,
         "equity": 12443616000000.0,
@@ -1881,14 +2199,15 @@
         "components": {
           "financials": 18.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -7.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -1904,14 +2223,27 @@
       "sector": "바이오",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 44.71,
+          "pbr": 8.03,
+          "eps": 30779.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:14.232223+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 29898,
+          "foreign_net_buy_10d_krw": 7756,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:14.545678+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 1345000,
-        "return_5d_pct": -2.21,
-        "return_20d_pct": 5.71,
-        "return_60d_pct": -13.79,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1923,7 +2255,7 @@
           "trading_value_krw": 55207582500,
           "market_cap_krw": 62261329095000,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584784+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096304+09:00"
         }
       },
       "financials": {
@@ -1932,7 +2264,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:02:51.539675+09:00",
+        "fetched_at": "2026-07-21T10:27:16.670373+09:00",
         "assets": 11994999582438.0,
         "assets_growth_pct": 8.45,
         "equity": 7922835735735.0,
@@ -1957,14 +2289,15 @@
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": 5.0
+          "valuation": -7.0,
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "긍정"
       },
@@ -1980,14 +2313,27 @@
       "sector": "바이오",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 33.18,
+          "pbr": 2.26,
+          "eps": 5226.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:15.016421+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 557580,
+          "foreign_net_buy_10d_krw": 249778,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:15.335614+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 172600,
-        "return_5d_pct": -1.66,
-        "return_20d_pct": 2.2,
-        "return_60d_pct": -11.0,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1999,7 +2345,7 @@
           "trading_value_krw": 81697537050,
           "market_cap_krw": 40138769655600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584789+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096309+09:00"
         }
       },
       "financials": {
@@ -2008,7 +2354,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:03:02.797958+09:00",
+        "fetched_at": "2026-07-21T10:27:19.039519+09:00",
         "assets": 23156645428216.0,
         "assets_growth_pct": 3.68,
         "equity": 17814382031809.0,
@@ -2027,18 +2373,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 26.0,
+        "score": 33.0,
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
           "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": 5.0
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "긍정"
       },
@@ -2054,14 +2401,27 @@
       "sector": "바이오",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 110.77,
+          "pbr": 28.63,
+          "eps": 2415.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:15.866564+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -253845,
+          "foreign_net_buy_10d_krw": 42124,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:16.170585+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 269500,
-        "return_5d_pct": -16.43,
-        "return_20d_pct": -24.54,
-        "return_60d_pct": -28.32,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
@@ -2073,7 +2433,7 @@
           "trading_value_krw": 108082192000,
           "market_cap_krw": 14441519438500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584794+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096314+09:00"
         }
       },
       "financials": {
@@ -2082,7 +2442,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:03:10.253527+09:00",
+        "fetched_at": "2026-07-21T10:27:21.384447+09:00",
         "assets": 729469655232.0,
         "assets_growth_pct": 4.4,
         "equity": 512858119587.0,
@@ -2107,14 +2467,15 @@
         "components": {
           "financials": -15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -7.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "부정"
       },
@@ -2130,14 +2491,26 @@
       "sector": "바이오",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "pbr": 21.48,
+          "eps": -439.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:16.714091+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -160650,
+          "foreign_net_buy_10d_krw": 452509,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:16.999813+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 70200,
-        "return_5d_pct": -12.77,
-        "return_20d_pct": -29.38,
-        "return_60d_pct": -55.74,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
@@ -2149,7 +2522,7 @@
           "trading_value_krw": 14668479150,
           "market_cap_krw": 3930319902600,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584799+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096319+09:00"
         }
       },
       "financials": {
@@ -2158,7 +2531,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:03:18.428184+09:00",
+        "fetched_at": "2026-07-21T10:27:23.702450+09:00",
         "assets": 298130275703.0,
         "assets_growth_pct": 6.12,
         "equity": 183343287401.0,
@@ -2179,20 +2552,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 14.0,
+        "score": 18.0,
         "components": {
           "financials": 21.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": -3.0,
           "flow": 0.0,
-          "momentum": -7.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "중립"
+        "signal": "긍정"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -2206,14 +2580,27 @@
       "sector": "금융",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 9.12,
+          "pbr": 0.79,
+          "eps": 14513.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:17.522578+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 968883,
+          "foreign_net_buy_10d_krw": -245251,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:17.834300+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 133400,
-        "return_5d_pct": -2.34,
-        "return_20d_pct": 8.19,
-        "return_60d_pct": 5.28,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2225,7 +2612,7 @@
           "trading_value_krw": 166092956750,
           "market_cap_krw": 36600657583200,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584804+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096324+09:00"
         }
       },
       "financials": {
@@ -2234,7 +2621,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:03:33.000906+09:00",
+        "fetched_at": "2026-07-21T10:27:26.222325+09:00",
         "assets": 685367577000000.0,
         "assets_growth_pct": 1.6,
         "equity": 46442152000000.0,
@@ -2251,18 +2638,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 11.0,
+        "score": 12.0,
         "components": {
           "financials": 3.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": 9.0,
           "flow": 0.0,
-          "momentum": 8.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -2278,14 +2666,27 @@
       "sector": "금융",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 7.25,
+          "pbr": 0.59,
+          "eps": 4216.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:18.372902+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 1217275,
+          "foreign_net_buy_10d_krw": -12491,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:18.684798+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 30550,
-        "return_5d_pct": -2.72,
-        "return_20d_pct": 1.68,
-        "return_60d_pct": -15.22,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2297,7 +2698,7 @@
           "trading_value_krw": 64548249975,
           "market_cap_krw": 22243139785100,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584809+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096329+09:00"
         }
       },
       "financials": {
@@ -2306,7 +2707,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:03:48.473990+09:00",
+        "fetched_at": "2026-07-21T10:27:28.821697+09:00",
         "assets": 612585300000000.0,
         "assets_growth_pct": 1.85,
         "equity": 39906308000000.0,
@@ -2323,18 +2724,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -7.0,
+        "score": 0.0,
         "components": {
           "financials": -9.0,
           "consensus": 0.0,
-          "valuation": 0.0,
+          "valuation": 9.0,
           "flow": 0.0,
-          "momentum": 2.0
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -2350,14 +2752,27 @@
       "sector": "건설",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "per": 33.53,
+          "pbr": 0.45,
+          "eps": 762.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:19.198868+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": 1335341,
+          "foreign_net_buy_10d_krw": 691749,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:19.489441+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 26050,
-        "return_5d_pct": -13.58,
-        "return_20d_pct": -6.26,
-        "return_60d_pct": -40.95,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2369,7 +2784,7 @@
           "trading_value_krw": 27837075625,
           "market_cap_krw": 2229397814500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584815+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096334+09:00"
         }
       },
       "financials": {
@@ -2378,7 +2793,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:03:58.150048+09:00",
+        "fetched_at": "2026-07-21T10:27:31.157368+09:00",
         "assets": 18541824000000.0,
         "assets_growth_pct": 0.44,
         "equity": 5597238000000.0,
@@ -2399,18 +2814,19 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": -6.0,
+        "score": 13.0,
         "components": {
           "financials": -3.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": -3.0
+          "valuation": 4.0,
+          "flow": 12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
         "signal": "중립"
       },
@@ -2426,14 +2842,26 @@
       "sector": "건축자재",
       "market": {
         "status": "ok",
-        "as_of": "20260720",
+        "valuation": {
+          "pbr": 0.37,
+          "eps": -1098.0,
+          "status": "ok",
+          "source": "NAVER Finance 공개 시세 페이지",
+          "fetched_at": "2026-07-21T10:28:20.017889+09:00"
+        },
+        "investor_flow": {
+          "institution_net_buy_10d_krw": -1236,
+          "foreign_net_buy_10d_krw": -12365,
+          "unit": "shares",
+          "trading_days": 10,
+          "status": "ok",
+          "source": "NAVER Finance 공개 투자자별 매매 페이지",
+          "fetched_at": "2026-07-21T10:28:20.319429+09:00"
+        },
+        "source": "KRX OPEN API",
+        "login_based_collection_disabled": true,
         "current_price": 32450,
-        "return_5d_pct": 0.94,
-        "return_20d_pct": 2.56,
-        "return_60d_pct": 1.9,
-        "valuation": {},
-        "investor_flow": {},
-        "source": "KRX OPEN API + pykrx",
+        "as_of": "20260720",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2445,7 +2873,7 @@
           "trading_value_krw": 848238050,
           "market_cap_krw": 291000891500,
           "source": "KRX Data Marketplace OPEN API",
-          "fetched_at": "2026-07-21T10:05:19.584820+09:00"
+          "fetched_at": "2026-07-21T10:27:51.096339+09:00"
         }
       },
       "financials": {
@@ -2454,7 +2882,7 @@
         "report_code": "11013",
         "report_name": "1분기",
         "source": "OpenDART",
-        "fetched_at": "2026-07-21T10:04:07.180597+09:00",
+        "fetched_at": "2026-07-21T10:27:33.537894+09:00",
         "assets": 2371864000000.0,
         "assets_growth_pct": 9.3,
         "equity": 873799000000.0,
@@ -2473,20 +2901,21 @@
         "source": "FnGuide CompanyGuide"
       },
       "quantitative": {
-        "score": 23.0,
+        "score": 7.0,
         "components": {
           "financials": 15.0,
           "consensus": 0.0,
-          "valuation": 0.0,
-          "flow": 0.0,
-          "momentum": 8.0
+          "valuation": 4.0,
+          "flow": -12.0,
+          "momentum": 0.0
         },
-        "available_dimensions": 2,
+        "available_dimensions": 3,
         "dimension_names": [
           "financials",
-          "momentum"
+          "valuation",
+          "flow"
         ],
-        "signal": "긍정"
+        "signal": "중립"
       },
       "universe_tags": [
         "FIXED_RECOMMENDATION_WATCHLIST"
@@ -2495,44 +2924,11 @@
       "business_sector": "건축자재"
     }
   },
-  "errors": [
-    "삼성전자 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "SK하이닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "한미반도체 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "삼성전기 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "LS ELECTRIC market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "현대차 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "기아 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "현대모비스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "한화에어로스페이스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "HD현대중공업 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "LG에너지솔루션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "LG이노텍 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "LG디스플레이 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "LG씨엔에스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "SK이노베이션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "SK이터닉스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "포스코퓨처엠 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "NAVER market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "카카오 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "현대건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "한화시스템 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "한화오션 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "한화엔진 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "두산에너빌리티 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "삼성바이오로직스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "셀트리온 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "알테오젠 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "에이비엘바이오 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "하나금융지주 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "우리금융지주 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "GS건설 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\"",
-    "LX하우시스 market repair: \"None of [Index(['BPS', 'PER', 'PBR', 'EPS', 'DIV', 'DPS'], dtype='object')] are in the [columns]\""
-  ],
+  "errors": [],
   "universe": {
     "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
     "mode": "fixed_recommendation_watchlist",
-    "updated_at": "2026-07-21T09:54:44.219079+09:00",
+    "updated_at": "2026-07-21T10:26:06.604178+09:00",
     "stock_count": 32,
     "stocks": [
       {
