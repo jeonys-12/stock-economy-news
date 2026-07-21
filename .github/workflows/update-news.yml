@@ -29,29 +29,31 @@ permissions:
 
 concurrency:
   group: news-pages-deploy
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   collect-and-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 25
+    env:
+      STOCK_COLLECT_WORKERS: "6"
+      PUBLIC_MARKET_WORKERS: "6"
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+        run: pip install --disable-pip-version-check -r requirements.txt
 
       - name: Register secret masks and verify configuration
         env:
@@ -86,28 +88,21 @@ jobs:
           python scripts/collect_news.py
           python scripts/filter_news_exclusions.py
 
-      - name: Collect fixed recommendation stock factors
-        continue-on-error: true
-        env:
-          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
-          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
-        run: python scripts/collect_expanded_stock_data.py
-
-      - name: Repair factors without KRX login
+      - name: Collect stock fundamentals and consensus in parallel
         continue-on-error: true
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
-        run: python scripts/repair_stock_factors_no_krx_login.py
+        run: python scripts/collect_expanded_stock_data.py
 
-      - name: Enrich official market, public market and ROE data
+      - name: Enrich market data and ROE
         continue-on-error: true
         env:
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: |
           python scripts/collect_krx_official.py
-          python scripts/collect_public_market_fallback.py
+          python scripts/collect_public_market_fast.py
           python scripts/enrich_roe.py
 
       - name: Sanitize collected data
@@ -137,8 +132,7 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/news.json
-            if [ -f data/stock_data.json ]; then git add data/stock_data.json; fi
+            git add data/news.json data/stock_data.json
             git commit -m "chore: update news and stock factor data"
             git push origin main
           fi
@@ -148,19 +142,18 @@ jobs:
           rm -rf public
           mkdir -p public/data
           cp index.html style.css section-navigation.css app.js multifactor-ui.js multifactor-ui.css stock-monitoring-ui.js stock-monitoring-ui.css priority-sort.js count-badges.js count-badges.css default-daily.js .nojekyll public/
-          cp data/news.json public/data/news.json
-          if [ -f data/stock_data.json ]; then cp data/stock_data.json public/data/stock_data.json; fi
+          cp data/news.json data/stock_data.json public/data/
 
       - name: Publish to gh-pages branch
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd public
-          git init
-          git checkout -b gh-pages
+          git init -q
+          git checkout -q -b gh-pages
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "deploy: update news dashboard"
+          git commit -q -m "deploy: update news dashboard"
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push --force origin gh-pages
+          git push --force --quiet origin gh-pages
