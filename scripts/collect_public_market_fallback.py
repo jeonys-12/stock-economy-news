@@ -19,7 +19,7 @@ KST = timezone(timedelta(hours=9))
 DATA_FILE = Path("data/stock_data.json")
 PREVIOUS_FILE = Path(os.getenv("PREVIOUS_STOCK_DATA", "/tmp/stock_data_previous.json"))
 CACHE_DAYS = 3
-TIMEOUT = (10, 30)
+TIMEOUT = (8, 20)
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
     "Referer": "https://finance.naver.com/",
@@ -51,7 +51,7 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def fetch(session: requests.Session, url: str) -> str:
     last_error: Exception | None = None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             response = session.get(url, headers=HEADERS, timeout=TIMEOUT)
             response.raise_for_status()
@@ -59,34 +59,83 @@ def fetch(session: requests.Session, url: str) -> str:
             return response.text
         except Exception as exc:
             last_error = exc
-            time.sleep(1.2 * (attempt + 1))
+            if attempt == 0:
+                time.sleep(0.8)
     raise RuntimeError(str(last_error)[:300])
 
 
-def collect_valuation(session: requests.Session, code: str) -> dict[str, Any]:
+def find_metric_in_text(text: str, labels: tuple[str, ...]) -> float | None:
+    compact = re.sub(r"\s+", " ", text)
+    for label in labels:
+        patterns = (
+            rf"{re.escape(label)}\s*[:：]?\s*([0-9,.-]+)\s*%?",
+            rf"{re.escape(label)}[^0-9\-]{{0,20}}([0-9,.-]+)\s*%?",
+        )
+        for pattern in patterns:
+            match = re.search(pattern, compact, re.IGNORECASE)
+            value = number(match.group(1)) if match else None
+            if value is not None:
+                return value
+    return None
+
+
+def collect_valuation(session: requests.Session, code: str, current_price: int | float | None = None) -> dict[str, Any]:
+    """종목 메인 페이지 한 번의 요청으로 PER·PBR·EPS·BPS·ROE를 수집합니다.
+
+    PER/PBR 직접 값이 없을 때 현재가와 EPS/BPS를 이용해 파생 계산합니다.
+    ROE는 OpenDART 계산값이 최우선이며, 여기서 수집한 값은 보조 대체값입니다.
+    """
     url = f"https://finance.naver.com/item/main.naver?code={code}"
     html = fetch(session, url)
     soup = BeautifulSoup(html, "html.parser")
-    selectors = {"per": "#_per", "pbr": "#_pbr", "eps": "#_eps", "bps": "#_bps"}
+    selectors = {
+        "per": "#_per",
+        "pbr": "#_pbr",
+        "eps": "#_eps",
+        "bps": "#_bps",
+        "roe_pct": "#_roe",
+    }
     result: dict[str, Any] = {}
     for key, selector in selectors.items():
         node = soup.select_one(selector)
         value = number(node.get_text(" ", strip=True)) if node else None
         if value is not None:
             result[key] = value
-    if not result.get("per") or not result.get("pbr"):
-        text = soup.get_text(" ", strip=True)
-        patterns = {"per": r"PER(?:lEPS)?\s*([0-9,.\-]+)", "pbr": r"PBR(?:lBPS)?\s*([0-9,.\-]+)"}
-        for key, pattern in patterns.items():
-            if key in result:
-                continue
-            match = re.search(pattern, text, re.IGNORECASE)
-            value = number(match.group(1)) if match else None
+
+    text = soup.get_text(" ", strip=True)
+    fallback_labels = {
+        "per": ("PER",),
+        "pbr": ("PBR",),
+        "eps": ("EPS",),
+        "bps": ("BPS",),
+        "roe_pct": ("ROE(지배주주)", "ROE", "자기자본이익률"),
+    }
+    for key, labels in fallback_labels.items():
+        if result.get(key) is None:
+            value = find_metric_in_text(text, labels)
             if value is not None:
                 result[key] = value
-    if not any(result.get(key) is not None for key in ("per", "pbr", "eps", "bps")):
-        raise RuntimeError("공개 시세 페이지에서 PER·PBR 값을 찾지 못했습니다.")
-    result.update({"status": "ok", "source": "NAVER Finance 공개 시세 페이지", "fetched_at": datetime.now(KST).isoformat()})
+
+    price = number(current_price)
+    eps = number(result.get("eps"))
+    bps = number(result.get("bps"))
+    if result.get("per") is None and price is not None and eps not in (None, 0):
+        result["per"] = round(price / eps, 2)
+        result["per_method"] = "현재가 / EPS 파생 계산"
+    if result.get("pbr") is None and price is not None and bps not in (None, 0):
+        result["pbr"] = round(price / bps, 2)
+        result["pbr_method"] = "현재가 / BPS 파생 계산"
+
+    if not any(result.get(key) is not None for key in ("per", "pbr", "eps", "bps", "roe_pct")):
+        raise RuntimeError("공개 종목 페이지에서 PER·PBR·ROE 값을 찾지 못했습니다.")
+
+    result.update({
+        "status": "ok",
+        "source": "NAVER Finance 종목 메인 페이지",
+        "source_url": url,
+        "fetched_at": datetime.now(KST).isoformat(),
+        "collection_policy": "한 번의 페이지 요청으로 PER·PBR·EPS·BPS·ROE 통합 수집",
+    })
     return result
 
 
@@ -170,7 +219,8 @@ def cached_value(previous: dict[str, Any], name: str, key: str) -> dict[str, Any
         return None
     cached = dict(value)
     cached.update({
-        "status": "cached", "cached_from": fetched.isoformat(),
+        "status": "cached",
+        "cached_from": fetched.isoformat(),
         "cache_age_hours": round(age.total_seconds() / 3600, 1),
         "source": f"{value.get('source', '공개 시장 데이터')} ({CACHE_DAYS}일 캐시)",
     })
@@ -178,7 +228,7 @@ def cached_value(previous: dict[str, Any], name: str, key: str) -> dict[str, Any
 
 
 def has_valuation(value: Any) -> bool:
-    return isinstance(value, dict) and any(number(value.get(key)) is not None for key in ("per", "pbr", "eps", "bps"))
+    return isinstance(value, dict) and any(number(value.get(key)) is not None for key in ("per", "pbr", "eps", "bps", "roe_pct"))
 
 
 def has_flow(value: Any) -> bool:
@@ -206,7 +256,7 @@ def main() -> None:
             continue
         if not has_valuation(market.get("valuation")):
             try:
-                market["valuation"] = collect_valuation(session, code)
+                market["valuation"] = collect_valuation(session, code, market.get("current_price"))
                 success_valuation += 1
             except Exception as exc:
                 cached = cached_value(previous, name, "valuation")
@@ -229,10 +279,11 @@ def main() -> None:
                     market["investor_flow"] = {"status": "unavailable", "reason": str(exc)[:300], "source": "NAVER Finance 공개 페이지"}
                     errors.append({"stock": name, "field": "investor_flow", "reason": str(exc)[:240]})
         row["quantitative"] = repair_stock_factors.score(row.get("financials", {}), market, row.get("consensus", {}))
-        time.sleep(0.15)
+        time.sleep(0.05)
+    session.close()
     payload.setdefault("source_status", {})["public_market_fallback"] = {
         "status": "ok" if success_valuation or success_flow or cache_valuation or cache_flow else "failed",
-        "role": "KRX 로그인 없이 PER·PBR 및 외국인·기관 수급 보완",
+        "role": "KRX 로그인 없이 PER·PBR·ROE 및 외국인·기관 수급 보완",
         "source": "NAVER Finance 공개 페이지",
         "valuation_fresh": success_valuation,
         "valuation_cached": cache_valuation,
