@@ -19,13 +19,16 @@
 .stock-diagnostic-item{border:1px solid #e2e8f0;border-left:4px solid #f59e0b;border-radius:14px;background:#fff;overflow:hidden}
 .stock-diagnostic-item.ok{border-left-color:#16a34a}
 .stock-diagnostic-item.failed{border-left-color:#dc2626}
-.stock-diagnostic-item summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 18px;cursor:pointer;list-style:none}
+.stock-diagnostic-item summary{display:grid;grid-template-columns:minmax(180px,240px) minmax(250px,1fr) auto;align-items:center;gap:18px;padding:16px 18px;cursor:pointer;list-style:none}
 .stock-diagnostic-item summary::-webkit-details-marker{display:none}
 .stock-diagnostic-item summary::after{content:'＋';font-size:18px;color:#64748b}
 .stock-diagnostic-item[open] summary::after{content:'−'}
-.diagnostic-stock-name{display:flex;flex-direction:column;gap:4px;min-width:180px}
+.diagnostic-stock-name{display:flex;flex-direction:column;gap:4px;min-width:0}
 .diagnostic-stock-name strong{font-size:16px;color:#0f172a}
 .diagnostic-stock-name span{font-size:12px;color:#64748b}
+.diagnostic-score-basis{display:flex;min-width:0;flex-direction:column;gap:4px;padding-left:14px;border-left:1px solid #e2e8f0}
+.diagnostic-score-basis strong{overflow:hidden;color:#1e293b;font-size:12px;line-height:1.4;text-overflow:ellipsis;white-space:nowrap}
+.diagnostic-score-basis span{overflow:hidden;color:#64748b;font-size:11px;line-height:1.4;text-overflow:ellipsis;white-space:nowrap}
 .diagnostic-summary-badges{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:7px;margin-left:auto}
 .diagnostic-badge,.score-chip,.dimension-chip{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800;white-space:nowrap}
 .diagnostic-badge.ok{background:#dcfce7;color:#166534}
@@ -43,5 +46,6 @@
 .diagnostic-problems>strong{font-size:13px;color:#9a3412}
 .diagnostic-problems ul{margin:9px 0 0;padding-left:19px;color:#7c2d12;font-size:12px;line-height:1.65}
 .diagnostic-success{margin:8px 0 0;color:#166534;font-size:12px}
-@media(max-width:900px){.diagnostic-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stock-diagnostics-controls{align-items:stretch;flex-direction:column}#stockDiagnosticSearch{width:100%}}
-@media(max-width:640px){.stock-diagnostics-section{margin-top:36px;padding:20px 14px;border-radius:14px}.stock-diagnostics-header{flex-direction:column}.stock-diagnostics-meta{justify-content:flex-start}.stock-diagnostic-item summary{align-items:flex-start;flex-direction:column}.diagnostic-summary-badges{justify-content:flex-start;margin-left:0}.diagnostic-source-grid{grid-template-columns:1fr}.stock-diagnostic-item summary::after{position:absolute;right:24px}.stock-diagnostic-item{position:relative}}
+@media(max-width:1050px){.stock-diagnostic-item summary{grid-template-columns:minmax(160px,210px) minmax(200px,1fr) auto}.diagnostic-score-basis strong,.diagnostic-score-basis span{white-space:normal}}
+@media(max-width:900px){.diagnostic-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stock-diagnostics-controls{align-items:stretch;flex-direction:column}#stockDiagnosticSearch{width:100%}.stock-diagnostic-item summary{grid-template-columns:1fr auto}.diagnostic-score-basis{grid-column:1/-1;grid-row:2;padding:10px 0 0;border-top:1px dashed #e2e8f0;border-left:0}.diagnostic-summary-badges{grid-column:2;grid-row:1}}
+@media(max-width:640px){.stock-diagnostics-section{margin-top:36px;padding:20px 14px;border-radius:14px}.stock-diagnostics-header{flex-direction:column}.stock-diagnostics-meta{justify-content:flex-start}.stock-diagnostic-item summary{display:flex;align-items:flex-start;flex-direction:column}.diagnostic-summary-badges{justify-content:flex-start;margin-left:0}.diagnostic-score-basis{width:100%;padding-top:10px}.diagnostic-source-grid{grid-template-columns:1fr}.stock-diagnostic-item summary::after{position:absolute;right:24px}.stock-diagnostic-item{position:relative}}
