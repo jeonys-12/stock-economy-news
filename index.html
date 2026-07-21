@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="multifactor-ui.css">
   <link rel="stylesheet" href="stock-monitoring-ui.css">
+  <link rel="stylesheet" href="quality-value-ui.css">
   <link rel="stylesheet" href="section-navigation.css">
 </head>
 <body>
@@ -34,6 +35,7 @@
       <a class="primary" href="#investmentBriefing">시장·종목 브리핑</a>
       <a href="#data">기사·영상</a>
       <a href="#sources">수집 현황</a>
+      <a href="#qualityValue">품질·가치 분석</a>
       <a href="#stockDiagnostics">종목 수집 결과</a>
       <a href="#youtube">YouTube</a>
       <a href="#top">맨 위</a>
@@ -84,94 +86,45 @@
         <div><p class="section-kicker">MONITORING</p><h2>기사·영상 목록</h2></div>
         <button id="resetButton" class="reset-button" type="button">필터 초기화</button>
       </div>
-
       <section class="control-panel" aria-label="기사·영상 분야 및 검색 필터">
-        <div id="typeFilters" hidden></div>
-        <div id="periodFilters" hidden></div>
-        <div class="filter-line wide">
-          <span class="filter-label">분야</span>
-          <div class="button-group" id="categoryFilters">
-            <button class="filter-button active" data-category="all">전체 <span class="filter-count" data-count-category="all">0</span></button>
-            <button class="filter-button" data-category="기업공시">기업공시 <span class="filter-count" data-count-category="기업공시">0</span></button>
-            <button class="filter-button" data-category="경제정책">경제정책 <span class="filter-count" data-count-category="경제정책">0</span></button>
-            <button class="filter-button" data-category="금융시장">금융시장 <span class="filter-count" data-count-category="금융시장">0</span></button>
-            <button class="filter-button" data-category="건설·부동산">건설·부동산 <span class="filter-count" data-count-category="건설·부동산">0</span></button>
-            <button class="filter-button" data-category="경제 유튜브">경제 유튜브 <span class="filter-count" data-count-category="경제 유튜브">0</span></button>
-          </div>
-        </div>
-        <div class="search-row">
-          <input id="searchInput" type="search" placeholder="기업명, 공시, 정책, 종목, 채널명 검색">
-          <select id="sortSelect" aria-label="정렬 기준">
-            <option value="importance">우선순위순</option>
-            <option value="latest">최신순</option>
-          </select>
-        </div>
+        <div id="typeFilters" hidden></div><div id="periodFilters" hidden></div>
+        <div class="filter-line wide"><span class="filter-label">분야</span><div class="button-group" id="categoryFilters">
+          <button class="filter-button active" data-category="all">전체 <span class="filter-count" data-count-category="all">0</span></button>
+          <button class="filter-button" data-category="기업공시">기업공시 <span class="filter-count" data-count-category="기업공시">0</span></button>
+          <button class="filter-button" data-category="경제정책">경제정책 <span class="filter-count" data-count-category="경제정책">0</span></button>
+          <button class="filter-button" data-category="금융시장">금융시장 <span class="filter-count" data-count-category="금융시장">0</span></button>
+          <button class="filter-button" data-category="건설·부동산">건설·부동산 <span class="filter-count" data-count-category="건설·부동산">0</span></button>
+          <button class="filter-button" data-category="경제 유튜브">경제 유튜브 <span class="filter-count" data-count-category="경제 유튜브">0</span></button>
+        </div></div>
+        <div class="search-row"><input id="searchInput" type="search" placeholder="기업명, 공시, 정책, 종목, 채널명 검색"><select id="sortSelect" aria-label="정렬 기준"><option value="importance">우선순위순</option><option value="latest">최신순</option></select></div>
       </section>
-
-      <p class="result-info" id="resultInfo">데이터 로딩 중</p>
-      <section id="newsGrid" class="news-grid" aria-live="polite"></section>
-      <div id="emptyState" class="empty-state" hidden>조건에 맞는 콘텐츠가 없습니다.</div>
-      <button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
+      <p class="result-info" id="resultInfo">데이터 로딩 중</p><section id="newsGrid" class="news-grid" aria-live="polite"></section><div id="emptyState" class="empty-state" hidden>조건에 맞는 콘텐츠가 없습니다.</div><button id="loadMoreButton" class="load-more" type="button" hidden>더 보기</button>
     </section>
 
-    <section class="source-section" id="sources">
-      <div class="section-heading"><div><p class="section-kicker">SOURCE STATUS</p><h2>수집 방식·제한 현황</h2></div></div>
-      <p class="source-help">공식 API와 공식 RSS를 우선 사용하며, 실패하거나 인증이 필요한 경우 대체 수집 방식으로 자동 전환합니다.</p>
-      <div id="sourceStatusList" class="source-status-list"><p class="result-info">수집 상태를 불러오는 중입니다.</p></div>
+    <section class="source-section" id="sources"><div class="section-heading"><div><p class="section-kicker">SOURCE STATUS</p><h2>수집 방식·제한 현황</h2></div></div><p class="source-help">공식 API와 공식 RSS를 우선 사용하며, 실패하거나 인증이 필요한 경우 대체 수집 방식으로 자동 전환합니다.</p><div id="sourceStatusList" class="source-status-list"><p class="result-info">수집 상태를 불러오는 중입니다.</p></div></section>
+
+    <section class="quality-value-section" id="qualityValue">
+      <div class="section-heading"><div><p class="section-kicker">QUALITY & VALUE</p><h2>3~5년 품질·가치 종목 분석</h2></div></div>
+      <p class="quality-value-help">EPS 성장률, 영업활동현금흐름, ROE, 부채비율, 추정 PER을 최근 3~5년 추세와 동일 업종 중앙값으로 비교합니다. 점수는 선별 보조지표이며 매수 권유가 아닙니다.</p>
+      <div class="qv-controls"><div id="qualityValueFilters" class="qv-filters"><button class="active" data-grade="all" type="button">전체</button><button data-grade="A" type="button">A등급</button><button data-grade="B" type="button">B등급</button><button data-grade="C" type="button">C등급</button><button data-grade="D" type="button">D등급</button></div><input id="qualityValueSearch" type="search" placeholder="종목명·코드·업종 검색"></div>
+      <p id="qualityValueSummary" class="stock-diagnostics-summary">분석 결과 집계 중</p>
+      <div id="qualityValueList" class="qv-list" aria-live="polite"><p class="result-info">품질·가치 분석 데이터를 불러오는 중입니다.</p></div>
     </section>
 
     <section class="stock-diagnostics-section" id="stockDiagnostics">
-      <div class="stock-diagnostics-header">
-        <div class="section-heading"><div><p class="section-kicker">STOCK DATA DIAGNOSTICS</p><h2>매수·매도 검토 종목 수집 결과</h2></div></div>
-        <div class="stock-diagnostics-meta"><span>종목 데이터 업데이트: <strong id="stockDiagnosticsUpdatedAt">확인 중</strong></span><button id="stockDiagnosticRefresh" class="stock-diagnostics-refresh" type="button">상태 새로고침</button></div>
-      </div>
+      <div class="stock-diagnostics-header"><div class="section-heading"><div><p class="section-kicker">STOCK DATA DIAGNOSTICS</p><h2>매수·매도 검토 종목 수집 결과</h2></div></div><div class="stock-diagnostics-meta"><span>종목 데이터 업데이트: <strong id="stockDiagnosticsUpdatedAt">확인 중</strong></span><button id="stockDiagnosticRefresh" class="stock-diagnostics-refresh" type="button">상태 새로고침</button></div></div>
       <p class="stock-diagnostics-help">모니터링 대상 전체 종목의 OpenDART 재무, FnGuide 컨센서스, 주가, PER·PBR, 외국인·기관 수급 및 정량 추천조건을 표시합니다. 종목을 펼치면 수집 실패·자료 누락 원인과 수정 단서를 확인할 수 있습니다.</p>
       <div id="stockGlobalStatus" class="stock-global-status"><p class="result-info">전체 수집 상태를 불러오는 중입니다.</p></div>
-      <div class="stock-diagnostics-controls">
-        <div id="stockDiagnosticFilters" class="stock-diagnostic-filters" aria-label="종목 수집 상태 필터">
-          <button class="active" type="button" data-stock-status="all">전체</button>
-          <button type="button" data-stock-status="ok">정상</button>
-          <button type="button" data-stock-status="warning">일부 누락</button>
-          <button type="button" data-stock-status="failed">수집 실패</button>
-        </div>
-        <input id="stockDiagnosticSearch" type="search" placeholder="종목명·종목코드·업종 검색">
-      </div>
-      <p id="stockDiagnosticsSummary" class="stock-diagnostics-summary">수집 결과 집계 중</p>
-      <div id="stockDiagnosticsList" class="stock-diagnostics-list" aria-live="polite"><p class="result-info">종목별 수집 결과를 불러오는 중입니다.</p></div>
+      <div class="stock-diagnostics-controls"><div id="stockDiagnosticFilters" class="stock-diagnostic-filters" aria-label="종목 수집 상태 필터"><button class="active" type="button" data-stock-status="all">전체</button><button type="button" data-stock-status="ok">정상</button><button type="button" data-stock-status="warning">일부 누락</button><button type="button" data-stock-status="failed">수집 실패</button></div><input id="stockDiagnosticSearch" type="search" placeholder="종목명·종목코드·업종 검색"></div>
+      <p id="stockDiagnosticsSummary" class="stock-diagnostics-summary">수집 결과 집계 중</p><div id="stockDiagnosticsList" class="stock-diagnostics-list" aria-live="polite"><p class="result-info">종목별 수집 결과를 불러오는 중입니다.</p></div>
     </section>
 
-    <section class="channel-section" id="youtube">
-      <div class="section-heading"><div><p class="section-kicker">YOUTUBE</p><h2>모니터링 채널</h2></div></div>
-      <div class="channel-list">
-        <a href="https://www.youtube.com/channel/UCiYbaVEODktcsh09454Grow" target="_blank" rel="noopener">손에잡히는경제</a>
-        <a href="https://www.youtube.com/channel/UCIUni4ScRp4mqPXsxy62L5w" target="_blank" rel="noopener">언더스탠딩</a>
-        <a href="https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg" target="_blank" rel="noopener">슈카월드</a>
-      </div>
-    </section>
+    <section class="channel-section" id="youtube"><div class="section-heading"><div><p class="section-kicker">YOUTUBE</p><h2>모니터링 채널</h2></div></div><div class="channel-list"><a href="https://www.youtube.com/channel/UCiYbaVEODktcsh09454Grow" target="_blank" rel="noopener">손에잡히는경제</a><a href="https://www.youtube.com/channel/UCIUni4ScRp4mqPXsxy62L5w" target="_blank" rel="noopener">언더스탠딩</a><a href="https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg" target="_blank" rel="noopener">슈카월드</a></div></section>
   </main>
 
-  <div hidden aria-hidden="true">
-    <span id="totalCount">0</span><span id="dailyCount">0</span><span id="koreaCount">0</span><span id="youtubeCount">0</span>
-  </div>
-
+  <div hidden aria-hidden="true"><span id="totalCount">0</span><span id="dailyCount">0</span><span id="koreaCount">0</span><span id="youtubeCount">0</span></div>
   <footer><div class="container"><p>공개 RSS·공식 API 기반 모니터링 · 투자 판단 전 원문을 확인하십시오.</p></div></footer>
-
-  <template id="newsCardTemplate">
-    <article class="news-card">
-      <a class="thumbnail-link" target="_blank" rel="noopener noreferrer"><img class="news-thumbnail" alt="" loading="lazy"></a>
-      <div class="card-body">
-        <div class="card-meta"><span class="type-badge"></span><span class="country-badge"></span><span class="category-badge"></span><span class="importance-badge"></span></div>
-        <h3><a class="news-link" target="_blank" rel="noopener noreferrer"></a></h3>
-        <p class="news-description"></p>
-        <div class="card-footer"><span class="news-source"></span><time class="news-date"></time></div>
-      </div>
-    </article>
-  </template>
-  <script src="app.js" defer></script>
-  <script src="multifactor-ui.js" defer></script>
-  <script src="priority-sort.js" defer></script>
-  <script src="count-badges.js" defer></script>
-  <script src="default-daily.js" defer></script>
-  <script src="stock-monitoring-ui.js" defer></script>
+  <template id="newsCardTemplate"><article class="news-card"><a class="thumbnail-link" target="_blank" rel="noopener noreferrer"><img class="news-thumbnail" alt="" loading="lazy"></a><div class="card-body"><div class="card-meta"><span class="type-badge"></span><span class="country-badge"></span><span class="category-badge"></span><span class="importance-badge"></span></div><h3><a class="news-link" target="_blank" rel="noopener noreferrer"></a></h3><p class="news-description"></p><div class="card-footer"><span class="news-source"></span><time class="news-date"></time></div></div></article></template>
+  <script src="app.js" defer></script><script src="multifactor-ui.js" defer></script><script src="priority-sort.js" defer></script><script src="count-badges.js" defer></script><script src="default-daily.js" defer></script><script src="stock-monitoring-ui.js" defer></script><script src="quality-value-ui.js" defer></script>
 </body>
 </html>
