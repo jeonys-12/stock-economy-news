@@ -19,6 +19,7 @@ jobs:
     timeout-minutes: 35
     env:
       QUALITY_ANALYSIS_WORKERS: "5"
+      DART_LATEST_WORKERS: "5"
 
     steps:
       - name: Checkout repository
@@ -45,6 +46,12 @@ jobs:
             exit 1
           fi
           echo "::add-mask::$OPENDART_API_KEY"
+
+      - name: Refresh latest quarterly financials with correct comparison periods
+        env:
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+          DART_LATEST_WORKERS: "5"
+        run: python scripts/refresh_latest_dart_financials.py
 
       - name: Verify 3 to 5 year financial trends with OpenDART
         env:
