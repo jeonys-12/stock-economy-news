@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22T07:50:20.315667+09:00",
+  "updated_at": "2026-07-22T08:05:06.648862+09:00",
   "count": 144,
   "source_status": [
     {
@@ -254,10 +254,10 @@
       "importance_score": 70
     },
     {
-      "id": "2f01510a2e55851a",
+      "id": "bfb7a2e681b9229d",
       "type": "news",
-      "title": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) - KRX KIND 공시 시스템",
-      "description": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) KRX KIND 공시 시스템",
+      "title": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) - KRX KIND",
+      "description": "[신세계푸드] 매매거래정지 및 정지해제(중요내용공시) KRX KIND",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRmdMWks5d1pxa1RHNkxaeTVPMFloeWp3dmlYQTVlRGpFd21adWlVbUNmNVd1Sk1DTVhmVEU3dTJXbHRkUUgtMFA5d2pvR3BrUmRHYnRLcm5WeFBkX0dyUlg2U1lCR2dQd2hHQXBQOUliOVUyajJ6TlhCRlBWbzJlQWlPNXNVM2lv?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -768,6 +768,22 @@
       "importance_score": 61
     },
     {
+      "id": "e903c7757b4ab20f",
+      "type": "news",
+      "title": "\"하나머티리얼즈, 반도체 업황 개선에 계단식 실적 증가…목표가↑\"-신한 - 한국경제",
+      "description": "\"하나머티리얼즈, 반도체 업황 개선에 계단식 실적 증가…목표가↑\"-신한 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1OQk92b2pDU3p4RFF1ek9PVFMwRlRoSHJPRWhXcGZaaV9DaUR3MHRYcEVRYURtNUxDVnVsdmM1dmFvTFROMHFISVN3RzNIRWU1LXBLVlVnWUJXQQ?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-21T22:51:09+00:00",
+      "importance_score": 60
+    },
+    {
       "id": "da564f07a1aa4a83",
       "type": "news",
       "title": "[마켓뷰] 韓반등에 뉴욕증시도 화답…'7천피' 회복 시도하나",
@@ -1202,11 +1218,11 @@
       "importance_score": 58
     },
     {
-      "id": "6c8b8097d067e9c7",
+      "id": "3fd00b0bc0d285bd",
       "type": "news",
       "title": "LG전자, 압구정 재건축에 ‘가전 구독’ 전격 도입… B2B 시장 정조준 - 대한경제",
       "description": "LG전자, 압구정 재건축에 ‘가전 구독’ 전격 도입… B2B 시장 정조준 대한경제",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZFc5T0JHczdaRGkxV3lXN3p1V25QUE1EemZKNlJuLXRjVlNxaG5LcEJId1p6WVpTdkdTQ0R3V3RKNFBvRmwtX21QUEVQZ3FGY1JUYWRXd25GRmRVMFBmSGpKQXZTcDNjZ3J5VVdaTlBQUTVoNzNYbkV0Q05LTXdqTnU0RTZhUGc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1BWDhEdVZWUGU4T3p6UFl3ZlpKcWE3amY0c2V0MXVMZGo0YWswNW1YeUpXcW56cnJJaThaS3lLdnJ3MVd4RjIzVWFSYTViYkZ6bFB0bzNROE8tdEp4bng0eEZ3SHpaRkIwZU1hZFZsVGhOMDQ?oc=5",
       "source": "대한경제",
       "source_domain": "dnews.co.kr",
       "source_priority": 2,
@@ -1234,10 +1250,10 @@
       "importance_score": 56
     },
     {
-      "id": "6ea1a7abe67b1605",
+      "id": "6b54dee40d871bf0",
       "type": "news",
-      "title": "[교보증권] 지속가능경영보고서 등 관련사항(자율공시) - KRX KIND 공시 시스템",
-      "description": "[교보증권] 지속가능경영보고서 등 관련사항(자율공시) KRX KIND 공시 시스템",
+      "title": "[교보증권] 지속가능경영보고서 등 관련사항(자율공시) - KRX KIND",
+      "description": "[교보증권] 지속가능경영보고서 등 관련사항(자율공시) KRX KIND",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdWp2cUdzU1FteDNERHdmLVVLbGJUNHNHLXJORFJpLUwyNnFtbG1kVDEwQjA1dUpQZXBaYmk3OFRHdEl6TmZ0QlVmRDdDQmJ1YTc4cy10clNUOVlTblBaY0dFZl8xUUJpSWJsZUpLUk1uWElQcDU0VWQ5QlQ2ZlJ0SWpTeVB1ek9s?oc=5",
       "source": "한국거래소 KIND",
       "source_domain": "kind.krx.co.kr",
@@ -1410,6 +1426,22 @@
       "importance_score": 56
     },
     {
+      "id": "ffd7db407543b19b",
+      "type": "news",
+      "title": "[K-AI 시대] ② AI 앞세우고 건설 따라간다…해외수주 판 바뀐다 - 대한경제",
+      "description": "[K-AI 시대] ② AI 앞세우고 건설 따라간다…해외수주 판 바뀐다 대한경제",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE52czdiMEh5UTBiVWZQdlE2S2R3dmdfWmc3cU9wV21lY21QbElIWF9lU1hra3ZqMzREblZnX3lLTUlhenhzaFFCb0ZzNnh5YUxOLVBGbXBKUm1EcS1WSG1SM001SU5yVTFzeEllWGtmaWttemc?oc=5",
+      "source": "대한경제",
+      "source_domain": "dnews.co.kr",
+      "source_priority": 2,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "건설·부동산",
+      "published_at": "2026-07-20T21:00:47+00:00",
+      "importance_score": 56
+    },
+    {
       "id": "10204b4ecce194e2",
       "type": "news",
       "title": "자이에스앤디, 영종하늘도시 공동주택사업 수주 - 대한경제",
@@ -1424,6 +1456,22 @@
       "category": "건설·부동산",
       "published_at": "2026-07-19T07:01:56+00:00",
       "importance_score": 56
+    },
+    {
+      "id": "1d39a9bea5c090a4",
+      "type": "news",
+      "title": "부산진해경제자유구역청, 지역건설업 활성화 간담회 개최 - 대한경제",
+      "description": "부산진해경제자유구역청, 지역건설업 활성화 간담회 개최 대한경제",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Fd2VuR1ZJTW1TM25PSDl2cTNhTi1Md21FRkdzQ1VGZDlRa3M4bmVDRGNuRUpTLWZud0NCQUFuSEpwYnM2enE5b3c3OEJuRWNIS1ozaWswTldaVGd3VkFrOXQ4azBWYUZKUERHdy1YTjVPb2s?oc=5",
+      "source": "대한경제",
+      "source_domain": "dnews.co.kr",
+      "source_priority": 2,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "건설·부동산",
+      "published_at": "2026-07-21T22:49:46+00:00",
+      "importance_score": 55
     },
     {
       "id": "61f8fac1084c17c3",
@@ -1455,38 +1503,6 @@
       "country": "대한민국",
       "category": "건설·부동산",
       "published_at": "2026-07-21T21:00:37+00:00",
-      "importance_score": 55
-    },
-    {
-      "id": "7297bd83c6fcd8b4",
-      "type": "news",
-      "title": "[부동산 대토론회 핵심 쟁점]①‘보유세 자산가액 전환’ 패러다임 시프트…취득ㆍ양도세 묶이면 효과 ‘제한적’ - 대한경제",
-      "description": "[부동산 대토론회 핵심 쟁점]①‘보유세 자산가액 전환’ 패러다임 시프트…취득ㆍ양도세 묶이면 효과 ‘제한적’ 대한경제",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA5ZzFhWFJoLU1kR00wTHh1NmEwaXg0a2NnNmJRLTk5Z0V6U2FTTkRyeTllNjV2SlJkU284S1l2YVpncWE3eXlzWGIwX0pqeFR5cDN4alBqYzRObzdCM1NVOHpSVUE3Z1ppZ0VHY1ljM0djLU02?oc=5",
-      "source": "대한경제",
-      "source_domain": "dnews.co.kr",
-      "source_priority": 2,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-21T20:00:30+00:00",
-      "importance_score": 55
-    },
-    {
-      "id": "c875e1dc5f24bfbd",
-      "type": "news",
-      "title": "[부동산 대토론회 핵심 쟁점]②“5년 내 사업승인 못받은 택지, 종부세 합산으로 공급 원가 상승” - 대한경제",
-      "description": "[부동산 대토론회 핵심 쟁점]②“5년 내 사업승인 못받은 택지, 종부세 합산으로 공급 원가 상승” 대한경제",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tWmN2dVRZRjFGTjNlMlQybFp2VHp4SjZ0dVpsenNpZUlQZ3NOM1lsMTFnMWdJQk5OMXlYcGQzNkt5dzV1cktIbDAzNF85Rk9RQUJidEZVLUptR0RLMGpxTWh2ZE5HRllRbk1tdV90Y19heWRX?oc=5",
-      "source": "대한경제",
-      "source_domain": "dnews.co.kr",
-      "source_priority": 2,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "건설·부동산",
-      "published_at": "2026-07-21T20:00:14+00:00",
       "importance_score": 55
     },
     {
@@ -1554,23 +1570,6 @@
       "country": "대한민국",
       "category": "경제 유튜브",
       "published_at": "2026-07-21T12:25:03+00:00",
-      "importance_score": 55
-    },
-    {
-      "id": "2088f653d54e3121",
-      "type": "youtube",
-      "title": "도쿄로 본 미래 서울, 더 좁고 높아질 겁니다 - 남성현, 조정현 연구원 (IBK투자증권)",
-      "description": "#부동산 #한국 #서울 #일본 #도쿄 #도심 #외곽 #역세권 #철도부지 #인구 #고령화 #수도권 #통근권 #오피스텔 #버블기 #신주쿠 #시부야 #버블붕괴 #마루노우치 #아자부다이힐즈 #복합개발 #도시재생 #용적률 #박정호 #박정호교수 [ai를 통해 정리한 내용입니다] 🏙️ 서울 부동산의 미래, 도쿄 도시개발에서 답을 찾다 저출산과 고령화로 전체 인구가 줄어들더라도 도심 개발 수요까지 사라지는 것은 아니다. 3~4인 가구 중심이던 과거와 달리 1~2인 가구가 늘어나면서 주거 형태와 생활 방식이 세분화되고, 오래된 도시는 시간이 지날수록 재정비가 필요하기 때문이다. 앞으로의 도시개발은 외곽으로 계속 넓어지는 방식보다 교통과 일자리, 소비 수요가 집중되는 핵심 지역을 중심으로 압축적으로 진행될 가능성이 크다. 일본은 도심 내부의 낡은 자산을 다시 ",
-      "summary_source": "description",
-      "url": "https://www.youtube.com/watch?v=72OV-5Nl8RY",
-      "thumbnail": "https://i.ytimg.com/vi/72OV-5Nl8RY/hqdefault.jpg",
-      "source": "손에잡히는경제",
-      "source_priority": 1,
-      "collection_method": "official_rss",
-      "collection_label": "YouTube 공식 채널 RSS",
-      "country": "대한민국",
-      "category": "경제 유튜브",
-      "published_at": "2026-07-21T11:00:17+00:00",
       "importance_score": 55
     },
     {
@@ -1878,6 +1877,23 @@
       "importance_score": 53
     },
     {
+      "id": "2088f653d54e3121",
+      "type": "youtube",
+      "title": "도쿄로 본 미래 서울, 더 좁고 높아질 겁니다 - 남성현, 조정현 연구원 (IBK투자증권)",
+      "description": "#부동산 #한국 #서울 #일본 #도쿄 #도심 #외곽 #역세권 #철도부지 #인구 #고령화 #수도권 #통근권 #오피스텔 #버블기 #신주쿠 #시부야 #버블붕괴 #마루노우치 #아자부다이힐즈 #복합개발 #도시재생 #용적률 #박정호 #박정호교수 [ai를 통해 정리한 내용입니다] 🏙️ 서울 부동산의 미래, 도쿄 도시개발에서 답을 찾다 저출산과 고령화로 전체 인구가 줄어들더라도 도심 개발 수요까지 사라지는 것은 아니다. 3~4인 가구 중심이던 과거와 달리 1~2인 가구가 늘어나면서 주거 형태와 생활 방식이 세분화되고, 오래된 도시는 시간이 지날수록 재정비가 필요하기 때문이다. 앞으로의 도시개발은 외곽으로 계속 넓어지는 방식보다 교통과 일자리, 소비 수요가 집중되는 핵심 지역을 중심으로 압축적으로 진행될 가능성이 크다. 일본은 도심 내부의 낡은 자산을 다시 ",
+      "summary_source": "description",
+      "url": "https://www.youtube.com/watch?v=72OV-5Nl8RY",
+      "thumbnail": "https://i.ytimg.com/vi/72OV-5Nl8RY/hqdefault.jpg",
+      "source": "손에잡히는경제",
+      "source_priority": 1,
+      "collection_method": "official_rss",
+      "collection_label": "YouTube 공식 채널 RSS",
+      "country": "대한민국",
+      "category": "경제 유튜브",
+      "published_at": "2026-07-21T11:00:17+00:00",
+      "importance_score": 51
+    },
+    {
       "id": "eb41ecfa3e228967",
       "type": "youtube",
       "title": "여왕은 안돼! 1촌 딸 대신 36촌 아들을 선택한 일본",
@@ -1943,6 +1959,22 @@
       "category": "건설·부동산",
       "published_at": "2026-07-21T03:24:40+00:00",
       "importance_score": 51
+    },
+    {
+      "id": "bdf5effe6498cc20",
+      "type": "news",
+      "title": "포지션 청산 끝? 마이크론 12%↑…다이먼 \"안 사\", 4.6% 넘은 10년물 [김현석의 월스트리트나우] - 한국경제",
+      "description": "포지션 청산 끝? 마이크론 12%↑…다이먼 \"안 사\", 4.6% 넘은 10년물 [김현석의 월스트리트나우] 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0yLUdaQjkxWkd0SmZfMkl2MXg5eElFbmlXaE5mMktaeW5RS1lHQWRYYmJsWjFVSU5aWGltZFRtaGRHWDBtaFA1TlNPdFVYTDZLRndYWkJUbnRuZw?oc=5",
+      "source": "한국경제",
+      "source_domain": "hankyung.com",
+      "source_priority": 1,
+      "collection_method": "google_news_rss",
+      "collection_label": "Google News RSS 대체",
+      "country": "대한민국",
+      "category": "금융시장",
+      "published_at": "2026-07-21T22:56:53+00:00",
+      "importance_score": 50
     },
     {
       "id": "63d355a8d528ec86",
@@ -2025,10 +2057,10 @@
       "importance_score": 50
     },
     {
-      "id": "2c43c12a7ffa1619",
+      "id": "90c9c40e9448584f",
       "type": "news",
-      "title": "슈퍼리치는 왜 도쿄 펜트하우스를 현금으로 살까 [김용남의 부동산 자산관리] - 한국경제",
-      "description": "슈퍼리치는 왜 도쿄 펜트하우스를 현금으로 살까 [김용남의 부동산 자산관리] 한국경제",
+      "title": "펜트하우스도 '대출 없이' 산다…현금 쓰는 日 부자들의 비밀 [김용남의 부동산 자산관리] - 한국경제",
+      "description": "펜트하우스도 '대출 없이' 산다…현금 쓰는 日 부자들의 비밀 [김용남의 부동산 자산관리] 한국경제",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JZXBEMUtteVRfVkIxa3J2ZWZqYUVUYjN1VTNiQ2MtdUFIQmxadDB1b0I1b2R5OVpUM21vcnJMSTVHQ0ZIaEpiTktxNTZrUTVGWWtIdTFVVjdPUQ?oc=5",
       "source": "한국경제",
       "source_domain": "hankyung.com",
@@ -2134,38 +2166,6 @@
       "country": "대한민국",
       "category": "금융시장",
       "published_at": "2026-07-21T19:00:00+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "9a4e49a30785dc20",
-      "type": "news",
-      "title": "선비탑부동산공인중개사사무소 - 한경부동산매물",
-      "description": "선비탑부동산공인중개사사무소 한경부동산매물",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ScnU0WkgyeVd4dVYzRGs0WmtHQVVpeDlBM2RfZjZmV3gwcFY5cEVhdV85Y3RfQ2s0V1JyWmxKbmRHb3V2NFgySV9WZjNGeWlnNzY4cEVR?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-21T15:21:40+00:00",
-      "importance_score": 50
-    },
-    {
-      "id": "72626ce6b1ad9a5e",
-      "type": "news",
-      "title": "美증시, 반도체 주도 기술주 상승…나스닥 1%↑ - 한국경제",
-      "description": "美증시, 반도체 주도 기술주 상승…나스닥 1%↑ 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0xUjRfeDZCdXJhSmpla1E0Y1Q0OWZlYkJabURPMEhXcGlRdXYwd1R4VDJaZFA1U0hmN0R6Vk44NjR3Z1lYcWVDQ3FCUGVqQkZHUzhONVZiQlNOQQ?oc=5",
-      "source": "한국경제",
-      "source_domain": "hankyung.com",
-      "source_priority": 1,
-      "collection_method": "google_news_rss",
-      "collection_label": "Google News RSS 대체",
-      "country": "대한민국",
-      "category": "금융시장",
-      "published_at": "2026-07-21T14:24:12+00:00",
       "importance_score": 50
     },
     {
@@ -2509,20 +2509,20 @@
   },
   "stock_data_status": {
     "status": "ok",
-    "updated_at": "2026-07-22T07:50:38.440003+09:00",
+    "updated_at": "2026-07-22T08:05:27.647183+09:00",
     "stock_count": 32,
     "errors": []
   },
   "ai_briefings": {
     "daily": {
       "signal": "경계",
-      "title": "단기적으로는 대형주·반도체 중심의 수급 쏠림과 정책·금융 규제 이슈로 변동성 확대가 우려됩니다.",
-      "summary": "최근 24시간 관찰되는 시장은 반도체 대형주 쏠림과 단기 변동성 확대가 주된 특징입니다. 단일종목 레버리지·ETN 관련 보완방안과 금융당국 발표로 구조적 불확실성이 높아졌고(금융위·관계기관), 코스피 내 비중 높은 종목의 급등락이 지수 변동성을 증폭하고 있습니다. 국토부의 非아파트 공급 보완조치 전면 시행은 건설·부동산 관련주에는 단기적(정책) 호재로 작용하지만, 고(高)주담대 금리는 수요 측면에서 리스크로 남습니다. 정량적으로는 삼성전자·SK하이닉스 등 일부 대형 반도체의 quality_value 점수가 긍정적이나 외국인·기관의 최근 순매도 흐름이 병존해 상충 신호가 관찰됩니다.",
+      "title": "거시·정책 이슈가 혼재된 가운데 단기 변동성 확대 — 선별적 대응과 주의 필요",
+      "summary": "최근 24시간 뉴스 흐름은 시장 변동성 확대와 정책·제도(단일종목 레버리지 보완 등) 이슈가 혼재된 모습입니다. 반도체 비중에 따른 코스피 변동성 확대 우려가 제기되는 반면, 부동산·건설 정책 실행(공급 보완·착공 독려)은 건설업종에 부분적 호재로 작용할 수 있습니다. 한편 한국은행의 통화정책 방향은 단기 투자심리의 중요한 변수로 작용하고 있어 금리·유동성 관련 리스크를 주시해야 합니다. 정량 신호는 종목별로 온도차가 커, 종목 단위 수급·밸류에이션·실적 확인이 우선입니다.",
       "confidence": 0,
       "drivers": [
         {
           "sentiment": "부정",
-          "title": "코스피 내 대형주(삼전·SK하이닉스) 쏠림으로 단기 변동성 확대",
+          "title": "반도체 비중에 따른 코스피 변동성 확대 — 단기 리스크",
           "evidence": [
             {
               "id": "ee8ae4c0e43e4943",
@@ -2540,75 +2540,7 @@
         },
         {
           "sentiment": "중립",
-          "title": "단일종목 레버리지·ETN 보완방안(관계기관 합동) 발표로 시장구조·상품 리스크 부각",
-          "evidence": [
-            {
-              "id": "0807f159d251df75",
-              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
-              "source": "금융위원회"
-            },
-            {
-              "id": "de7041afea5f2860",
-              "title": "보도자료 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTlY5X1pFRnM2aEdlSjRqQUhTQXhiRzZ0VTlXSTA2cERJNjFZdmhCa0ZmQlN5VDBOdE9CaEppYW5yZXVscEx6Uy1DS0x1MHFjWUU3ZXl5MG9Nem9hQ1E0RnJfaGxKRkdJVHg2cERCanVIaEJQNldBSEtGazRnVGdlaUJydEl1ekREMWxjY2Jrdl9Od0JlV2ppVDc4bDVxRjBI?oc=5",
-              "source": "금융위원회"
-            }
-          ]
-        },
-        {
-          "sentiment": "긍정",
-          "title": "국토부의 非아파트 공급 보완조치 전면 시행(7.20)으로 건설·부동산 정책지원 확인",
-          "evidence": [
-            {
-              "id": "a817e1fc2d309ab5",
-              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
-              "source": "국토교통부"
-            },
-            {
-              "id": "ae7c26b79117b095",
-              "title": "21일 착공식 참석하여 안전하고 차질 없는 완공 당부 - 국토교통부",
-              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB2Tjkxc0FqeC15Y01ub0hQVVhfREZ0Mkt4TnhfU1Ewa3ZjRWptZmVHeU9fbXE5c0ZxOE1HMlJzeTUwdGJzeGdUZF9DNzdfWHhrUEdfZGF4N3BqN3RuU2JwZmE4cl9Zd3lOcGh0V1FIZFpuSDJUZldr?oc=5",
-              "source": "국토교통부"
-            }
-          ]
-        },
-        {
-          "sentiment": "부정",
-          "title": "주담대 고정금리 상승 등 가계금융 부담은 부동산 수요의 하방요인",
-          "evidence": [
-            {
-              "id": "0a6c7186cac4b309",
-              "title": "기준금리 3.5% 때보다 더 높은 주담대 고정금리, 왜 그럴까",
-              "url": "https://www.yna.co.kr/view/AKR20260721168700002",
-              "source": "연합뉴스"
-            }
-          ]
-        }
-      ],
-      "buy_candidates": [],
-      "sell_candidates": [],
-      "risks": [
-        "대형 반도체 중심의 수급 쏠림(지수 집중)으로 단기 급락·급등 리스크 지속",
-        "금리·주담대 부담이 건설·주택 수요 회복을 제약할 가능성",
-        "금융당국의 레버리지 상품 규제 강화로 관련 ETF·ETN 유동성 변동성 확대"
-      ],
-      "checks": [
-        "개별 종목별 주요 기업공시(DART/KIND) 여부 확인(예: 7.21~7.22 공시)",
-        "외국인·기관의 향후 5~10거래일 추세(순매수/순매도 지속성) 확인",
-        "단기 레버리지·ETN 관련 구체적 보완방안(세부 시행일·범위) 모니터링"
-      ]
-    },
-    "weekly": {
-      "signal": "중립",
-      "title": "주간 관점에서는 반도체 업황·수급과 정부의 건설·금융 정책이 섹터별 방향성을 갈라놓을 전망입니다.",
-      "summary": "주간으로 보면 제조업(특히 반도체) 비중 확대가 지수 방향성에 큰 영향을 미치고 있습니다. 한국은행의 통화정책·금융시장 동향과 금융당국의 레버리지 상품 보완방안이 단기 모멘텀을 제약할 수 있으며, 국토부의 공급 보완조치는 건설 섹터에 차별화된 지지 요인으로 작용할 가능성이 있습니다. 정량 신호에서는 삼성전자·SK하이닉스·알테오젠 등 일부 종목의 quality_value 점수가 양호하나, 외국인·기관의 최근 순매도(혹은 순매수 불균형)가 연동되어 투자 판단에 상충 신호를 제공합니다. 따라서 섹터·종목별로 리스크 관리가 요구됩니다.",
-      "confidence": 0,
-      "drivers": [
-        {
-          "sentiment": "중립",
-          "title": "한국은행 통화정책·금융시장 동향(월간·통화정책 관련 보도) — 거시변수 영향 고려 필요",
+          "title": "한국은행 통화정책 방향 발표 — 금리·유동성 관여",
           "evidence": [
             {
               "id": "c67c2e00b285654b",
@@ -2625,8 +2557,60 @@
           ]
         },
         {
-          "sentiment": "부정",
-          "title": "제조업(반도체) 편중 심화로 지수·수급 리스크 상존",
+          "sentiment": "긍정",
+          "title": "국토교통부의 비아파트 공급 보완조치 전면 시행 등 건설정책 집행 — 건설업체에 실수요·수주 개선 기대",
+          "evidence": [
+            {
+              "id": "a817e1fc2d309ab5",
+              "title": "5.22일 발표한 非아파트 공급 보완조치를 7.20일부터 전면 시행, 토지 확보 지원금 상향(최대 80%), PF 대출보증지원 강화 등으로 사업자 부담 완화 - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MX2tjNkJVUlZYYTZDVktyS2J1TWpvRW4tYkgxLUxCQzBZSl93OUJDZTVlQzU5SGZqRlZZSU5BTTIwbEswbG9jWnB0Y1I2bVhzMlRZdS1uaFhhdkludkpkWlMxT3lCa3hHN2lRUENUaV96NUhUamQw?oc=5",
+              "source": "국토교통부"
+            },
+            {
+              "id": "ae7c26b79117b095",
+              "title": "21일 착공식 참석하여 안전하고 차질 없는 완공 당부 - 국토교통부",
+              "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB2Tjkxc0FqeC15Y01ub0hQVVhfREZ0Mkt4TnhfU1Ewa3ZjRWptZmVHeU9fbXE5c0ZxOE1HMlJzeTUwdGJzeGdUZF9DNzdfWHhrUEdfZGF4N3BqN3RuU2JwZmE4cl9Zd3lOcGh0V1FIZFpuSDJUZldr?oc=5",
+              "source": "국토교통부"
+            }
+          ]
+        },
+        {
+          "sentiment": "중립",
+          "title": "단일종목 레버리지 상품 보완방안 발표 — 관련 ETF·ETN 변동성·유동성 영향 가능",
+          "evidence": [
+            {
+              "id": "0807f159d251df75",
+              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
+              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
+              "source": "금융위원회"
+            }
+          ]
+        }
+      ],
+      "buy_candidates": [],
+      "sell_candidates": [],
+      "risks": [
+        "단기 변동성(특히 반도체 비중에 따른 코스피 급락·급등)으로 추격매수 위험이 높음.",
+        "한국은행 통화정책·금리 경로 변화가 금융·부동산·성장주에 동시 영향 가능.",
+        "정책 호재(건설 관련 보완조치)가 실적 개선으로 연결되지 않을 경우 가치함정 리스크 존재.",
+        "외국인·기관의 단기 매도(특히 시가총액 큰 종목)에 따른 지수·수급 불안."
+      ],
+      "checks": [
+        "관심 종목의 최신 사업보고서·분기공시(DART) 확인(재무·가이던스 변경 여부) — 관련 공시 참조(뉴스 ID: 93ccabacaa7e5492, e4e2de8f1a507fc1).",
+        "기관·외국인 일별·10거래일 누적 순매수 동향 확인(실시간 수급) — 급변시 손절·리스크 관리 계획 수립.",
+        "단일종목 레버리지 ETF/ETN 포지션·운용변경 공지 여부 확인(레버리지 규제 영향).",
+        "건설업체 수주·착공 관련 세부 공시(대형 프로젝트 착공·수주성사 여부) 확인."
+      ]
+    },
+    "weekly": {
+      "signal": "중립",
+      "title": "정책·구조적 요인이 업종별 차별화 지속 — 실적·수급 확인 중심의 선별 매매 권고",
+      "summary": "최근 7일간 뉴스는 통화·재정·부동산 정책과 금융 규제(레버리지 상품 보완) 소식이 주를 이뤘습니다. 제조업(특히 반도체) 쏠림 심화와 지표(제조업 비중 확대)로 업종별 온도차가 커진 상태입니다. 정량적 데이터에서는 대형 반도체·인터넷·바이오 일부 종목이 양호한 스코어를 보이나, 동일 기간 외국인·기관 수급은 종목별로 엇갈립니다. 따라서 중기적 관점에서는 실적·컨센서스·수급 확인을 우선한 선별적 접근이 필요합니다.",
+      "confidence": 0,
+      "drivers": [
+        {
+          "sentiment": "중립",
+          "title": "제조업(반도체) 비중 확대 — 지수 성과에 양방향 영향",
           "evidence": [
             {
               "id": "ee4e968a341a4f54",
@@ -2643,8 +2627,26 @@
           ]
         },
         {
+          "sentiment": "중립",
+          "title": "금융·제도 리스크(레버리지 상품 보완) — 시장 구조·변동성 영향",
+          "evidence": [
+            {
+              "id": "0807f159d251df75",
+              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
+              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
+              "source": "금융위원회"
+            },
+            {
+              "id": "24d205762dae2b86",
+              "title": "“대체불가 대한민국 대도약을 선도하는 ｢금융 구조개혁｣ 가속화” - 금융위원회 하반기 업무보고 - 금융위원회",
+              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUg5UFlzckZRQkN1MG9BVmxtQWd0bFdPdU9PTG9fd3lPcDgxOS1lcUxEOXBRTW5TQzBZYkI2N0dKd2ExdGF1TUtkWk5zOUtuSmQtdjZDc05xYVJsQWU1THg2eXV0LXBqRExTWWtBZjFFX0JIR2p6UkN3X3lOaElKaXhQbTJQcDJ1UzlzelYxVk9LaG5nN3IyVFlUeHJxY0ZR?oc=5",
+              "source": "금융위원회"
+            }
+          ]
+        },
+        {
           "sentiment": "긍정",
-          "title": "국토부의 공급 정책(非아파트 보완조치) 시행으로 건설·관련주 수혜 가능성",
+          "title": "부동산 공급 보완조치 전면 시행 및 착공 관련 정책 집행 — 건설업종에 실수요·수주 개선 신호",
           "evidence": [
             {
               "id": "a817e1fc2d309ab5",
@@ -2662,13 +2664,13 @@
         },
         {
           "sentiment": "부정",
-          "title": "단일종목 레버리지 상품 보완방안 발표로 특정 상품·종목의 변동성 확대 가능",
+          "title": "단기 박스권 전망·변동성 지속 전망 — 투자자 심리 위축 가능",
           "evidence": [
             {
-              "id": "0807f159d251df75",
-              "title": "관계기관 합동, 단일종목 레버리지 상품(ETF·ETN) 보완방안 마련 - 금융위원회",
-              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVTJvUThHUVhBRnlCdFNqQ1NQMXV0LXZucS1pWlZhOVY2TjRONEU5NS14UTR0ZmxDb01ua2lzaTJ0Z2diOFI5RWpYLURRLWZ2dGpZd0NhYks3cDdyYkVYQURWUFBRbW1CTnlUdGdOMUh4eG50dlZObkx6cTlmcmZlcmlSeWNPMVdNR0RrZHd3?oc=5",
-              "source": "금융위원회"
+              "id": "dc864337b4b6a655",
+              "title": "‘V자 반등’ 기다리는데 급등락에 ‘어질’…“연말까지 박스피” 전망 무게",
+              "url": "https://www.mk.co.kr/news/stock/12103382",
+              "source": "매일경제"
             }
           ]
         }
@@ -2676,18 +2678,19 @@
       "buy_candidates": [],
       "sell_candidates": [],
       "risks": [
-        "지수 상위(반도체) 비중에 따른 외생충격(수급 이탈 시 급락) 위험",
-        "금융규제·상품개편으로 유동성 구조가 변하는 리스크",
-        "주택담보대출·금리 수준의 추가 상승 시 건설·주택 관련 수요 급감 가능성"
+        "뉴스·정책이 실물 실적(매출·영업이익)으로 연결되지 않으면 밸류에이션 리레이팅 약화 가능.",
+        "외국인·기관의 순매도 전환이 장기적 하방 압력으로 작용할 수 있음(특히 시가총액 큰 종목).",
+        "레버리지·파생상품 규제 변화는 단기 유동성·변동성 확대를 초래할 수 있음."
       ],
       "checks": [
-        "주요 대형주의 분기·사업보고서(최근 DART 공시)와 기관투자자 포지션 변화 확인(뉴스·공시 모니터링)",
-        "금융당국의 레버리지·파생상품 보완방안 세부안(시행 일정·적용범위) 확인",
-        "국내외 반도체 수요 지표(메모리 가격·수요)와 기업별 실적 추정치 변화 추적"
+        "관심 종목의 최신 사업보고서·분기 공시(DART) 상세 확인(뉴스 ID: 93ccabacaa7e5492, e4e2de8f1a507fc1).",
+        "대형주(반도체·인터넷 등) 외국인·기관 10거래일 누적 매매동향 확인(수급 지속성 판단).",
+        "금융위·한은 발표(통화정책·레버리지 규제)의 후속 조치·세부 가이드라인 모니터링(뉴스 ID: 0807f159d251df75, c67c2e00b285654b).",
+        "건설업 수주·착공 실적 공시 및 국토부 관련 보도(정책 집행 속도·규모) 확인(뉴스 ID: a817e1fc2d309ab5, ae7c26b79117b095)."
       ]
     },
     "model": "gpt-5-mini",
-    "generated_at": "2026-07-22T07:51:18.595458+09:00",
+    "generated_at": "2026-07-22T08:06:26.712853+09:00",
     "analysis_type": "openai_multifactor",
     "methodology": {
       "description": "네이버페이 증권 Financial Summary를 최우선으로 사용하는 경량 종목 분석",
@@ -2712,6 +2715,6 @@
     "input_items": 50,
     "stock_factors": 32,
     "analysis_type": "openai_multifactor",
-    "generated_at": "2026-07-22T07:51:18.595532+09:00"
+    "generated_at": "2026-07-22T08:06:26.712942+09:00"
   }
 }
