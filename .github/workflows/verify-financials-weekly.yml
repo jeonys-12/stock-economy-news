@@ -53,6 +53,9 @@ jobs:
           QUALITY_ANALYSIS_WORKERS: "5"
         run: python scripts/analyze_quality_value.py
 
+      - name: Normalize investor flow fields
+        run: python scripts/normalize_investor_flow_fields.py
+
       - name: Sanitize verified data
         env:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
