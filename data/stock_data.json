@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-21T22:34:24.939126+09:00",
+  "updated_at": "2026-07-22T07:50:38.440003+09:00",
   "source_status": {
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-07-21T22:34:05.225497+09:00",
+      "updated_at": "2026-07-22T07:50:20.427512+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -28,7 +28,7 @@
       "requested_stocks": 32,
       "parallel_workers": 6,
       "errors": [],
-      "updated_at": "2026-07-21T22:34:17.244523+09:00"
+      "updated_at": "2026-07-22T07:50:31.639362+09:00"
     },
     "quality_value_analysis": {
       "status": "ok",
@@ -45,7 +45,7 @@
         "KRX OPEN API",
         "FnGuide 별도 호출"
       ],
-      "updated_at": "2026-07-21T22:34:24.939115+09:00"
+      "updated_at": "2026-07-22T07:50:38.439995+09:00"
     },
     "naver_required_stock_validation": {
       "status": "ok",
@@ -385,7 +385,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005930",
-          "fetched_at": "2026-07-21T22:34:07.929012+09:00"
+          "fetched_at": "2026-07-22T07:50:22.448280+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -6861,
@@ -396,12 +396,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=005930&page=1",
-          "fetched_at": "2026-07-21T22:34:08.835892+09:00",
+          "fetched_at": "2026-07-22T07:50:23.879385+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 259000,
-        "as_of": "2026-07-21T22:34:07.929012+09:00",
+        "as_of": "2026-07-22T07:50:22.448280+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -479,7 +479,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:18.529336+09:00",
+        "updated_at": "2026-07-22T07:50:32.857026+09:00",
         "score": 80,
         "grade": "A",
         "components": {
@@ -540,7 +540,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000660",
-          "fetched_at": "2026-07-21T22:34:07.675011+09:00"
+          "fetched_at": "2026-07-22T07:50:22.435520+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -308404,
@@ -551,12 +551,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000660&page=1",
-          "fetched_at": "2026-07-21T22:34:08.846380+09:00",
+          "fetched_at": "2026-07-22T07:50:23.889332+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 1836000,
-        "as_of": "2026-07-21T22:34:07.675011+09:00",
+        "as_of": "2026-07-22T07:50:22.435520+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -634,7 +634,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:18.476257+09:00",
+        "updated_at": "2026-07-22T07:50:33.121267+09:00",
         "score": 92,
         "grade": "A",
         "components": {
@@ -695,7 +695,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042700",
-          "fetched_at": "2026-07-21T22:34:07.849839+09:00"
+          "fetched_at": "2026-07-22T07:50:22.725289+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -85480,
@@ -706,12 +706,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=042700&page=1",
-          "fetched_at": "2026-07-21T22:34:08.823460+09:00",
+          "fetched_at": "2026-07-22T07:50:23.873364+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 224000,
-        "as_of": "2026-07-21T22:34:07.849839+09:00",
+        "as_of": "2026-07-22T07:50:22.725289+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -789,7 +789,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:18.698211+09:00",
+        "updated_at": "2026-07-22T07:50:33.069753+09:00",
         "score": 62,
         "grade": "C",
         "components": {
@@ -850,7 +850,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=009150",
-          "fetched_at": "2026-07-21T22:34:07.961299+09:00"
+          "fetched_at": "2026-07-22T07:50:22.528787+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -467806,
@@ -861,12 +861,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=009150&page=1",
-          "fetched_at": "2026-07-21T22:34:08.812951+09:00",
+          "fetched_at": "2026-07-22T07:50:23.869608+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 1310000,
-        "as_of": "2026-07-21T22:34:07.961299+09:00",
+        "as_of": "2026-07-22T07:50:22.528787+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -944,7 +944,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:18.712710+09:00",
+        "updated_at": "2026-07-22T07:50:32.763967+09:00",
         "score": 74,
         "grade": "B",
         "components": {
@@ -1005,7 +1005,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=010120",
-          "fetched_at": "2026-07-21T22:34:07.548449+09:00"
+          "fetched_at": "2026-07-22T07:50:22.804025+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -286873,
@@ -1016,12 +1016,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=010120&page=1",
-          "fetched_at": "2026-07-21T22:34:08.841629+09:00",
+          "fetched_at": "2026-07-22T07:50:23.893703+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 189100,
-        "as_of": "2026-07-21T22:34:07.548449+09:00",
+        "as_of": "2026-07-22T07:50:22.804025+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1099,7 +1099,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:18.767620+09:00",
+        "updated_at": "2026-07-22T07:50:33.052801+09:00",
         "score": 74,
         "grade": "B",
         "components": {
@@ -1160,7 +1160,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=005380",
-          "fetched_at": "2026-07-21T22:34:07.964176+09:00"
+          "fetched_at": "2026-07-22T07:50:22.854128+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 157800,
@@ -1171,12 +1171,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=005380&page=1",
-          "fetched_at": "2026-07-21T22:34:08.829593+09:00",
+          "fetched_at": "2026-07-22T07:50:23.884997+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 399000,
-        "as_of": "2026-07-21T22:34:07.964176+09:00",
+        "as_of": "2026-07-22T07:50:22.854128+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1254,7 +1254,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:19.513382+09:00",
+        "updated_at": "2026-07-22T07:50:33.755918+09:00",
         "score": 33,
         "grade": "D",
         "components": {
@@ -1315,7 +1315,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000270",
-          "fetched_at": "2026-07-21T22:34:09.764824+09:00"
+          "fetched_at": "2026-07-22T07:50:25.162537+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 730478,
@@ -1326,12 +1326,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000270&page=1",
-          "fetched_at": "2026-07-21T22:34:10.418665+09:00",
+          "fetched_at": "2026-07-22T07:50:25.640710+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 144600,
-        "as_of": "2026-07-21T22:34:09.764824+09:00",
+        "as_of": "2026-07-22T07:50:25.162537+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1409,7 +1409,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:19.733749+09:00",
+        "updated_at": "2026-07-22T07:50:33.824581+09:00",
         "score": 58,
         "grade": "C",
         "components": {
@@ -1470,7 +1470,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012330",
-          "fetched_at": "2026-07-21T22:34:10.213348+09:00"
+          "fetched_at": "2026-07-22T07:50:25.331731+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -27566,
@@ -1481,12 +1481,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=012330&page=1",
-          "fetched_at": "2026-07-21T22:34:10.574345+09:00",
+          "fetched_at": "2026-07-22T07:50:25.707526+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 479500,
-        "as_of": "2026-07-21T22:34:10.213348+09:00",
+        "as_of": "2026-07-22T07:50:25.331731+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1564,7 +1564,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:19.941551+09:00",
+        "updated_at": "2026-07-22T07:50:34.032139+09:00",
         "score": 72,
         "grade": "B",
         "components": {
@@ -1625,7 +1625,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=012450",
-          "fetched_at": "2026-07-21T22:34:10.264379+09:00"
+          "fetched_at": "2026-07-22T07:50:25.190955+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -28652,
@@ -1636,12 +1636,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=012450&page=1",
-          "fetched_at": "2026-07-21T22:34:10.617790+09:00",
+          "fetched_at": "2026-07-22T07:50:25.646478+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 899000,
-        "as_of": "2026-07-21T22:34:10.264379+09:00",
+        "as_of": "2026-07-22T07:50:25.190955+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1719,7 +1719,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:19.972813+09:00",
+        "updated_at": "2026-07-22T07:50:34.042822+09:00",
         "score": 75,
         "grade": "B",
         "components": {
@@ -1780,7 +1780,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=329180",
-          "fetched_at": "2026-07-21T22:34:10.110966+09:00"
+          "fetched_at": "2026-07-22T07:50:25.377885+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -137739,
@@ -1791,12 +1791,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=329180&page=1",
-          "fetched_at": "2026-07-21T22:34:10.433481+09:00",
+          "fetched_at": "2026-07-22T07:50:25.725980+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 451500,
-        "as_of": "2026-07-21T22:34:10.110966+09:00",
+        "as_of": "2026-07-22T07:50:25.377885+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -1874,7 +1874,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:19.820195+09:00",
+        "updated_at": "2026-07-22T07:50:34.134751+09:00",
         "score": 70,
         "grade": "B",
         "components": {
@@ -1935,7 +1935,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=373220",
-          "fetched_at": "2026-07-21T22:34:10.292621+09:00"
+          "fetched_at": "2026-07-22T07:50:25.087639+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -149827,
@@ -1946,12 +1946,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=373220&page=1",
-          "fetched_at": "2026-07-21T22:34:10.655763+09:00",
+          "fetched_at": "2026-07-22T07:50:25.596634+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 317000,
-        "as_of": "2026-07-21T22:34:10.292621+09:00",
+        "as_of": "2026-07-22T07:50:25.087639+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2029,7 +2029,7 @@
           "period": null,
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:20.539294+09:00",
+        "updated_at": "2026-07-22T07:50:34.874497+09:00",
         "score": 11,
         "grade": "D",
         "components": {
@@ -2086,7 +2086,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=011070",
-          "fetched_at": "2026-07-21T22:34:10.375144+09:00"
+          "fetched_at": "2026-07-22T07:50:24.980079+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -801883,
@@ -2097,12 +2097,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=011070&page=1",
-          "fetched_at": "2026-07-21T22:34:10.736056+09:00",
+          "fetched_at": "2026-07-22T07:50:25.552926+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 629000,
-        "as_of": "2026-07-21T22:34:10.375144+09:00",
+        "as_of": "2026-07-22T07:50:24.980079+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2180,7 +2180,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:20.915412+09:00",
+        "updated_at": "2026-07-22T07:50:34.690638+09:00",
         "score": 41,
         "grade": "D",
         "components": {
@@ -2241,7 +2241,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034220",
-          "fetched_at": "2026-07-21T22:34:11.723219+09:00"
+          "fetched_at": "2026-07-22T07:50:26.455637+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -167453,
@@ -2252,12 +2252,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=034220&page=1",
-          "fetched_at": "2026-07-21T22:34:12.152486+09:00",
+          "fetched_at": "2026-07-22T07:50:27.073566+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 9750,
-        "as_of": "2026-07-21T22:34:11.723219+09:00",
+        "as_of": "2026-07-22T07:50:26.455637+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2335,7 +2335,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:20.983562+09:00",
+        "updated_at": "2026-07-22T07:50:34.884577+09:00",
         "score": 15,
         "grade": "D",
         "components": {
@@ -2392,7 +2392,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=064400",
-          "fetched_at": "2026-07-21T22:34:11.652277+09:00"
+          "fetched_at": "2026-07-22T07:50:26.667797+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 63900,
@@ -2403,12 +2403,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=064400&page=1",
-          "fetched_at": "2026-07-21T22:34:12.170099+09:00",
+          "fetched_at": "2026-07-22T07:50:27.085135+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 62500,
-        "as_of": "2026-07-21T22:34:11.652277+09:00",
+        "as_of": "2026-07-22T07:50:26.667797+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2484,7 +2484,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:21.054986+09:00",
+        "updated_at": "2026-07-22T07:50:34.993491+09:00",
         "score": 82,
         "grade": "A",
         "components": {
@@ -2545,7 +2545,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=096770",
-          "fetched_at": "2026-07-21T22:34:11.579241+09:00"
+          "fetched_at": "2026-07-22T07:50:26.896813+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 2469342,
@@ -2556,12 +2556,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=096770&page=1",
-          "fetched_at": "2026-07-21T22:34:12.164376+09:00",
+          "fetched_at": "2026-07-22T07:50:27.208323+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 116300,
-        "as_of": "2026-07-21T22:34:11.579241+09:00",
+        "as_of": "2026-07-22T07:50:26.896813+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2639,7 +2639,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:21.132713+09:00",
+        "updated_at": "2026-07-22T07:50:35.090450+09:00",
         "score": 20,
         "grade": "D",
         "components": {
@@ -2698,7 +2698,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=475150",
-          "fetched_at": "2026-07-21T22:34:11.919927+09:00"
+          "fetched_at": "2026-07-22T07:50:26.905146+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1179044,
@@ -2709,12 +2709,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=475150&page=1",
-          "fetched_at": "2026-07-21T22:34:12.274710+09:00",
+          "fetched_at": "2026-07-22T07:50:27.225988+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 55900,
-        "as_of": "2026-07-21T22:34:11.919927+09:00",
+        "as_of": "2026-07-22T07:50:26.905146+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2735,7 +2735,7 @@
         "history": [],
         "metrics": {},
         "source": "NAVER Finance 종목 메인 기업실적분석",
-        "updated_at": "2026-07-21T22:34:21.528688+09:00",
+        "updated_at": "2026-07-22T07:50:35.582208+09:00",
         "score": 0,
         "grade": "D",
         "components": {
@@ -2782,7 +2782,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=003670",
-          "fetched_at": "2026-07-21T22:34:11.950241+09:00"
+          "fetched_at": "2026-07-22T07:50:27.014757+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -96242,
@@ -2793,12 +2793,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=003670&page=1",
-          "fetched_at": "2026-07-21T22:34:12.314900+09:00",
+          "fetched_at": "2026-07-22T07:50:27.331073+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 138600,
-        "as_of": "2026-07-21T22:34:11.950241+09:00",
+        "as_of": "2026-07-22T07:50:27.014757+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -2876,7 +2876,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:22.213985+09:00",
+        "updated_at": "2026-07-22T07:50:35.684936+09:00",
         "score": 26,
         "grade": "D",
         "components": {
@@ -2937,7 +2937,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035420",
-          "fetched_at": "2026-07-21T22:34:12.063239+09:00"
+          "fetched_at": "2026-07-22T07:50:26.820761+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 16119,
@@ -2948,12 +2948,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=035420&page=1",
-          "fetched_at": "2026-07-21T22:34:12.431683+09:00",
+          "fetched_at": "2026-07-22T07:50:27.143843+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 193000,
-        "as_of": "2026-07-21T22:34:12.063239+09:00",
+        "as_of": "2026-07-22T07:50:26.820761+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3031,7 +3031,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:21.990809+09:00",
+        "updated_at": "2026-07-22T07:50:35.808605+09:00",
         "score": 78,
         "grade": "B",
         "components": {
@@ -3092,7 +3092,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=035720",
-          "fetched_at": "2026-07-21T22:34:13.663961+09:00"
+          "fetched_at": "2026-07-22T07:50:27.839355+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 974087,
@@ -3103,12 +3103,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=035720&page=1",
-          "fetched_at": "2026-07-21T22:34:14.119953+09:00",
+          "fetched_at": "2026-07-22T07:50:28.679338+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 35300,
-        "as_of": "2026-07-21T22:34:13.663961+09:00",
+        "as_of": "2026-07-22T07:50:27.839355+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3186,7 +3186,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:22.066163+09:00",
+        "updated_at": "2026-07-22T07:50:35.935176+09:00",
         "score": 68,
         "grade": "B",
         "components": {
@@ -3247,7 +3247,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=000720",
-          "fetched_at": "2026-07-21T22:34:13.658941+09:00"
+          "fetched_at": "2026-07-22T07:50:28.288888+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1600,
@@ -3258,12 +3258,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000720&page=1",
-          "fetched_at": "2026-07-21T22:34:14.147974+09:00",
+          "fetched_at": "2026-07-22T07:50:28.734214+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 93800,
-        "as_of": "2026-07-21T22:34:13.658941+09:00",
+        "as_of": "2026-07-22T07:50:28.288888+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3341,7 +3341,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:22.224741+09:00",
+        "updated_at": "2026-07-22T07:50:35.965243+09:00",
         "score": 14,
         "grade": "D",
         "components": {
@@ -3402,7 +3402,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=272210",
-          "fetched_at": "2026-07-21T22:34:13.415704+09:00"
+          "fetched_at": "2026-07-22T07:50:28.161448+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -159425,
@@ -3413,12 +3413,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=272210&page=1",
-          "fetched_at": "2026-07-21T22:34:13.840558+09:00",
+          "fetched_at": "2026-07-22T07:50:28.697959+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 60600,
-        "as_of": "2026-07-21T22:34:13.415704+09:00",
+        "as_of": "2026-07-22T07:50:28.161448+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3496,7 +3496,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:22.471653+09:00",
+        "updated_at": "2026-07-22T07:50:36.487623+09:00",
         "score": 32,
         "grade": "D",
         "components": {
@@ -3557,7 +3557,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=042660",
-          "fetched_at": "2026-07-21T22:34:13.320520+09:00"
+          "fetched_at": "2026-07-22T07:50:28.069894+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 400129,
@@ -3568,12 +3568,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=042660&page=1",
-          "fetched_at": "2026-07-21T22:34:13.798384+09:00",
+          "fetched_at": "2026-07-22T07:50:28.691429+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 81900,
-        "as_of": "2026-07-21T22:34:13.320520+09:00",
+        "as_of": "2026-07-22T07:50:28.069894+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3651,7 +3651,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:22.982358+09:00",
+        "updated_at": "2026-07-22T07:50:36.606985+09:00",
         "score": 69,
         "grade": "B",
         "components": {
@@ -3712,7 +3712,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=082740",
-          "fetched_at": "2026-07-21T22:34:13.611405+09:00"
+          "fetched_at": "2026-07-22T07:50:28.360303+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 879852,
@@ -3723,12 +3723,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=082740&page=1",
-          "fetched_at": "2026-07-21T22:34:14.134674+09:00",
+          "fetched_at": "2026-07-22T07:50:28.743432+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 44400,
-        "as_of": "2026-07-21T22:34:13.611405+09:00",
+        "as_of": "2026-07-22T07:50:28.360303+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3806,7 +3806,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:23.058224+09:00",
+        "updated_at": "2026-07-22T07:50:36.917274+09:00",
         "score": 80,
         "grade": "A",
         "components": {
@@ -3867,7 +3867,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=034020",
-          "fetched_at": "2026-07-21T22:34:13.777612+09:00"
+          "fetched_at": "2026-07-22T07:50:28.500226+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 382445,
@@ -3878,12 +3878,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=034020&page=1",
-          "fetched_at": "2026-07-21T22:34:14.163362+09:00",
+          "fetched_at": "2026-07-22T07:50:28.810876+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 66800,
-        "as_of": "2026-07-21T22:34:13.777612+09:00",
+        "as_of": "2026-07-22T07:50:28.500226+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -3961,7 +3961,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:23.158999+09:00",
+        "updated_at": "2026-07-22T07:50:36.741854+09:00",
         "score": 40,
         "grade": "D",
         "components": {
@@ -4022,7 +4022,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=207940",
-          "fetched_at": "2026-07-21T22:34:14.873600+09:00"
+          "fetched_at": "2026-07-22T07:50:29.932085+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 40123,
@@ -4033,12 +4033,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=207940&page=1",
-          "fetched_at": "2026-07-21T22:34:15.629251+09:00",
+          "fetched_at": "2026-07-22T07:50:30.413492+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 1395000,
-        "as_of": "2026-07-21T22:34:14.873600+09:00",
+        "as_of": "2026-07-22T07:50:29.932085+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -4116,7 +4116,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:23.235340+09:00",
+        "updated_at": "2026-07-22T07:50:36.923339+09:00",
         "score": 83,
         "grade": "A",
         "components": {
@@ -4177,7 +4177,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=068270",
-          "fetched_at": "2026-07-21T22:34:14.960258+09:00"
+          "fetched_at": "2026-07-22T07:50:30.158088+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 621426,
@@ -4188,12 +4188,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=068270&page=1",
-          "fetched_at": "2026-07-21T22:34:15.662176+09:00",
+          "fetched_at": "2026-07-22T07:50:30.539260+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 171600,
-        "as_of": "2026-07-21T22:34:14.960258+09:00",
+        "as_of": "2026-07-22T07:50:30.158088+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -4271,7 +4271,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:23.422086+09:00",
+        "updated_at": "2026-07-22T07:50:37.225126+09:00",
         "score": 57,
         "grade": "C",
         "components": {
@@ -4332,7 +4332,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=196170",
-          "fetched_at": "2026-07-21T22:34:15.098062+09:00"
+          "fetched_at": "2026-07-22T07:50:29.915861+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -228089,
@@ -4343,12 +4343,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=196170&page=1",
-          "fetched_at": "2026-07-21T22:34:15.667939+09:00",
+          "fetched_at": "2026-07-22T07:50:30.403271+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 273000,
-        "as_of": "2026-07-21T22:34:15.098062+09:00",
+        "as_of": "2026-07-22T07:50:29.915861+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
@@ -4426,7 +4426,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:23.979819+09:00",
+        "updated_at": "2026-07-22T07:50:37.624049+09:00",
         "score": 85,
         "grade": "A",
         "components": {
@@ -4487,7 +4487,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=298380",
-          "fetched_at": "2026-07-21T22:34:15.530795+09:00"
+          "fetched_at": "2026-07-22T07:50:29.728029+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -236362,
@@ -4498,12 +4498,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=298380&page=1",
-          "fetched_at": "2026-07-21T22:34:15.885520+09:00",
+          "fetched_at": "2026-07-22T07:50:30.409036+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 69300,
-        "as_of": "2026-07-21T22:34:15.530795+09:00",
+        "as_of": "2026-07-22T07:50:29.728029+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSDAQ",
@@ -4581,7 +4581,7 @@
           "period": null,
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:24.089904+09:00",
+        "updated_at": "2026-07-22T07:50:37.704618+09:00",
         "score": 16,
         "grade": "D",
         "components": {
@@ -4639,7 +4639,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=086790",
-          "fetched_at": "2026-07-21T22:34:15.558150+09:00"
+          "fetched_at": "2026-07-22T07:50:29.741879+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 984530,
@@ -4650,12 +4650,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=086790&page=1",
-          "fetched_at": "2026-07-21T22:34:15.934583+09:00",
+          "fetched_at": "2026-07-22T07:50:30.391547+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 132600,
-        "as_of": "2026-07-21T22:34:15.558150+09:00",
+        "as_of": "2026-07-22T07:50:29.741879+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -4733,7 +4733,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:24.165183+09:00",
+        "updated_at": "2026-07-22T07:50:37.879024+09:00",
         "score": 55,
         "grade": "C",
         "components": {
@@ -4794,7 +4794,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=316140",
-          "fetched_at": "2026-07-21T22:34:15.350555+09:00"
+          "fetched_at": "2026-07-22T07:50:30.195345+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1147283,
@@ -4805,12 +4805,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=316140&page=1",
-          "fetched_at": "2026-07-21T22:34:15.726120+09:00",
+          "fetched_at": "2026-07-22T07:50:30.546306+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 30500,
-        "as_of": "2026-07-21T22:34:15.350555+09:00",
+        "as_of": "2026-07-22T07:50:30.195345+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -4888,7 +4888,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:24.239401+09:00",
+        "updated_at": "2026-07-22T07:50:37.954025+09:00",
         "score": 48,
         "grade": "D",
         "components": {
@@ -4949,7 +4949,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=006360",
-          "fetched_at": "2026-07-21T22:34:16.896202+09:00"
+          "fetched_at": "2026-07-22T07:50:31.195880+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1094082,
@@ -4960,12 +4960,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=006360&page=1",
-          "fetched_at": "2026-07-21T22:34:17.243261+09:00",
+          "fetched_at": "2026-07-22T07:50:31.490249+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 25600,
-        "as_of": "2026-07-21T22:34:16.896202+09:00",
+        "as_of": "2026-07-22T07:50:31.195880+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -5043,7 +5043,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:24.376299+09:00",
+        "updated_at": "2026-07-22T07:50:38.041324+09:00",
         "score": 44,
         "grade": "D",
         "components": {
@@ -5104,7 +5104,7 @@
           "status": "ok",
           "source": "NAVER Finance 종목 메인 페이지",
           "source_url": "https://finance.naver.com/item/main.naver?code=108670",
-          "fetched_at": "2026-07-21T22:34:16.650906+09:00"
+          "fetched_at": "2026-07-22T07:50:31.333024+09:00"
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -3198,
@@ -5115,12 +5115,12 @@
           "status": "ok",
           "source": "NAVER Finance 투자자별 매매 페이지",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=108670&page=1",
-          "fetched_at": "2026-07-21T22:34:17.029160+09:00",
+          "fetched_at": "2026-07-22T07:50:31.638436+09:00",
           "period_description": "최근 10거래일 순매매량 합계"
         },
         "source": "NAVER Finance",
         "current_price": 31450,
-        "as_of": "2026-07-21T22:34:16.650906+09:00",
+        "as_of": "2026-07-22T07:50:31.333024+09:00",
         "official_krx": {
           "status": "ok",
           "market": "KOSPI",
@@ -5198,7 +5198,7 @@
           "period": "2026.12 (E)",
           "source": "NAVER Finance 기업실적분석 컨센서스(E)"
         },
-        "updated_at": "2026-07-21T22:34:24.937342+09:00",
+        "updated_at": "2026-07-22T07:50:38.438013+09:00",
         "score": 22,
         "grade": "D",
         "components": {
