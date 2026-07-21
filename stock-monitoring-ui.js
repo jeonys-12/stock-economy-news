@@ -1,5 +1,13 @@
 const stockMonitoringState={payload:null,filter:'all',query:''};
 
+const SCORE_COMPONENT_LABELS={
+  financials:'재무',
+  consensus:'컨센서스',
+  valuation:'밸류',
+  flow:'수급',
+  momentum:'모멘텀',
+};
+
 function diagnosticEscape(value){
   return String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 }
@@ -18,6 +26,30 @@ function diagnosticReason(value,fallback){
 
 function metricAvailable(value){
   return value!==null&&value!==undefined&&value!=='';
+}
+
+function signedScore(value){
+  const number=Number(value);
+  if(!Number.isFinite(number))return '0';
+  return `${number>0?'+':''}${number.toLocaleString('ko-KR')}`;
+}
+
+function scoreBasisSummary(item){
+  const components=item.quantitative.components&&typeof item.quantitative.components==='object'?item.quantitative.components:{};
+  const ranked=Object.entries(components)
+    .map(([key,value])=>({key,value:Number(value)}))
+    .filter(entry=>Number.isFinite(entry.value)&&entry.value!==0)
+    .sort((a,b)=>Math.abs(b.value)-Math.abs(a.value)||b.value-a.value)
+    .slice(0,3);
+  const componentText=ranked.length
+    ?ranked.map(entry=>`${SCORE_COMPONENT_LABELS[entry.key]||entry.key} ${signedScore(entry.value)}`).join(' · ')
+    :'유효한 가감점 없음';
+  const roeValue=metricAvailable(item.financials.roe_pct)?item.financials.roe_pct:item.valuation.roe_pct;
+  const metrics=[];
+  if(metricAvailable(roeValue))metrics.push(`ROE ${compactNumber(roeValue,'%')}`);
+  if(metricAvailable(item.valuation.per))metrics.push(`PER ${compactNumber(item.valuation.per,'배')}`);
+  if(metricAvailable(item.valuation.pbr))metrics.push(`PBR ${compactNumber(item.valuation.pbr,'배')}`);
+  return {componentText,metricText:metrics.join(' · ')||'핵심 지표 확인 필요'};
 }
 
 function stockDiagnosticRow(name,row){
@@ -116,9 +148,14 @@ function renderStockDiagnostics(){
     const flowUnit=item.flow.unit==='shares'?'주':'원';
     const roeValue=metricAvailable(item.financials.roe_pct)?item.financials.roe_pct:item.valuation.roe_pct;
     const roeSource=item.financials.roe_source||item.valuation.source||'-';
+    const scoreBasis=scoreBasisSummary(item);
     return `<details class="stock-diagnostic-item ${item.overall}" ${item.overall==='failed'?'open':''}>
       <summary>
         <div class="diagnostic-stock-name"><strong>${diagnosticEscape(item.name)}</strong><span>${code} · ${sector}</span></div>
+        <div class="diagnostic-score-basis" aria-label="점수 환산 근거 요약">
+          <strong>${diagnosticEscape(scoreBasis.componentText)}</strong>
+          <span>${diagnosticEscape(scoreBasis.metricText)}</span>
+        </div>
         <div class="diagnostic-summary-badges">
           ${diagnosticBadge(overallClass,overallLabel)}
           <span class="score-chip ${scoreClass}">점수 ${compactNumber(item.score)}</span>
