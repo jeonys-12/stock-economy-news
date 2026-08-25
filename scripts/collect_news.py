@@ -328,6 +328,14 @@ def limit_per_source(items: list[dict]) -> list[dict]:
 
 
 def main() -> None:
+    previous_payload = {}
+    if OUTPUT.exists():
+        try:
+            loaded = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            previous_payload = loaded if isinstance(loaded, dict) else {}
+        except (OSError, json.JSONDecodeError):
+            pass
+
     all_items, errors, statuses = [], [], []
     for source in SOURCES:
         items, runtime = collect_source(source)
@@ -354,6 +362,11 @@ def main() -> None:
         "updated_at": datetime.now(KST).isoformat(), "count": min(len(items), MAX_ITEMS),
         "source_status": statuses, "errors": errors, "news": items[:MAX_ITEMS],
     }
+    # Keep the last successful briefing until the optional AI step replaces it.
+    # This prevents code-push workflows and transient API failures from erasing it.
+    for key in ("ai_briefings", "ai_status", "stock_data_status"):
+        if key in previous_payload:
+            payload[key] = previous_payload[key]
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Saved {payload['count']} items to {OUTPUT}")

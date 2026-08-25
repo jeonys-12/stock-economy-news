@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import hashlib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -12,8 +13,10 @@ from openai import OpenAI
 KST = timezone(timedelta(hours=9))
 DATA_FILE = Path("data/news.json")
 STOCK_DATA_FILE = Path("data/stock_data.json")
-MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini").strip() or "gpt-5-mini"
-MAX_INPUT_ITEMS = 35
+MODEL = os.getenv("OPENAI_MODEL", "gpt-5-nano").strip() or "gpt-5-nano"
+MAX_INPUT_ITEMS = int(os.getenv("OPENAI_MAX_INPUT_ITEMS", "35"))
+MAX_OUTPUT_TOKENS = int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", "3500"))
+PREVIOUS_DATA_FILE = Path(os.getenv("PREVIOUS_NEWS_DATA", "/tmp/news_previous.json"))
 WATCHLIST = [
     "삼성전자", "SK하이닉스", "현대차", "기아", "한화에어로스페이스",
     "HD현대중공업", "삼성중공업", "POSCO홀딩스", "LG에너지솔루션",
@@ -64,7 +67,7 @@ def build_news_text(items: list[dict[str, Any]]) -> str:
                     f"분야: {item.get('category', '')}",
                     f"출처: {item.get('source', '')}",
                     f"제목: {item.get('title', '')}",
-                    f"요약: {str(item.get('description', ''))[:600]}",
+                    f"요약: {str(item.get('description', ''))[:300]}",
                 ]
             )
         )
@@ -83,7 +86,12 @@ def compact_stock_data(stock_payload: dict[str, Any]) -> dict[str, Any]:
         compact[name] = {
             "code": row.get("code"),
             "sector": row.get("sector"),
-            "quantitative": quantitative,
+            "quantitative": {
+                "score": quantitative.get("score"),
+                "components": quantitative.get("components", {}),
+                "available_dimensions": quantitative.get("available_dimensions"),
+                "signal": quantitative.get("signal"),
+            },
             "market": {
                 "status": market.get("status"),
                 "as_of": market.get("as_of"),
@@ -187,6 +195,30 @@ def extract_json(text: str) -> dict[str, Any]:
         cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
         cleaned = re.sub(r"\s*```$", "", cleaned)
     return json.loads(cleaned)
+
+
+def input_fingerprint(items: list[dict[str, Any]], stock_data: dict[str, Any]) -> str:
+    """Identify identical analysis inputs without including volatile generated timestamps."""
+    news = [
+        {
+            key: item.get(key)
+            for key in ("id", "published_at", "category", "source", "title", "description")
+        }
+        for item in items
+    ]
+    material = {"news": news, "stocks": compact_stock_data(stock_data), "model": MODEL}
+    encoded = json.dumps(material, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def load_previous_payload() -> dict[str, Any]:
+    if not PREVIOUS_DATA_FILE.exists():
+        return {}
+    try:
+        value = json.loads(PREVIOUS_DATA_FILE.read_text(encoding="utf-8"))
+        return value if isinstance(value, dict) else {}
+    except (OSError, json.JSONDecodeError):
+        return {}
 
 
 def normalize_briefing(raw: dict[str, Any], items: list[dict[str, Any]], stock_data: dict[str, Any]) -> dict[str, Any]:
@@ -299,6 +331,8 @@ def main() -> None:
     stock_data = json.loads(STOCK_DATA_FILE.read_text(encoding="utf-8")) if STOCK_DATA_FILE.exists() else {"stocks": {}}
     items = select_items(payload.get("news", []))
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    fingerprint = input_fingerprint(items, stock_data)
+    previous = load_previous_payload()
 
     payload["stock_data_status"] = {
         "status": "ok" if stock_data.get("stocks") else "unavailable",
@@ -319,9 +353,27 @@ def main() -> None:
         print("No recent items: rule-based briefing remains active")
         return
 
+    previous_status = previous.get("ai_status", {}) if isinstance(previous.get("ai_status"), dict) else {}
+    previous_briefings = previous.get("ai_briefings")
+    if previous_status.get("input_fingerprint") == fingerprint and isinstance(previous_briefings, dict):
+        payload["ai_briefings"] = previous_briefings
+        payload["ai_status"] = {
+            **previous_status,
+            "status": "cached",
+            "cache_reason": "analysis inputs unchanged",
+        }
+        DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        print("OpenAI call skipped: analysis inputs unchanged")
+        return
+
     try:
         client = OpenAI(api_key=api_key, timeout=120.0, max_retries=2)
-        response = client.responses.create(model=MODEL, input=prompt_for(items, stock_data), store=False)
+        response = client.responses.create(
+            model=MODEL,
+            input=prompt_for(items, stock_data),
+            max_output_tokens=MAX_OUTPUT_TOKENS,
+            store=False,
+        )
         raw = extract_json(response.output_text)
         payload["ai_briefings"] = normalize_briefing(raw, items, stock_data)
         payload["ai_status"] = {
@@ -331,6 +383,12 @@ def main() -> None:
             "stock_factors": len(stock_data.get("stocks", {})),
             "analysis_type": "openai_multifactor",
             "generated_at": datetime.now(KST).isoformat(),
+            "input_fingerprint": fingerprint,
+            "usage": {
+                "input_tokens": getattr(response.usage, "input_tokens", None),
+                "output_tokens": getattr(response.usage, "output_tokens", None),
+                "total_tokens": getattr(response.usage, "total_tokens", None),
+            },
         }
         print(f"OpenAI multifactor briefing generated with {MODEL} from {len(items)} news and {len(stock_data.get('stocks', {}))} stocks")
     except Exception as exc:

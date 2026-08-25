@@ -165,7 +165,9 @@ def main() -> None:
         stocks = payload.get("stocks", {})
         if isinstance(stocks, dict) and stocks:
             generate_ai_briefing.WATCHLIST = list(stocks.keys())
-            generate_ai_briefing.MAX_INPUT_ITEMS = 80
+            generate_ai_briefing.MAX_INPUT_ITEMS = int(
+                generate_ai_briefing.os.getenv("OPENAI_MAX_INPUT_ITEMS", "45")
+            )
             print(f"Flexible AI watchlist loaded: {len(stocks)} stocks")
 
     original_normalize = generate_ai_briefing.normalize_briefing
