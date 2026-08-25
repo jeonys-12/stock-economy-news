@@ -155,6 +155,7 @@ def add_flexible_candidates(
         "minimum_dimensions": MIN_DIMENSIONS,
         "news_requirement": "직접 뉴스 우선, 직접 뉴스가 없어도 2개 이상 데이터 축과 점수 기준 충족 시 정량 중심 후보 허용",
         "candidate_limit": MAX_CANDIDATES,
+        "candidate_generation": "deterministic_postprocessing",
     })
     return normalized
 

@@ -49,7 +49,7 @@ jobs:
       OPENAI_MODEL: gpt-5-nano
       OPENAI_MAX_INPUT_ITEMS: "45"
       OPENAI_MAX_INPUT_STOCKS: "24"
-      OPENAI_MAX_OUTPUT_TOKENS: "3500"
+      OPENAI_MAX_OUTPUT_TOKENS: "2500"
       OPENAI_MIN_REFRESH_HOURS: "20"
       OPENAI_FORCE_REFRESH: ${{ inputs.force_ai_refresh || 'false' }}
 

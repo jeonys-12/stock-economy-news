@@ -16,11 +16,11 @@ STOCK_DATA_FILE = Path("data/stock_data.json")
 MODEL = os.getenv("OPENAI_MODEL", "gpt-5-nano").strip() or "gpt-5-nano"
 MAX_INPUT_ITEMS = int(os.getenv("OPENAI_MAX_INPUT_ITEMS", "35"))
 MAX_INPUT_STOCKS = int(os.getenv("OPENAI_MAX_INPUT_STOCKS", "24"))
-MAX_OUTPUT_TOKENS = int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", "3500"))
+MAX_OUTPUT_TOKENS = int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", "2500"))
 MIN_REFRESH_HOURS = float(os.getenv("OPENAI_MIN_REFRESH_HOURS", "20"))
 FORCE_REFRESH = os.getenv("OPENAI_FORCE_REFRESH", "").strip().lower() in {"1", "true", "yes"}
 PREVIOUS_DATA_FILE = Path(os.getenv("PREVIOUS_NEWS_DATA", "/tmp/news_previous.json"))
-PROMPT_VERSION = "2026-08-26-v2"
+PROMPT_VERSION = "2026-08-26-v3"
 WATCHLIST = [
     "삼성전자", "SK하이닉스", "현대차", "기아", "한화에어로스페이스",
     "HD현대중공업", "삼성중공업", "POSCO홀딩스", "LG에너지솔루션",
@@ -104,7 +104,9 @@ def compact_stock_data(stock_payload: dict[str, Any]) -> dict[str, Any]:
         financials = row.get("financials", {}) if isinstance(row.get("financials"), dict) else {}
         consensus = row.get("consensus", {}) if isinstance(row.get("consensus"), dict) else {}
         quantitative = row.get("quantitative", {}) if isinstance(row.get("quantitative"), dict) else {}
-        compact[name] = {
+        valuation = market.get("valuation", {}) if isinstance(market.get("valuation"), dict) else {}
+        investor_flow = market.get("investor_flow", {}) if isinstance(market.get("investor_flow"), dict) else {}
+        value = {
             "code": row.get("code"),
             "sector": row.get("sector"),
             "quantitative": {
@@ -120,8 +122,15 @@ def compact_stock_data(stock_payload: dict[str, Any]) -> dict[str, Any]:
                 "return_5d_pct": market.get("return_5d_pct"),
                 "return_20d_pct": market.get("return_20d_pct"),
                 "return_60d_pct": market.get("return_60d_pct"),
-                "valuation": market.get("valuation", {}),
-                "investor_flow": market.get("investor_flow", {}),
+                "valuation": {
+                    "per": valuation.get("per"),
+                    "pbr": valuation.get("pbr"),
+                    "dividend_yield_pct": valuation.get("dividend_yield_pct"),
+                },
+                "investor_flow": {
+                    "institution_net_buy_10d_shares": investor_flow.get("institution_net_buy_10d_shares"),
+                    "foreign_net_buy_10d_shares": investor_flow.get("foreign_net_buy_10d_shares"),
+                },
             },
             "financials": {
                 "status": financials.get("status"),
@@ -143,7 +152,20 @@ def compact_stock_data(stock_payload: dict[str, Any]) -> dict[str, Any]:
                 "analyst_count": consensus.get("analyst_count"),
             },
         }
+        compact[name] = drop_empty(value)
     return compact
+
+
+def drop_empty(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {
+            key: cleaned
+            for key, item in value.items()
+            if (cleaned := drop_empty(item)) not in (None, "", {}, [])
+        }
+    if isinstance(value, list):
+        return [cleaned for item in value if (cleaned := drop_empty(item)) not in (None, "", {}, [])]
+    return value
 
 
 def prompt_for(items: list[dict[str, Any]], stock_data: dict[str, Any]) -> str:
@@ -161,15 +183,11 @@ def prompt_for(items: list[dict[str, Any]], stock_data: dict[str, Any]) -> str:
 필수 원칙:
 - 제공되지 않은 수치, 목표주가, 사건을 추정하거나 만들어내지 마십시오.
 - 뉴스만 긍정적이거나 정량 데이터만 긍정적인 경우 추천하지 말고 상충 신호로 설명하십시오.
-- 관심·분할매수 검토는 quantitative.score가 15 이상이고 available_dimensions가 2 이상이며, 해당 종목의 직접 뉴스 근거가 있을 때만 허용합니다.
-- 비중 축소·매도 검토는 quantitative.score가 -15 이하이고 available_dimensions가 2 이상이며, 해당 종목의 직접 뉴스 근거가 있을 때만 허용합니다.
-- 각 후보 reason에는 재무, 컨센서스, 밸류에이션, 수급, 모멘텀 중 확보된 근거를 최소 2개 명시하십시오.
 - 단순 저PER·저PBR만으로 매수 후보를 만들지 말고 이익 추세 및 수급과 함께 판단하십시오.
 - 목표주가 상승여력이 높아도 실적 악화나 외국인·기관 동반 순매도이면 위험을 명시하십시오.
 - 급등 종목은 추격매수 위험을, 급락 종목은 가치함정 가능성을 반대 시나리오로 검토하십시오.
-- 종목 의견은 WATCHLIST에 포함된 종목만 허용합니다.
-- 매수·매도 확정 지시가 아니라 '관심·분할매수 검토'와 '비중 축소·매도 검토'로 표현하십시오.
-- 각 핵심 근거와 종목 의견에는 반드시 실제 뉴스 ID를 evidence_ids에 넣으십시오.
+- 종목 후보는 별도의 정량 규칙으로 생성하므로 출력하지 마십시오.
+- 각 핵심 근거에는 반드시 실제 뉴스 ID를 evidence_ids에 넣으십시오.
 - confidence는 자료 가용성, 출처 신뢰도, 뉴스와 정량 신호의 일관성을 반영하십시오.
 - 출력은 설명이나 마크다운 없이 유효한 JSON 객체 하나만 반환하십시오.
 
@@ -184,10 +202,8 @@ JSON 형식:
     "summary": "3~5문장의 균형 잡힌 요약",
     "confidence": 0,
     "drivers": [{{"sentiment":"긍정|부정|중립","title":"핵심 근거","evidence_ids":["뉴스ID"]}}],
-    "buy_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
-    "sell_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
-    "risks": ["핵심 리스크"],
-    "checks": ["투자 전 추가 확인사항"]
+    "risks": ["핵심 리스크, 최대 4개"],
+    "checks": ["투자 전 추가 확인사항, 최대 4개"]
   }},
   "weekly": {{
     "signal": "긍정|중립|경계",
@@ -195,10 +211,8 @@ JSON 형식:
     "summary": "3~5문장의 균형 잡힌 요약",
     "confidence": 0,
     "drivers": [{{"sentiment":"긍정|부정|중립","title":"핵심 근거","evidence_ids":["뉴스ID"]}}],
-    "buy_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
-    "sell_candidates": [{{"name":"종목명","code":"종목코드","sector":"업종","reason":"뉴스와 정량근거를 함께 반영한 이유","risk":"반대 시나리오","evidence_ids":["뉴스ID"]}}],
-    "risks": ["핵심 리스크"],
-    "checks": ["투자 전 추가 확인사항"]
+    "risks": ["핵심 리스크, 최대 4개"],
+    "checks": ["투자 전 추가 확인사항, 최대 4개"]
   }}
 }}
 
