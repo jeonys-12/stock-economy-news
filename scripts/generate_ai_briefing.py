@@ -20,7 +20,40 @@ MAX_OUTPUT_TOKENS = int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", "2500"))
 MIN_REFRESH_HOURS = float(os.getenv("OPENAI_MIN_REFRESH_HOURS", "20"))
 FORCE_REFRESH = os.getenv("OPENAI_FORCE_REFRESH", "").strip().lower() in {"1", "true", "yes"}
 PREVIOUS_DATA_FILE = Path(os.getenv("PREVIOUS_NEWS_DATA", "/tmp/news_previous.json"))
-PROMPT_VERSION = "2026-08-26-v3"
+PROMPT_VERSION = "2026-08-26-v4"
+PERIOD_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {
+        "signal": {"type": "string", "enum": ["긍정", "중립", "경계"]},
+        "title": {"type": "string"},
+        "summary": {"type": "string"},
+        "confidence": {"type": "integer", "minimum": 0, "maximum": 100},
+        "drivers": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "properties": {
+                    "sentiment": {"type": "string", "enum": ["긍정", "부정", "중립"]},
+                    "title": {"type": "string"},
+                    "evidence_ids": {"type": "array", "maxItems": 3, "items": {"type": "string"}},
+                },
+                "required": ["sentiment", "title", "evidence_ids"],
+            },
+        },
+        "risks": {"type": "array", "maxItems": 4, "items": {"type": "string"}},
+        "checks": {"type": "array", "maxItems": 4, "items": {"type": "string"}},
+    },
+    "required": ["signal", "title", "summary", "confidence", "drivers", "risks", "checks"],
+}
+BRIEFING_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {"daily": PERIOD_SCHEMA, "weekly": PERIOD_SCHEMA},
+    "required": ["daily", "weekly"],
+}
 WATCHLIST = [
     "삼성전자", "SK하이닉스", "현대차", "기아", "한화에어로스페이스",
     "HD현대중공업", "삼성중공업", "POSCO홀딩스", "LG에너지솔루션",
@@ -189,32 +222,10 @@ def prompt_for(items: list[dict[str, Any]], stock_data: dict[str, Any]) -> str:
 - 종목 후보는 별도의 정량 규칙으로 생성하므로 출력하지 마십시오.
 - 각 핵심 근거에는 반드시 실제 뉴스 ID를 evidence_ids에 넣으십시오.
 - confidence는 자료 가용성, 출처 신뢰도, 뉴스와 정량 신호의 일관성을 반영하십시오.
-- 출력은 설명이나 마크다운 없이 유효한 JSON 객체 하나만 반환하십시오.
+- 제공된 출력 스키마를 정확히 따르십시오.
 
 WATCHLIST:
 {json.dumps(WATCHLIST, ensure_ascii=False)}
-
-JSON 형식:
-{{
-  "daily": {{
-    "signal": "긍정|중립|경계",
-    "title": "한 문장 시장 전망",
-    "summary": "3~5문장의 균형 잡힌 요약",
-    "confidence": 0,
-    "drivers": [{{"sentiment":"긍정|부정|중립","title":"핵심 근거","evidence_ids":["뉴스ID"]}}],
-    "risks": ["핵심 리스크, 최대 4개"],
-    "checks": ["투자 전 추가 확인사항, 최대 4개"]
-  }},
-  "weekly": {{
-    "signal": "긍정|중립|경계",
-    "title": "한 문장 시장 전망",
-    "summary": "3~5문장의 균형 잡힌 요약",
-    "confidence": 0,
-    "drivers": [{{"sentiment":"긍정|부정|중립","title":"핵심 근거","evidence_ids":["뉴스ID"]}}],
-    "risks": ["핵심 리스크, 최대 4개"],
-    "checks": ["투자 전 추가 확인사항, 최대 4개"]
-  }}
-}}
 
 종목 정량 데이터:
 {json.dumps(compact_stock_data(stock_data), ensure_ascii=False, separators=(",", ":"))}
@@ -429,9 +440,21 @@ def main() -> None:
             max_output_tokens=MAX_OUTPUT_TOKENS,
             prompt_cache_key="stock-economy-news-briefing-v2",
             reasoning={"effort": "minimal"},
-            text={"verbosity": "low"},
+            text={
+                "format": {
+                    "type": "json_schema",
+                    "name": "market_briefing",
+                    "strict": True,
+                    "schema": BRIEFING_SCHEMA,
+                },
+                "verbosity": "low",
+            },
             store=False,
         )
+        if response.status != "completed":
+            detail = getattr(response, "incomplete_details", None)
+            reason = getattr(detail, "reason", None) or response.status
+            raise RuntimeError(f"OpenAI response was not completed: {reason}")
         raw = extract_json(response.output_text)
         payload["ai_briefings"] = normalize_briefing(raw, items, stock_data)
         payload["ai_status"] = {

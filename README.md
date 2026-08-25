@@ -19,6 +19,8 @@ GitHub Actions가 한국·미국의 경제정책, 금융시장, 건설·부동�
 
 모델에는 분석에 필요한 숫자만 전달하며 출처 URL, 수집 시각, 상태 설명과 빈 필드는 제거합니다. 종목 후보는 모델이 중복 생성하지 않고 검증 가능한 정량 규칙으로 후처리합니다.
 
+응답에는 JSON Schema 기반 Structured Outputs를 적용합니다. 잘못된 JSON으로 유료 호출 결과가 폐기되는 일을 줄이고, 토큰 상한으로 응답이 중단된 경우에는 불완전한 결과를 게시하지 않습니다.
+
 필요하면 `OPENAI_MODEL`, `OPENAI_MAX_INPUT_ITEMS`, `OPENAI_MAX_INPUT_STOCKS`, `OPENAI_MAX_OUTPUT_TOKENS`, `OPENAI_MIN_REFRESH_HOURS`로 품질과 비용의 균형을 조정할 수 있습니다. 즉시 강제 갱신하려면 수동 실행에서 `OPENAI_FORCE_REFRESH=true`를 설정합니다.
 
 `data/news.json`의 `ai_status.usage`에서 실제 입력·캐시된 입력·출력·전체 토큰을 확인할 수 있습니다.
