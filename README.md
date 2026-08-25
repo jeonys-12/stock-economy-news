@@ -15,9 +15,11 @@ GitHub Actions가 한국·미국의 경제정책, 금융시장, 건설·부동�
 
 ## OpenAI API 비용 제어
 
-기본 모델은 요약·분류에 적합한 `gpt-5-nano`이며, 한 번의 실행에서 뉴스 45건과 출력 3,500 토큰을 상한으로 사용합니다. 분석 입력이 이전 실행과 같으면 저장된 브리핑을 재사용합니다. 필요하면 Actions 변수 또는 워크플로 환경값 `OPENAI_MODEL`, `OPENAI_MAX_INPUT_ITEMS`, `OPENAI_MAX_OUTPUT_TOKENS`로 품질과 비용의 균형을 조정할 수 있습니다.
+기본 모델은 요약·분류에 적합한 `gpt-5-nano`이며, 한 번의 실행에서 뉴스 45건·종목 24개·출력 3,500 토큰을 상한으로 사용합니다. 분석 입력이 같거나 마지막 생성 후 20시간이 지나지 않았으면 저장된 브리핑을 재사용합니다. 프롬프트의 고정 지침을 앞에 배치하고 안정적인 cache key를 사용해 OpenAI의 공통 입력 캐시 적중률도 높입니다.
 
-`data/news.json`의 `ai_status.usage`에서 실제 입력·출력·전체 토큰을 확인할 수 있습니다.
+필요하면 `OPENAI_MODEL`, `OPENAI_MAX_INPUT_ITEMS`, `OPENAI_MAX_INPUT_STOCKS`, `OPENAI_MAX_OUTPUT_TOKENS`, `OPENAI_MIN_REFRESH_HOURS`로 품질과 비용의 균형을 조정할 수 있습니다. 즉시 강제 갱신하려면 수동 실행에서 `OPENAI_FORCE_REFRESH=true`를 설정합니다.
+
+`data/news.json`의 `ai_status.usage`에서 실제 입력·캐시된 입력·출력·전체 토큰을 확인할 수 있습니다.
 
 ## 최초 설정
 

@@ -1,9 +1,9 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
-import hashlib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -15,8 +15,12 @@ DATA_FILE = Path("data/news.json")
 STOCK_DATA_FILE = Path("data/stock_data.json")
 MODEL = os.getenv("OPENAI_MODEL", "gpt-5-nano").strip() or "gpt-5-nano"
 MAX_INPUT_ITEMS = int(os.getenv("OPENAI_MAX_INPUT_ITEMS", "35"))
+MAX_INPUT_STOCKS = int(os.getenv("OPENAI_MAX_INPUT_STOCKS", "24"))
 MAX_OUTPUT_TOKENS = int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", "3500"))
+MIN_REFRESH_HOURS = float(os.getenv("OPENAI_MIN_REFRESH_HOURS", "20"))
+FORCE_REFRESH = os.getenv("OPENAI_FORCE_REFRESH", "").strip().lower() in {"1", "true", "yes"}
 PREVIOUS_DATA_FILE = Path(os.getenv("PREVIOUS_NEWS_DATA", "/tmp/news_previous.json"))
+PROMPT_VERSION = "2026-08-26-v2"
 WATCHLIST = [
     "삼성전자", "SK하이닉스", "현대차", "기아", "한화에어로스페이스",
     "HD현대중공업", "삼성중공업", "POSCO홀딩스", "LG에너지솔루션",
@@ -76,9 +80,26 @@ def build_news_text(items: list[dict[str, Any]]) -> str:
 
 def compact_stock_data(stock_payload: dict[str, Any]) -> dict[str, Any]:
     compact: dict[str, Any] = {}
-    for name, row in stock_payload.get("stocks", {}).items():
-        if name not in WATCHLIST or not isinstance(row, dict):
-            continue
+    candidates = [
+        (name, row)
+        for name, row in stock_payload.get("stocks", {}).items()
+        if name in WATCHLIST and isinstance(row, dict)
+    ]
+
+    def relevance(pair: tuple[str, dict[str, Any]]) -> tuple[float, int, str]:
+        name, row = pair
+        quantitative = row.get("quantitative", {}) if isinstance(row.get("quantitative"), dict) else {}
+        try:
+            score = abs(float(quantitative.get("score", 0) or 0))
+        except (TypeError, ValueError):
+            score = 0.0
+        try:
+            dimensions = int(quantitative.get("available_dimensions", 0) or 0)
+        except (TypeError, ValueError):
+            dimensions = 0
+        return (-score, -dimensions, name)
+
+    for name, row in sorted(candidates, key=relevance)[:MAX_INPUT_STOCKS]:
         market = row.get("market", {}) if isinstance(row.get("market"), dict) else {}
         financials = row.get("financials", {}) if isinstance(row.get("financials"), dict) else {}
         consensus = row.get("consensus", {}) if isinstance(row.get("consensus"), dict) else {}
@@ -128,7 +149,7 @@ def compact_stock_data(stock_payload: dict[str, Any]) -> dict[str, Any]:
 def prompt_for(items: list[dict[str, Any]], stock_data: dict[str, Any]) -> str:
     now = datetime.now(KST).isoformat(timespec="minutes")
     return f"""
-현재 시각은 {now}입니다. 당신은 한국 주식시장 리서치팀의 보조 분석가입니다.
+당신은 한국 주식시장 리서치팀의 보조 분석가입니다.
 아래 공개 뉴스와 정량 데이터를 함께 사용해 최근 24시간 및 최근 7일 브리핑을 각각 작성하십시오.
 
 정량 데이터 구성:
@@ -182,10 +203,12 @@ JSON 형식:
 }}
 
 종목 정량 데이터:
-{json.dumps(compact_stock_data(stock_data), ensure_ascii=False)}
+{json.dumps(compact_stock_data(stock_data), ensure_ascii=False, separators=(",", ":"))}
 
 뉴스 자료:
 {build_news_text(items)}
+
+분석 기준 시각: {now}
 """.strip()
 
 
@@ -201,12 +224,17 @@ def input_fingerprint(items: list[dict[str, Any]], stock_data: dict[str, Any]) -
     """Identify identical analysis inputs without including volatile generated timestamps."""
     news = [
         {
-            key: item.get(key)
+            key: (str(item.get(key, ""))[:300] if key == "description" else item.get(key))
             for key in ("id", "published_at", "category", "source", "title", "description")
         }
         for item in items
     ]
-    material = {"news": news, "stocks": compact_stock_data(stock_data), "model": MODEL}
+    material = {
+        "news": news,
+        "stocks": compact_stock_data(stock_data),
+        "model": MODEL,
+        "prompt_version": PROMPT_VERSION,
+    }
     encoded = json.dumps(material, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
 
@@ -219,6 +247,17 @@ def load_previous_payload() -> dict[str, Any]:
         return value if isinstance(value, dict) else {}
     except (OSError, json.JSONDecodeError):
         return {}
+
+
+def previous_is_fresh(previous_status: dict[str, Any]) -> bool:
+    if FORCE_REFRESH or MIN_REFRESH_HOURS <= 0:
+        return False
+    generated_at = str(previous_status.get("generated_at", ""))
+    try:
+        age = datetime.now(KST) - datetime.fromisoformat(generated_at).astimezone(KST)
+    except (TypeError, ValueError):
+        return False
+    return timedelta(0) <= age < timedelta(hours=MIN_REFRESH_HOURS)
 
 
 def normalize_briefing(raw: dict[str, Any], items: list[dict[str, Any]], stock_data: dict[str, Any]) -> dict[str, Any]:
@@ -355,12 +394,14 @@ def main() -> None:
 
     previous_status = previous.get("ai_status", {}) if isinstance(previous.get("ai_status"), dict) else {}
     previous_briefings = previous.get("ai_briefings")
-    if previous_status.get("input_fingerprint") == fingerprint and isinstance(previous_briefings, dict):
+    cache_reason = "analysis inputs unchanged" if previous_status.get("input_fingerprint") == fingerprint else "minimum refresh interval"
+    should_reuse = previous_status.get("input_fingerprint") == fingerprint or previous_is_fresh(previous_status)
+    if should_reuse and isinstance(previous_briefings, dict):
         payload["ai_briefings"] = previous_briefings
         payload["ai_status"] = {
             **previous_status,
             "status": "cached",
-            "cache_reason": "analysis inputs unchanged",
+            "cache_reason": cache_reason,
         }
         DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print("OpenAI call skipped: analysis inputs unchanged")
@@ -372,6 +413,9 @@ def main() -> None:
             model=MODEL,
             input=prompt_for(items, stock_data),
             max_output_tokens=MAX_OUTPUT_TOKENS,
+            prompt_cache_key="stock-economy-news-briefing-v2",
+            reasoning={"effort": "minimal"},
+            text={"verbosity": "low"},
             store=False,
         )
         raw = extract_json(response.output_text)
@@ -388,6 +432,9 @@ def main() -> None:
                 "input_tokens": getattr(response.usage, "input_tokens", None),
                 "output_tokens": getattr(response.usage, "output_tokens", None),
                 "total_tokens": getattr(response.usage, "total_tokens", None),
+                "cached_input_tokens": getattr(
+                    getattr(response.usage, "input_tokens_details", None), "cached_tokens", None
+                ),
             },
         }
         print(f"OpenAI multifactor briefing generated with {MODEL} from {len(items)} news and {len(stock_data.get('stocks', {}))} stocks")
