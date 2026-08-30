@@ -78,12 +78,12 @@ jobs:
           PREVIOUS_STOCK_DATA: /tmp/stock_data_previous.json
         run: python scripts/collect_public_market_fast.py
 
-      - name: Analyze NAVER main page Financial Summary
+      - name: Analyze NAVER Financial Summary with short-history support
         env:
           QUALITY_ANALYSIS_WORKERS: "5"
-        run: python scripts/analyze_naver_financial_summary.py
+        run: python scripts/analyze_naver_financial_summary_flexible.py
 
-      - name: Validate Kia required Financial Summary metrics
+      - name: Validate Kia and SK Eternix Financial Summary metrics
         run: python scripts/validate_naver_financial_summary.py
 
       - name: Normalize investor flow fields
