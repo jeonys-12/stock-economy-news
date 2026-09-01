@@ -5,6 +5,12 @@ on:
     # 매일 오전 6시 30분(KST) = 전날 21시 30분(UTC)
     - cron: "30 21 * * *"
   workflow_dispatch:
+    inputs:
+      force_ai_refresh:
+        description: "20시간 재사용 제한을 무시하고 AI 브리핑 강제 갱신"
+        required: false
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -40,6 +46,12 @@ jobs:
     env:
       PUBLIC_MARKET_WORKERS: "6"
       QUALITY_ANALYSIS_WORKERS: "5"
+      OPENAI_MODEL: gpt-5-nano
+      OPENAI_MAX_INPUT_ITEMS: "45"
+      OPENAI_MAX_INPUT_STOCKS: "24"
+      OPENAI_MAX_OUTPUT_TOKENS: "2500"
+      OPENAI_MIN_REFRESH_HOURS: "20"
+      OPENAI_FORCE_REFRESH: ${{ inputs.force_ai_refresh || 'false' }}
 
     steps:
       - name: Checkout repository
@@ -57,12 +69,20 @@ jobs:
       - name: Install dependencies
         run: pip install --disable-pip-version-check -r requirements.txt
 
+      - name: Run unit tests
+        run: python -m unittest discover -s tests
+
       - name: Preserve previous stock cache
         run: |
           if [ -f data/stock_data.json ]; then
             cp data/stock_data.json /tmp/stock_data_previous.json
           else
             echo '{}' > /tmp/stock_data_previous.json
+          fi
+          if [ -f data/news.json ]; then
+            cp data/news.json /tmp/news_previous.json
+          else
+            echo '{}' > /tmp/news_previous.json
           fi
 
       - name: Collect and filter news
@@ -90,10 +110,11 @@ jobs:
         run: python scripts/normalize_investor_flow_fields.py
 
       - name: Generate OpenAI market briefing
+        if: github.event_name != 'push'
         continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: gpt-5-mini
+          PREVIOUS_NEWS_DATA: /tmp/news_previous.json
         run: python scripts/generate_expanded_ai_briefing.py
 
       - name: Sanitize outputs
