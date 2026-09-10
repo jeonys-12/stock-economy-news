@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-10T08:26:36.899442+09:00",
+  "updated_at": "2026-09-11T08:20:23.915670+09:00",
   "source_status": {
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-09-10T08:26:20.203437+09:00",
+      "updated_at": "2026-09-11T08:19:56.526177+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -21,31 +21,31 @@
       "status": "ok",
       "role": "현재가·PER·PBR·EPS·BPS·목표주가·최근 10거래일 수급 수집",
       "source": "NAVER Finance",
-      "valuation_fresh": 32,
-      "valuation_cached": 0,
-      "investor_flow_fresh": 32,
-      "investor_flow_cached": 0,
+      "valuation_fresh": 0,
+      "valuation_cached": 32,
+      "investor_flow_fresh": 0,
+      "investor_flow_cached": 32,
       "requested_stocks": 32,
       "parallel_workers": 6,
       "errors": [],
-      "updated_at": "2026-09-10T08:26:30.497726+09:00"
+      "updated_at": "2026-09-11T08:20:11.880667+09:00"
     },
     "quality_value_analysis": {
-      "status": "ok",
-      "completed_stocks": 31,
-      "cached_stocks": 0,
+      "status": "partial",
+      "completed_stocks": 0,
+      "cached_stocks": 31,
       "failed_stocks": 1,
       "requested_stocks": 32,
       "source": "NAVER Finance 종목 메인 기업실적분석",
       "failure_samples": [
-        "SK이터닉스: 연간 확정 실적이 2개년만 인식됐습니다: ['2024.12', '2025.12', '2026.12 (E)', '2025.06']"
+        "SK이터닉스: 종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       ],
       "excluded_sources": [
         "OpenDART",
         "KRX OPEN API",
         "FnGuide 별도 호출"
       ],
-      "updated_at": "2026-09-10T08:26:36.899434+09:00"
+      "updated_at": "2026-09-11T08:20:23.915657+09:00"
     },
     "naver_required_stock_validation": {
       "status": "ok",
@@ -373,7 +373,7 @@
       ],
       "watchlist_order": 1,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 12.09,
           "pbr": 3.13,
@@ -382,10 +382,12 @@
           "bps": 52002.0,
           "target_price": 488409,
           "target_upside_pct": 81.23,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=005930",
-          "fetched_at": "2026-09-10T08:26:22.061052+09:00"
+          "fetched_at": "2026-09-10T08:26:22.061052+09:00",
+          "cached_from": "2026-09-10T08:26:22.061052+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 2947585,
@@ -393,11 +395,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=005930&page=1",
           "fetched_at": "2026-09-10T08:26:23.254393+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:23.254393+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 269500,
@@ -417,8 +421,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=005930",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -503,7 +507,9 @@
           "평균 ROE 8.0%",
           "부채비율 29.9%",
           "추정 PER 5.6배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 18.0,
@@ -528,7 +534,7 @@
       ],
       "watchlist_order": 2,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 8.27,
           "pbr": 5.01,
@@ -537,10 +543,12 @@
           "bps": 77752.0,
           "target_price": 3305652,
           "target_upside_pct": 78.11,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=000660",
-          "fetched_at": "2026-09-10T08:26:22.265542+09:00"
+          "fetched_at": "2026-09-10T08:26:22.265542+09:00",
+          "cached_from": "2026-09-10T08:26:22.265542+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -1352880,
@@ -548,11 +556,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000660&page=1",
           "fetched_at": "2026-09-10T08:26:23.238233+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:23.238233+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 1856000,
@@ -572,8 +582,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=000660",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -658,7 +668,9 @@
           "평균 ROE 19.9%",
           "부채비율 46.0%",
           "추정 PER 5.1배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 25.2,
@@ -683,7 +695,7 @@
       ],
       "watchlist_order": 3,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 107.51,
           "pbr": 31.81,
@@ -692,10 +704,12 @@
           "bps": 5907.0,
           "target_price": 380000,
           "target_upside_pct": 51.7,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=042700",
-          "fetched_at": "2026-09-10T08:26:22.146546+09:00"
+          "fetched_at": "2026-09-10T08:26:22.146546+09:00",
+          "cached_from": "2026-09-10T08:26:22.146546+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 517059,
@@ -703,11 +717,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=042700&page=1",
           "fetched_at": "2026-09-10T08:26:23.229790+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:23.229790+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 250500,
@@ -727,8 +743,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=042700",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -813,7 +829,9 @@
           "평균 ROE 39.2%",
           "부채비율 17.8%",
           "추정 PER 67.4배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 7.2,
@@ -838,7 +856,7 @@
       ],
       "watchlist_order": 4,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 108.13,
           "pbr": 10.37,
@@ -847,10 +865,12 @@
           "bps": 103878.0,
           "target_price": 2350500,
           "target_upside_pct": 67.41,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=009150",
-          "fetched_at": "2026-09-10T08:26:22.193210+09:00"
+          "fetched_at": "2026-09-10T08:26:22.193210+09:00",
+          "cached_from": "2026-09-10T08:26:22.193210+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 129072,
@@ -858,11 +878,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=009150&page=1",
           "fetched_at": "2026-09-10T08:26:23.244032+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:23.244032+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 1404000,
@@ -882,8 +904,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=009150",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -968,7 +990,9 @@
           "평균 ROE 7.1%",
           "부채비율 49.0%",
           "추정 PER 69.0배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 14.4,
@@ -993,7 +1017,7 @@
       ],
       "watchlist_order": 5,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 81.6,
           "pbr": 14.77,
@@ -1002,10 +1026,12 @@
           "bps": 11669.0,
           "target_price": 297500,
           "target_upside_pct": 40.66,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=010120",
-          "fetched_at": "2026-09-10T08:26:22.371649+09:00"
+          "fetched_at": "2026-09-10T08:26:22.371649+09:00",
+          "cached_from": "2026-09-10T08:26:22.371649+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 72957,
@@ -1013,11 +1039,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=010120&page=1",
           "fetched_at": "2026-09-10T08:26:23.248153+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:23.248153+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 211500,
@@ -1037,8 +1065,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=010120",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1123,7 +1151,9 @@
           "평균 ROE 13.6%",
           "부채비율 131.5%",
           "추정 PER 55.6배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 14.4,
@@ -1148,7 +1178,7 @@
       ],
       "watchlist_order": 6,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 12.64,
           "pbr": 0.83,
@@ -1157,10 +1187,12 @@
           "bps": 351861.0,
           "target_price": 701600,
           "target_upside_pct": 80.82,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=005380",
-          "fetched_at": "2026-09-10T08:26:22.286341+09:00"
+          "fetched_at": "2026-09-10T08:26:22.286341+09:00",
+          "cached_from": "2026-09-10T08:26:22.286341+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -977753,
@@ -1168,11 +1200,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=005380&page=1",
           "fetched_at": "2026-09-10T08:26:23.258932+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:23.258932+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 388000,
@@ -1192,8 +1226,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=005380",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1278,7 +1312,9 @@
           "평균 ROE 11.5%",
           "부채비율 188.9%",
           "추정 PER 10.2배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -10.2,
@@ -1303,7 +1339,7 @@
       ],
       "watchlist_order": 7,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 7.04,
           "pbr": 0.76,
@@ -1312,10 +1348,12 @@
           "bps": 117495.0,
           "target_price": 216800,
           "target_upside_pct": 70.98,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=000270",
-          "fetched_at": "2026-09-10T08:26:24.028441+09:00"
+          "fetched_at": "2026-09-10T08:26:24.028441+09:00",
+          "cached_from": "2026-09-10T08:26:24.028441+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -594263,
@@ -1323,11 +1361,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000270&page=1",
           "fetched_at": "2026-09-10T08:26:24.685277+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:24.685277+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 126800,
@@ -1347,8 +1387,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=000270",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1433,7 +1473,9 @@
           "평균 ROE 17.5%",
           "부채비율 61.8%",
           "추정 PER 5.7배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 4.8,
@@ -1458,7 +1500,7 @@
       ],
       "watchlist_order": 8,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 10.47,
           "pbr": 0.72,
@@ -1467,10 +1509,12 @@
           "bps": 448144.0,
           "target_price": 735200,
           "target_upside_pct": 76.1,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=012330",
-          "fetched_at": "2026-09-10T08:26:24.490868+09:00"
+          "fetched_at": "2026-09-10T08:26:24.490868+09:00",
+          "cached_from": "2026-09-10T08:26:24.490868+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -663234,
@@ -1478,11 +1522,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=012330&page=1",
           "fetched_at": "2026-09-10T08:26:24.761222+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:24.761222+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 417500,
@@ -1502,8 +1548,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=012330",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1588,7 +1634,9 @@
           "평균 ROE 8.6%",
           "부채비율 43.0%",
           "추정 PER 9.1배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 13.2,
@@ -1613,7 +1661,7 @@
       ],
       "watchlist_order": 9,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 26.11,
           "pbr": 4.49,
@@ -1622,10 +1670,12 @@
           "bps": 68644.0,
           "target_price": 1658889,
           "target_upside_pct": 58.44,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=012450",
-          "fetched_at": "2026-09-10T08:26:24.186546+09:00"
+          "fetched_at": "2026-09-10T08:26:24.186546+09:00",
+          "cached_from": "2026-09-10T08:26:24.186546+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 17643,
@@ -1633,11 +1683,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=012450&page=1",
           "fetched_at": "2026-09-10T08:26:24.720026+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:24.720026+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 1047000,
@@ -1657,8 +1709,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=012450",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1743,7 +1795,9 @@
           "평균 ROE 32.9%",
           "부채비율 221.4%",
           "추정 PER 22.8배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 15.0,
@@ -1768,7 +1822,7 @@
       ],
       "watchlist_order": 10,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 18.08,
           "pbr": 4.61,
@@ -1777,10 +1831,12 @@
           "bps": 58660.0,
           "target_price": 871059,
           "target_upside_pct": 87.93,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=329180",
-          "fetched_at": "2026-09-10T08:26:24.606112+09:00"
+          "fetched_at": "2026-09-10T08:26:24.606112+09:00",
+          "cached_from": "2026-09-10T08:26:24.606112+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -4647,
@@ -1788,11 +1844,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=329180&page=1",
           "fetched_at": "2026-09-10T08:26:24.913394+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:24.913394+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 463500,
@@ -1812,8 +1870,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=329180",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1898,7 +1956,9 @@
           "평균 ROE 10.2%",
           "부채비율 180.1%",
           "추정 PER 14.4배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 12.0,
@@ -1923,7 +1983,7 @@
       ],
       "watchlist_order": 11,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "pbr": 3.89,
           "eps": -7193.0,
@@ -1932,10 +1992,12 @@
           "bps": 86328.0,
           "target_price": 515778,
           "target_upside_pct": 39.02,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=373220",
-          "fetched_at": "2026-09-10T08:26:24.401205+09:00"
+          "fetched_at": "2026-09-10T08:26:24.401205+09:00",
+          "cached_from": "2026-09-10T08:26:24.401205+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 357568,
@@ -1943,11 +2005,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=373220&page=1",
           "fetched_at": "2026-09-10T08:26:24.727377+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:24.727377+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 371000,
@@ -1967,8 +2031,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=373220",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2049,7 +2113,9 @@
           "영업이익 3~5년 성장률 -21.1%",
           "평균 ROE -1.3%",
           "부채비율 129.0%"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -23.4,
@@ -2074,7 +2140,7 @@
       ],
       "watchlist_order": 12,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 19.74,
           "pbr": 2.05,
@@ -2083,10 +2149,12 @@
           "bps": 199226.0,
           "target_price": 1125789,
           "target_upside_pct": 103.58,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=011070",
-          "fetched_at": "2026-09-10T08:26:24.587161+09:00"
+          "fetched_at": "2026-09-10T08:26:24.587161+09:00",
+          "cached_from": "2026-09-10T08:26:24.587161+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -241379,
@@ -2094,11 +2162,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=011070&page=1",
           "fetched_at": "2026-09-10T08:26:24.895630+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:24.895630+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 553000,
@@ -2118,8 +2188,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=011070",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2204,7 +2274,9 @@
           "평균 ROE 9.2%",
           "부채비율 107.0%",
           "추정 PER 13.8배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -5.4,
@@ -2229,7 +2301,7 @@
       ],
       "watchlist_order": 13,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "pbr": 0.71,
           "eps": -2704.0,
@@ -2238,10 +2310,12 @@
           "bps": 18267.0,
           "target_price": 15786,
           "target_upside_pct": 76.38,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=034220",
-          "fetched_at": "2026-09-10T08:26:25.532976+09:00"
+          "fetched_at": "2026-09-10T08:26:25.532976+09:00",
+          "cached_from": "2026-09-10T08:26:25.532976+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1155844,
@@ -2249,11 +2323,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=034220&page=1",
           "fetched_at": "2026-09-10T08:26:26.176370+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:26.176370+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 8950,
@@ -2273,8 +2349,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=034220",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2355,7 +2431,9 @@
           "평균 ROE -21.9%",
           "부채비율 243.4%",
           "추정 PER 144.7배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -25.8,
@@ -2380,7 +2458,7 @@
       ],
       "watchlist_order": 14,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 14.51,
           "pbr": 2.29,
@@ -2389,10 +2467,12 @@
           "bps": 21369.0,
           "target_price": 98667,
           "target_upside_pct": 36.85,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=064400",
-          "fetched_at": "2026-09-10T08:26:25.841284+09:00"
+          "fetched_at": "2026-09-10T08:26:25.841284+09:00",
+          "cached_from": "2026-09-10T08:26:25.841284+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -29407,
@@ -2400,11 +2480,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=064400&page=1",
           "fetched_at": "2026-09-10T08:26:26.211956+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:26.211956+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 72100,
@@ -2424,8 +2506,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=064400",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2508,7 +2590,9 @@
           "평균 ROE 18.2%",
           "부채비율 79.7%",
           "추정 PER 15.0배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 19.2,
@@ -2533,7 +2617,7 @@
       ],
       "watchlist_order": 15,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "pbr": 1.0,
           "eps": -6951.0,
@@ -2542,10 +2626,12 @@
           "bps": 230169.0,
           "target_price": 174750,
           "target_upside_pct": 13.84,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=096770",
-          "fetched_at": "2026-09-10T08:26:25.619067+09:00"
+          "fetched_at": "2026-09-10T08:26:25.619067+09:00",
+          "cached_from": "2026-09-10T08:26:25.619067+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1696389,
@@ -2553,11 +2639,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=096770&page=1",
           "fetched_at": "2026-09-10T08:26:26.204996+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:26.204996+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 153500,
@@ -2577,8 +2665,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=096770",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2661,7 +2749,9 @@
           "평균 ROE -7.6%",
           "부채비율 190.2%",
           "추정 PER 8.1배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -18.0,
@@ -2686,7 +2776,7 @@
       ],
       "watchlist_order": 16,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 241.82,
           "pbr": 6.74,
@@ -2695,10 +2785,12 @@
           "bps": 7187.0,
           "target_price": 57250,
           "target_upside_pct": 7.61,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=475150",
-          "fetched_at": "2026-09-10T08:26:25.761593+09:00"
+          "fetched_at": "2026-09-10T08:26:25.761593+09:00",
+          "cached_from": "2026-09-10T08:26:25.761593+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -235808,
@@ -2706,11 +2798,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=475150&page=1",
           "fetched_at": "2026-09-10T08:26:26.200220+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:26.200220+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 53200,
@@ -2731,11 +2825,11 @@
       },
       "quality_value_analysis": {
         "status": "failed",
-        "reason": "연간 확정 실적이 2개년만 인식됐습니다: ['2024.12', '2025.12', '2026.12 (E)', '2025.06']",
+        "reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다.",
         "history": [],
         "metrics": {},
         "source": "NAVER Finance 종목 메인 기업실적분석",
-        "updated_at": "2026-09-10T08:26:34.135864+09:00",
+        "updated_at": "2026-09-11T08:20:18.770969+09:00",
         "score": 0,
         "grade": "D",
         "components": {
@@ -2770,7 +2864,7 @@
       ],
       "watchlist_order": 17,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 379.64,
           "pbr": 4.07,
@@ -2779,10 +2873,12 @@
           "bps": 29410.0,
           "target_price": 205625,
           "target_upside_pct": 7.04,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=003670",
-          "fetched_at": "2026-09-10T08:26:26.046618+09:00"
+          "fetched_at": "2026-09-10T08:26:26.046618+09:00",
+          "cached_from": "2026-09-10T08:26:26.046618+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 451509,
@@ -2790,11 +2886,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=003670&page=1",
           "fetched_at": "2026-09-10T08:26:26.378656+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:26.378656+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 192100,
@@ -2814,8 +2912,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=003670",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2900,7 +2998,9 @@
           "평균 ROE -2.0%",
           "부채비율 102.7%",
           "추정 PER 558.4배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -14.4,
@@ -2925,7 +3025,7 @@
       ],
       "watchlist_order": 18,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 16.3,
           "pbr": 1.06,
@@ -2934,10 +3034,12 @@
           "bps": 154077.0,
           "target_price": 330958,
           "target_upside_pct": 57.6,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=035420",
-          "fetched_at": "2026-09-10T08:26:26.067983+09:00"
+          "fetched_at": "2026-09-10T08:26:26.067983+09:00",
+          "cached_from": "2026-09-10T08:26:26.067983+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -364459,
@@ -2945,11 +3047,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=035420&page=1",
           "fetched_at": "2026-09-10T08:26:26.391703+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:26.391703+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 210000,
@@ -2969,8 +3073,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=035420",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3055,7 +3159,9 @@
           "평균 ROE 6.6%",
           "부채비율 41.9%",
           "추정 PER 17.1배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 16.8,
@@ -3080,7 +3186,7 @@
       ],
       "watchlist_order": 19,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 44.76,
           "pbr": 1.31,
@@ -3089,10 +3195,12 @@
           "bps": 22281.0,
           "target_price": 55053,
           "target_upside_pct": 57.07,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=035720",
-          "fetched_at": "2026-09-10T08:26:27.344967+09:00"
+          "fetched_at": "2026-09-10T08:26:27.344967+09:00",
+          "cached_from": "2026-09-10T08:26:27.344967+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 166040,
@@ -3100,11 +3208,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=035720&page=1",
           "fetched_at": "2026-09-10T08:26:27.781180+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:27.781180+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 35050,
@@ -3124,8 +3234,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=035720",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3210,7 +3320,9 @@
           "평균 ROE -1.7%",
           "부채비율 82.5%",
           "추정 PER 27.3배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 10.8,
@@ -3235,7 +3347,7 @@
       ],
       "watchlist_order": 20,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 33.47,
           "pbr": 1.62,
@@ -3244,10 +3356,12 @@
           "bps": 72383.0,
           "target_price": 167650,
           "target_upside_pct": 25.49,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=000720",
-          "fetched_at": "2026-09-10T08:26:27.170419+09:00"
+          "fetched_at": "2026-09-10T08:26:27.170419+09:00",
+          "cached_from": "2026-09-10T08:26:27.170419+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1043621,
@@ -3255,11 +3369,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000720&page=1",
           "fetched_at": "2026-09-10T08:26:27.757289+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:27.757289+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 133600,
@@ -3279,8 +3395,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=000720",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3365,7 +3481,9 @@
           "평균 ROE 3.1%",
           "부채비율 174.8%",
           "추정 PER 28.8배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -24.6,
@@ -3390,7 +3508,7 @@
       ],
       "watchlist_order": 21,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 72.26,
           "pbr": 2.96,
@@ -3399,10 +3517,12 @@
           "bps": 11443.0,
           "target_price": 108714,
           "target_upside_pct": 52.9,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=272210",
-          "fetched_at": "2026-09-10T08:26:27.447761+09:00"
+          "fetched_at": "2026-09-10T08:26:27.447761+09:00",
+          "cached_from": "2026-09-10T08:26:27.447761+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -128579,
@@ -3410,11 +3530,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=272210&page=1",
           "fetched_at": "2026-09-10T08:26:27.792265+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:27.792265+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 71100,
@@ -3434,8 +3556,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=272210",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3520,7 +3642,9 @@
           "평균 ROE 14.4%",
           "부채비율 106.5%",
           "추정 PER 94.7배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -10.8,
@@ -3545,7 +3669,7 @@
       ],
       "watchlist_order": 22,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 13.01,
           "pbr": 3.59,
@@ -3554,10 +3678,12 @@
           "bps": 14061.0,
           "target_price": 140050,
           "target_upside_pct": 58.97,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=042660",
-          "fetched_at": "2026-09-10T08:26:27.203286+09:00"
+          "fetched_at": "2026-09-10T08:26:27.203286+09:00",
+          "cached_from": "2026-09-10T08:26:27.203286+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 89848,
@@ -3565,11 +3691,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=042660&page=1",
           "fetched_at": "2026-09-10T08:26:27.765496+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:27.765496+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 88100,
@@ -3589,8 +3717,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=042660",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3675,7 +3803,9 @@
           "평균 ROE 13.5%",
           "부채비율 226.2%",
           "추정 PER 13.4배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 11.4,
@@ -3700,7 +3830,7 @@
       ],
       "watchlist_order": 23,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 18.74,
           "pbr": 6.31,
@@ -3709,10 +3839,12 @@
           "bps": 3134.0,
           "target_price": 91143,
           "target_upside_pct": 85.44,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=082740",
-          "fetched_at": "2026-09-10T08:26:27.644808+09:00"
+          "fetched_at": "2026-09-10T08:26:27.644808+09:00",
+          "cached_from": "2026-09-10T08:26:27.644808+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 402419,
@@ -3720,11 +3852,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=082740&page=1",
           "fetched_at": "2026-09-10T08:26:27.927383+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:27.927383+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 49150,
@@ -3744,8 +3878,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=082740",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3830,7 +3964,9 @@
           "평균 ROE 20.7%",
           "부채비율 204.9%",
           "추정 PER 19.2배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 18.0,
@@ -3855,7 +3991,7 @@
       ],
       "watchlist_order": 24,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 324.03,
           "pbr": 7.18,
@@ -3864,10 +4000,12 @@
           "bps": 11113.0,
           "target_price": 129000,
           "target_upside_pct": 40.68,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=034020",
-          "fetched_at": "2026-09-10T08:26:27.556985+09:00"
+          "fetched_at": "2026-09-10T08:26:27.556985+09:00",
+          "cached_from": "2026-09-10T08:26:27.556985+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 3996622,
@@ -3875,11 +4013,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=034020&page=1",
           "fetched_at": "2026-09-10T08:26:27.828678+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:27.828678+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 91700,
@@ -3899,8 +4039,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=034020",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3985,7 +4125,9 @@
           "평균 ROE 1.1%",
           "부채비율 129.1%",
           "추정 PER 179.5배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -6.0,
@@ -4010,7 +4152,7 @@
       ],
       "watchlist_order": 25,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 40.11,
           "pbr": 8.03,
@@ -4019,10 +4161,12 @@
           "bps": 138119.0,
           "target_price": 1997143,
           "target_upside_pct": 37.54,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=207940",
-          "fetched_at": "2026-09-10T08:26:28.529870+09:00"
+          "fetched_at": "2026-09-10T08:26:28.529870+09:00",
+          "cached_from": "2026-09-10T08:26:28.529870+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -47180,
@@ -4030,11 +4174,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=207940&page=1",
           "fetched_at": "2026-09-10T08:26:29.218807+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:29.218807+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 1452000,
@@ -4054,8 +4200,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=207940",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4140,7 +4286,9 @@
           "평균 ROE 13.0%",
           "부채비율 48.4%",
           "추정 PER 35.6배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 18.0,
@@ -4165,7 +4313,7 @@
       ],
       "watchlist_order": 26,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 27.88,
           "pbr": 2.34,
@@ -4174,10 +4322,12 @@
           "bps": 70023.0,
           "target_price": 274621,
           "target_upside_pct": 49.98,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=068270",
-          "fetched_at": "2026-09-10T08:26:28.578785+09:00"
+          "fetched_at": "2026-09-10T08:26:28.578785+09:00",
+          "cached_from": "2026-09-10T08:26:28.578785+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -195871,
@@ -4185,11 +4335,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=068270&page=1",
           "fetched_at": "2026-09-10T08:26:29.231620+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:29.231620+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 183100,
@@ -4209,8 +4361,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=068270",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4295,7 +4447,9 @@
           "평균 ROE 4.5%",
           "부채비율 28.7%",
           "추정 PER 27.2배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 11.4,
@@ -4320,7 +4474,7 @@
       ],
       "watchlist_order": 27,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 102.23,
           "pbr": 36.56,
@@ -4329,10 +4483,12 @@
           "bps": 2150.0,
           "target_price": 452500,
           "target_upside_pct": 61.9,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=196170",
-          "fetched_at": "2026-09-10T08:26:28.788567+09:00"
+          "fetched_at": "2026-09-10T08:26:28.788567+09:00",
+          "cached_from": "2026-09-10T08:26:28.788567+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -509111,
@@ -4340,11 +4496,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=196170&page=1",
           "fetched_at": "2026-09-10T08:26:29.236701+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:29.236701+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 279500,
@@ -4364,8 +4522,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=196170",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4450,7 +4608,9 @@
           "평균 ROE 22.2%",
           "부채비율 53.8%",
           "추정 PER 61.2배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 21.0,
@@ -4475,7 +4635,7 @@
       ],
       "watchlist_order": 28,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "pbr": 22.53,
           "eps": -1420.0,
@@ -4484,10 +4644,12 @@
           "bps": 1547.0,
           "target_price": 257500,
           "target_upside_pct": 273.19,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=298380",
-          "fetched_at": "2026-09-10T08:26:29.029943+09:00"
+          "fetched_at": "2026-09-10T08:26:29.029943+09:00",
+          "cached_from": "2026-09-10T08:26:29.029943+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -378750,
@@ -4495,11 +4657,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=298380&page=1",
           "fetched_at": "2026-09-10T08:26:29.321186+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:29.321186+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 69000,
@@ -4519,8 +4683,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=298380",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4602,7 +4766,9 @@
         "reasons": [
           "평균 ROE -24.4%",
           "부채비율 79.3%"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -20.4,
@@ -4627,7 +4793,7 @@
       ],
       "watchlist_order": 29,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 9.1,
           "pbr": 0.76,
@@ -4636,10 +4802,12 @@
           "bps": 136601.0,
           "target_price": 165263,
           "target_upside_pct": 23.33,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=086790",
-          "fetched_at": "2026-09-10T08:26:28.763582+09:00"
+          "fetched_at": "2026-09-10T08:26:28.763582+09:00",
+          "cached_from": "2026-09-10T08:26:28.763582+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1035126,
@@ -4647,11 +4815,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=086790&page=1",
           "fetched_at": "2026-09-10T08:26:29.240121+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:29.240121+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 134000,
@@ -4671,8 +4841,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=086790",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4757,7 +4927,9 @@
           "평균 ROE 9.1%",
           "부채비율 1377.9%",
           "추정 PER 8.5배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": 3.0,
@@ -4782,7 +4954,7 @@
       ],
       "watchlist_order": 30,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 7.75,
           "pbr": 0.63,
@@ -4791,10 +4963,12 @@
           "bps": 42116.0,
           "target_price": 43778,
           "target_upside_pct": 30.68,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=316140",
-          "fetched_at": "2026-09-10T08:26:29.078408+09:00"
+          "fetched_at": "2026-09-10T08:26:29.078408+09:00",
+          "cached_from": "2026-09-10T08:26:29.078408+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 3058621,
@@ -4802,11 +4976,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=316140&page=1",
           "fetched_at": "2026-09-10T08:26:29.369402+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:29.369402+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 33500,
@@ -4826,8 +5002,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=316140",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4912,7 +5088,9 @@
           "평균 ROE 8.9%",
           "부채비율 1488.7%",
           "추정 PER 7.7배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -1.2,
@@ -4937,7 +5115,7 @@
       ],
       "watchlist_order": 31,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 23.31,
           "pbr": 0.62,
@@ -4946,10 +5124,12 @@
           "bps": 50825.0,
           "target_price": 40810,
           "target_upside_pct": 14.8,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=006360",
-          "fetched_at": "2026-09-10T08:26:30.172667+09:00"
+          "fetched_at": "2026-09-10T08:26:30.172667+09:00",
+          "cached_from": "2026-09-10T08:26:30.172667+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 555379,
@@ -4957,11 +5137,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=006360&page=1",
           "fetched_at": "2026-09-10T08:26:30.459636+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:30.459636+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 35550,
@@ -4981,8 +5163,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=006360",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -5067,7 +5249,9 @@
           "평균 ROE -1.0%",
           "부채비율 234.2%",
           "추정 PER 20.0배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -3.6,
@@ -5092,7 +5276,7 @@
       ],
       "watchlist_order": 32,
       "market": {
-        "status": "ok",
+        "status": "cached",
         "valuation": {
           "per": 9.52,
           "pbr": 0.37,
@@ -5101,10 +5285,12 @@
           "bps": 83467.0,
           "target_price": 45667,
           "target_upside_pct": 32.56,
-          "status": "ok",
-          "source": "NAVER Finance 종목 메인 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=108670",
-          "fetched_at": "2026-09-10T08:26:30.212326+09:00"
+          "fetched_at": "2026-09-10T08:26:30.212326+09:00",
+          "cached_from": "2026-09-10T08:26:30.212326+09:00",
+          "cache_age_hours": 23.9
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 69727,
@@ -5112,11 +5298,13 @@
           "unit": "shares",
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
-          "status": "ok",
-          "source": "NAVER Finance 투자자별 매매 페이지",
+          "status": "cached",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=108670&page=1",
           "fetched_at": "2026-09-10T08:26:30.496886+09:00",
-          "period_description": "최근 10거래일 순매매량 합계"
+          "period_description": "최근 10거래일 순매매량 합계",
+          "cached_from": "2026-09-10T08:26:30.496886+09:00",
+          "cache_age_hours": 23.9
         },
         "source": "NAVER Finance",
         "current_price": 34450,
@@ -5136,8 +5324,8 @@
         }
       },
       "quality_value_analysis": {
-        "status": "ok",
-        "source": "NAVER Finance 종목 메인 기업실적분석",
+        "status": "cached",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=108670",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -5222,7 +5410,9 @@
           "평균 ROE 2.6%",
           "부채비율 160.1%",
           "추정 PER 3.8배"
-        ]
+        ],
+        "live_collection_status": "failed",
+        "live_collection_reason": "종목 메인 페이지에서 기업실적분석 표를 찾지 못했습니다."
       },
       "quantitative": {
         "score": -16.8,
