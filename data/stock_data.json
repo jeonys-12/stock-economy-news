@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-11T08:20:23.915670+09:00",
+  "updated_at": "2026-09-12T08:28:40.160403+09:00",
   "source_status": {
     "stock_universe": {
       "policy": "사용자 지정 매수·매도 추천 모니터링 종목",
       "mode": "fixed_recommendation_watchlist",
-      "updated_at": "2026-09-11T08:19:56.526177+09:00",
+      "updated_at": "2026-09-12T08:28:20.250867+09:00",
       "total_stocks": 32,
       "duplicate_removed": [
         "현대건설"
@@ -28,7 +28,7 @@
       "requested_stocks": 32,
       "parallel_workers": 6,
       "errors": [],
-      "updated_at": "2026-09-11T08:20:11.880667+09:00"
+      "updated_at": "2026-09-12T08:28:31.806872+09:00"
     },
     "quality_value_analysis": {
       "status": "partial",
@@ -45,7 +45,7 @@
         "KRX OPEN API",
         "FnGuide 별도 호출"
       ],
-      "updated_at": "2026-09-11T08:20:23.915657+09:00"
+      "updated_at": "2026-09-12T08:28:40.160394+09:00"
     },
     "naver_required_stock_validation": {
       "status": "ok",
@@ -383,11 +383,11 @@
           "target_price": 488409,
           "target_upside_pct": 81.23,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=005930",
           "fetched_at": "2026-09-10T08:26:22.061052+09:00",
           "cached_from": "2026-09-10T08:26:22.061052+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 2947585,
@@ -396,12 +396,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=005930&page=1",
           "fetched_at": "2026-09-10T08:26:23.254393+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:23.254393+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 269500,
@@ -422,7 +422,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=005930",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -544,11 +544,11 @@
           "target_price": 3305652,
           "target_upside_pct": 78.11,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=000660",
           "fetched_at": "2026-09-10T08:26:22.265542+09:00",
           "cached_from": "2026-09-10T08:26:22.265542+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -1352880,
@@ -557,12 +557,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000660&page=1",
           "fetched_at": "2026-09-10T08:26:23.238233+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:23.238233+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 1856000,
@@ -583,7 +583,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=000660",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -705,11 +705,11 @@
           "target_price": 380000,
           "target_upside_pct": 51.7,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=042700",
           "fetched_at": "2026-09-10T08:26:22.146546+09:00",
           "cached_from": "2026-09-10T08:26:22.146546+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 517059,
@@ -718,12 +718,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=042700&page=1",
           "fetched_at": "2026-09-10T08:26:23.229790+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:23.229790+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 250500,
@@ -744,7 +744,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=042700",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -866,11 +866,11 @@
           "target_price": 2350500,
           "target_upside_pct": 67.41,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=009150",
           "fetched_at": "2026-09-10T08:26:22.193210+09:00",
           "cached_from": "2026-09-10T08:26:22.193210+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 129072,
@@ -879,12 +879,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=009150&page=1",
           "fetched_at": "2026-09-10T08:26:23.244032+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:23.244032+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 1404000,
@@ -905,7 +905,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=009150",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1027,11 +1027,11 @@
           "target_price": 297500,
           "target_upside_pct": 40.66,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=010120",
           "fetched_at": "2026-09-10T08:26:22.371649+09:00",
           "cached_from": "2026-09-10T08:26:22.371649+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 72957,
@@ -1040,12 +1040,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=010120&page=1",
           "fetched_at": "2026-09-10T08:26:23.248153+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:23.248153+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 211500,
@@ -1066,7 +1066,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=010120",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1188,11 +1188,11 @@
           "target_price": 701600,
           "target_upside_pct": 80.82,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=005380",
           "fetched_at": "2026-09-10T08:26:22.286341+09:00",
           "cached_from": "2026-09-10T08:26:22.286341+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -977753,
@@ -1201,12 +1201,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=005380&page=1",
           "fetched_at": "2026-09-10T08:26:23.258932+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:23.258932+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 388000,
@@ -1227,7 +1227,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=005380",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1349,11 +1349,11 @@
           "target_price": 216800,
           "target_upside_pct": 70.98,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=000270",
           "fetched_at": "2026-09-10T08:26:24.028441+09:00",
           "cached_from": "2026-09-10T08:26:24.028441+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -594263,
@@ -1362,12 +1362,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000270&page=1",
           "fetched_at": "2026-09-10T08:26:24.685277+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:24.685277+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 126800,
@@ -1388,7 +1388,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=000270",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1510,11 +1510,11 @@
           "target_price": 735200,
           "target_upside_pct": 76.1,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=012330",
           "fetched_at": "2026-09-10T08:26:24.490868+09:00",
           "cached_from": "2026-09-10T08:26:24.490868+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -663234,
@@ -1523,12 +1523,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=012330&page=1",
           "fetched_at": "2026-09-10T08:26:24.761222+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:24.761222+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 417500,
@@ -1549,7 +1549,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=012330",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1671,11 +1671,11 @@
           "target_price": 1658889,
           "target_upside_pct": 58.44,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=012450",
           "fetched_at": "2026-09-10T08:26:24.186546+09:00",
           "cached_from": "2026-09-10T08:26:24.186546+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 17643,
@@ -1684,12 +1684,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=012450&page=1",
           "fetched_at": "2026-09-10T08:26:24.720026+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:24.720026+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 1047000,
@@ -1710,7 +1710,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=012450",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1832,11 +1832,11 @@
           "target_price": 871059,
           "target_upside_pct": 87.93,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=329180",
           "fetched_at": "2026-09-10T08:26:24.606112+09:00",
           "cached_from": "2026-09-10T08:26:24.606112+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -4647,
@@ -1845,12 +1845,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=329180&page=1",
           "fetched_at": "2026-09-10T08:26:24.913394+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:24.913394+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 463500,
@@ -1871,7 +1871,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=329180",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -1993,11 +1993,11 @@
           "target_price": 515778,
           "target_upside_pct": 39.02,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=373220",
           "fetched_at": "2026-09-10T08:26:24.401205+09:00",
           "cached_from": "2026-09-10T08:26:24.401205+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 357568,
@@ -2006,12 +2006,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=373220&page=1",
           "fetched_at": "2026-09-10T08:26:24.727377+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:24.727377+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 371000,
@@ -2032,7 +2032,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=373220",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2150,11 +2150,11 @@
           "target_price": 1125789,
           "target_upside_pct": 103.58,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=011070",
           "fetched_at": "2026-09-10T08:26:24.587161+09:00",
           "cached_from": "2026-09-10T08:26:24.587161+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -241379,
@@ -2163,12 +2163,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=011070&page=1",
           "fetched_at": "2026-09-10T08:26:24.895630+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:24.895630+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 553000,
@@ -2189,7 +2189,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=011070",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2311,11 +2311,11 @@
           "target_price": 15786,
           "target_upside_pct": 76.38,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=034220",
           "fetched_at": "2026-09-10T08:26:25.532976+09:00",
           "cached_from": "2026-09-10T08:26:25.532976+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1155844,
@@ -2324,12 +2324,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=034220&page=1",
           "fetched_at": "2026-09-10T08:26:26.176370+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:26.176370+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 8950,
@@ -2350,7 +2350,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=034220",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2468,11 +2468,11 @@
           "target_price": 98667,
           "target_upside_pct": 36.85,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=064400",
           "fetched_at": "2026-09-10T08:26:25.841284+09:00",
           "cached_from": "2026-09-10T08:26:25.841284+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -29407,
@@ -2481,12 +2481,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=064400&page=1",
           "fetched_at": "2026-09-10T08:26:26.211956+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:26.211956+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 72100,
@@ -2507,7 +2507,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=064400",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2627,11 +2627,11 @@
           "target_price": 174750,
           "target_upside_pct": 13.84,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=096770",
           "fetched_at": "2026-09-10T08:26:25.619067+09:00",
           "cached_from": "2026-09-10T08:26:25.619067+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1696389,
@@ -2640,12 +2640,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=096770&page=1",
           "fetched_at": "2026-09-10T08:26:26.204996+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:26.204996+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 153500,
@@ -2666,7 +2666,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=096770",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -2786,11 +2786,11 @@
           "target_price": 57250,
           "target_upside_pct": 7.61,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=475150",
           "fetched_at": "2026-09-10T08:26:25.761593+09:00",
           "cached_from": "2026-09-10T08:26:25.761593+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -235808,
@@ -2799,12 +2799,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=475150&page=1",
           "fetched_at": "2026-09-10T08:26:26.200220+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:26.200220+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 53200,
@@ -2829,7 +2829,7 @@
         "history": [],
         "metrics": {},
         "source": "NAVER Finance 종목 메인 기업실적분석",
-        "updated_at": "2026-09-11T08:20:18.770969+09:00",
+        "updated_at": "2026-09-12T08:28:36.761138+09:00",
         "score": 0,
         "grade": "D",
         "components": {
@@ -2874,11 +2874,11 @@
           "target_price": 205625,
           "target_upside_pct": 7.04,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=003670",
           "fetched_at": "2026-09-10T08:26:26.046618+09:00",
           "cached_from": "2026-09-10T08:26:26.046618+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 451509,
@@ -2887,12 +2887,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=003670&page=1",
           "fetched_at": "2026-09-10T08:26:26.378656+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:26.378656+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 192100,
@@ -2913,7 +2913,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=003670",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3035,11 +3035,11 @@
           "target_price": 330958,
           "target_upside_pct": 57.6,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=035420",
           "fetched_at": "2026-09-10T08:26:26.067983+09:00",
           "cached_from": "2026-09-10T08:26:26.067983+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -364459,
@@ -3048,12 +3048,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=035420&page=1",
           "fetched_at": "2026-09-10T08:26:26.391703+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:26.391703+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 210000,
@@ -3074,7 +3074,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=035420",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3196,11 +3196,11 @@
           "target_price": 55053,
           "target_upside_pct": 57.07,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=035720",
           "fetched_at": "2026-09-10T08:26:27.344967+09:00",
           "cached_from": "2026-09-10T08:26:27.344967+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 166040,
@@ -3209,12 +3209,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=035720&page=1",
           "fetched_at": "2026-09-10T08:26:27.781180+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:27.781180+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 35050,
@@ -3235,7 +3235,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=035720",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3357,11 +3357,11 @@
           "target_price": 167650,
           "target_upside_pct": 25.49,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=000720",
           "fetched_at": "2026-09-10T08:26:27.170419+09:00",
           "cached_from": "2026-09-10T08:26:27.170419+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1043621,
@@ -3370,12 +3370,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=000720&page=1",
           "fetched_at": "2026-09-10T08:26:27.757289+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:27.757289+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 133600,
@@ -3396,7 +3396,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=000720",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3518,11 +3518,11 @@
           "target_price": 108714,
           "target_upside_pct": 52.9,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=272210",
           "fetched_at": "2026-09-10T08:26:27.447761+09:00",
           "cached_from": "2026-09-10T08:26:27.447761+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -128579,
@@ -3531,12 +3531,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=272210&page=1",
           "fetched_at": "2026-09-10T08:26:27.792265+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:27.792265+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 71100,
@@ -3557,7 +3557,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=272210",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3679,11 +3679,11 @@
           "target_price": 140050,
           "target_upside_pct": 58.97,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=042660",
           "fetched_at": "2026-09-10T08:26:27.203286+09:00",
           "cached_from": "2026-09-10T08:26:27.203286+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 89848,
@@ -3692,12 +3692,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=042660&page=1",
           "fetched_at": "2026-09-10T08:26:27.765496+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:27.765496+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 88100,
@@ -3718,7 +3718,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=042660",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -3840,11 +3840,11 @@
           "target_price": 91143,
           "target_upside_pct": 85.44,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=082740",
           "fetched_at": "2026-09-10T08:26:27.644808+09:00",
           "cached_from": "2026-09-10T08:26:27.644808+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 402419,
@@ -3853,12 +3853,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=082740&page=1",
           "fetched_at": "2026-09-10T08:26:27.927383+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:27.927383+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 49150,
@@ -3879,7 +3879,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=082740",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4001,11 +4001,11 @@
           "target_price": 129000,
           "target_upside_pct": 40.68,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=034020",
           "fetched_at": "2026-09-10T08:26:27.556985+09:00",
           "cached_from": "2026-09-10T08:26:27.556985+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 3996622,
@@ -4014,12 +4014,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=034020&page=1",
           "fetched_at": "2026-09-10T08:26:27.828678+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:27.828678+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 91700,
@@ -4040,7 +4040,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=034020",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4162,11 +4162,11 @@
           "target_price": 1997143,
           "target_upside_pct": 37.54,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=207940",
           "fetched_at": "2026-09-10T08:26:28.529870+09:00",
           "cached_from": "2026-09-10T08:26:28.529870+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -47180,
@@ -4175,12 +4175,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=207940&page=1",
           "fetched_at": "2026-09-10T08:26:29.218807+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:29.218807+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 1452000,
@@ -4201,7 +4201,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=207940",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4323,11 +4323,11 @@
           "target_price": 274621,
           "target_upside_pct": 49.98,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=068270",
           "fetched_at": "2026-09-10T08:26:28.578785+09:00",
           "cached_from": "2026-09-10T08:26:28.578785+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -195871,
@@ -4336,12 +4336,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=068270&page=1",
           "fetched_at": "2026-09-10T08:26:29.231620+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:29.231620+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 183100,
@@ -4362,7 +4362,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=068270",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4484,11 +4484,11 @@
           "target_price": 452500,
           "target_upside_pct": 61.9,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=196170",
           "fetched_at": "2026-09-10T08:26:28.788567+09:00",
           "cached_from": "2026-09-10T08:26:28.788567+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -509111,
@@ -4497,12 +4497,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=196170&page=1",
           "fetched_at": "2026-09-10T08:26:29.236701+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:29.236701+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 279500,
@@ -4523,7 +4523,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=196170",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4645,11 +4645,11 @@
           "target_price": 257500,
           "target_upside_pct": 273.19,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=298380",
           "fetched_at": "2026-09-10T08:26:29.029943+09:00",
           "cached_from": "2026-09-10T08:26:29.029943+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": -378750,
@@ -4658,12 +4658,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=298380&page=1",
           "fetched_at": "2026-09-10T08:26:29.321186+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:29.321186+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 69000,
@@ -4684,7 +4684,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=298380",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4803,11 +4803,11 @@
           "target_price": 165263,
           "target_upside_pct": 23.33,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=086790",
           "fetched_at": "2026-09-10T08:26:28.763582+09:00",
           "cached_from": "2026-09-10T08:26:28.763582+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 1035126,
@@ -4816,12 +4816,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=086790&page=1",
           "fetched_at": "2026-09-10T08:26:29.240121+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:29.240121+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 134000,
@@ -4842,7 +4842,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=086790",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -4964,11 +4964,11 @@
           "target_price": 43778,
           "target_upside_pct": 30.68,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=316140",
           "fetched_at": "2026-09-10T08:26:29.078408+09:00",
           "cached_from": "2026-09-10T08:26:29.078408+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 3058621,
@@ -4977,12 +4977,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=316140&page=1",
           "fetched_at": "2026-09-10T08:26:29.369402+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:29.369402+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 33500,
@@ -5003,7 +5003,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=316140",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -5125,11 +5125,11 @@
           "target_price": 40810,
           "target_upside_pct": 14.8,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=006360",
           "fetched_at": "2026-09-10T08:26:30.172667+09:00",
           "cached_from": "2026-09-10T08:26:30.172667+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 555379,
@@ -5138,12 +5138,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=006360&page=1",
           "fetched_at": "2026-09-10T08:26:30.459636+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:30.459636+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 35550,
@@ -5164,7 +5164,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=006360",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
@@ -5286,11 +5286,11 @@
           "target_price": 45667,
           "target_upside_pct": 32.56,
           "status": "cached",
-          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시)",
+          "source": "NAVER Finance 종목 메인 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/main.naver?code=108670",
           "fetched_at": "2026-09-10T08:26:30.212326+09:00",
           "cached_from": "2026-09-10T08:26:30.212326+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "investor_flow": {
           "institution_net_buy_10d_shares": 69727,
@@ -5299,12 +5299,12 @@
           "trading_days": 10,
           "definition": "최근 10거래일 순매매량 합계",
           "status": "cached",
-          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시)",
+          "source": "NAVER Finance 투자자별 매매 페이지 (3일 캐시) (3일 캐시)",
           "source_url": "https://finance.naver.com/item/frgn.naver?code=108670&page=1",
           "fetched_at": "2026-09-10T08:26:30.496886+09:00",
           "period_description": "최근 10거래일 순매매량 합계",
           "cached_from": "2026-09-10T08:26:30.496886+09:00",
-          "cache_age_hours": 23.9
+          "cache_age_hours": 48.0
         },
         "source": "NAVER Finance",
         "current_price": 34450,
@@ -5325,7 +5325,7 @@
       },
       "quality_value_analysis": {
         "status": "cached",
-        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시)",
+        "source": "NAVER Finance 종목 메인 기업실적분석 (이전 정상 캐시) (이전 정상 캐시)",
         "source_url": "https://finance.naver.com/item/main.naver?code=108670",
         "collection_mode": "main_page_financial_summary",
         "annual_column_count": 4,
