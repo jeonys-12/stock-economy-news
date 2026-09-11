@@ -11,6 +11,19 @@ GitHub Actions가 한국·미국의 경제정책, 금융시장, 건설·부동�
 - 중요 뉴스 우선 정렬
 - 매일 오전 6시 30분(KST) 자동 업데이트
 - GitHub Actions 수동 실행 지원
+- 변경 없는 AI 입력은 기존 브리핑을 재사용하고, 코드 push 시 API 호출을 생략
+
+## OpenAI API 비용 제어
+
+기본 모델은 요약·분류에 적합한 `gpt-5-nano`이며, 한 번의 실행에서 뉴스 45건·종목 24개·출력 2,500 토큰을 상한으로 사용합니다. 분석 입력이 같거나 마지막 생성 후 20시간이 지나지 않았으면 저장된 브리핑을 재사용합니다. 프롬프트의 고정 지침을 앞에 배치하고 안정적인 cache key를 사용해 OpenAI의 공통 입력 캐시 적중률도 높입니다.
+
+모델에는 분석에 필요한 숫자만 전달하며 출처 URL, 수집 시각, 상태 설명과 빈 필드는 제거합니다. 종목 후보는 모델이 중복 생성하지 않고 검증 가능한 정량 규칙으로 후처리합니다.
+
+응답에는 JSON Schema 기반 Structured Outputs를 적용합니다. 잘못된 JSON으로 유료 호출 결과가 폐기되는 일을 줄이고, 토큰 상한으로 응답이 중단된 경우에는 불완전한 결과를 게시하지 않습니다.
+
+필요하면 `OPENAI_MODEL`, `OPENAI_MAX_INPUT_ITEMS`, `OPENAI_MAX_INPUT_STOCKS`, `OPENAI_MAX_OUTPUT_TOKENS`, `OPENAI_MIN_REFRESH_HOURS`로 품질과 비용의 균형을 조정할 수 있습니다. 즉시 강제 갱신하려면 수동 실행에서 `OPENAI_FORCE_REFRESH=true`를 설정합니다.
+
+`data/news.json`의 `ai_status.usage`에서 실제 입력·캐시된 입력·출력·전체 토큰을 확인할 수 있습니다.
 
 ## 최초 설정
 
